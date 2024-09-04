@@ -1,0 +1,131 @@
+package com.locnguyen.toeicexercises.utils
+
+import android.content.Context
+import android.database.sqlite.SQLiteDatabase
+import android.database.sqlite.SQLiteOpenHelper
+import android.util.Log
+import com.locnguyen.toeicexercises.R
+import com.locnguyen.toeicexercises.model.Word
+import com.locnguyen.toeicexercises.model.WordKindMean
+import java.io.File
+import java.io.FileInputStream
+import java.io.FileOutputStream
+import java.io.IOException
+import java.io.InputStream
+import java.io.OutputStream
+
+class WordDB(private val context: Context, version: Int = 1) :
+    SQLiteOpenHelper(context, context.getString(R.string.db_name), null, version) {
+
+    private var db: SQLiteDatabase? = null
+
+    // bỏ 3 hàm dưới nếu lấy dữ liệu từ trên server về
+    init {
+        // Sao chép cơ sở dữ liệu từ assets nếu chưa tồn tại
+        if (!isExistedDatabase()) {
+            this.readableDatabase
+            copyDatabase()
+        }
+    }
+
+    private fun isExistedDatabase(): Boolean {
+        val dbFile = context.getDatabasePath(context.getString(R.string.db_name))
+        return dbFile.exists()
+    }
+
+    // Sao chép tệp cơ sở dữ liệu từ thư mục assets vào thư mục cơ sở dữ liệu của ứng dụng.
+    private fun copyDatabase() {
+        var inputStream: InputStream? = null
+        var outputStream: OutputStream? = null
+        try {
+            // Mở cơ sở dữ liệu từ assets
+            inputStream = context.assets.open(context.getString(R.string.db_name))
+            val outFileName = context.getDatabasePath(context.getString(R.string.db_name)).absolutePath
+            outputStream = FileOutputStream(outFileName)
+            // Sao chép cơ sở dữ liệu
+            val buffer = ByteArray(1024)
+            var length: Int
+            while (inputStream.read(buffer).also { length = it } > 0) {
+                outputStream.write(buffer, 0, length)
+            }
+            outputStream.flush()
+        } catch (e: IOException) {
+            e.printStackTrace()
+        }finally {
+            outputStream?.close()
+            inputStream?.close()
+        }
+    }
+
+    override fun onCreate(db: SQLiteDatabase?) {
+
+    }
+
+    override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
+    }
+
+    private fun openDb(): SQLiteDatabase? {
+        val dbFile = context.getDatabasePath(context.getString(R.string.db_name))
+
+        Log.d("DB", dbFile.absolutePath)
+
+        return if (!dbFile.exists()) {
+            null
+        } else {
+            SQLiteDatabase.openDatabase(dbFile.absolutePath, null, SQLiteDatabase.OPEN_READONLY)
+        }
+    }
+
+    fun getListWord(level: Int, limit: Int? = null): List<Word> {
+        val listWord: ArrayList<Word> = ArrayList()
+
+        if(db == null) db = openDb()
+
+        val tables = mutableListOf<String>()
+        if (db == null) db = openDb()
+        val cursor1 = db?.rawQuery("SELECT name FROM sqlite_master WHERE type='table'", null)
+        cursor1?.let {
+            if (it.moveToFirst()) {
+                do {
+                    val tableName = it.getString(0)
+                    tables.add(tableName)
+                } while (it.moveToNext())
+            }
+            it.close()
+        }
+        Log.d("DB", "Tables in database: $tables")
+
+        val cursor = if (limit == null) {
+            db?.rawQuery("Select * from words where level == $level", null)
+        } else {
+            db?.rawQuery("Select * from words where level == $level and limit == $limit", null)
+        }
+
+        cursor?.let{
+            it.moveToFirst()
+
+            while (!it.isAfterLast) {
+                val idValue = it.getColumnIndex("id")
+                val wordValue = it.getColumnIndex("word")
+                val shortMeanValue = it.getColumnIndex("short_mean")
+                val listMeansValue = it.getColumnIndex("means")
+                val levelValue = it.getColumnIndex("level")
+                val pronounceValue = it.getColumnIndex("pronounce")
+
+                val wordObject = Word(
+                    if (idValue != -1) it.getInt(idValue) else null,
+                    if (wordValue != -1) it.getString(wordValue) else null,
+                    if (shortMeanValue != -1) it.getString(shortMeanValue) else null,
+                    if (listMeansValue != -1) WordKindMean.covertFromJsonStringToList(it.getString(listMeansValue)) else null,
+                    if (levelValue != -1) it.getInt(levelValue) else null,
+                    if (pronounceValue != -1) it.getString(pronounceValue) else null,
+                )
+                listWord.add(wordObject)
+                it.moveToNext()
+            }
+            it.close()
+        }
+
+        return listWord
+    }
+}

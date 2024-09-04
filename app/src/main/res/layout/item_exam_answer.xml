@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:padding="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/order_question"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tool:text="Câu 1: "
+        android:textSize="@dimen/small_content"
+        android:fontFamily="@font/tinos_bold"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/answer_A"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:text="@string/_A"
+        android:textSize="@dimen/small_content"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@id/order_question"
+        app:layout_constraintTop_toTopOf="@id/order_question"
+        app:layout_constraintBottom_toBottomOf="@id/order_question"
+        app:layout_constraintEnd_toStartOf="@id/answer_B"
+        android:layout_marginStart="5dp"
+        android:gravity="center"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:id="@+id/answer_B"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:text="@string/_B"
+        android:textSize="@dimen/small_content"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@id/answer_A"
+        app:layout_constraintTop_toTopOf="@id/order_question"
+        app:layout_constraintBottom_toBottomOf="@id/order_question"
+        app:layout_constraintEnd_toStartOf="@id/answer_C"
+        android:layout_marginStart="5dp"
+        android:visibility="invisible"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/answer_C"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:text="@string/_C"
+        android:textSize="@dimen/small_content"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@id/answer_B"
+        app:layout_constraintTop_toTopOf="@id/order_question"
+        app:layout_constraintBottom_toBottomOf="@id/order_question"
+        app:layout_constraintEnd_toStartOf="@id/answer_D"
+        android:layout_marginStart="5dp"
+        android:gravity="center"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:id="@+id/answer_D"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:text="@string/_D"
+        android:textSize="@dimen/small_content"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@id/answer_C"
+        app:layout_constraintTop_toTopOf="@id/order_question"
+        app:layout_constraintBottom_toBottomOf="@id/order_question"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="5dp"
+        android:gravity="center"
+        android:visibility="invisible"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

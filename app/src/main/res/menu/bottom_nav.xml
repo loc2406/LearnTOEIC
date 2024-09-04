@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/bottom_nav_exercise"
+        android:title="@string/Practice"
+        android:icon="@drawable/ic_home"/>
+
+    <item
+        android:id="@+id/bottom_nav_exam"
+        android:title="@string/Exam"
+        android:icon="@drawable/ic_exam_black"/>
+
+    <item
+        android:id="@+id/bottom_nav_upgrade"
+        android:title="@string/Upgrade"
+        android:icon="@drawable/ic_upgrade"/>
+
+    <item
+        android:id="@+id/bottom_nav_setting"
+        android:title="@string/Setting"
+        android:icon="@drawable/ic_setting"/>
+</menu>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/tinos_bold"
+            android:textColor="@color/black"
+            android:textSize="@dimen/small_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tool:text="Câu 1: Chọn đáp án đúng" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/media_space"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="@id/title"
+            app:layout_constraintStart_toStartOf="@id/title"
+            app:layout_constraintTop_toBottomOf="@id/title">
+
+            <SeekBar
+                android:id="@+id/media_progress"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:progressTint="@color/primary"
+                android:progress="0"
+                android:thumbTint="@color/secondPrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/ic_control_media"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/Control_media"
+                android:scaleType="centerInside"
+                tool:src="@drawable/ic_play"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="@id/media_progress"
+                app:layout_constraintTop_toBottomOf="@id/media_progress" />
+
+            <TextView
+                android:id="@+id/media_time"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="10dp"
+                android:gravity="center_vertical|end"
+                android:textColor="@color/black"
+                android:textSize="@dimen/small_content"
+                app:layout_constraintBottom_toBottomOf="@id/ic_control_media"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ic_control_media"
+                app:layout_constraintTop_toTopOf="@id/ic_control_media"
+                tool:text="00:00/00:00" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="20dp"
+            android:contentDescription="@string/Question_img"
+            android:scaleType="centerInside"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/media_space"
+            tool:src="@drawable/ic_error" />
+
+        <TextView
+            android:id="@+id/first_answer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_white_rectangle_primary_stroke_10dp_corners"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/smaller_content"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/img"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/second_answer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_white_rectangle_primary_stroke_10dp_corners"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:visibility="gone"
+            android:textSize="@dimen/smaller_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/first_answer"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/third_answer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_white_rectangle_primary_stroke_10dp_corners"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:visibility="gone"
+            android:textSize="@dimen/smaller_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/second_answer"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/fourth_answer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_white_rectangle_primary_stroke_10dp_corners"
+            android:padding="10dp"
+            android:visibility="gone"
+            android:textColor="@color/black"
+            android:textSize="@dimen/smaller_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/third_answer"
+            android:text="" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

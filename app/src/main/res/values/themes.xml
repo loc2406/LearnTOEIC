@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.TOEICExercises" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:fontFamily">@font/tinos_regular</item>
+        <item name="android:colorPrimary">@color/primary</item>
+    </style>
+
+    <style name="MySplashScreen" parent="Theme.SplashScreen">
+        <item name="postSplashScreenTheme">@style/Theme.TOEICExercises</item>
+        <item name="android:windowBackground">@drawable/logo_splash_screen</item>
+    </style>
+
+    <style name="MyAlertDialog" parent="Theme.Material3.Light.Dialog">
+        <item name="android:windowBackground">@drawable/bg_white_rectangle_primary_stroke_10dp_corners</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">@font/tinos_regular</item>
+        <item name="android:colorAccent">@color/primary</item>
+    </style>
+</resources>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="theory_detail_title">%d. %s</string>
+    <string name="Favorite">Ưa thích</string>
+</resources>

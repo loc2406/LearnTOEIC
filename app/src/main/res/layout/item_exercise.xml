@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/ic_space"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="10dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="3dp">
+
+        <ImageView
+            android:id="@+id/ic"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:scaleX="0.6"
+            android:scaleY="0.6"
+            android:importantForAccessibility="no"
+           tool:src="@drawable/ic_exercise1"
+            android:scaleType="centerInside"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/content"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tool:text="Chọn câu đúng"
+        android:maxLines="2"
+        android:textSize="14sp"
+        android:textColor="@color/primary"
+        android:fontFamily="@font/tinos_bold"
+        android:layout_below="@id/ic_space"
+        android:layout_alignStart="@id/ic_space"
+        android:layout_alignEnd="@id/ic_space"
+        android:layout_marginTop="10dp"
+        android:gravity="center"/>
+
+</RelativeLayout>

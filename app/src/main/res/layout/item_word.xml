@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:background="@drawable/bg_transparent_rectangle_primary_stroke_10dp_corners"
+    android:padding="15dp"
+    android:layout_marginEnd="20dp"
+    android:layout_marginBottom="20dp">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tool:text="Tên từ vựng"
+        android:textColor="@color/primary"
+        android:fontFamily="@font/tinos_bold"
+        android:maxLines="2"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/ic_pronounce"
+        android:ellipsize="end"
+        android:textSize="@dimen/small_content"/>
+
+    <ImageView
+        android:id="@+id/ic_pronounce"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:contentDescription="@string/Pronounce"
+        android:src="@drawable/ic_volume"
+        android:scaleType="centerInside"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintStart_toEndOf="@id/title"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/ic_favorite"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <ImageView
+        android:id="@+id/ic_favorite"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:contentDescription="@string/Favorite"
+        android:src="@drawable/ic_star_empty"
+        android:scaleType="centerInside"
+        app:layout_constraintStart_toEndOf="@id/ic_pronounce"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/pronounce_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tool:text="Cách phát âm"
+        android:textColor="@color/black"
+        android:maxLines="1"
+        app:layout_constraintStart_toStartOf="@id/title"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintEnd_toEndOf="@id/title"
+        android:layout_marginTop="5dp"
+        android:ellipsize="end"
+        android:textSize="@dimen/smallest_content"/>
+
+    <TextView
+        android:id="@+id/content"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tool:text="Nghĩa của từ"
+        android:textColor="@color/black"
+        android:maxLines="2"
+        android:fontFamily="@font/tinos_bold"
+        app:layout_constraintStart_toStartOf="@id/title"
+        app:layout_constraintTop_toBottomOf="@id/pronounce_value"
+        app:layout_constraintEnd_toEndOf="@id/title"
+        android:layout_marginTop="5dp"
+        android:ellipsize="end"
+        android:textSize="@dimen/smaller_content"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

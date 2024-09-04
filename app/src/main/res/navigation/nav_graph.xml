@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/aboutAppFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.locnguyen.toeicexercises.fragment.MainFragment"
+        android:label="MainFragment"
+        tools:layout="@layout/main_fragment">
+        <action
+            android:id="@+id/action_mainFragment_to_wordFragment"
+            app:destination="@id/wordFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_examDetailFragment"
+            app:destination="@id/examDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/aboutAppFragment"
+        android:name="com.locnguyen.toeicexercises.fragment.AboutAppFragment"
+        android:label="AboutAppFragment"
+        tools:layout="@layout/about_app_fragment">
+        <action
+            android:id="@+id/action_aboutAppFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:popUpTo="@id/aboutAppFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/wordFragment"
+        android:name="com.locnguyen.toeicexercises.fragment.WordFragment"
+        android:label="WordFragment"
+        tools:layout="@layout/word_fragment" />
+    <fragment
+        android:id="@+id/examDetailFragment"
+        android:name="com.locnguyen.toeicexercises.fragment.exam.ExamDetailFragment"
+        android:label="ExamDetailFragment"
+        tools:layout="@layout/exam_detail_fragment">
+
+        <argument
+            android:name="exam"
+            app:argType="com.locnguyen.toeicexercises.model.Exam"
+            app:nullable="false" />
+        <action
+            android:id="@+id/action_examDetailFragment_to_examScoreFragment"
+            app:destination="@id/examScoreFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/examScoreFragment"
+        android:name="com.locnguyen.toeicexercises.fragment.exam.ExamScoreFragment"
+        android:label="ExamScoreFragment"
+        tools:layout="@layout/exam_score_fragment">
+        <action
+            android:id="@+id/action_examScoreFragment_to_examAnswerFragment"
+            app:destination="@id/examAnswerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/examAnswerFragment"
+        android:name="com.locnguyen.toeicexercises.fragment.exam.ExamAnswerFragment"
+        android:label="ExamAnswerFragment"
+        tools:layout="@layout/exam_answer_fragment">
+        <action
+            android:id="@+id/action_examAnswerFragment_to_answerFragment"
+            app:destination="@id/answerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/answerFragment"
+        android:name="com.locnguyen.toeicexercises.fragment.exam.AnswerFragment"
+        android:label="AnswerFragment"
+        tools:layout="@layout/answer_fragment">
+
+        <argument
+            android:name="questionPosition"
+            app:argType="integer"
+            app:nullable="false" />
+
+        <argument
+            android:name="question"
+            app:argType="com.locnguyen.toeicexercises.model.Question"
+            app:nullable="false" />
+
+        <argument
+            android:name="userAnswer"
+            app:argType="string"
+            app:nullable="true"/>
+    </fragment>
+
+</navigation>

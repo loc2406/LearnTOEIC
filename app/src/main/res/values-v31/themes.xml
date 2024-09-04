@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.TOEICExercises" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:fontFamily">@font/tinos_regular</item>
+        <item name="android:colorPrimary">@color/primary</item>
+    </style>
+
+    <style name="MySplashScreen" parent="Theme.SplashScreen">
+        <item name="postSplashScreenTheme">@style/Theme.TOEICExercises</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@drawable/logo</item>
+        <item name="android:windowSplashScreenBackground">@color/white</item>
+    </style>
+</resources>

@@ -1,0 +1,1855 @@
+[
+  {
+    "title": "Test 1",
+    "parts": [
+      {
+        "title": "Listening",
+        "contents": [
+          {
+            "type": "Picture Description",
+            "description": "In this part, you will see a picture and you will hear four short statements each question. The statements will be spoken just one time. They will not be displayed on device so you must listen carefully to understand what the speaker says. When you have heard all 4 sentences, look at the picture and choose the answer that best describes the picture in the order A, B, C, D.",
+            "questions": [
+              {
+                "title": "Select the correct answer",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/2b928ed5bed86eb62e49ba91a024df1e.mp3",
+                "img": "https://migiitoeic.eupgroup.net/uploads/image_ETS/6cd8910606ae1dbaa1ff8183279ae089.png",
+                "answers": [
+                  "She's searching in her handbag",
+                  "She's looking in a display case",
+                  "She's paying for a purchase",
+                  "She's holding some flowers"
+                ],
+                "trueAnswer": "She's looking in a display case",
+                "explain": "A. She's searching in her handbag<br>B. She's looking in a display case<br>C. She's paying for a purchase<br>D. She's holding some flowers",
+                "key": ""
+              },
+              {
+                "title": "Select the correct answer",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/4672928725429edd4038c571b1d77727.mp3",
+                "img": "https://migiitoeic.eupgroup.net/uploads/image_ETS/32dace9388c9504b6126e591937d78bc.png",
+                "answers": [
+                  "The man is switching off a lamp",
+                  "The man is opening some curtains",
+                  "The man is seated by a window",
+                  "The man is hanging some photographs on the wall"
+                ],
+                "trueAnswer": "The man is seated by a window",
+                "explain": "A. The man is switching off a lamp<br>B. The man is opening some curtains<br>C. The man is seated by a window<br>D. The man is hanging some photographs on the wall",
+                "key": ""
+              },
+              {
+                "title": "Select the correct answer",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/8c605030165189f50b53af19d2d4b0d3.mp3",
+                "img": "https://migiitoeic.eupgroup.net/uploads/image_ETS/b496a1e1758dd849fd8be1a12611858c.png",
+                "answers": [
+                  "Some chairs are arranged in a circle",
+                  "Some stairs are being cleaned",
+                  "A roof is being repaired",
+                  "A tree is being trimmed"
+                ],
+                "trueAnswer": "Some chairs are arranged in a circle",
+                "explain": "A. Some chairs are arranged in a circle<br>B. Some stairs are being cleaned<br>C. A roof is being repaired<br>D. A tree is being trimmed",
+                "key": ""
+              },
+              {
+                "title": "Select the correct answer",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/fab7febcd3cac3bde19ea49c93875f8c.mp3",
+                "img": "https://migiitoeic.eupgroup.net/uploads/image_ETS/f3424d058bb65747114d36a7822f2825.png",
+                "answers": [
+                  "One of the women is wearing a scarf",
+                  "The women are talking to each other",
+                  "The man is pouring coffee into a cup",
+                  "The people are closing their menus"
+                ],
+                "trueAnswer": "One of the women is wearing a scarf",
+                "explain": "A. One of the women is wearing a scarf<br>B. The women are talking to each other<br>C. The man is pouring coffee into a cup<br>D. The people are closing their menus",
+                "key": ""
+              },
+              {
+                "title": "Select the correct answer",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/49759e2590787ded1255df1580184e57.mp3",
+                "img": "https://migiitoeic.eupgroup.net/uploads/image_ETS/c43d3231a906b8e34b4c733c4394dd6c.png",
+                "answers": [
+                  "A notice is being hung on a post",
+                  "The women are walking toward a doorway",
+                  "The man is changing a bicycle tire",
+                  "A basket is being removed from a car"
+                ],
+                "trueAnswer": "The women are walking toward a doorway",
+                "explain": "A. A notice is being hung on a post<br>B. The women are walking toward a doorway<br>C. The man is changing a bicycle tire<br>D. A basket is being removed from a cart",
+                "key": ""
+              },
+              {
+                "title": "Select the correct answer",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/14d2b3df561e56dbda638eb417526840.mp3",
+                "img": "https://migiitoeic.eupgroup.net/uploads/image_ETS/44a75b54ca3f27670c64bb28d490ed19.png",
+                "answers": [
+                  "A shop assistant is giving a man some money",
+                  "Some people are entering a supermarket",
+                  "A cashier is putting merchandise into a bag",
+                  "Some customers are waiting in line"
+                ],
+                "trueAnswer": "Some customers are waiting in line",
+                "explain": "A. A shop assistant is giving a man some money<br>B. Some people are entering a supermarket<br>C. A cashier is putting merchandise into a bag<br>D. Some customers are waiting in line",
+                "key": ""
+              }
+            ]
+          },
+          {
+            "type": "Question Response",
+            "description": "Int this part, you will hear a question or statement spoken in English, followed by three responses, also spoken in English. The question or statement and the responses will be spoken just one time and didn't display on device, so you must listen carefully. You are to choose the best response to each question or statement in order to A, B, C.",
+            "questions": [
+              {
+                "title": "Select the correct answer",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/baaa749942d89a51f21e11943896d759.mp3",
+                "img": "",
+                "answers": [
+                  "The store is close to my house",
+                  "Last week when it was on sale",
+                  "I think it's the same number"
+                ],
+                "trueAnswer": "Last week when it was on sale",
+                "explain": "When did you buy your new phone?<br>A. The store is close to my house<br>B. Last week when it was on sale<br>C. I think it's the same number",
+                "key": "when, last week, sale"
+              },
+              {
+                "title": "Select the correct answer",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/98e61919e425d21491c369d5e6e423e7.mp3",
+                "img": "",
+                "answers": [
+                  "That's the official logo",
+                  "To reserve a room",
+                  "It's on the second floor"
+                ],
+                "trueAnswer": "It's on the second floor",
+                "explain": "Do you know where Keiko's office is?<br>A. That's the official logo<br>B. To reserve a room<br>C. It's on the second floor",
+                "key": "where, second floor"
+              },
+              {
+                "title": "Select the correct answer",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/7af8474e08f793ff3681312bd7df7450.mp3",
+                "img": "",
+                "answers": [
+                  "The theater on Glenn Road",
+                  "You're right - it was only an hour!",
+                  "I must have misplaced it"
+                ],
+                "trueAnswer": "You're right - it was only an hour!",
+                "explain": "That was a short movie, wasn't it?<br>A. The theater on Glenn Road<br>B. You're right - it was only an hour!<br>C. I must have misplaced it",
+                "key": "wasn't it? right, an hour"
+              },
+              {
+                "title": "Select the correct answer",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/cbc3236639c79e6fdec3521f3ba2d232.mp3",
+                "img": "",
+                "answers": [
+                  "In two weeks",
+                  "No, thank you",
+                  "Near the front entrance"
+                ],
+                "trueAnswer": "Near the front entrance",
+                "explain": "Where can I find a building directory?<br>A. In two weeks<br>B. No, thank you<br>C. Near the front entrance",
+                "key": "where, near, front entrance"
+              },
+              {
+                "title": "Select the correct answer",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/f780855429b9dc5846384f6d06932ea4.mp3",
+                "img": "",
+                "answers": [
+                  "John Sanchez",
+                  "Thanks, I appreciate it",
+                  "No, that's not mine"
+                ],
+                "trueAnswer": "John Sanchez",
+                "explain": "Who's going to lead the merger negotiations?<br>A. John Sanchez is<br>B. Thanks, I appreciate it<br>C. No, that's not mine",
+                "key": "who, John"
+              },
+              {
+                "title": "Select the correct answer",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/9ef9d6d7c33751977679ddee76e894fb.mp3",
+                "img": "",
+                "answers": [
+                  "A free consultation",
+                  "He left his business card",
+                  "In a few more days"
+                ],
+                "trueAnswer": "He left his business card",
+                "explain": "How do I contact the financial consultant?<br>A. A free consultation<br>B. He left his business card<br>C. In a few more days",
+                "key": "How, business card"
+              },
+              {
+                "title": "Select the correct answer",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/db4b4089a067c91ec3f62e4aef617c8d.mp3",
+                "img": "",
+                "answers": [
+                  "Anytime this week",
+                  "It's good for your health",
+                  "At the back door"
+                ],
+                "trueAnswer": "Anytime this week",
+                "explain": "When is the health inspector coming?<br>A. Anytime this week<br>B. It's good for your health<br>C. At the back door",
+                "key": "when, anytime, this week"
+              },
+              {
+                "title": "Select the correct answer",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/fa5828d9568265003eba68006d16d061.mp3",
+                "img": "",
+                "answers": [
+                  "It's talking longer than we thought",
+                  "Sign at the bottom of the page",
+                  "No, you don't need permission"
+                ],
+                "trueAnswer": "It's talking longer than we thought",
+                "explain": "Wasn't this assignment due last week?<br>A. It's talking longer than we thought<br>B. Sign at the bottom of the page<br>C. No, you don't need permission",
+                "key": "wasn't, longer"
+              },
+              {
+                "title": "Select the correct answer",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/1bf215d028ccd1922bd50198cdee980e.mp3",
+                "img": "",
+                "answers": [
+                  "Two sugars please",
+                  "In the kitchen",
+                  "I already bought it"
+                ],
+                "trueAnswer": "I already bought it",
+                "explain": "Whose turn is it to buy coffee?<br>A. Two sugars please<br>B. In the kitchen<br>C. I already bought it",
+                "key": "whose turn, already bought"
+              },
+              {
+                "title": "Select the correct answer",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/6efb3ac5b79e685beb813d1ae8db3aae.mp3",
+                "img": "",
+                "answers": [
+                  "Every year",
+                  "It hasn't been decided yet",
+                  "Yes, I've been there"
+                ],
+                "trueAnswer": "It hasn't been decided yet",
+                "explain": "Where will the company retreat be next year?<br>A. Every year<br>B. It hasn't been decided yet<br>C. Yes, I've been there",
+                "key": "where, hasn't been decided"
+              },
+              {
+                "title": "Select the correct answer",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/0f2e9ca246ed6bb348368a91bc937f6b.mp3",
+                "img": "",
+                "answers": [
+                  "We can do it this afternoon instead",
+                  "The sign on the wall",
+                  "Does he work in that building, too?"
+                ],
+                "trueAnswer": "We can do it this afternoon instead",
+                "explain": "Let's discuss the building designs this morning<br>A. We can do it this afternoon instead<br>B. The sign on the wall<br>C. Does he work in that building, too?",
+                "key": "afternoon instead"
+              },
+              {
+                "title": "Select the correct answer",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/0c06cd6d72b704d00f840c86617b28f2.mp3",
+                "img": "",
+                "answers": [
+                  "The potted plant on the ground",
+                  "I'll answer the phone",
+                  "Because Barb's party is today"
+                ],
+                "trueAnswer": "Because Barb's party is today",
+                "explain": "Why is there a cake sitting out on the front desk?<br>A. The potted plant on the ground<br>B. I'll answer the phone<br>C. Because Barb's party is today",
+                "key": "why, Because"
+              },
+              {
+                "title": "Select the correct answer",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/8f55a1fe54eb8b1d629cece29a679f44.mp3",
+                "img": "",
+                "answers": [
+                  "Sergio will help us",
+                  "Across the hallway",
+                  "Have a seat by the window"
+                ],
+                "trueAnswer": "Sergio will help us",
+                "explain": "How are we going to move all of these office chairs?<br>A. Sergio will help us<br>B. Across the hallway<br>C. Have a seat by the window",
+                "key": "How, Sergio, help"
+              },
+              {
+                "title": "Select the correct answer",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/59716007c5073d211192f4d84fdbdf13.mp3",
+                "img": "",
+                "answers": [
+                  "A new training manual",
+                  "Sure, we can leave some for you",
+                  "I didn't know it was required"
+                ],
+                "trueAnswer": "I didn't know it was required",
+                "explain": "Have you gone to the leadership training yet?<br>A. A new training manual<br>B. Sure, we can leave some for you<br>C. I didn't know it was required",
+                "key": "Have you gone, didn't know, required"
+              },
+              {
+                "title": "Select the correct answer",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/1cc3d3a8b0244a13b73de1f496ecdf4b.mp3",
+                "img": "",
+                "answers": [
+                  "That's a really good idea",
+                  "The film starts at nine",
+                  "Fifteen should be enough"
+                ],
+                "trueAnswer": "That's a really good idea",
+                "explain": "Why don't we start marketing to a younger audience?<br>A. That's a really good idea<br>B. The film starts at nine<br>C. Fifteen should be enough",
+                "key": "why don't we, good idea"
+              },
+              {
+                "title": "Select the correct answer",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/3e1b676407870f6b1f13c5d80a6cc3df.mp3",
+                "img": "",
+                "answers": [
+                  "I have a few more minutes",
+                  "An electronics store nearby",
+                  "Are you thinking of buying one?"
+                ],
+                "trueAnswer": "Are you thinking of buying one?",
+                "explain": "What kind of tablet computer do you have?<br>A. I have a few more minutes<br>B. An electronics store nearby<br>C. Are you thinking of buying one?",
+                "key": "what kind, thinking, buying"
+              },
+              {
+                "title": "Select the correct answer",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/88ec174038d1b5173be3fc30c7671055.mp3",
+                "img": "",
+                "answers": [
+                  "A round-trip ticket for two thousand dollars",
+                  "I'm planning to paint my house",
+                  "I would follow up with Sahar"
+                ],
+                "trueAnswer": "I'm planning to paint my house",
+                "explain": "Wouldn't you rather travel somewhere during your time off?<br>A. A round-trip ticket for two thousand dollars<br>B. I'm planning to paint my house<br>C. I would follow up with Sahar",
+                "key": "wouldn't you, paint, house"
+              },
+              {
+                "title": "Select the correct answer",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/ba15ac85e8662cef34d634b5f913a276.mp3",
+                "img": "",
+                "answers": [
+                  "A reliable delivery service",
+                  "That's an impressive offer",
+                  "Hasn't the payment arrived yet?"
+                ],
+                "trueAnswer": "Hasn't the payment arrived yet?",
+                "explain": "You gave the customers the bill, didn't you?<br>A. A reliable delivery service<br>B. That's an impressive offer<br>C. Hasn't the payment arrived yet?",
+                "key": "didn't you, payment, arrived"
+              },
+              {
+                "title": "Select the correct answer",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/686c66ab599aec42dd31c2aea5439ee3.mp3",
+                "img": "",
+                "answers": [
+                  "He's a reporter there",
+                  "I'll be done before lunch",
+                  "Please make ten copies"
+                ],
+                "trueAnswer": "I'll be done before lunch",
+                "explain": "How soon can you finish the Sterling report?<br>A. He's a reporter there<br>B. I'll be done before lunch<br>C. Please make ten copies",
+                "key": "how soon, before lunch"
+              },
+              {
+                "title": "Select the correct answer",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/c40356c984690058266a3ef175c3ad68.mp3",
+                "img": "",
+                "answers": [
+                  "Just put it in my bag, thanks",
+                  "About twenty-five euros",
+                  "That's a great looking sweater"
+                ],
+                "trueAnswer": "Just put it in my bag, thanks",
+                "explain": "Would you like your receipt now, or shall I put it in the bag?<br>A. Just put it in my bag, thanks<br>B. About twenty-five euros<br>C. That's a great looking sweater",
+                "key": "shall I put, put, bag"
+              },
+              {
+                "title": "Select the correct answer",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/2fcac4e5cf34c3b08a7b60f174bd2943.mp3",
+                "img": "",
+                "answers": [
+                  "Where did you hear that?",
+                  "They arrived already",
+                  "Yes, I'd like to"
+                ],
+                "trueAnswer": "Where did you hear that?",
+                "explain": "The registration deadline is on Friday<br>A. Where did you hear that?<br>B. They arrived already<br>C. Yes, I'd like to",
+                "key": "where, hear"
+              },
+              {
+                "title": "Select the correct answer",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/04ce742a594802f5612aa2203099c9db.mp3",
+                "img": "",
+                "answers": [
+                  "The nearest train station",
+                  "Yes, it departs at 8pm",
+                  "Usually at a hotel downtown"
+                ],
+                "trueAnswer": "Yes, it departs at 8pm",
+                "explain": "Your airline has an overnight flight to Delhi, doesn't it?<br>A. The nearest train station<br>B. Yes, it departs at 8pm<br>C. Usually at a hotel downtown",
+                "key": "departs, 8pm"
+              },
+              {
+                "title": "Select the correct answer",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/beb68ddc6ea3c13f5bc4ef61f6f933d7.mp3",
+                "img": "",
+                "answers": [
+                  "Yes, the post office is still open",
+                  "Sorry - I'll try sending it again",
+                  "We can't see that far either"
+                ],
+                "trueAnswer": "Sorry - I'll try sending it again",
+                "explain": "I can't seem to open the file you sent me<br>A. Yes, the post office is still open<br>B. Sorry - I'll try sending it again<br>C. We can't see that far either",
+                "key": "send, again"
+              },
+              {
+                "title": "Select the correct answer",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/a41f25ca197bf2ed5b5513e8b8bb18b1.mp3",
+                "img": "",
+                "answers": [
+                  "Sure, that'll be fine",
+                  "Check-in is at three o'clock",
+                  "A view of the ocean, if possible"
+                ],
+                "trueAnswer": "Sure, that'll be fine",
+                "explain": "Would you like to include breakfast in your room reservation?<br>A. Sure, that'll be fine<br>B. Check-in is at three o'clock<br>C. A view of the ocean, if possible",
+                "key": "sure"
+              },
+              {
+                "title": "Select the correct answer",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/975be53eff862cb6a470d7b68d19ad6f.mp3",
+                "img": "",
+                "answers": [
+                  "The last page of the order form",
+                  "Four million dollars this year",
+                  "Everyone there will have a laptop"
+                ],
+                "trueAnswer": "Everyone there will have a laptop",
+                "explain": "Should I print copies of the budget for the meeting or e-mail it to everyone?<br>A. The last page of the order form<br>B. Four million dollars this year<br>C. Everyone there will have a laptop",
+                "key": "everyone, laptop"
+              }
+            ]
+          },
+          {
+            "type": "Short Conversations",
+            "description": "You will hear some conversations between two people. You will be asked to answer three questions about what the speakers say in each conversation. Select the best response to each question and mark the letter A, B, C or D on your answer sheet. The conversations will not be displayed on device and will be spoken only one time.",
+            "questions": [
+              {
+                "title": "Why is the woman calling?",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/6c4c3df203d1e61a5234e097eeeaae1f.mp3",
+                "img": "",
+                "answers": [
+                  "To make an appointment",
+                  "To rent a car",
+                  "To ask about a fee",
+                  "To apply for a position"
+                ],
+                "trueAnswer": "To ask about a fee",
+                "explain": "Why is the woman calling?<br>A. To make an appointment<br>B. To rent a car<br>C. To ask about a fee<br>D. To apply for a position<br>Information:<br>Hi. I got my car repaired last week and used your shuttle service to get a ride back to my office. Can you tell me why there's a service charge on my invoice for using the shuttle? I've never had to pay that before.",
+                "key": ""
+              },
+              {
+                "title": "According to the man, what has recently changed?",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/6c4c3df203d1e61a5234e097eeeaae1f.mp3",
+                "img": "",
+                "answers": [
+                  "Office hours",
+                  "Job requirement",
+                  "A computer system",
+                  "A company policy"
+                ],
+                "trueAnswer": "A company policy",
+                "explain": "According to the man, what has recently changed?<br>A. Office hours<br>B. Job requirements<br>C. A computer systems<br>D. A company policy<br>Information:<br>Yes, unfortunately the cost of auto fuel has risen quite a bit, so the company now requires us to charge for the shuttle.",
+                "key": ""
+              },
+              {
+                "title": "What does the man agree to do?",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/6c4c3df203d1e61a5234e097eeeaae1f.mp3",
+                "img": "",
+                "answers": [
+                  "Waive a fee",
+                  "Reschedule a meeting",
+                  "Sign a contract",
+                  "Repair a vehicle"
+                ],
+                "trueAnswer": "Waive a fee",
+                "explain": "What does the man agree to do?<br>A. Waive a fee<br>B. Reschedule a meeting<br>C. Sign a contract<br>D. Repair a vehicle<br>Information: I'm sorry we didn't inform you of this ahead of time. I'll waive the fee now...",
+                "key": ""
+              },
+              {
+                "title": "What is the topic of the conversation?",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/8340d09c3e40fb449c60f104d32de9be.mp3",
+                "img": "",
+                "answers": [
+                  "Health",
+                  "Traffic",
+                  "Sports",
+                  "Finance"
+                ],
+                "trueAnswer": "Sports",
+                "explain": "What is the topic of the conversation?<br>A. Health B. Traffic<br>C. Sports<br>D. Finance<br>Information:<br>In sports news, our own Easton Jaguars won today's soccer match against the Portville Lions.",
+                "key": ""
+              },
+              {
+                "title": "What caused a problem?",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/8340d09c3e40fb449c60f104d32de9be.mp3",
+                "img": "",
+                "answers": [
+                  "A staffing change",
+                  "A rainstorm",
+                  "A typographical error",
+                  "A road closure"
+                ],
+                "trueAnswer": "A rainstorm",
+                "explain": "What caused a problem?<br>A. A staffing change<br>B. A rainstorm<br>C. A typographical error<br>D. A road closure<br>Information:<br>Today's game was challenging - it started to rain early on, and the storm didn't let up for nearly an hour.",
+                "key": ""
+              },
+              {
+                "title": "What will the listeners hear next?",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/8340d09c3e40fb449c60f104d32de9be.mp3",
+                "img": "",
+                "answers": [
+                  "A commercial",
+                  "A song",
+                  "A weather report",
+                  "A reading from a book"
+                ],
+                "trueAnswer": "A commercial",
+                "explain": "What will the listeners hear next?<br>A. A commercial<br>B. A song<br>C. A wether report<br>D. A reading from book<br>Information:<br>Now, it's time for a commercial break.",
+                "key": ""
+              },
+              {
+                "title": "What does the woman notify the man about?",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/611decb5c1781fbfc43afa539d8adc34.mp3",
+                "img": "",
+                "answers": [
+                  "She is unable to meet a deadline",
+                  "She needs a replacement laptop",
+                  "She cannot attend a business trip",
+                  "She is planning to give a speech"
+                ],
+                "trueAnswer":  "She cannot attend a business trip",
+                "explain": "What does the woman notify the man about?<br>A. She is unable to meet a deadline<br>B. She needs a replacement laptop<br>C. She cannot attend a business trip<br>D. She is planning to give a speech<br>Information:<br>I know we were planning to work at the trade show together next week, but something has come up. Do you think you could find someone else to go in my place?",
+                "key": ""
+              },
+              {
+                "title": "According to the woman, what recently happened in her department?",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/611decb5c1781fbfc43afa539d8adc34.mp3",
+                "img": "",
+                "answers": [
+                  "A corporate policy was updated",
+                  "A supply order was mishandled",
+                  "Client contracts were renewed",
+                  "New employees were hired"
+                ],
+                "trueAnswer":  "New employees were hired",
+                "explain": "According to the woman, what recently happened in her department?<br>A. A corporate policy was updated<br>B. A supply order was mishandled<br>C. Client contracts were renewed<br>D. New employees were hired<br>Information:<br>My department recently hired several new people",
+                "key": ""
+              },
+              {
+                "title": "What does the man say he will do next?",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/611decb5c1781fbfc43afa539d8adc34.mp3",
+                "img": "",
+                "answers": [
+                  "Speak with a colleague",
+                  "Conduct an interview",
+                  "Calculate a budget",
+                  "Draft a travel itinerary"
+                ],
+                "trueAnswer":  "Speak with a colleague",
+                "explain": "What does the man say he will do next?<br>A. Speak with a colleague<br>B. Conduct an interview<br>C. Calculate a budget<br>D. Draft a travel itinerary<br>Information:<br>I'll call Ramona and ask her if she'd be able to attend the show instead",
+                "key": ""
+              },
+              {
+                "title": "What does the man want to do?",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/ac5e8cd240a74269329fb6a38e8ba53b.mp3",
+                "img": "",
+                "answers": [
+                  "Purchase an area map",
+                  "See an event schedule",
+                  "Cancel a hotel reservation",
+                  "Book a bus tour"
+                ],
+                "trueAnswer":  "Book a bus tour",
+                "explain": "What does the man want to do?<br>A. Purchase an area map<br>B. See an event schedule<br>C. Cancel a hotel reservation<br>D. Book a bus tour<br>Information:<br>I'd like to book two tickets for tonight's city bus tour",
+                "key": ""
+              },
+              {
+                "title": "What is the man asked to choose?",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/ac5e8cd240a74269329fb6a38e8ba53b.mp3",
+                "img": "",
+                "answers": [
+                  "When to arrive",
+                  "What to visit",
+                  "How to pay",
+                  "What to eat"
+                ],
+                "trueAnswer":  "What to eat",
+                "explain": "What is the man asked to choose?<br>A. When to arrive<br>B. What to visit<br>C. How to pay<br>D. What to eat<br>Information:<br>You have a choice between the chicken with vegetables or the beef with rice",
+                "key": ""
+              },
+              {
+                "title": "What does the woman suggest doing?",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/ac5e8cd240a74269329fb6a38e8ba53b.mp3",
+                "img": "",
+                "answers": [
+                  "Wearing a jacket",
+                  "Using a credit card",
+                  "Bringing a camera",
+                  "Looking for a coupon"
+                ],
+                "trueAnswer":  "Bringing a camera",
+                "explain": "What does the woman suggest doing?<br>A. Wearing a jacket<br>B. Using a credit card<br>C. Bringing a camera<br>D. Looking for a coupon<br>Information:<br>You'll definitely want to bring your camera.",
+                "key": ""
+              },
+              {
+                "title": "What does the man offer to do?",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/10581098563fca422370c0b9a111cf2a.mp3",
+                "img": "",
+                "answers": [
+                  "Meet in the lobby",
+                  "Contact a receptionist",
+                  "Carry some files",
+                  "Delay a meeting"
+                ],
+                "trueAnswer": "Carry some files",
+                "explain": "What does the man offer to do?<br>A. Meet in the lobby<br>B. Contact a receptionist<br>C. Carry some files<br>D. Delay a meeting<br>Information:<br>Do you need help taking those files up to our office?",
+                "key": ""
+              },
+              {
+                "title": "According to the man, what happened last week?",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/10581098563fca422370c0b9a111cf2a.mp3",
+                "img": "",
+                "answers": [
+                  "An office door would not lock",
+                  "A sink was installed incorrectly",
+                  "An elevator stopped working.",
+                  "A document was lost"
+                ],
+                "trueAnswer": "An elevator stopped working.",
+                "explain": "According to the man, what happened last week?<br>A. An office door would not lock<br>B. A sink was installed incorrectly<br>C. An elevator stopped working<br>D. A document was lost<br>Information:<br>But that broke last week (\"that\" refers to \"the elevator\")",
+                "key": ""
+              },
+              {
+                "title": "Why does the woman say, \"a piece of hardware had to be custom made\"?",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/10581098563fca422370c0b9a111cf2a.mp3",
+                "img": "",
+                "answers": [
+                  "To justify a price",
+                  "To explain a delay",
+                  "To illustrate a product's age",
+                  "To express regret for a purchase"
+                ],
+                "trueAnswer": "To explain a delay",
+                "explain": "Why does the woman say, \"a piece of hardware had to be custom made\"?<br>A. To justify a price<br>B. To explain a delay<br>C. To illustrate a product's age<br>D. To express regret for a purchase<br>Information:<br>But that broke last week - the maintenance crew should have repaired that by now",
+                "key": ""
+              },
+              {
+                "title": "What product are the speakers discussing?",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/479a3112b77a8c53b10fd9b17a2c856b.mp3",
+                "img": "",
+                "answers": [
+                  "Electronics",
+                  "Office furniture",
+                  "Calendars",
+                  "Clothing"
+                ],
+                "trueAnswer": "Clothing",
+                "explain": "What product are the speakers discussing?<br>A. Electronics<br>B. Office furniture<br>C. Calendars<br>D. Clothing<br>Information:<br>How were our clothing sales for June?",
+                "key": ""
+              },
+              {
+                "title": "What does Donna suggest?",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/479a3112b77a8c53b10fd9b17a2c856b.mp3",
+                "img": "",
+                "answers": [
+                  "Hiring additional staff",
+                  "Revising a budget",
+                  "Posting some photos online",
+                  "Reducing prices"
+                ],
+                "trueAnswer": "Revising a budget",
+                "explain": "What does Donna suggest?<br>A. Hiring additional staff<br>B. Revising a budget<br>C. Posting some photos online<br>D. Reducing prices<br>Information:<br>I think clothing sales weren't as strong because the advertising budget was cut this year. I'd like to see that money put back into our budget.",
+                "key": ""
+              },
+              {
+                "title": "What does the man propose?",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/479a3112b77a8c53b10fd9b17a2c856b.mp3",
+                "img": "",
+                "answers": [
+                  "Postponing a decision",
+                  "Conducting a survey",
+                  "Developing new products",
+                  "Opening another location"
+                ],
+                "trueAnswer": "Postponing a decision",
+                "explain": "What does the man propose?<br>A. Postponing a decision<br>B. Conducting a survey<br>C. Developing new products<br>D. Opening another location<br>Information:<br>Let's wait another month. If sales are still low, we may have to increase the advertising budget, but I prefer to wait on that decision.",
+                "key": ""
+              },
+              {
+                "title": "Who most likely is the man?",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/79c1e58025d871fb0509eab2299f68f2.mp3",
+                "img": "",
+                "answers": [
+                  "A manager",
+                  "A consultant",
+                  "A client",
+                  "A trainee"
+                ],
+                "trueAnswer": "A trainee",
+                "explain": "Who is the man most likely to be?<br>A. A manager<br>B. A consultant<br>C. A client<br>D. A trainee.<br>Information:<br>So you've been training with us for a couple of months now.",
+                "key": ""
+              },
+              {
+                "title": "What does the woman ask the man for?",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/79c1e58025d871fb0509eab2299f68f2.mp3",
+                "img": "",
+                "answers": [
+                  "Some feedback",
+                  "Some assistance",
+                  "Some references",
+                  "Some dates"
+                ],
+                "trueAnswer": "Some feedback",
+                "explain": "What does the woman ask the man for?<br>A. Some feedback<br>B. Some assistance<br>C. Some references<br>D. Some dates<br>Information:<br>I'd like to hear how your apprenticeship's been going",
+                "key": ""
+              },
+              {
+                "title": "What will the man receive?",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/79c1e58025d871fb0509eab2299f68f2.mp3",
+                "img": "",
+                "answers": [
+                  "Extra time off",
+                  "A promotion",
+                  "Bonus pay",
+                  "An award"
+                ],
+                "trueAnswer": "A promotion",
+                "explain": "What will the man receive?<br>A. Extra time off<br>B. A promotion<br>C. Bonus pay<br>D. An award<br>Information:<br>Your work is so good that we've decided to offer you a promotion when your training is complete.",
+                "key": ""
+              },
+              {
+                "title": "What type of product is being discussed?",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/9992a290a9449e4b38e08db79475256c.mp3",
+                "img": "",
+                "answers": [
+                  "A musical instrument",
+                  "A kitchen appliance",
+                  "A power tool",
+                  "A tablet computer"
+                ],
+                "trueAnswer": "A tablet computer",
+                "explain": "What type of product is being discussed?<br>A. A musical instrument<br>B. A kitchen appliance<br>C. A power tool<br>D. A tablet computer<br>Information:<br>We can't wait to see the latest design plans for the company's new, lightweight tablet",
+                "key": ""
+              },
+              {
+                "title": "Which product feature is the man most proud of?",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/9992a290a9449e4b38e08db79475256c.mp3",
+                "img": "",
+                "answers": [
+                  "The battery life",
+                  "The color selection",
+                  "The sound quality",
+                  "The size"
+                ],
+                "trueAnswer": "The battery life",
+                "explain": "Which product feature is the man most proud of?<br>A. The battery life<br>B. The color selection<br>C. The sound quality<br>D. The size<br>Information:<br>This model has our best battery life ever.",
+                "key": ""
+              },
+              {
+                "title": "Why does the man say, \"my favorite singer is performing that night\"?",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/9992a290a9449e4b38e08db79475256c.mp3",
+                "img": "",
+                "answers": [
+                  "To request a schedule change",
+                  "To explain a late arrival",
+                  "To decline an invitation",
+                  "To recommend a musician"
+                ],
+                "trueAnswer": "To decline an invitation",
+                "explain": "Why does the man say, \"my favorite singer is performing that night\"?<br>A. To request a schedule change<br>B. To explain a late arrival<br>C. To decline an invitation<br>D. To recommend a musician<br>Information:<br>That's OK. We'll see you soon",
+                "key": ""
+              },
+              {
+                "title": "What type of event is being planned?",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/14cb72923ade32b18c730e4a091fee94.mp3",
+                "img": "",
+                "answers": [
+                  "A trade show",
+                  "An awards ceremony",
+                  "A film festival",
+                  "A wedding"
+                ],
+                "trueAnswer": "An awards ceremony",
+                "explain": "What type of event is being planned?<br>A. A trade show<br>B. An awards ceremony<br>C. A film festival<br>D. A wedding<br>Information:<br>We're planning our annual awards banquet for June-for about a hundred guests.",
+                "key": ""
+              },
+              {
+                "title": "What does the man ask about?",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/14cb72923ade32b18c730e4a091fee94.mp3",
+                "img": "",
+                "answers": [
+                  "Accommodations",
+                  "Entertainment",
+                  "Meal options",
+                  "Outdoor seating"
+                ],
+                "trueAnswer": "Accommodations",
+                "explain": "What does the man ask about?<br>A. Accommodations<br>B. Entertainment<br>C. Meal options<br>D. Outdoor seating<br>Information:<br>Do you have enough rooms available for them to stay here?",
+                "key": ""
+              },
+              {
+                "title": "What does the hotel offer for free?",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/14cb72923ade32b18c730e4a091fee94.mp3",
+                "img": "",
+                "answers": [
+                  "Meals",
+                  "Internet access",
+                  "Transportation",
+                  "Parking"
+                ],
+                "trueAnswer": "Transportation",
+                "explain": "What does the hotel offer for free?<br>A. Meals<br>B. Internet access<br>C. Transportation<br>D. Parking<br>Information:<br>And additionally, we do offer free shuttle service to and from the airport.",
+                "key": ""
+              },
+              {
+                "title": "What problem does the man mention?",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/11bedd9d2535841d0e8909a2f548fe88.mp3",
+                "img": "",
+                "answers": [
+                  "His car is out of fuel",
+                  "His phone battery is empty",
+                  "He is late for an appointment",
+                  "He forgot his wallet"
+                ],
+                "trueAnswer": "His phone battery is empty",
+                "explain": "What problem does the man mention?<br>A. His car is out of fuel<br>B. His phone battery is empty<br>C. He is late for an appointment<br>D. He forgot his wallet<br>Information:<br>My mobile phone is out of power.",
+                "key": ""
+              },
+              {
+                "title": "Where are the speakers?",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/11bedd9d2535841d0e8909a2f548fe88.mp3",
+                "img": "",
+                "answers": [
+                  "At a train station",
+                  "At an electronics repair shop",
+                  "At a furniture store",
+                  "At a coffee shop"
+                ],
+                "trueAnswer": "At a coffee shop",
+                "explain": "Where are the speakers?<br>A. At a train station<br>B. At an electronics repair shop<br>C. At a furniture store<br>D. At a coffee shop<br>Information:<br>Are there any tables here at the cafe that are near a wall socket, so I can charge my phone while I have some coffee?",
+                "key": ""
+              },
+              {
+                "title": "What does the woman suggest the man do?",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/11bedd9d2535841d0e8909a2f548fe88.mp3",
+                "img": "",
+                "answers": [
+                  "Check a Web site",
+                  "Call a taxi",
+                  "Return at a later time",
+                  "Go to the library"
+                ],
+                "trueAnswer": "Go to the library",
+                "explain": "What does the woman suggest the man do?<br>A. Check a Web site<br>B. Call a taxi<br>C. Return at a later time<br>D. Go to the library<br>Information:<br>You know, the public library would be perfect for that",
+                "key": ""
+              },
+              {
+                "title": "What is the man having trouble with?",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/70864e264627f843104a2c45bf12d968.mp3",
+                "img": "https://migiitoeic.eupgroup.net/uploads/image_ETS/541e3e90818faa7249324e4a466ec931.png",
+                "answers": [
+                  "Conducting a test",
+                  "Preparing a bill",
+                  "Contacting a patient",
+                  "Shipping an order"
+                ],
+                "trueAnswer": "Preparing a bill",
+                "explain": "What is the man having trouble with?<br>A. Conducting a test<br>B. Preparing a bill<br>C. Contacting a patient<br>D. Shipping an order<br>Information:<br>I'm working on the bill for one of Dr. Singh's patients, and I keep getting an error message for the code I'm using...",
+                "key": ""
+              },
+              {
+                "title": "Look at the graphic. Which code should the man use?",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/70864e264627f843104a2c45bf12d968.mp3",
+                "img": "https://migiitoeic.eupgroup.net/uploads/image_ETS/541e3e90818faa7249324e4a466ec931.png",
+                "answers": [
+                  "018",
+                  "019",
+                  "020",
+                  "021"
+                ],
+                "trueAnswer": "018",
+                "explain": "Look at the graphic. Which code should the man use?<br>A. 018<br>B. 019<br>C. 020<br>D. 021<br>Information:<br>A blood test",
+                "key": ""
+              },
+              {
+                "title": "What does the woman say will happen soon?",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/70864e264627f843104a2c45bf12d968.mp3",
+                "img": "https://migiitoeic.eupgroup.net/uploads/image_ETS/541e3e90818faa7249324e4a466ec931.png",
+                "answers": [
+                  "Some patients will be transferred to another doctor",
+                  "Some employees will join a medical practice",
+                  "A list will be available electronically",
+                  "A doctor will begin a medical procedure"
+                ],
+                "trueAnswer": "A list will be available electronically",
+                "explain": "What does the woman say will happen soon?<br>A. Some patients will be transferred to another doctor<br>B. Some employees will join a medical practice<br>C. A list will be available electronically<br>D. A doctor will begin a medical procedure<br>Information:<br>But I heard they'll be adding the codes to our billing software soon, so we won't need to deal with paper lists anymore.",
+                "key": ""
+              },
+              {
+                "title": "What does the woman say they will need to do?",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/0a3d326eb10ccf95955298bbd70d6856.mp3",
+                "img": "https://migiitoeic.eupgroup.net/uploads/image_ETS/ba3db14da1e8b646e6a99f10008a08a1.png",
+                "answers": [
+                  "Rent storage space",
+                  "Increase production",
+                  "Organize a fashion show",
+                  "Update some equipment"
+                ],
+                "trueAnswer": "Increase production",
+                "explain": "What does the woman say they will need to do?<br>A. Rent storage space<br>B. Increase production<br>C. Organize a fashion show<br>D. Update some equipment<br>Information:<br>We'd better increase production to be sure we have a supply of all garment sizes.",
+                "key": ""
+              },
+              {
+                "title": "What does the man suggest?",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/0a3d326eb10ccf95955298bbd70d6856.mp3",
+                "img": "https://migiitoeic.eupgroup.net/uploads/image_ETS/ba3db14da1e8b646e6a99f10008a08a1.png",
+                "answers": [
+                  "Conferring with a client",
+                  "Contacting another department",
+                  "Photographing some designs",
+                  "Changing suppliers"
+                ],
+                "trueAnswer": "Contacting another department",
+                "explain": "What does the man suggest?<br>A. Conferring with a client<br>B. Contacting another department<br>C. Photographing some designs<br>D. Changing suppliers<br>Information:<br>I suggest we let the human resources department know that we'll need more workers.",
+                "key": ""
+              },
+              {
+                "title": "Look at the graphic. Which section of the label will the man need to revise?",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/0a3d326eb10ccf95955298bbd70d6856.mp3",
+                "img": "https://migiitoeic.eupgroup.net/uploads/image_ETS/ba3db14da1e8b646e6a99f10008a08a1.png",
+                "answers": [
+                  "The logo",
+                  "The material",
+                  "The care instructions",
+                  "The country of origin"
+                ],
+                "trueAnswer": "The care instructions",
+                "explain": "Look at the graphic. Which section of the label will the man need to revise?<br>A. The logo<br>B. The material<br>C. The care instructions<br>D. The country of origin<br>Information:<br>These garments are 100 percent cotton; so they shouldn't be washed in warm water.",
+                "key": ""
+              },
+              {
+                "title": "What are the speakers mainly discussing?",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/ca7623b69f99824a1af78e70a93d6cfa.mp3",
+                "img": "https://migiitoeic.eupgroup.net/uploads/image_ETS/5de594fe828ccb676ac4ee4f796a1ee4.png",
+                "answers": [
+                  "A job interview",
+                  "A company celebration",
+                  "An office relocation",
+                  "A landscaping project"
+                ],
+                "trueAnswer": "A job interview",
+                "explain": "What are the speakers mainly discussing?<br>A. A job interview<br>B. A company celebration<br>C. An office relocation<br>D. A landscaping project<br>Information:<br>We've reviewed your job application and would like you to come in for an interview.",
+                "key": ""
+              },
+              {
+                "title": "Look at the graphic. Which building is Silverby Industries located in?",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/ca7623b69f99824a1af78e70a93d6cfa.mp3",
+                "img": "https://migiitoeic.eupgroup.net/uploads/image_ETS/5de594fe828ccb676ac4ee4f796a1ee4.png",
+                "answers": [
+                  "Building 1",
+                  "Building 2",
+                  "Building 3",
+                  "Building 4"
+                ],
+                "trueAnswer": "Building 2",
+                "explain": "Look at the graphic. Which building is Silverby Industries located in?<br>A. Building 1<br>B. Building 2<br>C. Building 3<br>D. Building 4<br>Information:<br>0ur building is on Tinley Avenue, and we're right next to the lake.",
+                "key": ""
+              },
+              {
+                "title": "What does the woman tell the man about parking?",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/ca7623b69f99824a1af78e70a93d6cfa.mp3",
+                "img": "https://migiitoeic.eupgroup.net/uploads/image_ETS/5de594fe828ccb676ac4ee4f796a1ee4.png",
+                "answers": [
+                  "He should park in a visitor's space",
+                  "He will have to pay at a meter",
+                  "A parking pass is required",
+                  "The parking area fills up quickly"
+                ],
+                "trueAnswer": "He should park in a visitor's space",
+                "explain": "What does the woman tell the man about parking?<br>A. He should park in a visitor's space<br>B. He will have to pay at a meter<br>C. A parking pass is required<br>D. The parking area fills up quickly<br>Information:<br>Just make sure you're in a space marked Visitor, and you won't get a parking violation.",
+                "key": ""
+              }
+            ]
+          },
+          {
+            "type": "Short Talks",
+            "description": "You will hear some talks given by a single speaker. You will be asked to answer three questions about what the speaker says in each talk. Select the best response to each question and mark the letter A, B, C or D on your answer sheet. The talks will not be displayed on device and will be spoken only one time.",
+            "questions": [
+              {
+                "title": "What type of business is being advertised?",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/c5f0af02bc7797cd691c4671bdb25757.mp3",
+                "img": "",
+                "answers": [
+                  "A farmers market",
+                  "A fitness center",
+                  "A medical clinic",
+                  "A sporting goods store"
+                ],
+                "trueAnswer": "A fitness center",
+                "explain": "What type of business is being advertised?<br>A. A farmers market<br>B. A fitness center<br>C. A medical clinic<br>D. A sporting goods store<br>Information:<br>Attention all listeners! Palmer's Gym now has several locations in your area.",
+                "key": ""
+              },
+              {
+                "title": "What will the listeners be able to do starting in April?",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/c5f0af02bc7797cd691c4671bdb25757.mp3",
+                "img": "",
+                "answers": [
+                  "Use multiple locations",
+                  "Try free samples",
+                  "Meet with a nutritionist",
+                  "Enter a contest"
+                ],
+                "trueAnswer": "Use multiple locations",
+                "explain": "What will the listeners be able to do starting in April?<br>A. Use multiple locations<br>B. Try free samples<br>C. Meet with a nutritionist<br>D. Enter a contest<br>Information:<br>Starting in April, your membership gives you access to any of our locations across the country.",
+                "key": ""
+              },
+              {
+                "title": "Why does the speaker invite the listeners to visit a Web site?",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/c5f0af02bc7797cd691c4671bdb25757.mp3",
+                "img": "",
+                "answers": [
+                  "To write a review",
+                  "To register for a class",
+                  "To check a policy",
+                  "To look at a map"
+                ],
+                "trueAnswer": "To look at a map",
+                "explain": "Why does the speaker invite the listeners to visit a Web site?<br>A. To write a review<br>B. To register for a class<br>C. To check a policy<br>D. To look at a map<br>Information:<br>Visit our Web site to see a map of all the Palmer's Gym locations across the nation!",
+                "key": ""
+              },
+              {
+                "title": "Why does the speaker thank the listeners?",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/4e2b84edfff3e61dd8a6f629f2686ffc.mp3",
+                "img": "",
+                "answers": [
+                  "For submitting design ideas",
+                  "For training new employees",
+                  "For working overtime",
+                  "For earning a certification"
+                ],
+                "trueAnswer": "For working overtime",
+                "explain": "Why does the speaker thank the listeners?<br>A. For submitting design ideas<br>B. For training new employees<br>C. For working overtime<br>D. For earning a certification<br>Information:<br>I want to thank everyone for the extra hours you've put in getting our new line of camera accessories ready for market.",
+                "key": ""
+              },
+              {
+                "title": "According to the speaker, what is scheduled for next month?",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/4e2b84edfff3e61dd8a6f629f2686ffc.mp3",
+                "img": "",
+                "answers": [
+                  "A retirement celebration",
+                  "A trade show",
+                  "A factory tour",
+                  "A store opening"
+                ],
+                "trueAnswer":  "A trade show",
+                "explain": "According to the speaker, what is scheduled for next month?< br>A. A retirement celebration< br>B. A trade show< br>C. A factory tour< br>D. A store opening< br>Information:<br>The new products will be ready in time for the trade show coming up next month in Shanghai.",
+                "key": ""
+              },
+              {
+                "title": "What does the speaker imply when she says, \"it's a large space\"?",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/4e2b84edfff3e61dd8a6f629f2686ffc.mp3",
+                "img": "",
+                "answers": [
+                  "There is room to display new merchandise",
+                  "High attendance is anticipated",
+                  "A venue is too expensive",
+                  "There is not enough staff for an event"
+                ],
+                "trueAnswer":  "There is room to display new merchandise",
+                "explain": "What does the speaker imply when she says, \"it's a large space\"?< br>A. There is room to display new merchandise< br>B. High attendance is anticipated< br>C. A venue is too expensive< br>D. There is not enough staff for an event< br>Information:<br>We've reserved a booth at the front of the exhibition hall this year, and it's a large space.",
+                "key": ""
+              },
+              {
+                "title": "According to the speaker, what is special about the restaurant?",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/0e8ed6ad2d3d223c28aa114e5fdc9011.mp3",
+                "img": "",
+                "answers": [
+                  "It has private outdoor seating",
+                  "It has been recently renovated",
+                  "It has a vegetable garden",
+                  "It has weekly cooking classes"
+                ],
+                "trueAnswer":  "It has a vegetable garden",
+                "explain": "According to the speaker, what is special about the restaurant?<br>A. It has private outdoor seating<br>B. It has been recently renovated<br>C. It has a vegetable garden<br>D. It has weekly cooking classes<br>Information:<br>All the vegetable products you see on the menu come from our very own vegetable garden.",
+                "key": ""
+              },
+              {
+                "title": "Who is Natasha?",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/0e8ed6ad2d3d223c28aa114e5fdc9011.mp3",
+                "img": "",
+                "answers": [
+                  "A business owner",
+                  "An interior decorator",
+                  "An event organizer",
+                  "A food writer"
+                ],
+                "trueAnswer":  "A business owner",
+                "explain": "Who is Natasha?<br>A. A business owner<br>B. An interior decorator<br>C. An event organizer<br>D. A food writer<br>Information:<br>The owner of the cafe, Natasha, is a talented gardener who grows our fresh produce herself.",
+                "key": ""
+              },
+              {
+                "title": "Why does the speaker say, \"I eat it all the time\"?",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/0e8ed6ad2d3d223c28aa114e5fdc9011.mp3",
+                "img": "",
+                "answers": [
+                  "He wants to eat something different",
+                  "He is recommending a dish",
+                  "He knows the ingredients",
+                  "He understands a dish is popular"
+                ],
+                "trueAnswer":  "He is recommending a dish",
+                "explain": "Why does the speaker say, \"I eat it all the time\"?<br>A. He wants to eat something different<br>B. He is recommending a dish<br>C. He knows the ingredients<br>D. He understands a dish is popular<br>Information:<br>It's poached salmon, caught fresh today. It's a simple dish, served with a lemon sauce and a salad.",
+                "key": ""
+              },
+              {
+                "title": "Where is the announcement being made?",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/c991e151ce61e60fdd1b13bf2bd84115.mp3",
+                "img": "",
+                "answers": [
+                  "On a bus",
+                  "On a ferry boat",
+                  "On a train",
+                  "On an airplane"
+                ],
+                "trueAnswer":  "On an airplane",
+                "explain": "Where is the announcement being made?<br>A. On a bus<br>B. On a ferry boat<br>C. On a train<br>D. On an airplane<br>Information:<br>So welcome aboard this morning's direct flight to Toronto.",
+                "key": ""
+              },
+              {
+                "title": "What problem does the speaker mention?",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/c991e151ce61e60fdd1b13bf2bd84115.mp3",
+                "img": "",
+                "answers": [
+                  "There is no more room for large bags",
+                  "Too many tickets have been sold",
+                  "Weather conditions have changed",
+                  "A piece of equipment is being repaired"
+                ],
+                "trueAnswer":  "There is no more room for large bags",
+                "explain": "What problem does the speaker mention?<br>A. There is no more room for large bags<br>B. Too many tickets have been sold<br>C. Weather conditions have changed<br>D. A piece of equipment is being repaired<br>Information:<br>Unfortunately, we've run out of space in the overhead bins for larger carry-on bags.",
+                "key": ""
+              },
+              {
+                "title": "According to the speaker, why should the listeners talk with a staff member?",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/c991e151ce61e60fdd1b13bf2bd84115.mp3",
+                "img": "",
+                "answers": [
+                  "To receive a voucher",
+                  "To reserve a seat",
+                  "To buy some food",
+                  "To get free headphones"
+                ],
+                "trueAnswer":  "To buy some food",
+                "explain": "According to the speaker, why should the listeners talk with a staff member?<br>A. To receive a voucher<br>B. To reserve a seat<br>C. To buy some food<br>D. To get free headphones<br>Information:<br>If you would like to purchase a meal, please notify a flight attendant.",
+                "key": ""
+              },
+              {
+                "title": "Who is the speaker?",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/ca45956286cc34d64b1d6086c7685d20.mp3",
+                "img": "",
+                "answers": [
+                  "A repair person",
+                  "A store clerk",
+                  "A factory worker",
+                  "A truck driver"
+                ],
+                "trueAnswer":  "A truck driver",
+                "explain": "Who is the speaker?<br>A. A repair person<br>B. A store clerk<br>C. A factory worker<br>D. A truck driver<br>Information:<br>It's Dana, one of your truck drivers.",
+                "key": ""
+              },
+              {
+                "title": "What does the company sell?",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/ca45956286cc34d64b1d6086c7685d20.mp3",
+                "img": "",
+                "answers": [
+                  "Household furniture",
+                  "Kitchen appliances",
+                  "Packaged foods",
+                  "Construction equipment"
+                ],
+                "trueAnswer":  "Kitchen appliances",
+                "explain": "What does the company sell?<br>A. Household furniture<br>B. Kitchen appliances<br>C. Packaged foods<br>D. Construction equipment<br>Information:<br>I'm supposed to deliver kitchen appliances to our store branches in Syracuse.",
+                "key": ""
+              },
+              {
+                "title": "What does the speaker imply when she says, \"all I see are houses\"?",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/ca45956286cc34d64b1d6086c7685d20.mp3",
+                "img": "",
+                "answers": [
+                  "She is concerned about some regulations",
+                  "She thinks a mistake has been made",
+                  "A loan application has been completed",
+                  "A development plan cannot be approved"
+                ],
+                "trueAnswer":  "She thinks a mistake has been made",
+                "explain": "What does the speaker imply when she says, \"all I see are houses\"?<br>A. She is concerned about some regulations<br>B. She thinks a mistake has been made<br>C. A loan application has been completed<br>D. A development plan cannot be approved<br>###<br>Information: Could you please get back to me with the correct address?",
+                "key": ""
+              },
+              {
+                "title": "What is the talk mainly about?",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/2de9a19e18f70ee67d19eabe36c4309d.mp3",
+                "img": "",
+                "answers": [
+                  "A mobile phone model",
+                  "An office security system",
+                  "High-speed Internet service",
+                  "Business scheduling software"
+                ],
+                "trueAnswer":  "Business scheduling software",
+                "explain": "What is the talk mainly about?<br>A. A mobile phone model<br>B. An office security system<br>C. High-speed Internet service<br>D. Business scheduling software<br>Information:<br>I'll be conducting the training on how to use our company's new scheduling software - Spark Schedule.",
+                "key": ""
+              },
+              {
+                "title": "Why did the company choose the product?",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/2de9a19e18f70ee67d19eabe36c4309d.mp3",
+                "img": "",
+                "answers": [
+                  "It makes arranging meetings easy",
+                  "It is reasonably priced",
+                  "It has good security features",
+                  "It has received positive reviews"
+                ],
+                "trueAnswer":  "It makes arranging meetings easy",
+                "explain": "Why did the company choose the product?<br>A. It makes arranging meetings easy<br>B. It is reasonably priced<br>C. It has good security features<br>D. It has received positive reviews<br>Information: The reason we chose this particular software is because it makes it easy for you to schedule meetings with people in different time zones.",
+                "key": ""
+              },
+              {
+                "title": "What does the speaker say is offered with the product?",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/2de9a19e18f70ee67d19eabe36c4309d.mp3",
+                "img": "",
+                "answers": [
+                  "An annual upgrade",
+                  "A money-back guarantee",
+                  "A mobile phone application",
+                  "A customer-service help line"
+                ],
+                "trueAnswer":  "A mobile phone application",
+                "explain": "What does the speaker say is offered with the product?<br>A. An annual upgrade<br>B. A money-back guarantee<br>C. A mobile phone application<br>D. A customer-service help line<br>Information:<br>And best of all, there's a mobile phone application that you can download for free.",
+                "key": ""
+              },
+              {
+                "title": "What does the speaker say has recently been announced?",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/bc58c16c2bb3a3585df9e7f407773248.mp3",
+                "img": "",
+                "answers": [
+                  "An increase in funding",
+                  "A factory opening",
+                  "A new venue for an event",
+                  "A change in regulations"
+                ],
+                "trueAnswer":  "A change in regulations",
+                "explain": "What does the speaker say has recently been announced?<br>A. An increase in funding<br>B. A factory opening<br>C. A new venue for an event<br>D. A change in regulations<br>Information:<br>The announcement of new federal safety regulations means that major modifications must be made to the tracks.",
+                "key": ""
+              },
+              {
+                "title": "According to the speaker, why do some people dislike a construction project?",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/bc58c16c2bb3a3585df9e7f407773248.mp3",
+                "img": "",
+                "answers": [
+                  "Because it caused a power outage",
+                  "Because it costs too much",
+                  "Because roads have been closed",
+                  "Because of the loud noise"
+                ],
+                "trueAnswer":  "Because it costs too much",
+                "explain": "According to the speaker, why do some people dislike a construction project?<br>A. Because it caused a power outage<br>B. Because it costs too much<br>C. Because roads have been closed<br>D. Because of the loud noise<br>Information:<br>Some residents say they don't approve of how much money is being spent on the project",
+                "key": ""
+              },
+              {
+                "title": "What will the speaker do next?",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/bc58c16c2bb3a3585df9e7f407773248.mp3",
+                "img": "",
+                "answers": [
+                  "Introduce an advertiser",
+                  "Attend a press conference",
+                  "Interview some people",
+                  "End a broadcast"
+                ],
+                "trueAnswer":  "Interview some people",
+                "explain": "What will the speaker do next?<br>A. Introduce an advertiser<br>B. Attend a press conference<br>C. Interview some people<br>D. End a broadcast<br>Information:<br>I'll ask a few passersby how they feel about this latest development in the project",
+                "key": ""
+              },
+              {
+                "title": "What does the speaker thank the listeners for?",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/f31c61ef61ab611c9f4e62eb9c55da8a.mp3",
+                "img": "",
+                "answers": [
+                  "Reorganizing some files",
+                  "Cleaning a work area",
+                  "Working on a Saturday",
+                  "Attending a training"
+                ],
+                "trueAnswer":  "Working on a Saturday",
+                "explain": "What does the speaker thank the listeners for?< br>A. Reorganizing some files< br>B. Cleaning a work area< br>C. Working on a Saturday< br>D. Attending a training< br>Information:<br>Thanks for coming into the warehouse today to work on a Saturday.",
+                "key": ""
+              },
+              {
+                "title": "In which division do the listeners most likely work?",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/f31c61ef61ab611c9f4e62eb9c55da8a.mp3",
+                "img": "",
+                "answers": [
+                  "Shipping and Receiving",
+                  "Maintenance",
+                  "Sales and Marketing",
+                  "Accounting"
+                ],
+                "trueAnswer":  "Shipping and Receiving",
+                "explain": "In which division do the listeners most likely work?<br>A. Shipping and Receiving<br>B. Maintenance<br>C. Sales and Marketing<br>D. Accounting<br>Information:<br>There are hundreds of boxes, and we have to check what's inside them and put the information into our warehouse database.",
+                "key": ""
+              },
+              {
+                "title": "What does the speaker say he will provide?",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/f31c61ef61ab611c9f4e62eb9c55da8a.mp3",
+                "img": "",
+                "answers": [
+                  "A building name",
+                  "Group numbers",
+                  "Shift schedules",
+                  "A temporary password"
+                ],
+                "trueAnswer":  "Group numbers",
+                "explain": "What does the speaker say he will provide?<br>A. A building name<br>B. Group numbers<br>C. Shift schedules<br>D. A temporary password<br>Information:<br>Now, I'm going to assign you all to groups. Once you have your group number, go ahead and join your group members.",
+                "key": ""
+              },
+              {
+                "title": "What event is being described?",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/5a62ca6aa5b70d62656e449137fecf4a.mp3",
+                "img": "https://migiitoeic.eupgroup.net/uploads/image_ETS/e59704a24578cd6afcc3f58c8487ed4a.png",
+                "answers": [
+                  "A sports competition",
+                  "A government ceremony",
+                  "A music festival",
+                  "A cooking contest"
+                ],
+                "trueAnswer":  "A cooking contest",
+                "explain": "What event is being described?<br>A. A sports competition<br>B. A government ceremony<br>C. A music festival<br>D. A cooking contest<br>###<br>Information: And now, an event we've all been waiting for since last year - Danville's Annual Cook-Off.",
+                "key": ""
+              },
+              {
+                "title": "According to the speaker, what can the listeners find on a Web site?",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/5a62ca6aa5b70d62656e449137fecf4a.mp3",
+                "img": "https://migiitoeic.eupgroup.net/uploads/image_ETS/e59704a24578cd6afcc3f58c8487ed4a.png",
+                "answers": [
+                  "A city map",
+                  "A list of vendors",
+                  "A demonstration video",
+                  "An entry form"
+                ],
+                "trueAnswer":  "An entry form",
+                "explain": "According to the speaker, what can the listeners find on a Web site?<br>A. A city map<br>B. A list of vendors<br>C. A demonstration video<br>D. An entry form<br>Information:<br>If you're interested in participating, the contest registration form is available on the city's Web site.",
+                "key": ""
+              },
+              {
+                "title": "Look at the graphic. Which day is the event being held?",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/5a62ca6aa5b70d62656e449137fecf4a.mp3",
+                "img": "https://migiitoeic.eupgroup.net/uploads/image_ETS/e59704a24578cd6afcc3f58c8487ed4a.png",
+                "answers": [
+                  "Saturday",
+                  "Sunday",
+                  "Monday",
+                  "Tuesday"
+                ],
+                "trueAnswer":  "Sunday",
+                "explain": "Look at the graphic. Which day is the event being held?<br>A. Saturday<br>B. Sunday<br>C. Monday<br>D. Tuesday<br>Information:<br>Now, keep in mind we're expecting a cloudy day for this year's event. (Sunday is cloudy)",
+                "key": ""
+              },
+              {
+                "title": "What is the purpose of the call ?",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/43ff399af37a38ff11daf519f0fe5c1f.mp3",
+                "img": "https://migiitoeic.eupgroup.net/uploads/image_ETS/272d6de8b609dbfeb6c7b4ee7714876b.png",
+                "answers": [
+                  "To confirm a deadline",
+                  "To explain a company policy",
+                  "To make a job offer",
+                  "To discuss a new product"
+                ],
+                "trueAnswer":  "To make a job offer",
+                "explain": "What is the purpose of the call?<br>A. To confirm a deadline<br>B. To explain a company policy<br>C. To make a job offer<br>D. To discuss a new product<br>Information:<br>I'm calling because I'd like to hire you to discuss ways to make my company's database more secure.",
+                "key": ""
+              },
+              {
+                "title": "Look at the graphic. Who is the speaker calling?",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/43ff399af37a38ff11daf519f0fe5c1f.mp3",
+                "img": "https://migiitoeic.eupgroup.net/uploads/image_ETS/272d6de8b609dbfeb6c7b4ee7714876b.png",
+                "answers": [
+                  "Carla Wynn",
+                  "Jae-Ho Kim",
+                  "Kaori Aoki",
+                  "Alex Lehmann"
+                ],
+                "trueAnswer":  "Carla Wynn",
+                "explain": "Look at the graphic. Who is the speaker calling?<br>A. Carla Wynn<br>B. Jae-Ho Kim<br>C. Kaori Aoki<br>D. Alex Lehmann<br>Information:<br>I'd like to hire you to discuss ways to make my company's database more secure. I know you specialize in this type of work.",
+                "key": ""
+              },
+              {
+                "title": "What does the speaker ask the listener to do?",
+                "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/43ff399af37a38ff11daf519f0fe5c1f.mp3",
+                "img": "https://migiitoeic.eupgroup.net/uploads/image_ETS/272d6de8b609dbfeb6c7b4ee7714876b.png",
+                "answers": [
+                  "Check a catalog",
+                  "Send fee information",
+                  "Submit a travel itinerary",
+                  "Update a conference schedule"
+                ],
+                "trueAnswer":  "Send fee information",
+                "explain": "What does the speaker ask the listener to do?<br>A. Check a catalog<br>B. Send fee information<br>C. Submit a travel itinerary<br>D. Update a conference schedule<br>Information:<br>Could you please e-mail me a list of your consultant fees?",
+                "key": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Reading",
+        "contents": [
+          {
+            "type": "Incomplete Sentences",
+            "description": "In this part, a word or pharse is missing in each of the sentences below. Four answer choices are given below each sentence. Select the best answer to complete the sentence. Then mark the letter A, B, C or D on your answer sheet.",
+            "questions": [
+              {
+                "title": "Ms. Durkin asked for volunteers to help ____ with the employee fitness program",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "she",
+                  "her",
+                  "hers",
+                  "herself"
+                ],
+                "trueAnswer": "her",
+                "explain": "Ms. Durkin asked for volunteers to help her with the employee fitness program.<br>A. She: Subject<br>B. Her: Object or Possessive Adjective (+N)<br>C. Hers: Possessive Pronoun<br>D. Herself: Reflexive Pronoun<br>Explanation: Help (V) + her (O)",
+                "key": ""
+              },
+              {
+                "title": "Lasner Electronics' staff have extensive ____ of current hardware systems",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "know",
+                  "known",
+                  "knowledge",
+                  "knowledgeable"
+                ],
+                "trueAnswer": "knowledge",
+                "explain": "Lasner Electronics staff have extensive knowledge of current hardware systems.\nA. Know: Verb\nB. Known: Past Participle\nC. Knowledge: Noun</p><p>D. Knowledgeable: Adjective\nExplanation:\nExtensive (Adj) + Knowledge (N) =&gt; Noun Phrase",
+                "key": ""
+              },
+              {
+                "title": "____ a year, Tarrin Industrial Supply aud its the accounts of all of its factories",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "Once",
+                  "Immediately",
+                  "Directly",
+                  "Yet"
+                ],
+                "trueAnswer": "Once",
+                "explain": "Once a year, Tarrin Industrial Supply audits the accounts of all of its factories\nA. Once + time (month, year...)\nB. Immediately: without delay\nC. Directly\nD. Yet = but\nExplanation:\n\"Once a year\" makes sense, the others can stand alone.",
+                "key": ""
+              },
+              {
+                "title": "Ms. Pham requested a refund ____ the coffeemaker she received was damaged",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "despite",
+                  "why",
+                  "concerning",
+                  "because"
+                ],
+                "trueAnswer": "because",
+                "explain": "Ms. Pham requested a refund because the coffeemaker she received was damaged\nA. despite + Ving/N\nB. why: used in the question to ask\nC. concerning +N\nD. because +clause\nExplanation:\nBecause is the conjunction to connect cause-effect clauses\nClause 1: Ms. Pham requested a refund\nClause 2: the coffeemaker she received was damaged",
+                "key": ""
+              },
+              {
+                "title": "Information ____ the artwork in the lobby is available at the reception desk",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "across",
+                  "about",
+                  "upon",
+                  "except"
+                ],
+                "trueAnswer": "about",
+                "explain": "Information about the artwork in the lobby is available at the reception desk\nA. across\nB. about\nC. upon\nD. except",
+                "key": ""
+              },
+              {
+                "title": "With the Gema XTI binoculars, users can ____ see objects that are more than 100 meters away",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "ease",
+                  "easy",
+                  "easily",
+                  "easier"
+                ],
+                "trueAnswer": "easily",
+                "explain": "With the Gema XTI binoculars, users can easily see objects that are more than 100 meters away\nA. ease: Noun\nB. easy: Adj\nC. easily: Adv\nD. easier: Comparative form\nExplanation:\nUsers (N) + can + easily (Adv) + see (V)",
+                "key": ""
+              },
+              {
+                "title": "The Physical Therapy Association is committed to keeping costs ____ for its certification programs",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "affordable",
+                  "permitted",
+                  "cutting",
+                  "necessary"
+                ],
+                "trueAnswer": "affordable",
+                "explain": "The Physical Therapy Association is committed to keeping costs affordable for its certification programs\nA. affordable: cheap enough that people can afford to pay it or buy it\nB. permitted = allowed\nC. cutting\nD. necessary: essential, vital",
+                "key": ""
+              },
+              {
+                "title": "Mr. Brennel ____ positions in various areas of the company before he became president",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "occupation",
+                  "occupational",
+                  "occupying",
+                  "occupied"
+                ],
+                "trueAnswer": "occupied",
+                "explain": "Mr. Brennel occupied positions in various areas of the company before he became president\nA. Occupation: Noun\nB. Occupational: Adj\nC. Occupying: Ving\nD. Occupied: V (simple past)\nExplanation:\nMr. Brennel (S) + occupied (V) + positions in various areas (O)",
+                "key": ""
+              },
+              {
+                "title": "To remain on schedule, editors must submit all ____ to the book to the authors by Friday",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "ideas",
+                  "essays",
+                  "revisions",
+                  "suggestions"
+                ],
+                "trueAnswer": "revisions",
+                "explain": "To remain on schedule, editors must submit all revisions to the book to the authors by Friday\nA. Ideas (of/about/for sth): a plan or thought, especially about what to do in a particular situation\nB. Essays (on/about sth): a short piece of writing by a student as part of a course of study\nC. Revisions (to sth): a change or set of changes to something\nD. Suggestions (on/about sth):an idea or a plan that you mention for somebody else to think about",
+                "key": ""
+              },
+              {
+                "title": "____ industry professionals are allowed to purchase tickets to the Kuo Photography Fair",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "Only",
+                  "Until",
+                  "Unless",
+                  "Quite"
+                ],
+                "trueAnswer": "Only",
+                "explain": "Only industry professionals are allowed to purchase tickets to the Kuo Photography Fair\nA. only\nB. until\nC. unless\nD. quite",
+                "key": ""
+              },
+              {
+                "title": "At Pharmbeck's banquet, Mr. Jones ____ a trophy for his performance in this year's quality-improvement initiative",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "accepted",
+                  "congratulated",
+                  "nominated",
+                  "hoped"
+                ],
+                "trueAnswer": "accepted",
+                "explain": "At Pharmbeck's banquet, Mr. Jones accepted a trophy for his performance in this year's quality-improvement initiative\nA. accepted: to take willingly something that is offered\nB. congratulated: to tell somebody that you are pleased about their success or achievements\nC. nominated: to formally suggest that somebody/something should be chosen for an important role, prize, position\nD. hoped: to want something to happen and think that it is possible",
+                "key": ""
+              },
+              {
+                "title": "Ms. Suto claims that important market trends become ____ with the use of data analysis",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "predict",
+                  "prediction",
+                  "predictable",
+                  "predictably"
+                ],
+                "trueAnswer": "predictable",
+                "explain": "Ms. Suto claims that important market trends become predictable with the use of data analysis\nA. predict: Verb\nB. prediction: Noun\nC. predictable: Adj\nD. predictably: Adv\nExplanation:\nbecome + Adj\n",
+                "key": ""
+              },
+              {
+                "title": "One of Grommer Consulting's goals is to enhance the relationship ____ salespeople and their customers",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "inside",
+                  "within",
+                  "around",
+                  "between"
+                ],
+                "trueAnswer": "between",
+                "explain": "One of Groomer Consulting's goals is to enhance the relationship between salespeople and their customers\nA. inside\nB. within\nC. around\nD. between\nExplanation:\nrelationship between A and B",
+                "key": ""
+              },
+              {
+                "title": "Depending on your answers to the survey, we ____ you to collect additional information",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "may call",
+                  "are calling",
+                  "have been called",
+                  "must be calling"
+                ],
+                "trueAnswer": "may call",
+                "explain": "Depending on your answers to the survey, we may call you to collect additional information\nA. may call\nB. are calling\nC. have been called\nD. must be calling\nExplanation:\n\"may\" describes sth likely to happen",
+                "key": ""
+              },
+              {
+                "title": "____ Jemburger opened its newest franchise, the first 100 customers were given free hamburgers",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "Now",
+                  "When",
+                  "As if",
+                  "After all"
+                ],
+                "trueAnswer": "When",
+                "explain": "When Jemburger opened its newest franchise, the first 100 customers were given free hamburgers\nA. Now\nB. When\nC. As if\nD. After all",
+                "key": ""
+              },
+              {
+                "title": "Please include the serial number of your product in any ____ with the customer service department",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "corresponds",
+                  "correspondence",
+                  "correspondingly",
+                  "correspondent"
+                ],
+                "trueAnswer": "correspondence",
+                "explain": "Please include the serial number of your product in any correspondence with the customer service department\nA. corresponds: Verb\nB. correspondence: Noun\nC. correspondingly: Adv\nD. correspondent: Adj\nExplanation:\nAny + N (correspondence)",
+                "key": ""
+              },
+              {
+                "title": "The award-winning film UnderWater Secrets promotes awareness ____ ocean pollution and its effects on our planet",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "of",
+                  "to",
+                  "from",
+                  "with"
+                ],
+                "trueAnswer": "of",
+                "explain": "The award-winning film UnderWater Secrets promotes awareness of ocean pollution and its effects on our planet\nA. of\nB. to\nC. from\nD. with\nExplanation:\nCollocation: awareness of sth",
+                "key": ""
+              },
+              {
+                "title": "BYF Company specializes in ____ promotional items to help companies advertise their brand",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "personally",
+                  "personalized",
+                  "personality",
+                  "personalizes"
+                ],
+                "trueAnswer": "personalized",
+                "explain": "BYF Company specializes in personalized promotional items to help companies advertise their brand\nA. personally: Adv\nB. personalized: Adj\nC. personality: Noun\nD. personalizes: Verb\nExplanation:\nThe blank can be filled with an adj or an adv, but the adv \"personally\" is not suitable in this context",
+                "key": ""
+              },
+              {
+                "title": "____ the rent increase is less than 2 percent, Selwin Electrical Supply will continue to lease the space",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "As long as",
+                  "Along with",
+                  "Not only",
+                  "Otherwise"
+                ],
+                "trueAnswer": "As long as",
+                "explain": "As long as the rent increase is less than 2 percent, Selwin Electrical Supply will continue to lease the space\nA. As long as + clause\nB. Along with +N\nC. Not only (... but also)\nD. Otherwise + clause",
+                "key": ""
+              },
+              {
+                "title": "Belden Hospital's chief of staff meets regularly with the staff to ensure that procedures ____ correctly",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "to be performed",
+                  "would have performed",
+                  "had been performed",
+                  "are being performed"
+                ],
+                "trueAnswer": "are being performed",
+                "explain": "Belden Hospital's chief of staff meets regularly with the staff to ensure that procedures are being performed correctly\nA. To be performed\nB. would have performed: want to do but did not do\nC. had been performed: done\nD. are being performed: still going on\nExplanation:\nThe action of performing the procedures are happening in the present",
+                "key": ""
+              },
+              {
+                "title": "Any requests for time off should be addressed to the ____ department supervisor",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "urgent",
+                  "appropriate",
+                  "subsequent",
+                  "deliverable"
+                ],
+                "trueAnswer": "appropriate",
+                "explain": "Any requests for time off should be addressed to the appropriate department supervisor\nA. urgent: that needs to be dealt with or happen immediately\nB. appropriate: suitable\nC. subsequent: happening or coming after something else\nD. deliverable",
+                "key": ""
+              },
+              {
+                "title": "World Fish Supply delivers the freshest fish possible thanks to innovative ____ and shipping methods",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "preserves",
+                  "preserved",
+                  "preserve",
+                  "preservation"
+                ],
+                "trueAnswer": "preservation",
+                "explain": "World Fish Supply delivers the freshest fish possible thanks to innovative preservation and shipping methods\nA. preserves: V (present simple)\nB. preserved: V (past simple)\nC. preserve: V-infinitive\nD. preservation: Noun\nExplanation:\nThanks to + Noun",
+                "key": ""
+              },
+              {
+                "title": "Company executives are currently reviewing the annual budget ____ submitted to them by the Financial Planning department",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "requirements",
+                  "deliveries",
+                  "developers",
+                  "qualities"
+                ],
+                "trueAnswer": "requirements",
+                "explain": "Company executives are currently reviewing the annual budget requirements submitted to them by the Financial Planning department\nA. requirements\nB. deliveries\nC. developers\nD. qualities",
+                "key": ""
+              },
+              {
+                "title": "Even the CEO had to admit that Prasma Designs' win was ____ the result of fortunate timing",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "parts",
+                  "parted",
+                  "partly",
+                  "parting"
+                ],
+                "trueAnswer": "partly",
+                "explain": "Even the CEO had to admit that Prasma Designs' win was partly the result of fortunate timing\nA. part: Noun\nB. parted: Adj\nC. partly: Adv\nD. parting: Noun (the act or occasion of leaving a person or place)",
+                "key": ""
+              },
+              {
+                "title": "Mr. Singh took notes on ____ the focus group discussed during the morning session",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "each",
+                  "several",
+                  "another",
+                  "everything"
+                ],
+                "trueAnswer": "everything",
+                "explain": "Mr. Singh took notes on everything the focus group discussed during the morning session\nA. each + singular N\nB. several + plural N\nC. another + singular N\nD. everything",
+                "key": ""
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "time": 120,
+    "isUnlock": true
+  },
+  {
+    "title": "Đề thứ 2",
+    "questions": [
+      {
+        "id": 0,
+        "title": "Tiêu đề của câu hỏi thứ 6",
+        "media": "R.raw.listen1",
+        "img": "",
+        "answers": [
+          "Đáp án thứ 6",
+          "Đáp án thứ 7",
+          "Đáp án thứ 8",
+          "Đáp án thứ 9"
+        ],
+        "trueAnswer": "Đáp án thứ 7",
+        "explain": "Giải thích cho câu thứ 6",
+        "key": "Key của đáp án thứ 6"
+      },
+      {
+        "id": 1,
+        "title": "Tiêu đề của câu hỏi thứ 7",
+        "media": "R.raw.listen2",
+        "img": "",
+        "answers": [
+          "Đáp án thứ 6",
+          "Đáp án thứ 7",
+          "Đáp án thứ 8"
+        ],
+        "trueAnswer": "Đáp án thứ 8",
+        "explain": "Giải thích cho câu thứ 7",
+        "key": "Key của đáp án thứ 7"
+      },
+      {
+        "id": 2,
+        "title": "Tiêu đề của câu hỏi thứ 8",
+        "media": "R.raw.listen3",
+        "img": "",
+        "answers": [
+          "Đáp án thứ 6",
+          "Đáp án thứ 7",
+          "Đáp án thứ 8",
+          "Đáp án thứ 9"
+        ],
+        "trueAnswer": "Đáp án thứ 9",
+        "explain": "Giải thích cho câu thứ 8",
+        "key": "Key của đáp án thứ 8"
+      },
+      {
+        "id": 3,
+        "title": "Tiêu đề của câu hỏi thứ 9",
+        "media": "R.raw.listen4",
+        "img": "",
+        "answers": [
+          "Đáp án thứ 6",
+          "Đáp án thứ 7",
+          "Đáp án thứ 8",
+          "Đáp án thứ 9"
+        ],
+        "trueAnswer": "Đáp án thứ 6",
+        "explain": "Giải thích cho câu thứ 9",
+        "key": "Key của đáp án thứ 9"
+      },
+      {
+        "id": 4,
+        "title": "Tiêu đề của câu hỏi thứ 10",
+        "media": "R.raw.listen5",
+        "img": "",
+        "answers": [
+          "Đáp án thứ 6",
+          "Đáp án thứ 7",
+          "Đáp án thứ 8",
+          "Đáp án thứ 9"
+        ],
+        "trueAnswer": "Đáp án thứ 7",
+        "explain": "Giải thích cho câu thứ 7",
+        "key": "Key của đáp án thứ 7"
+      }
+    ],
+    "time": 200,
+    "isUnlock": false
+  }
+]

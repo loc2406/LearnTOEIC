@@ -1,0 +1,32 @@
+package com.locnguyen.toeicexercises.adapter
+
+import android.os.Bundle
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentActivity
+import androidx.viewpager2.adapter.FragmentStateAdapter
+import com.locnguyen.toeicexercises.R
+import com.locnguyen.toeicexercises.fragment.exam.QuestionDetailFragment
+import com.locnguyen.toeicexercises.model.ExamPart
+import com.locnguyen.toeicexercises.model.ExamPartContent
+import com.locnguyen.toeicexercises.model.Question
+
+class ExamQuestionsAdapter(private val fm: FragmentActivity, private var allQuestions: List<Pair<String, Question>>): FragmentStateAdapter(fm){
+
+    override fun getItemCount(): Int {
+        return allQuestions.size
+    }
+
+    override fun createFragment(position: Int): Fragment {
+        return QuestionDetailFragment().apply {
+            arguments = Bundle().apply {
+                putParcelable("QUESTION", allQuestions[position].second)
+                putInt("POSITION", position)
+            }
+        }
+    }
+
+    fun removeAllQuestions(){
+        allQuestions = emptyList()
+        notifyDataSetChanged()
+    }
+}

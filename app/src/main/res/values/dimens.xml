@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="big_title">22sp</dimen>
+    <dimen name="medium_title">18sp</dimen>
+    <dimen name="small_title">16sp</dimen>
+    <dimen name="big_content">18sp</dimen>
+    <dimen name="medium_content">16sp</dimen>
+    <dimen name="small_content">14sp</dimen>
+    <dimen name="smaller_content">12sp</dimen>
+    <dimen name="smallest_content">11sp</dimen>
+    <dimen name="exam_score">40sp</dimen>
+</resources>
