@@ -8,6 +8,7 @@ import android.graphics.Color.WHITE
 import android.graphics.drawable.Drawable
 import android.media.AudioManager
 import android.media.MediaPlayer
+import android.media.MediaPlayer.OnSeekCompleteListener
 import android.os.Build
 import android.os.Bundle
 import android.os.Handler
@@ -18,8 +19,10 @@ import android.view.View.GONE
 import android.view.View.VISIBLE
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.content.res.AppCompatResources
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.MediatorLiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModelProvider
@@ -36,7 +39,7 @@ import com.locnguyen.toeicexercises.utils.GlobalHelper
 import com.locnguyen.toeicexercises.viewmodel.ExamVM
 import java.util.Locale
 
-class QuestionDetailFragment : BaseFragment("QuestionDetailFragment") {
+class QuestionDetailFragment : Fragment(), Runnable {
     private lateinit var binding: QuestionDetailFragmentBinding
     private lateinit var question: Question
     private lateinit var answerViews: List<TextView>
@@ -78,7 +81,6 @@ class QuestionDetailFragment : BaseFragment("QuestionDetailFragment") {
         return binding.root
     }
 
-    @RequiresApi(Build.VERSION_CODES.O)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         question = getQuestionFromArgument() ?: Question()
@@ -178,11 +180,7 @@ class QuestionDetailFragment : BaseFragment("QuestionDetailFragment") {
                     currentMediaState.value = MediaState.PREPARED
 
                     totalMediaSeconds = mediaPlayer.duration / 1000
-                    binding.mediaTime.text = requireContext().getString(
-                        R.string.Media_time_regex,
-                        getMediaTime(currentSecondsPlayed / 60, currentSecondsPlayed % 60),
-                        getMediaTime(totalMediaSeconds / 60, totalMediaSeconds % 60)
-                    )
+                    updateMediaTime(currentSecondsPlayed/60, currentSecondsPlayed%60, totalMediaSeconds/60, totalMediaSeconds%60)
                     binding.mediaProgress.max = totalMediaSeconds
                 }
             } catch (e: Exception) {
@@ -198,10 +196,10 @@ class QuestionDetailFragment : BaseFragment("QuestionDetailFragment") {
             binding.icControlMedia.setOnClickListener {
                 when (currentMediaState.value) {
                     MediaState.STARTED -> currentMediaState.value = MediaState.PAUSED
-                    MediaState.PAUSED, MediaState.PREPARED -> currentMediaState.value =
-                        MediaState.STARTED
+                    MediaState.PAUSED, MediaState.PREPARED -> currentMediaState.value = MediaState.STARTED
 
                     MediaState.STOPPED -> {
+                        stopMediaPlayer()
                         currentSecondsPlayed = 0
                         binding.mediaProgress.progress = 0
                         loadAudioSuccess.value = false
@@ -212,31 +210,19 @@ class QuestionDetailFragment : BaseFragment("QuestionDetailFragment") {
                 }
             }
 
-            handler.postDelayed(object : Runnable {
-                override fun run() {
-                    if (currentMediaState.value == MediaState.STARTED) {
-                        val totalPlayed = currentSecondsPlayed
-                        val minutesPlayed = totalPlayed / 60
-                        val secondsPlayed = totalPlayed % 60
-
-                        binding.mediaTime.text = requireContext().getString(
-                            R.string.Media_time_regex,
-                            getMediaTime(minutesPlayed, secondsPlayed),
-                            getMediaTime(totalMediaSeconds / 60, totalMediaSeconds % 60)
-                        )
-                        binding.mediaProgress.progress = mediaPlayer.currentPosition / 1000
-
-                        currentSecondsPlayed += 1
-                    }
-
-                    handler.postDelayed(this, 1000)
-                }
-            }, 0)
-
             mediaPlayer.setOnCompletionListener {
-                binding.mediaProgress.progress = binding.mediaProgress.max
                 currentMediaState.value = MediaState.PLAYBACK_COMPLETED
             }
+        }
+    }
+
+    private fun updateMediaTime(minutesPlayed: Int, secondsPlayed: Int, totalMinutes: Int, totalSeconds: Int){
+        binding.mediaTime.post {
+            binding.mediaTime.text = requireContext().getString(
+                R.string.Media_time_regex,
+                getMediaTime(minutesPlayed, secondsPlayed),
+                getMediaTime(totalMinutes, totalSeconds)
+            )
         }
     }
 
@@ -262,12 +248,11 @@ class QuestionDetailFragment : BaseFragment("QuestionDetailFragment") {
 
                 MediaState.PAUSED -> {
                     binding.icControlMedia.setImageResource(R.drawable.ic_play)
-                    mediaPlayer.pause()
+                    pauseMediaPlayer()
                 }
 
                 MediaState.PLAYBACK_COMPLETED -> {
                     binding.icControlMedia.setImageResource(R.drawable.ic_repeat)
-                    mediaPlayer.stop()
                     currentMediaState.value = MediaState.STOPPED
                 }
 
@@ -298,6 +283,17 @@ class QuestionDetailFragment : BaseFragment("QuestionDetailFragment") {
 
     private fun startMediaPlayer() {
         mediaPlayer.start()
+        handler.post(this)
+    }
+
+    private fun pauseMediaPlayer(){
+        mediaPlayer.pause()
+        handler.removeCallbacks(this)
+    }
+
+    private fun stopMediaPlayer(){
+        mediaPlayer.stop()
+        handler.removeCallbacks(this)
     }
 
     private fun checkUserAnsweredBefore() {
@@ -347,5 +343,19 @@ class QuestionDetailFragment : BaseFragment("QuestionDetailFragment") {
             mediaPlayer.stop()
         }
         mediaPlayer.release()
+    }
+
+    override fun run() {
+        val totalPlayed = currentSecondsPlayed
+        val minutesPlayed = totalPlayed / 60
+        val secondsPlayed = totalPlayed % 60
+
+        updateMediaTime(minutesPlayed, secondsPlayed, totalMediaSeconds/60, totalMediaSeconds%60)
+        binding.mediaProgress.progress = totalPlayed
+
+        if (currentSecondsPlayed < totalMediaSeconds){
+            currentSecondsPlayed += 1
+            handler.postDelayed(this, 1000)
+        }
     }
 }

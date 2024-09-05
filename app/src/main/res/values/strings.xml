@@ -67,4 +67,5 @@
     <string name="Title">Tiêu đề</string>
     <string name="Explain_title">Giải thích:</string>
     <string name="Key_title">Từ khóa:</string>
+    <string name="Default_time">00:00:00</string>
 </resources>

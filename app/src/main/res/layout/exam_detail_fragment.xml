@@ -95,7 +95,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@id/ic_clock"
                     app:layout_constraintTop_toTopOf="parent"
-                    tool:text="00:00:00" />
+                    android:text="@string/Default_time" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

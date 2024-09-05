@@ -216,6 +216,7 @@ class DialogHelper(private val context: Context) {
 
             setCustomTitle(titleView)
             setView(contentView)
+            setCancelable(false)
             setPositiveButton("Đã hiểu") { dialog, _ ->
                 positiveAction?.invoke()
                 dialog.dismiss()

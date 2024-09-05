@@ -97,7 +97,7 @@
           },
           {
             "type": "Question Response",
-            "description": "Int this part, you will hear a question or statement spoken in English, followed by three responses, also spoken in English. The question or statement and the responses will be spoken just one time and didn't display on device, so you must listen carefully. You are to choose the best response to each question or statement in order to A, B, C.",
+            "description": "In this part, you will hear a question or statement spoken in English, followed by three responses, also spoken in English. The question or statement and the responses will be spoken just one time and didn't display on device, so you must listen carefully. You are to choose the best response to each question or statement in order to A, B, C.",
             "questions": [
               {
                 "title": "Select the correct answer",
@@ -136,7 +136,7 @@
                 ],
                 "trueAnswer": "You're right - it was only an hour!",
                 "explain": "That was a short movie, wasn't it?<br>A. The theater on Glenn Road<br>B. You're right - it was only an hour!<br>C. I must have misplaced it",
-                "key": "wasn't it? right, an hour"
+                "key": "wasn't it?, right, an hour"
               },
               {
                 "title": "Select the correct answer",

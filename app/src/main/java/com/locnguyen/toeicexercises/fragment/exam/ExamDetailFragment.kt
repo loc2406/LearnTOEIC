@@ -2,6 +2,7 @@ package com.locnguyen.toeicexercises.fragment.exam
 
 import android.os.Bundle
 import android.os.CountDownTimer
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -89,6 +90,7 @@ class ExamDetailFragment: BaseFragment("ExamDetailFragment") {
                     val quesPart = allQuestions[position].first
                     val isNewPart = (quesPart != currentPart)
 
+                    // Chỉ hiển thị hộp thoại hướng dẫn khi chuyển sang câu tiếp theo phía sau
                     if (isNewPart){
                         pauseCountDown()
 
