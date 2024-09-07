@@ -1,11 +1,10 @@
 package com.locnguyen.toeicexercises.viewmodel
 
 import android.content.Context
-import android.os.Build
-import android.util.Log
-import android.widget.Toast
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.locnguyen.toeicexercises.R
+import com.locnguyen.toeicexercises.model.Exam
 import com.locnguyen.toeicexercises.model.Question
 import java.io.BufferedReader
 import java.io.IOException
@@ -230,4 +229,19 @@ class ExamVM : ViewModel() {
         return score
     }
 
+    fun getAllQuestionsFollowEachPart(context: Context, exam: Exam): List<Pair<String, Question>> {
+        val allQuestions = ArrayList<Pair<String, Question>>()
+
+        exam.parts.forEach { part ->
+            part.contents.forEach { content ->
+                val quesKey = context.getString(R.string.Exam_instruction_content_regex, part.title.uppercase(), content.type.uppercase(), content.description)
+
+                content.questions.forEach { question ->
+                    allQuestions.add(Pair(quesKey, question))
+                }
+            }
+        }
+
+        return allQuestions
+    }
 }

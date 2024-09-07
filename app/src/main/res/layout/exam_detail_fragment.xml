@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout>
+
     <data>
         <variable
             name="examVM"
             type="com.locnguyen.toeicexercises.viewmodel.ExamVM" />
-        <import type="android.view.View"/>
+
+        <import type="android.view.View" />
     </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tool="http://schemas.android.com/tools"
@@ -29,7 +32,7 @@
                 android:layout_height="24dp"
                 android:contentDescription="@string/Back"
                 android:scaleType="centerInside"
-                android:src="@drawable/ic_arrow_left_white"
+                android:src="@drawable/ic_back_white"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -61,13 +64,13 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/clock_space"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 android:background="@drawable/bg_white_rectangle_no_stroke_20dp_corners"
                 android:paddingHorizontal="15dp"
                 android:paddingVertical="10dp"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/order_question_space"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/title">
 
@@ -84,18 +87,17 @@
 
                 <TextView
                     android:id="@+id/time_remaining"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="10dp"
                     android:fontFamily="@font/tinos_bold"
                     android:gravity="center_vertical"
+                    android:text="@string/Default_time"
                     android:textColor="@color/black"
                     android:textSize="@dimen/small_content"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@id/ic_clock"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:text="@string/Default_time" />
+                    app:layout_constraintTop_toTopOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -103,13 +105,13 @@
                 android:id="@+id/order_question_space"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
                 android:background="@drawable/bg_white_rectangle_no_stroke_20dp_corners"
                 android:paddingHorizontal="15dp"
                 android:paddingVertical="10dp"
+                android:layout_marginStart="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/clock_space">
+                app:layout_constraintStart_toEndOf="@id/clock_space"
+                app:layout_constraintTop_toTopOf="@id/clock_space">
 
                 <ImageView
                     android:id="@+id/ic_previous_question"
@@ -148,7 +150,7 @@
                     app:layout_constraintEnd_toStartOf="@id/ic_next_question"
                     app:layout_constraintStart_toEndOf="@id/ic_previous_question"
                     app:layout_constraintTop_toTopOf="parent"
-                    tool:text="Câu 1 trong 256 câu" />
+                    tool:text="1/200" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

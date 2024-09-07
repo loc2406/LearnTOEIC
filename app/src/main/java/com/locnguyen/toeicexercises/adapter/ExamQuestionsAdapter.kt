@@ -18,9 +18,16 @@ class ExamQuestionsAdapter(private val fm: FragmentActivity, private var allQues
 
     override fun createFragment(position: Int): Fragment {
         return QuestionDetailFragment().apply {
+            val isShowAnswer: Boolean = when{
+                allQuestions[position].first.contains("Picture Description", true) ||
+                        allQuestions[position].first.contains("Question Response", true) -> false
+                else -> true
+            }
+
             arguments = Bundle().apply {
                 putParcelable("QUESTION", allQuestions[position].second)
                 putInt("POSITION", position)
+                putBoolean("IS_SHOW_ANSWER", isShowAnswer)
             }
         }
     }

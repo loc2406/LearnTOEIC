@@ -6,7 +6,9 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.activity.OnBackPressedCallback
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
@@ -19,12 +21,13 @@ import com.locnguyen.toeicexercises.fragment.BaseFragment
 import com.locnguyen.toeicexercises.model.Exam
 import com.locnguyen.toeicexercises.model.Question
 import com.locnguyen.toeicexercises.utils.DialogHelper
+import com.locnguyen.toeicexercises.utils.toastMessage
 import com.locnguyen.toeicexercises.viewmodel.ExamVM
 import com.locnguyen.toeicexercises.viewmodel.MainVM
 import java.util.Locale
 import kotlin.properties.Delegates
 
-class ExamDetailFragment: BaseFragment("ExamDetailFragment") {
+class ExamDetailFragment: Fragment() {
 
     private lateinit var binding: ExamDetailFragmentBinding
     private lateinit var exam: Exam
@@ -67,7 +70,7 @@ class ExamDetailFragment: BaseFragment("ExamDetailFragment") {
             }
         }
 
-        allQuestions = getAllQuestions()
+        allQuestions = examVM.getAllQuestionsFollowEachPart(requireContext(), exam)
 
         examQuestionAdapter = ExamQuestionsAdapter(requireActivity(), allQuestions)
 
@@ -82,28 +85,29 @@ class ExamDetailFragment: BaseFragment("ExamDetailFragment") {
         binding.title.text = exam.title
         binding.questions.apply {
             adapter = examQuestionAdapter
+            registerOnPageChangeCallback(handleQuestionChangeCallback())
+        }
+    }
 
-            registerOnPageChangeCallback(object: ViewPager2.OnPageChangeCallback(){
-                override fun onPageSelected(position: Int) {
-                    super.onPageSelected(position)
+    private fun handleQuestionChangeCallback() = object: ViewPager2.OnPageChangeCallback(){
+        override fun onPageSelected(position: Int) {
+            super.onPageSelected(position)
 
-                    val quesPart = allQuestions[position].first
-                    val isNewPart = (quesPart != currentPart)
+            val quesPart = allQuestions[position].first
+            val isNewPart = (quesPart != currentPart)
 
-                    // Chỉ hiển thị hộp thoại hướng dẫn khi chuyển sang câu tiếp theo phía sau
-                    if (isNewPart){
-                        pauseCountDown()
+            // Chỉ hiển thị hộp thoại hướng dẫn khi chuyển sang câu tiếp theo phía sau
+            if (isNewPart && (position > examVM.currentQuestion.value!! || position == 0)){
+                pauseCountDown()
 
-                        DialogHelper(requireContext()).getExamInstructionDialog(allQuestions[position].first) {
-                            startCountDown()
-                            currentPart = quesPart
-                        }.show()
-                    }
+                DialogHelper(requireContext()).getExamInstructionDialog(allQuestions[position].first) {
+                    startCountDown()
+                    currentPart = quesPart
+                }.show()
+            }
 
-                    binding.orderQuestion.text = requireContext().getString(R.string.Order_question_in_list_question_regex, position+1, examVM.examQuestions.size)
-                    examVM.currentQuestion.value = position
-                }
-            })
+            binding.orderQuestion.text = requireContext().getString(R.string.Order_question_in_list_question_regex, position+1, examVM.examQuestions.size)
+            examVM.currentQuestion.value = position
         }
     }
 
@@ -166,13 +170,20 @@ class ExamDetailFragment: BaseFragment("ExamDetailFragment") {
         dialogHelper.getFinishedExamDialog(null) {
             examVM.calculateExamScore()
             examQuestionAdapter.removeAllQuestions()
+            binding.questions.apply {
+                adapter = null
+                unregisterOnPageChangeCallback(handleQuestionChangeCallback())
+            }
             navController.navigate(R.id.action_examDetailFragment_to_examScoreFragment)
         }.show()
     }
 
     private fun handlePressedBack(){
         navController.popBackStack()
-        binding.questions.adapter = null
+        binding.questions.apply {
+            adapter = null
+            unregisterOnPageChangeCallback(handleQuestionChangeCallback())
+        }
         mainVM.itemExamClicked.value = null
         examVM.apply {
             examQuestions.clear()
@@ -181,21 +192,5 @@ class ExamDetailFragment: BaseFragment("ExamDetailFragment") {
             readCorrectAnswers = emptyList()
             answerCorrect.clear()
         }
-    }
-
-    private fun getAllQuestions(): List<Pair<String, Question>> {
-        val allQuestions = ArrayList<Pair<String, Question>>()
-
-        exam.parts.forEach { part ->
-            part.contents.forEach { content ->
-                val quesKey = requireContext().getString(R.string.Exam_instruction_content_regex, part.title.uppercase(), content.type.uppercase(), content.description)
-
-                content.questions.forEach { question ->
-                    allQuestions.add(Pair(quesKey, question))
-                }
-            }
-        }
-
-        return allQuestions
     }
 }

@@ -47,3 +47,7 @@ fun Context.isHasNetWork(): Boolean {
 fun Context.toastMessage(@StringRes stringRes: Int, duration: Int = Toast.LENGTH_SHORT) {
     Toast.makeText(this, stringRes, duration).show()
 }
+
+fun Int.pxToDp(context: Context): Int {
+    return (this * GlobalHelper(context).density).toInt()
+}

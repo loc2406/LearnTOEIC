@@ -64,23 +64,23 @@ class ExamAnswerAdapter(
             if (trueAnswerIndex == userAnswerIndex) {
                 answerCharViews[trueAnswerIndex].apply {
                     setTextColor(Color.WHITE)
-                    background = AppCompatResources.getDrawable(context, R.drawable.bg_true_answer)
+                    background = AppCompatResources.getDrawable(context, R.drawable.bg_circle_true_answer)
                 }
             } else {
                 answerCharViews[userAnswerIndex].apply {
                     setTextColor(Color.WHITE)
-                    background = AppCompatResources.getDrawable(context, R.drawable.bg_false_answer)
+                    background = AppCompatResources.getDrawable(context, R.drawable.bg_circle_false_answer)
                 }
 
                 answerCharViews[trueAnswerIndex].apply {
                     setTextColor(Color.WHITE)
-                    background = AppCompatResources.getDrawable(context, R.drawable.bg_true_answer)
+                    background = AppCompatResources.getDrawable(context, R.drawable.bg_circle_true_answer)
                 }
             }
         } else {
             answerCharViews[trueAnswerIndex].apply {
                 setTextColor(Color.WHITE)
-                background = AppCompatResources.getDrawable(context, R.drawable.bg_true_answer)
+                background = AppCompatResources.getDrawable(context, R.drawable.bg_circle_true_answer)
             }
         }
 

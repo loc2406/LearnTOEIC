@@ -37,7 +37,8 @@
     <string name="Media_time_regex">%s / %s</string>
     <string name="Question_img">Ảnh câu hỏi</string>
     <string name="Question_title_regex">%d. %s</string>
-    <string name="Question_answer_regex">%s. %s</string>
+    <string name="Question_answer_with_content_regex">%s. %s</string>
+    <string name="Question_answer_no_content_regex">%s</string>
     <string name="db_name">vi.db</string>
     <string name="User_finished_exam_title">Nộp bài thi?</string>
     <string name="User_finished_exam_content">Bạn có chắc muốn nộp bài chứ? Bạn sẽ không thể làm bài tiếp sau khi đã nộp!</string>
@@ -59,7 +60,7 @@
     <string name="Answer">Đáp án</string>
     <string name="message_is_not_supported_text_to_speech">Ngôn ngữ không hỗ trợ! Vui lòng kết nối mạng rồi thử lại!</string>
     <string name="Question">Câu hỏi</string>
-    <string name="Order_question_in_list_question_regex">Câu %d trong %d câu</string>
+    <string name="Order_question_in_list_question_regex">%d / %d</string>
     <string name="Permissions_allowed">Cấp quyền thành công!</string>
     <string name="Permissions_denied">Cấp quyền thất bại!</string>
     <string name="Exam_instruction_title">Hướng dẫn làm bài</string>

@@ -1,27 +1,24 @@
 package com.locnguyen.toeicexercises.fragment.exam
 
 import android.app.Dialog
-import android.content.Context
-import android.content.Intent
 import android.graphics.Color.BLACK
 import android.graphics.Color.WHITE
 import android.graphics.drawable.Drawable
-import android.media.AudioManager
 import android.media.MediaPlayer
-import android.media.MediaPlayer.OnSeekCompleteListener
 import android.os.Build
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.View.GONE
 import android.view.View.VISIBLE
 import android.view.ViewGroup
 import android.widget.TextView
-import android.widget.Toast
-import androidx.annotation.RequiresApi
 import androidx.appcompat.content.res.AppCompatResources
+import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.MediatorLiveData
 import androidx.lifecycle.MutableLiveData
@@ -32,18 +29,20 @@ import com.bumptech.glide.request.RequestListener
 import com.bumptech.glide.request.target.Target
 import com.locnguyen.toeicexercises.R
 import com.locnguyen.toeicexercises.databinding.QuestionDetailFragmentBinding
-import com.locnguyen.toeicexercises.fragment.BaseFragment
 import com.locnguyen.toeicexercises.model.Question
 import com.locnguyen.toeicexercises.utils.DialogHelper
 import com.locnguyen.toeicexercises.utils.GlobalHelper
+import com.locnguyen.toeicexercises.utils.pxToDp
 import com.locnguyen.toeicexercises.viewmodel.ExamVM
 import java.util.Locale
+import kotlin.properties.Delegates
 
 class QuestionDetailFragment : Fragment(), Runnable {
     private lateinit var binding: QuestionDetailFragmentBinding
     private lateinit var question: Question
     private lateinit var answerViews: List<TextView>
     private lateinit var examVM: ExamVM
+    private var isShowAnswer by Delegates.notNull<Boolean>()
 
     private var questionPosition: Int = -1
     private var currentSecondsPlayed: Int = 0
@@ -69,7 +68,7 @@ class QuestionDetailFragment : Fragment(), Runnable {
     private val userAnswer: MutableLiveData<TextView> = MutableLiveData()
 
     enum class MediaState {
-        IDLE, INITIALIZED, PREPARED, STARTED, PAUSED, STOPPED, PLAYBACK_COMPLETED
+        IDLE, INITIALIZED, PREPARED, STARTED, PAUSED, PLAYBACK_COMPLETED, STOPPED
     }
 
     override fun onCreateView(
@@ -83,14 +82,18 @@ class QuestionDetailFragment : Fragment(), Runnable {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         question = getQuestionFromArgument() ?: Question()
-        questionPosition = arguments?.getInt("POSITION", -1) ?: -1
+        questionPosition = arguments?.getInt("POSITION") ?: -1
+        isShowAnswer = arguments?.getBoolean("IS_SHOW_ANSWER") ?: false
+
         answerViews = listOf(
             binding.firstAnswer,
             binding.secondAnswer,
             binding.thirdAnswer,
             binding.fourthAnswer
         )
+
         examVM = ViewModelProvider(requireActivity())[ExamVM::class.java]
 
         initViews()
@@ -107,7 +110,9 @@ class QuestionDetailFragment : Fragment(), Runnable {
     }
 
     private fun initViews() {
-        setMedia()
+        initMedia()
+        initAnswerViews()
+        initAnswerContents()
 
         binding.title.text = requireContext().getString(
             R.string.Question_title_regex,
@@ -147,27 +152,10 @@ class QuestionDetailFragment : Fragment(), Runnable {
                 })
         }
 
-        val answersChar = listOf("A", "B", "C", "D")
-        for (i in question.answers.indices) {
-            answerViews[i].apply {
-                text = requireContext().getString(
-                    R.string.Question_answer_regex,
-                    answersChar[i],
-                    question.answers[i]
-                )
-
-                visibility = VISIBLE
-
-                setOnClickListener {
-                    userAnswer.value = this
-                }
-            }
-        }
-
         checkUserAnsweredBefore()
     }
 
-    private fun setMedia() {
+    private fun initMedia() {
         if (question.media.isNotEmpty()) {
             try {
                 binding.mediaProgress.isEnabled = false
@@ -188,7 +176,169 @@ class QuestionDetailFragment : Fragment(), Runnable {
             }
         } else {
             binding.mediaSpace.visibility = GONE
+            loadAudioSuccess.value = true
         }
+    }
+
+    private fun initAnswerViews(){
+        if (isShowAnswer){
+            binding.firstAnswer.apply {
+                layoutParams = ConstraintLayout.LayoutParams(
+                    0,
+                    ConstraintLayout.LayoutParams.WRAP_CONTENT
+                ).apply {
+                    topToBottom = binding.img.id
+                    startToStart = ConstraintLayout.LayoutParams.PARENT_ID
+                    endToEnd = ConstraintLayout.LayoutParams.PARENT_ID
+                    topMargin = 20.pxToDp(requireContext())
+                }
+
+                background = ContextCompat.getDrawable(requireContext(), R.drawable.bg_white_rectangle_primary_stroke_10dp_corners)
+                setPadding(10.pxToDp(requireContext()), 10.pxToDp(requireContext()), 10.pxToDp(requireContext()), 10.pxToDp(requireContext()))
+//                setTextColor(ContextCompat.getColor(context, R.color.black))
+//                setTextSize(TypedValue.COMPLEX_UNIT_PX, resources.getDimension(R.dimen.smaller_content))
+//                visibility = GONE
+            }
+            binding.secondAnswer.apply {
+                layoutParams = ConstraintLayout.LayoutParams(
+                    0,
+                    ConstraintLayout.LayoutParams.WRAP_CONTENT
+                ).apply {
+                    topToBottom = binding.firstAnswer.id
+                    startToStart = ConstraintLayout.LayoutParams.PARENT_ID
+                    endToEnd = ConstraintLayout.LayoutParams.PARENT_ID
+                    topMargin = 10.pxToDp(requireContext())
+                }
+
+                background = ContextCompat.getDrawable(requireContext(), R.drawable.bg_white_rectangle_primary_stroke_10dp_corners)
+                setPadding(10.pxToDp(requireContext()), 10.pxToDp(requireContext()), 10.pxToDp(requireContext()), 10.pxToDp(requireContext()))
+//                setTextColor(ContextCompat.getColor(context, R.color.black))
+//                setTextSize(TypedValue.COMPLEX_UNIT_PX, resources.getDimension(R.dimen.smaller_content))
+//                visibility = GONE
+            }
+            binding.thirdAnswer.apply {
+                layoutParams = ConstraintLayout.LayoutParams(
+                    0,
+                    ConstraintLayout.LayoutParams.WRAP_CONTENT
+                ).apply {
+                    topToBottom = binding.secondAnswer.id
+                    startToStart = ConstraintLayout.LayoutParams.PARENT_ID
+                    endToEnd = ConstraintLayout.LayoutParams.PARENT_ID
+                    topMargin = 10.pxToDp(requireContext())
+                }
+
+                background = ContextCompat.getDrawable(requireContext(), R.drawable.bg_white_rectangle_primary_stroke_10dp_corners)
+                setPadding(10.pxToDp(requireContext()), 10.pxToDp(requireContext()), 10.pxToDp(requireContext()), 10.pxToDp(requireContext()))
+//                setTextColor(ContextCompat.getColor(context, R.color.black))
+//                setTextSize(TypedValue.COMPLEX_UNIT_PX, resources.getDimension(R.dimen.smaller_content))
+//                visibility = GONE
+            }
+            binding.fourthAnswer.apply {
+                layoutParams = ConstraintLayout.LayoutParams(
+                    0,
+                    ConstraintLayout.LayoutParams.WRAP_CONTENT
+                ).apply {
+                    topToBottom = binding.thirdAnswer.id
+                    startToStart = ConstraintLayout.LayoutParams.PARENT_ID
+                    endToEnd = ConstraintLayout.LayoutParams.PARENT_ID
+                    topMargin = 10.pxToDp(requireContext())
+                }
+
+                background = ContextCompat.getDrawable(requireContext(), R.drawable.bg_white_rectangle_primary_stroke_10dp_corners)
+                setPadding(10.pxToDp(requireContext()), 10.pxToDp(requireContext()), 10.pxToDp(requireContext()), 10.pxToDp(requireContext()))
+//                setTextColor(ContextCompat.getColor(context, R.color.black))
+//                setTextSize(TypedValue.COMPLEX_UNIT_PX, resources.getDimension(R.dimen.smaller_content))
+//                visibility = GONE
+            }
+        }
+        else{
+            binding.firstAnswer.apply {
+                layoutParams = ConstraintLayout.LayoutParams(
+                    30.pxToDp(requireContext()),
+                    30.pxToDp(requireContext())
+                ).apply {
+                    topToBottom = binding.img.id
+                    startToStart = ConstraintLayout.LayoutParams.PARENT_ID
+                    endToStart = binding.secondAnswer.id
+                    topMargin = 20.pxToDp(requireContext())
+                }
+
+                background = ContextCompat.getDrawable(requireContext(), R.drawable.bg_circle_answer)
+                gravity = Gravity.CENTER
+            }
+            binding.secondAnswer.apply {
+                layoutParams = ConstraintLayout.LayoutParams(
+                    30.pxToDp(requireContext()),
+                    30.pxToDp(requireContext())
+                ).apply {
+                    topToTop = binding.firstAnswer.id
+                    startToEnd = binding.firstAnswer.id
+                    endToStart = binding.thirdAnswer.id
+                    bottomToBottom = binding.firstAnswer.id
+                }
+
+                background = ContextCompat.getDrawable(requireContext(), R.drawable.bg_circle_answer)
+                gravity = Gravity.CENTER
+
+            }
+            binding.thirdAnswer.apply {
+                layoutParams = ConstraintLayout.LayoutParams(
+                    30.pxToDp(requireContext()),
+                    30.pxToDp(requireContext())
+                ).apply {
+                    topToTop = binding.secondAnswer.id
+                    startToEnd = binding.secondAnswer.id
+                    endToStart = binding.fourthAnswer.id
+                    bottomToBottom = binding.secondAnswer.id
+                }
+
+                background = ContextCompat.getDrawable(requireContext(), R.drawable.bg_circle_answer)
+                gravity = Gravity.CENTER
+            }
+            binding.fourthAnswer.apply {
+                layoutParams = ConstraintLayout.LayoutParams(
+                    30.pxToDp(requireContext()),
+                    30.pxToDp(requireContext())
+                ).apply {
+                    topToTop = binding.thirdAnswer.id
+                    startToEnd = binding.thirdAnswer.id
+                    endToEnd = ConstraintLayout.LayoutParams.PARENT_ID
+                    bottomToBottom = binding.thirdAnswer.id
+                }
+
+                background = ContextCompat.getDrawable(requireContext(), R.drawable.bg_circle_answer)
+                gravity = Gravity.CENTER
+            }
+        }
+    }
+
+    private fun initAnswerContents(){
+        val answersChar = listOf("A", "B", "C", "D")
+
+        for (i in question.answers.indices) {
+            answerViews[i].apply {
+                if (isShowAnswer){
+                    text = requireContext().getString(
+                        R.string.Question_answer_with_content_regex,
+                        answersChar[i],
+                        question.answers[i]
+                    )
+                }else{
+                    text = requireContext().getString(
+                        R.string.Question_answer_no_content_regex,
+                        answersChar[i]
+                    )
+                }
+
+                visibility = VISIBLE
+
+                setOnClickListener {
+                    userAnswer.value = this
+                }
+            }
+        }
+
+        answerViews = answerViews.filter { view -> view.visibility == VISIBLE }
     }
 
     private fun initListeners() {
@@ -264,12 +414,22 @@ class QuestionDetailFragment : Fragment(), Runnable {
             view?.let {
                 checkedAnswer(view)
 
+                val answer: String = try{
+                    when{
+                        view.text.startsWith('A') -> question.answers[0]
+                        view.text.startsWith('B') -> question.answers[1]
+                        view.text.startsWith('C') -> question.answers[2]
+                        view.text.startsWith('D') -> question.answers[3]
+                        else -> ""
+                    }
+                }catch (e: IndexOutOfBoundsException){
+                    ""
+                }
+
                 if (examVM.userAnswers.contains(questionPosition)) {
-                    // không lấy các kí tự "A. ", "B. ", "C. ", "D. "
-                    examVM.userAnswers.replace(questionPosition, view.text.toString().substring(3))
+                    examVM.userAnswers.replace(questionPosition, answer)
                 } else {
-                    // không lấy các kí tự "A. ", "B. ", "C. ", "D. "
-                    examVM.userAnswers[questionPosition] = view.text.toString().substring(3)
+                    examVM.userAnswers[questionPosition] = answer
                 }
 
                 answerViews.forEach { answerView ->
@@ -313,20 +473,36 @@ class QuestionDetailFragment : Fragment(), Runnable {
     private fun checkedAnswer(view: TextView) {
         view.apply {
             setTextColor(WHITE)
-            background = AppCompatResources.getDrawable(
-                requireContext(),
-                R.drawable.bg_primary_rectangle_no_stroke_10dp_corners
-            )
+            background = if (isShowAnswer){
+                AppCompatResources.getDrawable(
+                    requireContext(),
+                    R.drawable.bg_primary_rectangle_no_stroke_10dp_corners
+                )
+            }
+            else{
+                AppCompatResources.getDrawable(
+                    requireContext(),
+                    R.drawable.bg_circle_true_answer
+                )
+            }
         }
     }
 
     private fun uncheckedAnswer(view: TextView) {
         view.apply {
             setTextColor(BLACK)
-            background = AppCompatResources.getDrawable(
-                requireContext(),
-                R.drawable.bg_white_rectangle_primary_stroke_10dp_corners
-            )
+            background = if (isShowAnswer){
+                AppCompatResources.getDrawable(
+                    requireContext(),
+                    R.drawable.bg_white_rectangle_primary_stroke_10dp_corners
+                )
+            }
+            else{
+                AppCompatResources.getDrawable(
+                    requireContext(),
+                    R.drawable.bg_circle_answer
+                )
+            }
         }
     }
 
