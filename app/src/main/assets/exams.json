@@ -10,7 +10,7 @@
             "description": "In this part, you will see a picture and you will hear four short statements each question. The statements will be spoken just one time. They will not be displayed on device so you must listen carefully to understand what the speaker says. When you have heard all 4 sentences, look at the picture and choose the answer that best describes the picture in the order A, B, C, D.",
             "questions": [
               {
-                "title": "Listen and Listen and select the correct answer::",
+                "title": "Listen and select the correct answer:",
                 "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/2b928ed5bed86eb62e49ba91a024df1e.mp3",
                 "img": "https://migiitoeic.eupgroup.net/uploads/image_ETS/6cd8910606ae1dbaa1ff8183279ae089.png",
                 "answers": [
@@ -24,7 +24,7 @@
                 "key": ""
               },
               {
-                "title": "Listen and Listen and select the correct answer::",
+                "title": "Listen and select the correct answer:",
                 "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/4672928725429edd4038c571b1d77727.mp3",
                 "img": "https://migiitoeic.eupgroup.net/uploads/image_ETS/32dace9388c9504b6126e591937d78bc.png",
                 "answers": [
@@ -38,7 +38,7 @@
                 "key": ""
               },
               {
-                "title": "Listen and Listen and select the correct answer::",
+                "title": "Listen and select the correct answer:",
                 "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/8c605030165189f50b53af19d2d4b0d3.mp3",
                 "img": "https://migiitoeic.eupgroup.net/uploads/image_ETS/b496a1e1758dd849fd8be1a12611858c.png",
                 "answers": [
@@ -52,7 +52,7 @@
                 "key": ""
               },
               {
-                "title": "Listen and Listen and select the correct answer::",
+                "title": "Listen and select the correct answer:",
                 "media": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/fab7febcd3cac3bde19ea49c93875f8c.mp3",
                 "img": "https://migiitoeic.eupgroup.net/uploads/image_ETS/f3424d058bb65747114d36a7822f2825.png",
                 "answers": [

@@ -14,8 +14,8 @@
             android:id="@+id/action_mainFragment_to_wordFragment"
             app:destination="@id/wordFragment" />
         <action
-            android:id="@+id/action_mainFragment_to_examDetailFragment"
-            app:destination="@id/examDetailFragment" />
+            android:id="@+id/action_mainFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
     </fragment>
 
     <fragment
@@ -35,17 +35,12 @@
         android:label="WordFragment"
         tools:layout="@layout/word_fragment" />
     <fragment
-        android:id="@+id/examDetailFragment"
-        android:name="com.locnguyen.toeicexercises.fragment.exam.ExamDetailFragment"
-        android:label="ExamDetailFragment"
-        tools:layout="@layout/exam_detail_fragment">
-
-        <argument
-            android:name="exam"
-            app:argType="com.locnguyen.toeicexercises.model.Exam"
-            app:nullable="false" />
+        android:id="@+id/detailFragment"
+        android:name="com.locnguyen.toeicexercises.fragment.exam.DetailFragment"
+        android:label="DetailFragment"
+        tools:layout="@layout/detail_fragment">
         <action
-            android:id="@+id/action_examDetailFragment_to_examScoreFragment"
+            android:id="@+id/action_detailFragment_to_examScoreFragment"
             app:destination="@id/examScoreFragment" />
 
     </fragment>
@@ -55,16 +50,16 @@
         android:label="ExamScoreFragment"
         tools:layout="@layout/exam_score_fragment">
         <action
-            android:id="@+id/action_examScoreFragment_to_examAnswerFragment"
-            app:destination="@id/examAnswerFragment" />
+            android:id="@+id/action_examScoreFragment_to_listAnswersFragment"
+            app:destination="@id/listAnswersFragment" />
     </fragment>
     <fragment
-        android:id="@+id/examAnswerFragment"
-        android:name="com.locnguyen.toeicexercises.fragment.exam.ExamAnswerFragment"
-        android:label="ExamAnswerFragment"
-        tools:layout="@layout/exam_answer_fragment">
+        android:id="@+id/listAnswersFragment"
+        android:name="com.locnguyen.toeicexercises.fragment.exam.ListAnswersFragment"
+        android:label="ListAnswersFragment"
+        tools:layout="@layout/list_answers_fragment">
         <action
-            android:id="@+id/action_examAnswerFragment_to_answerFragment"
+            android:id="@+id/action_listAnswersFragment_to_answerFragment"
             app:destination="@id/answerFragment" />
     </fragment>
     <fragment

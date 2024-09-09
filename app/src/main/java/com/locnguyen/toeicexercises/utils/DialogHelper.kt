@@ -122,7 +122,6 @@ class DialogHelper(private val context: Context) {
     }
 
     fun getFinishedExamDialog(
-        negativeAction: (() -> Unit)?,
         positiveAction: (() -> Unit)?
     ): AlertDialog {
         return AlertDialog.Builder(context, R.style.MyAlertDialog).apply {
@@ -164,7 +163,6 @@ class DialogHelper(private val context: Context) {
             setCustomTitle(titleView)
             setView(contentView)
             setNegativeButton("Hủy") { dialog, _ ->
-                negativeAction?.invoke()
                 dialog.dismiss()
             }
             setPositiveButton("Nộp bài") { dialog, _ ->

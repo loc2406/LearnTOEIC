@@ -46,8 +46,8 @@
     <string name="Score_title">Điểm số:</string>
     <string name="Listen_title">Nghe:</string>
     <string name="Read_title">Đọc:</string>
-    <string name="Answer_correct">Trả lời đúng (%d/%d)</string>
-    <string name="Answer_incorrect">Trả lời sai (%d/%d)</string>
+    <string name="Answer_correct_regex">Trả lời đúng: %d câu</string>
+    <string name="Answer_incorrect_regex">Trả lời sai / Không trả lời: %d câu</string>
     <string name="Back_to_main_screen">Quay về màn hình chính</string>
     <string name="Answer_detail">Chi tiết đáp án</string>
     <string name="Previous_question">Câu hỏi trước đó</string>
@@ -69,4 +69,5 @@
     <string name="Explain_title">Giải thích:</string>
     <string name="Key_title">Từ khóa:</string>
     <string name="Default_time">00:00:00</string>
+    <string name="Percent">%d %%</string>
 </resources>

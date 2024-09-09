@@ -13,7 +13,7 @@ import com.locnguyen.toeicexercises.databinding.ItemExamAnswerBinding
 import com.locnguyen.toeicexercises.model.Question
 
 class ExamAnswerAdapter(
-    private val questions: List<Question>,
+    private val questions: ArrayList<Pair<String, Question>>,
     private val userAnswers: HashMap<Int, String>,
     private val itemClicked: (Int, Question, String?) -> Unit
 ) :
@@ -40,7 +40,7 @@ class ExamAnswerAdapter(
     override fun onBindViewHolder(holder: ExamAnswerVH, position: Int) {
         setDefaultView(holder)
 
-        val question = questions[position]
+        val question = questions[position].second
         val userAnswer = userAnswers[position]
         val trueAnswerIndex = question.answers.indexOf(question.trueAnswer)
         val userAnswerIndex = question.answers.indexOf(userAnswer)

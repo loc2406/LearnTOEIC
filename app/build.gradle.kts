@@ -114,6 +114,6 @@ dependencies {
     //flash card
 //    implementation(libs.card.stack.view)
 
-    //chart
-    implementation(libs.mpandroidchart)
+    //circle progress bar
+    implementation(libs.circularprogressbar)
 }

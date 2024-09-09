@@ -1,8 +1,6 @@
 package com.locnguyen.toeicexercises.fragment
 
-import android.app.Dialog
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,12 +12,6 @@ import androidx.viewpager2.widget.ViewPager2
 import com.locnguyen.toeicexercises.R
 import com.locnguyen.toeicexercises.adapter.BottomNavAdapter
 import com.locnguyen.toeicexercises.databinding.MainFragmentBinding
-import com.locnguyen.toeicexercises.fragment.exam.ExamDetailFragmentArgs
-import com.locnguyen.toeicexercises.model.Exam
-import com.locnguyen.toeicexercises.model.Example
-import com.locnguyen.toeicexercises.model.Word
-import com.locnguyen.toeicexercises.model.WordMean
-import com.locnguyen.toeicexercises.utils.DialogHelper
 import com.locnguyen.toeicexercises.viewmodel.ExamVM
 import com.locnguyen.toeicexercises.viewmodel.MainVM
 
@@ -29,6 +21,7 @@ class MainFragment: Fragment() {
     private lateinit var navController: NavController
     private lateinit var bottomNavAdapter: BottomNavAdapter
     private lateinit var mainVM: MainVM
+    private lateinit var examVM: ExamVM
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -43,6 +36,7 @@ class MainFragment: Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         mainVM = ViewModelProvider(requireActivity())[MainVM::class.java]
+        examVM = ViewModelProvider(requireActivity())[ExamVM::class.java]
         navController = Navigation.findNavController(view)
 
         initViews()
@@ -91,7 +85,10 @@ class MainFragment: Fragment() {
         }
 
         mainVM.itemExamClicked.observe(viewLifecycleOwner){ exam ->
-            exam?.let { handleItemExamClicked(it) }
+            exam?.let {
+                handleItemExamClicked()
+                examVM.exam.value = exam
+            }
         }
     }
 
@@ -103,8 +100,7 @@ class MainFragment: Fragment() {
         }
     }
 
-    private fun handleItemExamClicked(exam: Exam){
-        val action = MainFragmentDirections.actionMainFragmentToExamDetailFragment(exam)
-        navController.navigate(action)
+    private fun handleItemExamClicked(){
+        navController.navigate(R.id.action_mainFragment_to_detailFragment)
     }
 }

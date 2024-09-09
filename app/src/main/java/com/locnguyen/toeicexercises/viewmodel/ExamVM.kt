@@ -12,8 +12,9 @@ import java.io.InputStreamReader
 import java.nio.charset.StandardCharsets
 
 class ExamVM : ViewModel() {
-    var currentQuestion: MutableLiveData<Int> = MutableLiveData(0)
-    var examQuestions: ArrayList<Question> = ArrayList()
+    val exam: MutableLiveData<Exam?> by lazy {MutableLiveData()}
+    val currentQuestion: MutableLiveData<Int> by lazy {MutableLiveData(0)}
+    var examQuestions: ArrayList<Pair<String, Question>> = ArrayList()
     var userAnswers: HashMap<Int, String> = HashMap()
     val answerCorrect: ArrayList<Question> by lazy { ArrayList()}
     var listenCorrectAnswers: List<Question> = emptyList()
@@ -40,16 +41,17 @@ class ExamVM : ViewModel() {
             val isAnswered = userAnswers[i]
 
             if (isAnswered != null){
-                if (examQuestions[i].trueAnswer == isAnswered){
-                    answerCorrect.add(examQuestions[i])
+                if (examQuestions[i].second.trueAnswer == isAnswered){
+                    answerCorrect.add(examQuestions[i].second)
                 }
             }
         }
     }
 
     fun getExamScore(): Int{
-        listenCorrectAnswers = answerCorrect.filter{question -> question.img.isNotEmpty()}
+        listenCorrectAnswers = answerCorrect.filter{question -> question.media.isNotEmpty()}
         readCorrectAnswers = (answerCorrect - listenCorrectAnswers.toSet())
+
         var score = 0
 
         when(listenCorrectAnswers.size){
@@ -229,15 +231,17 @@ class ExamVM : ViewModel() {
         return score
     }
 
-    fun getAllQuestionsFollowEachPart(context: Context, exam: Exam): List<Pair<String, Question>> {
+    fun getAllQuestionsFollowEachPart(context: Context): List<Pair<String, Question>> {
         val allQuestions = ArrayList<Pair<String, Question>>()
 
-        exam.parts.forEach { part ->
-            part.contents.forEach { content ->
-                val quesKey = context.getString(R.string.Exam_instruction_content_regex, part.title.uppercase(), content.type.uppercase(), content.description)
+        exam.value?.let{
+            it.parts.forEach { part ->
+                part.contents.forEach { content ->
+                    val quesKey = context.getString(R.string.Exam_instruction_content_regex, part.title.uppercase(), content.type.uppercase(), content.description)
 
-                content.questions.forEach { question ->
-                    allQuestions.add(Pair(quesKey, question))
+                    content.questions.forEach { question ->
+                        allQuestions.add(Pair(quesKey, question))
+                    }
                 }
             }
         }

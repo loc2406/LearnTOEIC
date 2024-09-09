@@ -166,7 +166,6 @@ class QuestionDetailFragment : Fragment(), Runnable {
                     loadAudioSuccess.value = true
                     mediaPlayer.isLooping = false
                     currentMediaState.value = MediaState.PREPARED
-
                     totalMediaSeconds = mediaPlayer.duration / 1000
                     updateMediaTime(currentSecondsPlayed/60, currentSecondsPlayed%60, totalMediaSeconds/60, totalMediaSeconds%60)
                     binding.mediaProgress.max = totalMediaSeconds
