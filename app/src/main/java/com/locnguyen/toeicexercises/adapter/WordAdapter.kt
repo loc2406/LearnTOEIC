@@ -11,7 +11,13 @@ import com.locnguyen.toeicexercises.databinding.ItemWordBinding
 import com.locnguyen.toeicexercises.model.Word
 import com.locnguyen.toeicexercises.utils.SpeakTextHelper
 
-class WordAdapter(val words: List<Word>, private val itemClicked: (Word) -> Unit): RecyclerView.Adapter<WordAdapter.WordVH>() {
+class WordAdapter(var words: List<Word>, private val itemClicked: (Word) -> Unit): RecyclerView.Adapter<WordAdapter.WordVH>() {
+
+     var defaultList: List<Word> = emptyList()
+
+    init {
+        defaultList = words
+    }
 
     class WordVH(val binding: ItemWordBinding): RecyclerView.ViewHolder(binding.root){
         var isFavorite: Boolean = false
@@ -60,5 +66,15 @@ class WordAdapter(val words: List<Word>, private val itemClicked: (Word) -> Unit
         holder.binding.root.setOnClickListener {
             itemClicked.invoke(data)
         }
+    }
+
+    fun setSearchResult(result: List<Word>){
+        words = result
+        notifyDataSetChanged()
+    }
+
+    fun stopSearchAction(){
+        words = defaultList
+        notifyDataSetChanged()
     }
 }

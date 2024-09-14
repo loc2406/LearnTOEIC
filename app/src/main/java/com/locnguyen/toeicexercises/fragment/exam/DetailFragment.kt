@@ -165,7 +165,7 @@ class DetailFragment: Fragment() {
             adapter = null
             unregisterOnPageChangeCallback(handleQuestionChangeCallback())
         }
-        navController.navigate(R.id.action_detailFragment_to_examScoreFragment)
+        navController.navigate(R.id.action_detailFragment_to_scoreFragment)
     }
 
     private fun handlePressedBack(){
@@ -177,6 +177,7 @@ class DetailFragment: Fragment() {
         mainVM.itemExamClicked.value = null
         examVM.apply {
             exam.value = null
+            currentQuestion.value = 0
             examQuestions.clear()
             userAnswers.clear()
             listenCorrectAnswers = emptyList()

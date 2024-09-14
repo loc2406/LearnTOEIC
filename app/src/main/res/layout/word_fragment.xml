@@ -1,149 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/background_device"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tool="http://schemas.android.com/tools">
+<layout>
+    <data>
+        <variable
+            name="wordVM"
+            type="com.locnguyen.toeicexercises.viewmodel.WordVM" />
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/header_space"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:padding="15dp"
-        android:background="@drawable/bg_primary_rectangle_no_stroke_20dp_botstart_botend_corners">
+        <import type="android.view.View"/>
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
 
-        <ImageView
-            android:id="@+id/ic_back"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:src="@drawable/ic_arrow_left_white"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/header_space"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_primary_rectangle_no_stroke_20dp_botstart_botend_corners"
+            android:paddingVertical="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:contentDescription="@string/Back"/>
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/ic_back"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="20dp"
+                android:importantForAccessibility="no"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_back_white"
+                app:layout_constraintBottom_toBottomOf="@id/title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/title" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="44dp"
+                android:fontFamily="@font/tinos_bold"
+                android:gravity="center"
+                android:text="@string/Title"
+                android:textColor="@color/white"
+                android:textSize="@dimen/medium_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ic_back"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <SearchView
+            android:id="@+id/search_bar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_white_rectangle_primary_stroke_10dp_corners"
+            android:iconifiedByDefault="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/header_space"
+            android:queryBackground="@null"
+            android:queryHint="@string/Find_word"
+            android:searchIcon="@drawable/ic_search" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/words"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/search_bar" />
 
         <TextView
-            android:id="@+id/title"
+            android:id="@+id/Dont_find_word_message"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            tool:text="Tiêu đề"
-            android:textSize="@dimen/medium_title"
-            android:textColor="@color/white"
             android:fontFamily="@font/tinos_bold"
-            app:layout_constraintStart_toEndOf="@id/ic_back"
-            app:layout_constraintTop_toTopOf="@id/ic_back"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="@id/ic_back"
-            android:gravity="center_vertical"
-            android:layout_marginStart="10dp"/>
+            android:gravity="center_horizontal"
+            android:text="@string/Dont_find_word_message"
+            android:textColor="@color/primary"
+            android:textSize="@dimen/small_content"
+            android:visibility="@{wordVM.searchResult.empty ? View.VISIBLE : View.GONE}"
+            app:layout_constraintEnd_toEndOf="@id/words"
+            app:layout_constraintStart_toStartOf="@id/words"
+            app:layout_constraintTop_toTopOf="@id/words" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <LinearLayout
-        android:id="@+id/game_space"
-        android:layout_width="0dp"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="30dp"
-        android:layout_height="wrap_content"
-        android:baselineAligned="false"
-        app:layout_constraintStart_toStartOf="parent"
-        android:weightSum="10"
-        android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@id/header_space"
-        app:layout_constraintEnd_toEndOf="parent">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/flashcard_space"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:background="@drawable/bg_transparent_rectangle_primary_stroke_10dp_corners"
-            android:padding="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_weight="5">
-
-            <ImageView
-                android:id="@+id/ic_flashcard"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:src="@drawable/ic_flashcard"
-                android:scaleType="centerInside"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintEnd_toStartOf="@id/flashcard_title"
-                app:layout_constraintBottom_toBottomOf="parent"
-                android:contentDescription="@string/Flashcard"/>
-
-            <TextView
-                android:id="@+id/flashcard_title"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:text="@string/Flashcard"
-                android:textSize="@dimen/small_content"
-                android:gravity="center"
-                android:textColor="@color/black"
-                android:fontFamily="@font/tinos_bold"
-                android:maxLines="2"
-                android:ellipsize="end"
-                app:layout_constraintStart_toEndOf="@id/ic_flashcard"
-                app:layout_constraintTop_toTopOf="@id/ic_flashcard"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toBottomOf="@id/ic_flashcard"/>
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/synonym_space"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:padding="10dp"
-            android:background="@drawable/bg_transparent_rectangle_primary_stroke_10dp_corners"
-            android:layout_weight="5">
-
-            <ImageView
-                android:id="@+id/ic_synonym"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:src="@drawable/ic_same"
-                android:scaleType="centerInside"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintEnd_toStartOf="@id/synonym_title"
-                app:layout_constraintBottom_toBottomOf="parent"
-                android:contentDescription="@string/Flashcard"/>
-
-            <TextView
-                android:id="@+id/synonym_title"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:text="@string/Synonym"
-                android:textSize="@dimen/small_content"
-                android:gravity="center"
-                android:maxLines="2"
-                android:ellipsize="end"
-                android:textColor="@color/black"
-                android:fontFamily="@font/tinos_bold"
-                app:layout_constraintStart_toEndOf="@id/ic_synonym"
-                app:layout_constraintTop_toTopOf="@id/ic_synonym"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toBottomOf="@id/ic_synonym"/>
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-    </LinearLayout>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/words"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/game_space"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"/>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -16,35 +16,37 @@
             android:id="@+id/header_space"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="20dp"
-            android:layout_marginTop="20dp"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/bg_primary_rectangle_no_stroke_20dp_botstart_botend_corners"
+            android:paddingVertical="15dp">
 
             <ImageView
                 android:id="@+id/ic_back"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:contentDescription="@string/Back"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:importantForAccessibility="no"
+                android:src="@drawable/ic_back_white"
                 android:scaleType="centerInside"
-                android:src="@drawable/ic_back_drawable"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="@id/header_title"
+                app:layout_constraintBottom_toBottomOf="@id/header_title"
+                android:layout_marginStart="20dp"/>
 
             <TextView
                 android:id="@+id/header_title"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/tinos_bold"
-                android:gravity="center"
-                android:textColor="@color/primary"
+                android:text="@string/Title"
                 android:textSize="@dimen/medium_title"
-                app:layout_constraintBottom_toBottomOf="@id/ic_back"
+                android:textColor="@color/white"
+                android:fontFamily="@font/tinos_bold"
+                app:layout_constraintStart_toEndOf="@id/ic_back"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@id/ic_back"
-                tool:text="@string/Title" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginEnd="44dp"
+                android:gravity="center"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -89,63 +91,35 @@
 
                 <TextView
                     android:id="@+id/first_answer"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:background="@drawable/bg_white_rectangle_primary_stroke_10dp_corners"
-                    android:padding="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:textColor="@color/black"
                     android:textSize="@dimen/smaller_content"
-                    android:visibility="gone"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/img"
-                    tool:text="Đáp án thứ 1" />
+                    android:visibility="gone" />
 
                 <TextView
                     android:id="@+id/second_answer"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:background="@drawable/bg_white_rectangle_primary_stroke_10dp_corners"
-                    android:padding="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:textColor="@color/black"
-                    android:visibility="gone"
                     android:textSize="@dimen/smaller_content"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/first_answer"
-                    tool:text="Đáp án thứ 2" />
+                    android:visibility="gone"/>
 
                 <TextView
                     android:id="@+id/third_answer"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:background="@drawable/bg_white_rectangle_primary_stroke_10dp_corners"
-                    android:padding="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:textColor="@color/black"
                     android:textSize="@dimen/smaller_content"
-                    android:visibility="gone"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/second_answer"
-                    tool:text="Đáp án thứ 3" />
+                    android:visibility="gone"/>
 
                 <TextView
                     android:id="@+id/fourth_answer"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:background="@drawable/bg_white_rectangle_primary_stroke_10dp_corners"
-                    android:padding="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:textColor="@color/black"
                     android:textSize="@dimen/smaller_content"
-                    android:visibility="gone"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/third_answer"
-                    tool:text="Đáp án thứ 4" />
+                    android:visibility="gone"/>
 
                 <TextView
                     android:id="@+id/explain_title"

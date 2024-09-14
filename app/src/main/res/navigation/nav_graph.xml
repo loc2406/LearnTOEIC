@@ -31,26 +31,30 @@
     </fragment>
     <fragment
         android:id="@+id/wordFragment"
-        android:name="com.locnguyen.toeicexercises.fragment.WordFragment"
+        android:name="com.locnguyen.toeicexercises.fragment.word.WordFragment"
         android:label="WordFragment"
-        tools:layout="@layout/word_fragment" />
+        tools:layout="@layout/word_fragment" >
+        <action
+            android:id="@+id/action_wordFragment_to_listMeansFragment"
+            app:destination="@id/listMeansFragment" />
+    </fragment>
     <fragment
         android:id="@+id/detailFragment"
         android:name="com.locnguyen.toeicexercises.fragment.exam.DetailFragment"
         android:label="DetailFragment"
         tools:layout="@layout/detail_fragment">
         <action
-            android:id="@+id/action_detailFragment_to_examScoreFragment"
-            app:destination="@id/examScoreFragment" />
+            android:id="@+id/action_detailFragment_to_scoreFragment"
+            app:destination="@id/scoreFragment" />
 
     </fragment>
     <fragment
-        android:id="@+id/examScoreFragment"
-        android:name="com.locnguyen.toeicexercises.fragment.exam.ExamScoreFragment"
-        android:label="ExamScoreFragment"
-        tools:layout="@layout/exam_score_fragment">
+        android:id="@+id/scoreFragment"
+        android:name="com.locnguyen.toeicexercises.fragment.exam.ScoreFragment"
+        android:label="ScoreFragment"
+        tools:layout="@layout/score_fragment">
         <action
-            android:id="@+id/action_examScoreFragment_to_listAnswersFragment"
+            android:id="@+id/action_scoreFragment_to_listAnswersFragment"
             app:destination="@id/listAnswersFragment" />
     </fragment>
     <fragment
@@ -82,6 +86,25 @@
             android:name="userAnswer"
             app:argType="string"
             app:nullable="true"/>
+
+        <argument
+            android:name="isShowAnswer"
+            app:argType="boolean"
+            app:nullable="false"/>
     </fragment>
+    <fragment
+        android:id="@+id/listMeansFragment"
+        android:name="com.locnguyen.toeicexercises.fragment.word.ListMeansFragment"
+        android:label="ListMeansFragment"
+        tools:layout="@layout/list_means_fragment">
+
+        <argument
+            android:name="word"
+            app:argType="com.locnguyen.toeicexercises.model.Word"
+            app:nullable="false"/>
+
+    </fragment>
+
+
 
 </navigation>

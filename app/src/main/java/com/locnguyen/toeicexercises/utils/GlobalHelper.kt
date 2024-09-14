@@ -32,6 +32,11 @@ fun Context.toastMessage(@StringRes stringRes: Int, duration: Int = Toast.LENGTH
     Toast.makeText(this, stringRes, duration).show()
 }
 
-fun Int.pxToDp(context: Context): Int {
+fun Int.dpToPx(context: Context): Int {
     return (this * GlobalHelper(context).density).toInt()
 }
+
+fun Float.pxToDp(context: Context): Float {
+    return (this / GlobalHelper(context).density)
+}
+

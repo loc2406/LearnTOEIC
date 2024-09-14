@@ -70,4 +70,6 @@
     <string name="Key_title">Từ khóa:</string>
     <string name="Default_time">00:00:00</string>
     <string name="Percent">%d %%</string>
+    <string name="Find_word">Tìm kiếm từ vựng...</string>
+    <string name="Dont_find_word_message">Không tìm thấy từ vựng</string>
 </resources>

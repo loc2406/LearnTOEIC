@@ -3,24 +3,28 @@ package com.locnguyen.toeicexercises.viewmodel
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.locnguyen.toeicexercises.model.Example
 import com.locnguyen.toeicexercises.model.Word
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-class WordVM(application: Application) : AndroidViewModel(application){
+class WordVM : ViewModel(){
+    val words: MutableLiveData<List<Word>> by lazy {MutableLiveData(emptyList())}
+    val examples: MutableLiveData<List<Example>> by lazy {MutableLiveData(emptyList())}
+    val searchResult: MutableLiveData<List<Word>> by lazy { MutableLiveData(emptyList()) }
 
-//    val allWords: LiveData<List<Word>>
-//
-//    init{
-//        val wordDao = WordDatabase.instance(application).wordDao()
-//        repo = WordRepo(wordDao)
-//        allWords =repo.allWords
-//    }
-//
-//    fun insert(word: Word){
-//        viewModelScope.launch(Dispatchers.IO) {
-//            repo.insert(word)
-//        }
-//    }
+    fun handleSearchWord(keyword: String) {
+        if(keyword.trim().isNotEmpty()){
+           words.value?.let{
+               searchResult.value = it.filter { word -> word.title?.contains(keyword, true) == true || word.shortMean?.contains(keyword, true) == true }
+           }
+        }
+    }
+
+    fun getExContent(exId: Int): String {
+        return examples.value?.find { ex -> ex.id == exId }?.engContent ?: ""
+    }
 }

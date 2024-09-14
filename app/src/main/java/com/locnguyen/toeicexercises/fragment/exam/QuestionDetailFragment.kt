@@ -32,7 +32,7 @@ import com.locnguyen.toeicexercises.databinding.QuestionDetailFragmentBinding
 import com.locnguyen.toeicexercises.model.Question
 import com.locnguyen.toeicexercises.utils.DialogHelper
 import com.locnguyen.toeicexercises.utils.GlobalHelper
-import com.locnguyen.toeicexercises.utils.pxToDp
+import com.locnguyen.toeicexercises.utils.dpToPx
 import com.locnguyen.toeicexercises.viewmodel.ExamVM
 import java.util.Locale
 import kotlin.properties.Delegates
@@ -48,8 +48,7 @@ class QuestionDetailFragment : Fragment(), Runnable {
     private var currentSecondsPlayed: Int = 0
     private var totalMediaSeconds: Int = 0
 
-    private val dialogHelper: DialogHelper by lazy { DialogHelper(requireContext()) }
-    private val loadingDialog: Dialog by lazy { dialogHelper.getLoadingDialog() }
+    private val loadingDialog: Dialog by lazy { DialogHelper.getLoadingDialog(requireContext()) }
     private val mediaPlayer: MediaPlayer by lazy { MediaPlayer() }
     private val currentMediaState: MutableLiveData<MediaState> by lazy { MutableLiveData(MediaState.IDLE) }
     private val handler: Handler by lazy { Handler(Looper.getMainLooper()) }
@@ -87,13 +86,6 @@ class QuestionDetailFragment : Fragment(), Runnable {
         questionPosition = arguments?.getInt("POSITION") ?: -1
         isShowAnswer = arguments?.getBoolean("IS_SHOW_ANSWER") ?: false
 
-        answerViews = listOf(
-            binding.firstAnswer,
-            binding.secondAnswer,
-            binding.thirdAnswer,
-            binding.fourthAnswer
-        )
-
         examVM = ViewModelProvider(requireActivity())[ExamVM::class.java]
 
         initViews()
@@ -111,6 +103,14 @@ class QuestionDetailFragment : Fragment(), Runnable {
 
     private fun initViews() {
         initMedia()
+
+        answerViews = listOf(
+            binding.firstAnswer,
+            binding.secondAnswer,
+            binding.thirdAnswer,
+            binding.fourthAnswer
+        )
+
         initAnswerViews()
         initAnswerContents()
 
@@ -189,14 +189,11 @@ class QuestionDetailFragment : Fragment(), Runnable {
                     topToBottom = binding.img.id
                     startToStart = ConstraintLayout.LayoutParams.PARENT_ID
                     endToEnd = ConstraintLayout.LayoutParams.PARENT_ID
-                    topMargin = 20.pxToDp(requireContext())
+                    topMargin = 20.dpToPx(requireContext())
                 }
 
                 background = ContextCompat.getDrawable(requireContext(), R.drawable.bg_white_rectangle_primary_stroke_10dp_corners)
-                setPadding(10.pxToDp(requireContext()), 10.pxToDp(requireContext()), 10.pxToDp(requireContext()), 10.pxToDp(requireContext()))
-//                setTextColor(ContextCompat.getColor(context, R.color.black))
-//                setTextSize(TypedValue.COMPLEX_UNIT_PX, resources.getDimension(R.dimen.smaller_content))
-//                visibility = GONE
+                setPadding(10.dpToPx(requireContext()), 10.dpToPx(requireContext()), 10.dpToPx(requireContext()), 10.dpToPx(requireContext()))
             }
             binding.secondAnswer.apply {
                 layoutParams = ConstraintLayout.LayoutParams(
@@ -206,14 +203,11 @@ class QuestionDetailFragment : Fragment(), Runnable {
                     topToBottom = binding.firstAnswer.id
                     startToStart = ConstraintLayout.LayoutParams.PARENT_ID
                     endToEnd = ConstraintLayout.LayoutParams.PARENT_ID
-                    topMargin = 10.pxToDp(requireContext())
+                    topMargin = 10.dpToPx(requireContext())
                 }
 
                 background = ContextCompat.getDrawable(requireContext(), R.drawable.bg_white_rectangle_primary_stroke_10dp_corners)
-                setPadding(10.pxToDp(requireContext()), 10.pxToDp(requireContext()), 10.pxToDp(requireContext()), 10.pxToDp(requireContext()))
-//                setTextColor(ContextCompat.getColor(context, R.color.black))
-//                setTextSize(TypedValue.COMPLEX_UNIT_PX, resources.getDimension(R.dimen.smaller_content))
-//                visibility = GONE
+                setPadding(10.dpToPx(requireContext()), 10.dpToPx(requireContext()), 10.dpToPx(requireContext()), 10.dpToPx(requireContext()))
             }
             binding.thirdAnswer.apply {
                 layoutParams = ConstraintLayout.LayoutParams(
@@ -223,14 +217,11 @@ class QuestionDetailFragment : Fragment(), Runnable {
                     topToBottom = binding.secondAnswer.id
                     startToStart = ConstraintLayout.LayoutParams.PARENT_ID
                     endToEnd = ConstraintLayout.LayoutParams.PARENT_ID
-                    topMargin = 10.pxToDp(requireContext())
+                    topMargin = 10.dpToPx(requireContext())
                 }
 
                 background = ContextCompat.getDrawable(requireContext(), R.drawable.bg_white_rectangle_primary_stroke_10dp_corners)
-                setPadding(10.pxToDp(requireContext()), 10.pxToDp(requireContext()), 10.pxToDp(requireContext()), 10.pxToDp(requireContext()))
-//                setTextColor(ContextCompat.getColor(context, R.color.black))
-//                setTextSize(TypedValue.COMPLEX_UNIT_PX, resources.getDimension(R.dimen.smaller_content))
-//                visibility = GONE
+                setPadding(10.dpToPx(requireContext()), 10.dpToPx(requireContext()), 10.dpToPx(requireContext()), 10.dpToPx(requireContext()))
             }
             binding.fourthAnswer.apply {
                 layoutParams = ConstraintLayout.LayoutParams(
@@ -240,26 +231,23 @@ class QuestionDetailFragment : Fragment(), Runnable {
                     topToBottom = binding.thirdAnswer.id
                     startToStart = ConstraintLayout.LayoutParams.PARENT_ID
                     endToEnd = ConstraintLayout.LayoutParams.PARENT_ID
-                    topMargin = 10.pxToDp(requireContext())
+                    topMargin = 10.dpToPx(requireContext())
                 }
 
                 background = ContextCompat.getDrawable(requireContext(), R.drawable.bg_white_rectangle_primary_stroke_10dp_corners)
-                setPadding(10.pxToDp(requireContext()), 10.pxToDp(requireContext()), 10.pxToDp(requireContext()), 10.pxToDp(requireContext()))
-//                setTextColor(ContextCompat.getColor(context, R.color.black))
-//                setTextSize(TypedValue.COMPLEX_UNIT_PX, resources.getDimension(R.dimen.smaller_content))
-//                visibility = GONE
+                setPadding(10.dpToPx(requireContext()), 10.dpToPx(requireContext()), 10.dpToPx(requireContext()), 10.dpToPx(requireContext()))
             }
         }
         else{
             binding.firstAnswer.apply {
                 layoutParams = ConstraintLayout.LayoutParams(
-                    30.pxToDp(requireContext()),
-                    30.pxToDp(requireContext())
+                    30.dpToPx(requireContext()),
+                    30.dpToPx(requireContext())
                 ).apply {
                     topToBottom = binding.img.id
                     startToStart = ConstraintLayout.LayoutParams.PARENT_ID
                     endToStart = binding.secondAnswer.id
-                    topMargin = 20.pxToDp(requireContext())
+                    topMargin = 20.dpToPx(requireContext())
                 }
 
                 background = ContextCompat.getDrawable(requireContext(), R.drawable.bg_circle_answer)
@@ -267,8 +255,8 @@ class QuestionDetailFragment : Fragment(), Runnable {
             }
             binding.secondAnswer.apply {
                 layoutParams = ConstraintLayout.LayoutParams(
-                    30.pxToDp(requireContext()),
-                    30.pxToDp(requireContext())
+                    30.dpToPx(requireContext()),
+                    30.dpToPx(requireContext())
                 ).apply {
                     topToTop = binding.firstAnswer.id
                     startToEnd = binding.firstAnswer.id
@@ -282,8 +270,8 @@ class QuestionDetailFragment : Fragment(), Runnable {
             }
             binding.thirdAnswer.apply {
                 layoutParams = ConstraintLayout.LayoutParams(
-                    30.pxToDp(requireContext()),
-                    30.pxToDp(requireContext())
+                    30.dpToPx(requireContext()),
+                    30.dpToPx(requireContext())
                 ).apply {
                     topToTop = binding.secondAnswer.id
                     startToEnd = binding.secondAnswer.id
@@ -296,8 +284,8 @@ class QuestionDetailFragment : Fragment(), Runnable {
             }
             binding.fourthAnswer.apply {
                 layoutParams = ConstraintLayout.LayoutParams(
-                    30.pxToDp(requireContext()),
-                    30.pxToDp(requireContext())
+                    30.dpToPx(requireContext()),
+                    30.dpToPx(requireContext())
                 ).apply {
                     topToTop = binding.thirdAnswer.id
                     startToEnd = binding.thirdAnswer.id
@@ -316,14 +304,14 @@ class QuestionDetailFragment : Fragment(), Runnable {
 
         for (i in question.answers.indices) {
             answerViews[i].apply {
-                if (isShowAnswer){
-                    text = requireContext().getString(
+                text = if (isShowAnswer){
+                    requireContext().getString(
                         R.string.Question_answer_with_content_regex,
                         answersChar[i],
                         question.answers[i]
                     )
                 }else{
-                    text = requireContext().getString(
+                    requireContext().getString(
                         R.string.Question_answer_no_content_regex,
                         answersChar[i]
                     )

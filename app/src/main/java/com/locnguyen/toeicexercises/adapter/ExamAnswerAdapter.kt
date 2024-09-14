@@ -15,7 +15,7 @@ import com.locnguyen.toeicexercises.model.Question
 class ExamAnswerAdapter(
     private val questions: ArrayList<Pair<String, Question>>,
     private val userAnswers: HashMap<Int, String>,
-    private val itemClicked: (Int, Question, String?) -> Unit
+    private val itemClicked: (Int, Question, String?, Boolean) -> Unit
 ) :
     RecyclerView.Adapter<ExamAnswerAdapter.ExamAnswerVH>() {
     class ExamAnswerVH(val binding: ItemExamAnswerBinding) :
@@ -85,7 +85,15 @@ class ExamAnswerAdapter(
         }
 
         holder.binding.root.setOnClickListener {
-            itemClicked.invoke(position, question, userAnswer)
+            itemClicked.invoke(position, question, userAnswer, isShowAnswer(questions[position].first))
+        }
+    }
+
+    private fun isShowAnswer(part:String): Boolean {
+        return when{
+            part.contains("Picture Description", true) ||
+                    part.contains("Question Response", true) -> false
+            else -> true
         }
     }
 

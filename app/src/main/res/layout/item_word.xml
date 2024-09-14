@@ -6,7 +6,6 @@
     xmlns:tool="http://schemas.android.com/tools"
     android:background="@drawable/bg_transparent_rectangle_primary_stroke_10dp_corners"
     android:padding="15dp"
-    android:layout_marginEnd="20dp"
     android:layout_marginBottom="20dp">
 
     <TextView

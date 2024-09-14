@@ -97,6 +97,8 @@ class MainFragment: Fragment() {
             "Từ vựng" -> {
                 navController.navigate(R.id.action_mainFragment_to_wordFragment)
             }
+            "Ngữ pháp" -> {
+            }
         }
     }
 

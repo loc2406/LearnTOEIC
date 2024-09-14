@@ -34,26 +34,14 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="1835" />
-                            <option name="y" value="40" />
+                            <option name="x" value="1696" />
+                            <option name="y" value="31" />
                           </Point>
                         </option>
                       </LayoutPositions>
                     </value>
                   </entry>
-                  <entry key="examAnswerFragment">
-                    <value>
-                      <LayoutPositions>
-                        <option name="myPosition">
-                          <Point>
-                            <option name="x" value="1523" />
-                            <option name="y" value="37" />
-                          </Point>
-                        </option>
-                      </LayoutPositions>
-                    </value>
-                  </entry>
-                  <entry key="examDetailFragment">
+                  <entry key="detailFragment">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
@@ -64,7 +52,7 @@
                         </option>
                         <option name="myPositions">
                           <map>
-                            <entry key="action_examDetailFragment_to_examScoreFragment">
+                            <entry key="action_detailFragment_to_scoreFragment">
                               <value>
                                 <LayoutPositions />
                               </value>
@@ -74,23 +62,35 @@
                       </LayoutPositions>
                     </value>
                   </entry>
-                  <entry key="examScoreFragment">
+                  <entry key="listAnswersFragment">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="1222" />
-                            <option name="y" value="32" />
+                            <option name="x" value="1501" />
+                            <option name="y" value="33" />
                           </Point>
                         </option>
                         <option name="myPositions">
                           <map>
-                            <entry key="action_examScoreFragment_to_examAnswerFragment">
+                            <entry key="action_listAnswersFragment_to_answerFragment">
                               <value>
                                 <LayoutPositions />
                               </value>
                             </entry>
                           </map>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="listMeansFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="1242" />
+                            <option name="y" value="-309" />
+                          </Point>
                         </option>
                       </LayoutPositions>
                     </value>
@@ -106,12 +106,33 @@
                         </option>
                         <option name="myPositions">
                           <map>
-                            <entry key="action_mainFragment_to_examDetailFragment">
+                            <entry key="action_mainFragment_to_detailFragment">
                               <value>
                                 <LayoutPositions />
                               </value>
                             </entry>
                             <entry key="action_mainFragment_to_wordFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="scoreFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="1260" />
+                            <option name="y" value="44" />
+                          </Point>
+                        </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_scoreFragment_to_listAnswersFragment">
                               <value>
                                 <LayoutPositions />
                               </value>

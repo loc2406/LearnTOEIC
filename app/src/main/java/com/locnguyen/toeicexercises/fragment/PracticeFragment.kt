@@ -17,6 +17,7 @@ import com.locnguyen.toeicexercises.adapter.NoteAdapter
 import com.locnguyen.toeicexercises.adapter.TheoryAdapter
 import com.locnguyen.toeicexercises.databinding.PracticeFragmentBinding
 import com.locnguyen.toeicexercises.model.Exam
+import com.locnguyen.toeicexercises.utils.DialogHelper
 import com.locnguyen.toeicexercises.viewmodel.MainVM
 
 class PracticeFragment: Fragment() {
@@ -39,12 +40,10 @@ class PracticeFragment: Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.TIRAMISU){
-            requireActivity().requestPermissions(arrayOf(Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE), MainActivity.CODE)
-        }
-
         mainVM = ViewModelProvider(requireActivity())[MainVM::class.java]
+
         theoryAdapter = TheoryAdapter(listOf(Pair("Từ vựng", R.drawable.ic_theory1), Pair("Ngữ pháp", R.drawable.ic_theory2))){ typeName ->
+            DialogHelper.getLoadingDialog(requireActivity()).show()
             mainVM.itemTheoryClicked.value = typeName
         }
         exerciseAdapter = ExerciseAdapter(listOf(Exam("Chọn câu đúng"), Exam("Nối câu"))){ exerciseName ->

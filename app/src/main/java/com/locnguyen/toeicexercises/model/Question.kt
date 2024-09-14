@@ -45,9 +45,6 @@ data class Question(
     }
 
     companion object CREATOR : Parcelable.Creator<Question> {
-        private var currentId: Long = 0
-
-        fun getId() = currentId++
 
         override fun createFromParcel(parcel: Parcel): Question {
             return Question(parcel)

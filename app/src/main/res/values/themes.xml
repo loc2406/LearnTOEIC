@@ -4,6 +4,8 @@
     <style name="Theme.TOEICExercises" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:fontFamily">@font/tinos_regular</item>
         <item name="android:colorPrimary">@color/primary</item>
+        <item name="android:statusBarColor">@color/primary</item>
+        <item name="android:navigationBarColor">@color/primary</item>
     </style>
 
     <style name="MySplashScreen" parent="Theme.SplashScreen">

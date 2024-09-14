@@ -36,6 +36,7 @@ class ListAnswersFragment: Fragment() {
         examVM = ViewModelProvider(requireActivity())[ExamVM::class.java]
 
         initViews()
+        initListeners()
     }
 
     private fun initViews() {
@@ -43,10 +44,16 @@ class ListAnswersFragment: Fragment() {
             setHasFixedSize(true)
             layoutManager = LinearLayoutManager(requireContext())
             addItemDecoration(DividerItemDecoration(requireContext(), DividerItemDecoration.VERTICAL))
-            adapter = ExamAnswerAdapter(examVM.examQuestions, examVM.userAnswers){ position, question, userAnswer ->
-                val action = ListAnswersFragmentDirections.actionListAnswersFragmentToAnswerFragment(position, question, userAnswer)
+            adapter = ExamAnswerAdapter(examVM.examQuestions, examVM.userAnswers){ position, question, userAnswer, isShowAnswer ->
+                val action = ListAnswersFragmentDirections.actionListAnswersFragmentToAnswerFragment(position, question, userAnswer, isShowAnswer)
                 navController.navigate(action)
             }
+        }
+    }
+
+    private fun initListeners(){
+        binding.icBack.setOnClickListener {
+            navController.popBackStack()
         }
     }
 }
