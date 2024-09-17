@@ -25,7 +25,7 @@
     <string name="Favorite">Ưa thích</string>
     <string name="Flashcard">Flashcard</string>
     <string name="Synonym">Từ đồng nghĩa</string>
-    <string name="Word_mean_example_regex">Ex: %s</string>
+    <string name="Word_mean_example_regex">- %s (<font color='#000000'>%s</font>)</string>
     <string name="Word_mean_regex">-> %s</string>
     <string name="Note">Sổ tay</string>
     <string name="Lock">Khóa</string>
@@ -72,4 +72,6 @@
     <string name="Percent">%d %%</string>
     <string name="Find_word">Tìm kiếm từ vựng...</string>
     <string name="Dont_find_word_message">Không tìm thấy từ vựng</string>
+    <string name="Example_title">"Ví dụ: "</string>
+    <string name="Exit_app_message">Nhấn back lần nữa để thoát ứng dụng!</string>
 </resources>

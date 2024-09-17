@@ -116,4 +116,7 @@ dependencies {
 
     //circle progress bar
     implementation(libs.circularprogressbar)
+
+    //gg ads
+    implementation(libs.play.services.ads)
 }

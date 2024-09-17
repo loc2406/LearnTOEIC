@@ -25,6 +25,7 @@ import androidx.navigation.fragment.NavHostFragment
 import com.locnguyen.toeicexercises.databinding.MainActivityBinding
 import com.locnguyen.toeicexercises.ui.theme.TOEICExercisesTheme
 import com.locnguyen.toeicexercises.utils.WordDB
+import com.locnguyen.toeicexercises.utils.admod.AdsInterval
 import com.locnguyen.toeicexercises.utils.toastMessage
 import com.locnguyen.toeicexercises.viewmodel.MainVM
 import com.locnguyen.toeicexercises.viewmodel.WordVM
@@ -35,6 +36,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var navController: NavController
     private lateinit var mainVM: MainVM
     private lateinit var wordVM: WordVM
+    private var adsInterval: AdsInterval? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         val splashScreen = installSplashScreen()
@@ -45,18 +47,20 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         window.statusBarColor = ContextCompat.getColor(this, R.color.primary);
-        window.navigationBarColor = ContextCompat.getColor(this, R.color.primary);
+        window.navigationBarColor = ContextCompat.getColor(this, R.color.white);
 
         navController = (supportFragmentManager.findFragmentById(R.id.nav_host) as NavHostFragment).navController
         mainVM = ViewModelProvider(this)[MainVM::class.java]
         wordVM = ViewModelProvider(this)[WordVM::class.java]
 
-        if(navController.currentDestination?.id == R.id.aboutAppFragment){
+        if(navController.currentDestination?.id == R.id.introFragment){
             splashScreen.setKeepOnScreenCondition{false}
         }
 
         wordVM.words.value = WordDB(this).getListWord()
         wordVM.examples.value = WordDB(this).getListExamples()
+
+        adsInterval = AdsInterval(this)
 
         initObserves()
     }
@@ -64,8 +68,17 @@ class MainActivity : AppCompatActivity() {
     private fun initObserves() {
         mainVM.startLearn.observe(this){ isClicked ->
             if (isClicked){
-                navController.navigate(R.id.action_aboutAppFragment_to_mainFragment)
+                onShowAdsInterval()
+                navController.navigate(R.id.action_introFragment_to_mainFragment)
             }
+        }
+    }
+
+    private fun onShowAdsInterval(){
+        try{
+            adsInterval?.showIntervalAds()
+        }catch (e: OutOfMemoryError){
+            e.printStackTrace()
         }
     }
 }

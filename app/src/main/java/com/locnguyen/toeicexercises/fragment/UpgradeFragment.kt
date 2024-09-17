@@ -5,8 +5,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.locnguyen.toeicexercises.adapter.AboutAppAdapter
-import com.locnguyen.toeicexercises.databinding.AboutAppFragmentBinding
 import com.locnguyen.toeicexercises.databinding.UpgradeFragmentBinding
 
 class UpgradeFragment: Fragment() {

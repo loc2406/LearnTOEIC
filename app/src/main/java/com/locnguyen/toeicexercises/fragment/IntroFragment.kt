@@ -1,27 +1,22 @@
 package com.locnguyen.toeicexercises.fragment
 
-import android.graphics.Color
-import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.AdapterView
 import android.widget.ArrayAdapter
-import android.widget.TextView
-import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.NavController
-import androidx.navigation.Navigation
+import com.google.android.gms.ads.AdRequest
 import com.locnguyen.toeicexercises.viewmodel.MainVM
 import com.locnguyen.toeicexercises.R
-import com.locnguyen.toeicexercises.databinding.AboutAppFragment1Binding
+import com.locnguyen.toeicexercises.databinding.IntroFragmentBinding
 
-class AboutAppFragment1: Fragment() {
+class IntroFragment: Fragment() {
 
-    private lateinit var binding: AboutAppFragment1Binding
+    private lateinit var binding: IntroFragmentBinding
     private lateinit var mainVM: MainVM
+    private lateinit var adRequest: AdRequest
 
     private val languages: List<String> by lazy {listOf("Tiếng Việt")}
 
@@ -30,13 +25,15 @@ class AboutAppFragment1: Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = AboutAppFragment1Binding.inflate(inflater, container, false)
+        binding = IntroFragmentBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         mainVM = ViewModelProvider(requireActivity())[MainVM::class.java]
+
+        adRequest = AdRequest.Builder().build()
 
         initViews()
         initListeners()
@@ -46,6 +43,8 @@ class AboutAppFragment1: Fragment() {
         val languageAdapter = ArrayAdapter(requireContext(), R.layout.item_language, languages)
         binding.selectLanguageSpinner.adapter = languageAdapter
         binding.selectLanguageSpinner.dropDownVerticalOffset = 100
+
+        binding.ads.loadAd(adRequest)
     }
 
     private fun initListeners(){

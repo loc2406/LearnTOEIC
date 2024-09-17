@@ -70,8 +70,6 @@ class WordDB(private val context: Context, version: Int = 1) :
     private fun openDb(): SQLiteDatabase? {
         val dbFile = context.getDatabasePath(context.getString(R.string.db_name))
 
-        Log.d("DB", dbFile.absolutePath)
-
         return if (!dbFile.exists()) {
             null
         } else {

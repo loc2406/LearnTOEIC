@@ -24,7 +24,11 @@ class WordVM : ViewModel(){
         }
     }
 
-    fun getExContent(exId: Int): String {
+    fun getExEngContent(exId: Int): String {
         return examples.value?.find { ex -> ex.id == exId }?.engContent ?: ""
+    }
+
+    fun getExVieContent(exId: Int): String {
+        return examples.value?.find { ex -> ex.id == exId }?.viContent ?: ""
     }
 }

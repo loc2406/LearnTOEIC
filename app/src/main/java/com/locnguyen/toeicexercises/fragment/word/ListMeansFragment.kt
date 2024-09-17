@@ -1,6 +1,7 @@
 package com.locnguyen.toeicexercises.fragment.word
 
 import android.os.Bundle
+import android.text.Html
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -97,8 +98,8 @@ class ListMeansFragment: Fragment() {
                         binding.wordMeans.addView(wordMeanView)
 
                         mean.examples?.let{ examples ->
-                            for (ex in examples){
-                                val wordMeanExView = TextView(requireContext()).apply {
+                            if (examples.isNotEmpty()){
+                                val exTitle = TextView(requireContext()).apply {
                                     layoutParams = LinearLayout.LayoutParams(
                                         LinearLayout.LayoutParams.MATCH_PARENT,
                                         LinearLayout.LayoutParams.WRAP_CONTENT
@@ -110,16 +111,39 @@ class ListMeansFragment: Fragment() {
                                             0
                                         )
                                     }
-                                    text = requireContext().getString(
-                                        R.string.Word_mean_example_regex,
-                                        wordVM.getExContent(ex)
-                                    )
+                                    text = requireContext().getString(R.string.Example_title)
                                     textSize = requireContext().resources.getDimension(R.dimen.small_content).pxToDp(requireContext())
                                     setTextColor(requireContext().getColor(R.color.black))
-                                    typeface = tinosItalic
+                                    typeface = tinosBold
                                 }
 
-                                binding.wordMeans.addView(wordMeanExView)
+                                binding.wordMeans.addView(exTitle)
+
+                                for (ex in examples){
+                                    val wordMeanExView = TextView(requireContext()).apply {
+                                        layoutParams = LinearLayout.LayoutParams(
+                                            LinearLayout.LayoutParams.MATCH_PARENT,
+                                            LinearLayout.LayoutParams.WRAP_CONTENT
+                                        ).apply {
+                                            setMargins(
+                                                20.dpToPx(requireContext()),
+                                                0,
+                                                0,
+                                                0
+                                            )
+                                        }
+                                        text = Html.fromHtml( requireContext().getString(
+                                            R.string.Word_mean_example_regex,
+                                            wordVM.getExEngContent(ex),
+                                            wordVM.getExVieContent(ex)
+                                        ), Html.FROM_HTML_MODE_LEGACY)
+                                        textSize = requireContext().resources.getDimension(R.dimen.small_content).pxToDp(requireContext())
+                                        setTextColor(requireContext().getColor(R.color.black))
+                                        typeface = tinosItalic
+                                    }
+
+                                    binding.wordMeans.addView(wordMeanExView)
+                                }
                             }
                         }
                     }

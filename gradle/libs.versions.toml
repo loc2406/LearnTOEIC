@@ -23,6 +23,7 @@ loggingInterceptor = "4.9.0"
 material = "1.12.0"
 mpandroidchart = "3.1.0"
 navigationFragmentKtx = "2.7.7"
+playServicesAds = "22.6.0"
 playServicesMlkitTextRecognitionCommon = "19.0.0"
 recyclerview = "1.3.2"
 retrofit = "2.7.2"
@@ -75,6 +76,7 @@ androidx-material3 = { group = "androidx.compose.material3", name = "material3" 
 logging-interceptor = { module = "com.squareup.okhttp3:logging-interceptor", version.ref = "loggingInterceptor" }
 material = { module = "com.google.android.material:material", version.ref = "material" }
 mpandroidchart = { module = "com.github.PhilJay:MPAndroidChart", version.ref = "mpandroidchart" }
+play-services-ads = { module = "com.google.android.gms:play-services-ads", version.ref = "playServicesAds" }
 play-services-mlkit-text-recognition-common = { module = "com.google.android.gms:play-services-mlkit-text-recognition-common", version.ref = "playServicesMlkitTextRecognitionCommon" }
 retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
 text-recognition = { module = "com.google.mlkit:text-recognition", version.ref = "textRecognition" }

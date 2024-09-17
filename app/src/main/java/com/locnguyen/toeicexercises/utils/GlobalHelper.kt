@@ -13,8 +13,13 @@ import com.bumptech.glide.request.RequestListener
 class GlobalHelper(private val context: Context) {
 
     val density = context.resources.displayMetrics.density
+    val idAdsApp = "ca-app-pub-9937095376409239~8917419808"
+    val idAdsBanner = "ca-app-pub-9937095376409239/9347820758"
+    val idAdsInterval = "ca-app-pub-9937095376409239/8967151572"
+    val idAdsBannerTest = "ca-app-pub-3940256099942544/9214589741"
+    val idAdsIntervalTest = "ca-app-pub-3940256099942544/1033173712"
 
-    fun loadImg(img: String, view: ImageView, listener: RequestListener<Drawable>? = null){
+    fun loadImg(img: String, view: ImageView, listener: RequestListener<Drawable>? = null) {
         Glide.with(context)
             .load(img)
             .addListener(listener)

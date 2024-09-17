@@ -16,6 +16,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TOEICExercises"
         tools:targetApi="31">
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-9937095376409239~8917419808" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true"

@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
@@ -12,6 +13,7 @@ import androidx.viewpager2.widget.ViewPager2
 import com.locnguyen.toeicexercises.R
 import com.locnguyen.toeicexercises.adapter.BottomNavAdapter
 import com.locnguyen.toeicexercises.databinding.MainFragmentBinding
+import com.locnguyen.toeicexercises.utils.toastMessage
 import com.locnguyen.toeicexercises.viewmodel.ExamVM
 import com.locnguyen.toeicexercises.viewmodel.MainVM
 
@@ -22,6 +24,8 @@ class MainFragment: Fragment() {
     private lateinit var bottomNavAdapter: BottomNavAdapter
     private lateinit var mainVM: MainVM
     private lateinit var examVM: ExamVM
+
+    private var backPressedTime: Long = 0
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -54,6 +58,12 @@ class MainFragment: Fragment() {
     }
 
     private fun initListeners(){
+        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner, object: OnBackPressedCallback(true){
+            override fun handleOnBackPressed() {
+                handlePressedBack()
+            }
+        })
+
         binding.bottomNavMenu.setOnItemSelectedListener { menuItem ->
             when(menuItem.itemId){
                 R.id.bottom_nav_exercise -> binding.fragmentViewPager2.currentItem = 0
@@ -90,6 +100,16 @@ class MainFragment: Fragment() {
                 examVM.exam.value = exam
             }
         }
+    }
+
+    private fun handlePressedBack(){
+        if (backPressedTime + 5000 > System.currentTimeMillis()) {
+            requireActivity().onBackPressedDispatcher.onBackPressed()
+            return
+        } else {
+            requireContext().toastMessage(R.string.Exit_app_message)
+        }
+        backPressedTime = System.currentTimeMillis()
     }
 
     private fun handleItemTheoryClicked(name: String) {
