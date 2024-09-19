@@ -74,4 +74,8 @@
     <string name="Dont_find_word_message">Không tìm thấy từ vựng</string>
     <string name="Example_title">"Ví dụ: "</string>
     <string name="Exit_app_message">Nhấn back lần nữa để thoát ứng dụng!</string>
+    <string name="Lesson_regex">Bài %d</string>
+    <string name="Grammar">Ngữ pháp</string>
+    <string name="Select_lesson_title">Chọn bài học:</string>
+    <string name="Intro_image">Ảnh bìa</string>
 </resources>

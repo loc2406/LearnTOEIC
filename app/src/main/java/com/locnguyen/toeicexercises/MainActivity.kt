@@ -1,32 +1,16 @@
 package com.locnguyen.toeicexercises
 
 import android.os.Bundle
-import android.view.View
-import android.view.WindowManager
-import android.widget.Toast
-import android.window.OnBackInvokedDispatcher
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.core.content.ContextCompat
-import androidx.core.splashscreen.SplashScreen
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import com.locnguyen.toeicexercises.databinding.MainActivityBinding
-import com.locnguyen.toeicexercises.ui.theme.TOEICExercisesTheme
-import com.locnguyen.toeicexercises.utils.WordDB
+import com.locnguyen.toeicexercises.utils.TheoryDB
 import com.locnguyen.toeicexercises.utils.admod.AdsInterval
-import com.locnguyen.toeicexercises.utils.toastMessage
+import com.locnguyen.toeicexercises.viewmodel.GrammarVM
 import com.locnguyen.toeicexercises.viewmodel.MainVM
 import com.locnguyen.toeicexercises.viewmodel.WordVM
 
@@ -36,11 +20,13 @@ class MainActivity : AppCompatActivity() {
     private lateinit var navController: NavController
     private lateinit var mainVM: MainVM
     private lateinit var wordVM: WordVM
-    private var adsInterval: AdsInterval? = null
+    private lateinit var grammarVM: GrammarVM
+    private lateinit var theoryDb: TheoryDB
+//    private var adsInterval: AdsInterval? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         val splashScreen = installSplashScreen()
-        splashScreen.setKeepOnScreenCondition{true}
+        splashScreen.setKeepOnScreenCondition { true }
 
         super.onCreate(savedInstanceState)
         binding = MainActivityBinding.inflate(layoutInflater)
@@ -49,36 +35,31 @@ class MainActivity : AppCompatActivity() {
         window.statusBarColor = ContextCompat.getColor(this, R.color.primary);
         window.navigationBarColor = ContextCompat.getColor(this, R.color.white);
 
-        navController = (supportFragmentManager.findFragmentById(R.id.nav_host) as NavHostFragment).navController
+        navController =
+            (supportFragmentManager.findFragmentById(R.id.nav_host) as NavHostFragment).navController
+
         mainVM = ViewModelProvider(this)[MainVM::class.java]
         wordVM = ViewModelProvider(this)[WordVM::class.java]
+        grammarVM = ViewModelProvider(this)[GrammarVM::class.java]
 
-        if(navController.currentDestination?.id == R.id.introFragment){
-            splashScreen.setKeepOnScreenCondition{false}
+        if (navController.currentDestination?.id == R.id.introFragment) {
+            splashScreen.setKeepOnScreenCondition { false }
         }
 
-        wordVM.words.value = WordDB(this).getListWord()
-        wordVM.examples.value = WordDB(this).getListExamples()
+        theoryDb = TheoryDB(this)
+        wordVM.words.value = theoryDb.getListWord()
+        wordVM.examples.value = theoryDb.getListExamples()
+        grammarVM.grammars.value = theoryDb.getListGrammars()
 
-        adsInterval = AdsInterval(this)
 
-        initObserves()
+//        adsInterval = AdsInterval(this)
     }
 
-    private fun initObserves() {
-        mainVM.startLearn.observe(this){ isClicked ->
-            if (isClicked){
-                onShowAdsInterval()
-                navController.navigate(R.id.action_introFragment_to_mainFragment)
-            }
-        }
-    }
-
-    private fun onShowAdsInterval(){
-        try{
-            adsInterval?.showIntervalAds()
-        }catch (e: OutOfMemoryError){
-            e.printStackTrace()
-        }
-    }
+//    private fun onShowAdsInterval(){
+//        try{
+//            adsInterval?.showIntervalAds()
+//        }catch (e: OutOfMemoryError){
+//            e.printStackTrace()
+//        }
+//    }
 }

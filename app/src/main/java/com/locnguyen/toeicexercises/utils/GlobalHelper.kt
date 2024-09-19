@@ -7,12 +7,17 @@ import android.net.Network
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.annotation.StringRes
+import androidx.core.content.res.ResourcesCompat
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestListener
+import com.locnguyen.toeicexercises.R
 
 class GlobalHelper(private val context: Context) {
 
     val density = context.resources.displayMetrics.density
+    val tinosBold by lazy { ResourcesCompat.getFont(context, R.font.tinos_bold)}
+    val tinosItalic by lazy { ResourcesCompat.getFont(context, R.font.tinos_italic)}
+
     val idAdsApp = "ca-app-pub-9937095376409239~8917419808"
     val idAdsBanner = "ca-app-pub-9937095376409239/9347820758"
     val idAdsInterval = "ca-app-pub-9937095376409239/8967151572"
@@ -35,6 +40,10 @@ fun Context.isHasNetWork(): Boolean {
 
 fun Context.toastMessage(@StringRes stringRes: Int, duration: Int = Toast.LENGTH_SHORT) {
     Toast.makeText(this, stringRes, duration).show()
+}
+
+fun Context.toastMessage(message: String, duration: Int = Toast.LENGTH_SHORT) {
+    Toast.makeText(this, message, duration).show()
 }
 
 fun Int.dpToPx(context: Context): Int {

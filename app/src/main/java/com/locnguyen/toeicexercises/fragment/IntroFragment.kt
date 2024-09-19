@@ -7,6 +7,8 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.NavController
+import androidx.navigation.Navigation
 import com.google.android.gms.ads.AdRequest
 import com.locnguyen.toeicexercises.viewmodel.MainVM
 import com.locnguyen.toeicexercises.R
@@ -15,10 +17,7 @@ import com.locnguyen.toeicexercises.databinding.IntroFragmentBinding
 class IntroFragment: Fragment() {
 
     private lateinit var binding: IntroFragmentBinding
-    private lateinit var mainVM: MainVM
-    private lateinit var adRequest: AdRequest
-
-    private val languages: List<String> by lazy {listOf("Tiếng Việt")}
+    private lateinit var navController: NavController
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -31,25 +30,15 @@ class IntroFragment: Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        mainVM = ViewModelProvider(requireActivity())[MainVM::class.java]
 
-        adRequest = AdRequest.Builder().build()
+        navController = Navigation.findNavController(view)
 
-        initViews()
         initListeners()
-    }
-
-    private fun initViews() {
-        val languageAdapter = ArrayAdapter(requireContext(), R.layout.item_language, languages)
-        binding.selectLanguageSpinner.adapter = languageAdapter
-        binding.selectLanguageSpinner.dropDownVerticalOffset = 100
-
-        binding.ads.loadAd(adRequest)
     }
 
     private fun initListeners(){
         binding.btnStartLearn.setOnClickListener{
-            mainVM.startLearn.value = true
+            navController.navigate(R.id.action_introFragment_to_mainFragment)
         }
     }
 }

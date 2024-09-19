@@ -1,6 +1,7 @@
 package com.locnguyen.toeicexercises.fragment.word
 
 import android.os.Bundle
+import android.provider.Settings.Global
 import android.text.Html
 import android.view.LayoutInflater
 import android.view.View
@@ -16,6 +17,7 @@ import androidx.navigation.fragment.navArgs
 import com.locnguyen.toeicexercises.R
 import com.locnguyen.toeicexercises.databinding.ListMeansFragmentBinding
 import com.locnguyen.toeicexercises.model.Word
+import com.locnguyen.toeicexercises.utils.GlobalHelper
 import com.locnguyen.toeicexercises.utils.dpToPx
 import com.locnguyen.toeicexercises.utils.pxToDp
 import com.locnguyen.toeicexercises.viewmodel.WordVM
@@ -27,8 +29,6 @@ class ListMeansFragment: Fragment() {
     private lateinit var navController: NavController
 
     private val args by navArgs<ListMeansFragmentArgs>()
-    private val tinosBold by lazy {ResourcesCompat.getFont(requireContext(), R.font.tinos_bold)}
-    private val tinosItalic by lazy {ResourcesCompat.getFont(requireContext(), R.font.tinos_italic)}
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -70,7 +70,7 @@ class ListMeansFragment: Fragment() {
                     text = means.kind
                     textSize = requireContext().resources.getDimension(R.dimen.small_title).pxToDp(requireContext())
                     setTextColor(requireContext().getColor(R.color.primary))
-                    typeface = tinosBold
+                    typeface = GlobalHelper(requireContext()).tinosBold
                 }
 
                 binding.wordMeans.addView(kindView)
@@ -92,7 +92,7 @@ class ListMeansFragment: Fragment() {
                             text = requireContext().getString(R.string.Word_mean_regex, mean.mean)
                             textSize = requireContext().resources.getDimension(R.dimen.medium_content).pxToDp(requireContext())
                             setTextColor(requireContext().getColor(R.color.secondPrimary))
-                            typeface = tinosBold
+                            typeface = GlobalHelper(requireContext()).tinosBold
                         }
 
                         binding.wordMeans.addView(wordMeanView)
@@ -114,7 +114,7 @@ class ListMeansFragment: Fragment() {
                                     text = requireContext().getString(R.string.Example_title)
                                     textSize = requireContext().resources.getDimension(R.dimen.small_content).pxToDp(requireContext())
                                     setTextColor(requireContext().getColor(R.color.black))
-                                    typeface = tinosBold
+                                    typeface = GlobalHelper(requireContext()).tinosBold
                                 }
 
                                 binding.wordMeans.addView(exTitle)
@@ -139,7 +139,7 @@ class ListMeansFragment: Fragment() {
                                         ), Html.FROM_HTML_MODE_LEGACY)
                                         textSize = requireContext().resources.getDimension(R.dimen.small_content).pxToDp(requireContext())
                                         setTextColor(requireContext().getColor(R.color.black))
-                                        typeface = tinosItalic
+                                        typeface = GlobalHelper(requireContext()).tinosItalic
                                     }
 
                                     binding.wordMeans.addView(wordMeanExView)

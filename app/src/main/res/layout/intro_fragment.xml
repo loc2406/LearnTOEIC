@@ -7,14 +7,15 @@
 
     <ImageView
         android:id="@+id/img"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:contentDescription="@string/Logo"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/Intro_image"
         android:scaleType="centerInside"
-        android:src="@drawable/logo"
+        android:src="@drawable/img_intro"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/title"
@@ -24,8 +25,8 @@
         android:fontFamily="@font/tinos_bold"
         android:gravity="center_horizontal"
         android:text="@string/about_app_title"
-        android:textColor="@color/black"
-        android:textSize="20sp"
+        android:textColor="@color/primary"
+        android:textSize="@dimen/big_title"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/img" />
@@ -58,7 +59,7 @@
             android:layout_marginStart="10dp"
             android:text="@string/benefit_1"
             android:textColor="@color/black"
-            android:textSize="14sp"
+            android:textSize="@dimen/medium_content"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/benefit1_ic"
@@ -94,7 +95,7 @@
             android:layout_marginStart="10dp"
             android:text="@string/benefit_2"
             android:textColor="@color/black"
-            android:textSize="14sp"
+            android:textSize="@dimen/medium_content"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/benefit2_ic"
@@ -130,7 +131,7 @@
             android:layout_marginStart="10dp"
             android:text="@string/benefit_3"
             android:textColor="@color/black"
-            android:textSize="14sp"
+            android:textSize="@dimen/medium_content"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/benefit3_ic"
@@ -138,55 +139,30 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <TextView
-        android:id="@+id/select_language_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="40dp"
-        android:fontFamily="@font/tinos_bold"
-        android:text="@string/Select_language"
-        android:textColor="@color/primary"
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/benefit3_space" />
-
-    <Spinner
-        android:id="@+id/select_language_spinner"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        app:layout_constraintBottom_toBottomOf="@id/select_language_title"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0"
-        app:layout_constraintStart_toEndOf="@id/select_language_title"
-        app:layout_constraintTop_toTopOf="@id/select_language_title" />
-
-    <com.google.android.gms.ads.AdView
-        android:id="@+id/ads"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/select_language_spinner"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:adSize="BANNER"
-        app:adUnitId="ca-app-pub-3940256099942544/9214589741"/>
+<!--    <com.google.android.gms.ads.AdView-->
+<!--        android:id="@+id/ads"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="50dp"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/benefit3_space"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:adSize="BANNER"-->
+<!--        app:adUnitId="ca-app-pub-3940256099942544/9214589741"/>-->
 
     <TextView
         android:id="@+id/btn_start_learn"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginBottom="10dp"
-        android:background="@drawable/bg_primary_rectangle_no_stroke_20dp_corners"
+        android:background="@drawable/bg_primary_rectangle_no_stroke_10dp_corners"
         android:fontFamily="@font/tinos_bold"
         android:gravity="center"
-        android:padding="10dp"
+        android:padding="15dp"
         android:text="@string/Start_learn"
         android:textColor="@color/white"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="20dp"
+        android:textSize="@dimen/small_content"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

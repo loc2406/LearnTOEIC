@@ -16,6 +16,9 @@
         <action
             android:id="@+id/action_mainFragment_to_detailFragment"
             app:destination="@id/detailFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_grammarFragment"
+            app:destination="@id/listGrammarFragment" />
     </fragment>
 
     <fragment
@@ -104,7 +107,25 @@
             app:nullable="false"/>
 
     </fragment>
-
+    <fragment
+        android:id="@+id/listGrammarFragment"
+        android:name="com.locnguyen.toeicexercises.fragment.grammar.ListGrammarFragment"
+        android:label="GrammarFragment"
+        tools:layout="@layout/list_grammar_fragment">
+        <action
+            android:id="@+id/action_listGrammarFragment_to_grammarFragment"
+            app:destination="@id/grammarFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/grammarFragment"
+        android:name="com.locnguyen.toeicexercises.fragment.grammar.GrammarFragment"
+        android:label="GrammarFragment"
+        tools:layout="@layout/grammar_fragment">
+        <argument
+            android:name="grammar"
+            app:argType="com.locnguyen.toeicexercises.model.Grammar"
+            app:nullable="false"/>
+    </fragment>
 
 
 </navigation>

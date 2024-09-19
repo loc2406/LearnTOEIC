@@ -118,6 +118,7 @@ class MainFragment: Fragment() {
                 navController.navigate(R.id.action_mainFragment_to_wordFragment)
             }
             "Ngữ pháp" -> {
+                navController.navigate(R.id.action_mainFragment_to_grammarFragment)
             }
         }
     }

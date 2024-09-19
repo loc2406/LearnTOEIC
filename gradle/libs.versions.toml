@@ -36,6 +36,7 @@ textRecognitionChinese = "16.0.0"
 textRecognitionJapanese = "16.0.0"
 textRecognitionKorean = "16.0.0"
 translate = "17.0.2"
+appcompat = "1.7.0"
 
 [libraries]
 adapter-rxjava2 = { module = "com.squareup.retrofit2:adapter-rxjava2", version.ref = "converterScalars" }
@@ -84,6 +85,7 @@ text-recognition-chinese = { module = "com.google.mlkit:text-recognition-chinese
 text-recognition-japanese = { module = "com.google.mlkit:text-recognition-japanese", version.ref = "textRecognitionJapanese" }
 text-recognition-korean = { module = "com.google.mlkit:text-recognition-korean", version.ref = "textRecognitionKorean" }
 translate = { module = "com.google.mlkit:translate", version.ref = "translate" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
