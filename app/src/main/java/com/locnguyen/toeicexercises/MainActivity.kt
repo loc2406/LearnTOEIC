@@ -8,8 +8,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import com.locnguyen.toeicexercises.databinding.MainActivityBinding
-import com.locnguyen.toeicexercises.utils.TheoryDB
-import com.locnguyen.toeicexercises.utils.admod.AdsInterval
+import com.locnguyen.toeicexercises.database.TheoryDB
 import com.locnguyen.toeicexercises.viewmodel.GrammarVM
 import com.locnguyen.toeicexercises.viewmodel.MainVM
 import com.locnguyen.toeicexercises.viewmodel.WordVM

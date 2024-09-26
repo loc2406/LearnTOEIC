@@ -21,7 +21,7 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:importantForAccessibility="no"
-                android:src="@drawable/ic_theory1"
+                android:src="@drawable/ic_word"
                 android:scaleType="centerInside"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"

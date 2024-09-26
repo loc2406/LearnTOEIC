@@ -1,106 +1,192 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
-    xmlns:tools="http://schemas.android.com/tools">
+    android:background="@color/white">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        xmlns:app="http://schemas.android.com/apk/res-auto">
+        android:layout_height="wrap_content">
 
         <TextView
             android:id="@+id/title"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="@string/Practice"
-            android:textSize="@dimen/medium_title"
-            android:textColor="@color/white"
-            android:fontFamily="@font/tinos_bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
             android:background="@drawable/bg_primary_rectangle_no_stroke_20dp_botstart_botend_corners"
+            android:fontFamily="@font/tinos_bold"
             android:gravity="center"
-            android:paddingVertical="15dp"/>
+            android:paddingVertical="15dp"
+            android:text="@string/Practice"
+            android:textColor="@color/white"
+            android:textSize="@dimen/medium_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/theory_title"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="@string/Theory"
-            android:textSize="@dimen/big_content"
-            android:textColor="@color/black"
-            android:fontFamily="@font/tinos_bold"
-            app:layout_constraintStart_toStartOf="@id/title"
-            app:layout_constraintTop_toBottomOf="@id/title"
-            app:layout_constraintEnd_toEndOf="@id/title"
+            android:layout_marginHorizontal="20dp"
             android:layout_marginTop="20dp"
-            android:layout_marginHorizontal="20dp"/>
+            android:fontFamily="@font/tinos_bold"
+            android:text="@string/Theory"
+            android:textColor="@color/black"
+            android:textSize="@dimen/big_content"
+            app:layout_constraintEnd_toEndOf="@id/title"
+            app:layout_constraintStart_toStartOf="@id/title"
+            app:layout_constraintTop_toBottomOf="@id/title" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/theory_content"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            tools:listitem="@layout/item_theory"
-            tools:itemCount="1"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
             android:scrollbars="none"
-            android:layout_marginStart="10dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/theory_title"
             app:layout_constraintEnd_toEndOf="@id/theory_title"
-            android:layout_marginTop="20dp"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/theory_title" />
 
         <TextView
             android:id="@+id/exercise_title"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="@string/Exercise"
-            android:textSize="@dimen/big_content"
-            android:textColor="@color/black"
+            android:layout_marginTop="20dp"
             android:fontFamily="@font/tinos_bold"
-            app:layout_constraintStart_toStartOf="@id/theory_title"
-            app:layout_constraintTop_toBottomOf="@id/theory_content"
+            android:text="@string/Exercise"
+            android:textColor="@color/black"
+            android:textSize="@dimen/big_content"
             app:layout_constraintEnd_toEndOf="@id/theory_title"
-            android:layout_marginTop="20dp"/>
+            app:layout_constraintStart_toStartOf="@id/theory_title"
+            app:layout_constraintTop_toBottomOf="@id/theory_content" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/exercise_content"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="10dp"
-            tools:itemCount="1"
-            tools:listitem="@layout/item_exercise"
-            app:layout_constraintTop_toBottomOf="@id/exercise_title"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
             app:layout_constraintEnd_toEndOf="@id/exercise_title"
-            android:layout_marginTop="20dp"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/exercise_title"/>
 
         <TextView
             android:id="@+id/note_title"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="@string/Note"
-            android:textSize="@dimen/big_content"
-            android:textColor="@color/black"
+            android:layout_marginTop="20dp"
             android:fontFamily="@font/tinos_bold"
-            app:layout_constraintStart_toStartOf="@id/theory_title"
-            app:layout_constraintTop_toBottomOf="@id/exercise_content"
+            android:text="@string/Note"
+            android:textColor="@color/black"
+            android:textSize="@dimen/big_content"
             app:layout_constraintEnd_toEndOf="@id/theory_title"
-            android:layout_marginTop="20dp"/>
+            app:layout_constraintStart_toStartOf="@id/theory_title"
+            app:layout_constraintTop_toBottomOf="@id/exercise_content" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/note_content"
-            android:layout_width="0dp"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/note_word_space"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="@id/theory_title"
-            tools:itemCount="2"
-            tools:listitem="@layout/item_note"
-            app:layout_constraintTop_toBottomOf="@id/note_title"
-            app:layout_constraintEnd_toEndOf="@id/theory_title"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginVertical="10dp"/>
+            android:layout_margin="20dp"
+            android:background="@drawable/bg_white_rectangle_primary_stroke_10dp_corners"
+            android:padding="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/note_title">
 
+            <ImageView
+                android:id="@+id/ic_word"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:importantForAccessibility="no"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_word"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/word_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/tinos_bold"
+                android:textColor="@color/primary"
+                android:textSize="@dimen/small_content"
+                app:layout_constraintBottom_toBottomOf="@id/ic_word"
+                app:layout_constraintStart_toEndOf="@id/ic_word"
+                app:layout_constraintTop_toTopOf="@id/ic_word"
+                android:text="@string/Word" />
+
+            <TextView
+                android:id="@+id/word_quantity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/tinos_bold"
+                android:textAlignment="viewEnd"
+                android:textColor="@color/black"
+                android:textSize="@dimen/small_content"
+                app:layout_constraintBottom_toBottomOf="@id/ic_word"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/word_title"
+                app:layout_constraintTop_toTopOf="@id/ic_word"
+                tools:text="100" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/note_grammar_space"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@drawable/bg_white_rectangle_primary_stroke_10dp_corners"
+            android:padding="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/note_word_space">
+
+            <ImageView
+                android:id="@+id/ic_grammar"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:importantForAccessibility="no"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_grammar"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/grammar_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/tinos_bold"
+                android:textColor="@color/primary"
+                android:textSize="@dimen/small_content"
+                app:layout_constraintBottom_toBottomOf="@id/ic_grammar"
+                app:layout_constraintStart_toEndOf="@id/ic_grammar"
+                app:layout_constraintTop_toTopOf="@id/ic_grammar"
+                android:text="@string/Grammar" />
+
+            <TextView
+                android:id="@+id/grammar_quantity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/tinos_bold"
+                android:textAlignment="viewEnd"
+                android:textColor="@color/black"
+                android:textSize="@dimen/small_content"
+                app:layout_constraintBottom_toBottomOf="@id/ic_grammar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/grammar_title"
+                app:layout_constraintTop_toTopOf="@id/ic_grammar"
+                tools:text="100" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>

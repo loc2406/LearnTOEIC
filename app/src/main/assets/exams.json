@@ -1424,7 +1424,7 @@
                   "herself"
                 ],
                 "trueAnswer": "her",
-                "explain": "Ms. Durkin asked for volunteers to help her with the employee fitness program.<br>A. She: Subject<br>B. Her: Object or Possessive Adjective (+N)<br>C. Hers: Possessive Pronoun<br>D. Herself: Reflexive Pronoun<br>Explanation: Help (V) + her (O)",
+                "explain": "Ms. Durkin asked for volunteers to help her with the employee fitness program.\nA. She: Subject\nB. Her: Object or Possessive Adjective (+N)\nC. Hers: Possessive Pronoun\nD. Herself: Reflexive Pronoun\nExplanation: Help (V) + her (O)",
                 "key": ""
               },
               {
@@ -1761,6 +1761,1068 @@
                 ],
                 "trueAnswer": "everything",
                 "explain": "Mr. Singh took notes on everything the focus group discussed during the morning session\nA. each + singular N\nB. several + plural N\nC. another + singular N\nD. everything",
+                "key": ""
+              },
+              {
+                "title": "Last year, Tadaka Computer Solutions ranked third ____ in regional earnings",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "together",
+                  "overall",
+                  "consecutively",
+                  "generally"
+                ],
+                "trueAnswer": "overall",
+                "explain": "Last year, Tadaka Computer Solutions ranked third overall in regional earnings\nNăm ngoái, Giải pháp máy tính Tadaka xếp thứ ba về tổng thu nhập trong khu vực\nA. together: cùng nhau \nB. overall: tổng\nC. consecutively: liên tiếp\nD. generally: nhìn chung",
+                "key": ""
+              },
+              {
+                "title": "____ the popularity of the BPT39 wireless speaker, production will be increased fivefold starting next month",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "On behalf of",
+                  "Whether",
+                  "Moreover",
+                  "As a result of"
+                ],
+                "trueAnswer": "As a result of",
+                "explain": "As a result of the popularity of the BPT39 wireless speaker, production will be increased fivefold starting next month. (Do sự phổ biến của loa không dây BPT39, sản lượng sẽ tăng gấp 5 lần bắt đầu từ tháng tới.)\nA. On behalf of + danh từ: đại diện cho\nB. Whether: liệu rằng\nC. Moreover: hơn nữa (trạng từ liên kết 2 câu)\nD. As a result of + danh từ: là kết quả của, vì\nGiải thích: As a result of + the popularity (danh từ)",
+                "key": ""
+              },
+              {
+                "title": "Zypo Properties has just signed a lease agreement with the law firm ____ offices are on the third floor",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "how",
+                  "what",
+                  "whose",
+                  "wherever"
+                ],
+                "trueAnswer": "whose",
+                "explain": "Zypo Properties has just signed a lease agreement with the law firm whose offices are on the third floor\nZypo Properties vừa ký hợp đồng thuê với công ty luật có văn phòng trên tầng 3\nA. how: như thế nào (từ để hỏi)\nB. what: cái gì (từ để hỏi)\nC. whose + danh từ: của ai\nD. wherever: bất cứ nơi đâu\nGiải thích: The law firm (danh từ 1) + whose + offices (danh từ 2) + are (động từ)",
+                "key": ""
+              },
+              {
+                "title": "____ events this year caused profits in the second and third quarters to differ significantly from original projections",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "Total",
+                  "Marginal",
+                  "Representative",
+                  "Unforeseen"
+                ],
+                "trueAnswer": "Unforeseen",
+                "explain": "Unforeseen events this year caused profits in the second and third quarters to differ significantly from original projections\nNhững sự kiện không lường trước được trong năm nay khiến lợi nhuận trong quý 2 và quý 3 chênh lệch đáng kể so với dự báo ban đầu\nA. Total: tổng\nB. Marginal: Bên lề\nC. Representative: đại diện\nD. Unforeseen: không đoán trước được",
+                "key": ""
+              },
+              {
+                "title": "The timeline for the pathway lighting project was extended to ____ input from the environmental commission",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "use up",
+                  "believe in",
+                  "make into",
+                  "allow for"
+                ],
+                "trueAnswer": "allow for",
+                "explain": "The timeline for the pathway lighting project was extended to allow for input from the environmental commission\nLịch trình của dự án chiếu sáng lối đi được kéo dài để cân nhắc các thông tin từ ủy ban môi trường\nA. use up: sử dụng hết\nB. believe in: tin tưởng vào\nC. make into: tạo thành\nD. allow for: cân nhắc",
+                "key": ""
+              }
+            ]
+          },
+          {
+            "type": "Text Completion",
+            "description": "Read the texts that follow. A word or pharse is missing in some of the sentences. Four answer choices are given below each of the sentences. Select the best answer to complete the text. Then mark the letter A, B, C or D on your answer sheet.",
+            "questions": [
+              {
+                "title": "With Global Strength Gym’s 30-day trial period, you get the opportunity to try out our classes, equipment, and facilities. __(1)__. It’s completely risk-free! To sign up, we require your contact information and payment details, but you will only be charged if you are a member for __(2)__ 30 days. If you decide within this time that you no longer want to be a member of Global Strength __(3)__ visit our Web site at www.gsgym.com. On the Membership page, elect to __(4)__ your membership and enter the necessary information. It’s that easy!\n\n__(1)__ is:",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "Throughout the trial, you pay nothing and sign no contract",
+                  "Weight-lifting classes are not currently available",
+                  "A cash deposit is required when you sign up for membership",
+                  "All questions should be e-mailed to [email protected] com"
+                ],
+                "trueAnswer": "Throughout the trial, you pay nothing and sign no contract",
+                "explain": "A. Trong suốt thời gian dùng thử, bạn không phải trả tiền và không ký hợp đồng\nB. Hiện không có lớp học nâng tạ\nC. Cần đặt cọc tiền mặt khi đăng ký thành viên\nD. Tất cả các câu hỏi nên được gửi đến [email protected]\nGiải thích:\n“Throughout the trial” (trong suốt quá trình trải nghiệm) để nhắc lại và liên kết ý “the opportunity to try out” (cơ hội dùng trải nghiệm thử) ở câu trước; “Risk-free” (không có rủi ro) ở câu sau để nhấn mạnh và bổ sung ý nghĩa cho “sign no contract” (không ký hợp đồng)",
+                "key": ""
+              },
+              {
+                "title": "With Global Strength Gym’s 30-day trial period, you get the opportunity to try out our classes, equipment, and facilities. __(1)__. It’s completely risk-free! To sign up, we require your contact information and payment details, but you will only be charged if you are a member for __(2)__ 30 days. If you decide within this time that you no longer want to be a member of Global Strength __(3)__ visit our Web site at www.gsgym.com. On the Membership page, elect to __(4)__ your membership and enter the necessary information. It’s that easy!\n\n__(2)__ is:",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "not even",
+                  "almost",
+                  "over",
+                  "less than"
+                ],
+                "trueAnswer": "over",
+                "explain": "A. thậm chí không\nB. gần\nC. hơn\nD. ít hơn\nGiải thích:\nThành viên chỉ được trải nghiệm miễn phí 30 ngày, nếu muốn dùng nhiều hơn 30 ngày thì phải trả phí.",
+                "key": ""
+              },
+              {
+                "title": "With Global Strength Gym’s 30-day trial period, you get the opportunity to try out our classes, equipment, and facilities. __(1)__. It’s completely risk-free! To sign up, we require your contact information and payment details, but you will only be charged if you are a member for __(2)__ 30 days. If you decide within this time that you no longer want to be a member of Global Strength __(3)__ visit our Web site at www.gsgym.com. On the Membership page, elect to __(4)__ your membership and enter the necessary information. It’s that easy!\n\n__(3)__ is:",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "justly",
+                  "regularly",
+                  "evenly",
+                  "simply"
+                ],
+                "trueAnswer": "simply",
+                "explain": "A. một cách công bằng\nB. thường xuyên\nC. đồng đều\nD. chỉ đơn giản là/ chỉ cần\nGiải thích: Nếu bạn quyết định không là thành viên của Global Strength nữa, bạn chỉ cần truy cập trang web www.gsgym.com",
+                "key": ""
+              },
+              {
+                "title": "With Global Strength Gym’s 30-day trial period, you get the opportunity to try out our classes, equipment, and facilities. __(1)__. It’s completely risk-free! To sign up, we require your contact information and payment details, but you will only be charged if you are a member for __(2)__ 30 days. If you decide within this time that you no longer want to be a member of Global Strength __(3)__ visit our Web site at www.gsgym.com. On the Membership page, elect to __(4)__ your membership and enter the necessary information. It’s that easy!\n\n__(4)__ is:",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "extend",
+                  "renew",
+                  "cancel",
+                  "initiate"
+                ],
+                "trueAnswer": "cancel",
+                "explain": "A. mở rộng\nB. làm mới\nC. hủy\nD. khởi xướng\nGiải thích: Tại trang thành viên, chọn hủy tư cách thành viên của bạn và nhập các thông tin cần thiết",
+                "key": ""
+              },
+              {
+                "title": "As a Hanson-Roves employee, you are entitled to sick absences, during which you will be paid for time off work for health __(1)__. To avoid deductions to your pay you __(2)__ to provide a physician-signed note as documentation of your illness. __(3)__ should include the date you were seen by the doctor, a statement certifying that you are unable to perform the duties of your position, and your expected date of return. Your supervisor will then forward the documentation to Human Resources.__(4)__. Employee health records can be accessed only by those with a valid business reason for reviewing them.\n\n__(1)__ is:",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "reasons",
+                  "origins",
+                  "senses",
+                  "contributions"
+                ],
+                "trueAnswer": "reasons",
+                "explain": "A. lý do\nB. nguồn gốc\nC. ý thức/ tri giác\nD. đóng góp\nGiải thích: Trong thời gian nghỉ ốm bạn vẫn sẽ được trả lương cho thời gian nghỉ làm vì lý do sức khỏe.",
+                "key": ""
+              },
+              {
+                "title": "As a Hanson-Roves employee, you are entitled to sick absences, during which you will be paid for time off work for health __(1)__. To avoid deductions to your pay you __(2)__ to provide a physician-signed note as documentation of your illness. __(3)__ should include the date you were seen by the doctor, a statement certifying that you are unable to perform the duties of your position, and your expected date of return. Your supervisor will then forward the documentation to Human Resources.__(4)__. Employee health records can be accessed only by those with a valid business reason for reviewing them.\n\n__(2)__ is:",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "were required",
+                  "require",
+                  "are required",
+                  "are requiring"
+                ],
+                "trueAnswer": "are required",
+                "explain": "A. đã được yêu cầu\nB. yêu cầu\nC. được yêu cầu\nD. đang yêu cầu\nGiải thích: Các chính sách của công ty được coi là chân lý, sự thật nên chia động từ ở thì hiện tại đơn. Chủ thể của hành động “được yêu cầu phải cung cấp giấy khám sức khỏe” nên chia ở thể bị động.",
+                "key": ""
+              },
+              {
+                "title": "As a Hanson-Roves employee, you are entitled to sick absences, during which you will be paid for time off work for health __(1)__. To avoid deductions to your pay you __(2)__ to provide a physician-signed note as documentation of your illness. __(3)__ should include the date you were seen by the doctor, a statement certifying that you are unable to perform the duties of your position, and your expected date of return. Your supervisor will then forward the documentation to Human Resources.__(4)__. Employee health records can be accessed only by those with a valid business reason for reviewing them.\n\n__(3)__ is:",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "Those",
+                  "They",
+                  "I",
+                  "It"
+                ],
+                "trueAnswer": "It",
+                "explain": "A. Những cái / thứ\nB. Họ\nC. Tôi\nD. Nó\nGiải thích: “It” (nó) thay thế cho “document of your illness” (hồ sơ bệnh án) ở câu trước.",
+                "key": ""
+              },
+              {
+                "title": "As a Hanson-Roves employee, you are entitled to sick absences, during which you will be paid for time off work for health __(1)__. To avoid deductions to your pay you __(2)__ to provide a physician-signed note as documentation of your illness. __(3)__ should include the date you were seen by the doctor, a statement certifying that you are unable to perform the duties of your position, and your expected date of return. Your supervisor will then forward the documentation to Human Resources.__(4)__. Employee health records can be accessed only by those with a valid business reason for reviewing them.\n\n__(4)__ is:",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "Hanson-Roves ensures the privacy of your health information",
+                  "Absences may be caused by a number of factors",
+                  "You should then explain why a physician's note is not available",
+                  "Take note of the duties you were originally assigned"
+                ],
+                "trueAnswer": "Hanson-Roves ensures the privacy of your health information",
+                "explain": "A. Hanson-Roves đảm bảo tính bảo mật thông tin sức khỏe của bạn.\nB. Có rất nhiều yếu tố dẫn đến việc xin nghỉ làm\nC. Sau đó bạn nên giải thích tại sao không có ghi chú của bác sĩ\nD. Ghi lại những nhiệm vụ ban đầu bạn được giao\nGiải thích: Căn cứ vào nội dung câu đứng sau: “Chỉ những người có lý do kinh doanh hợp lệ mới có thể xem hồ sơ sức khỏe của nhân viên”.",
+                "key": ""
+              },
+              {
+                "title": "To: [email protected] From: [email protected]\nDate: 15 July\nSubject: Your first day at Arolis\nDear Mr. Contini,\nWelcome to Arolis Chemicals! Thank you for (1) the full-time, permanent position of laboratory assistant. We look forward to your arrival on 1 August in the Harris Building. Please report to the front desk and ask for Jack McNolan. He (2) you to the Human Resources office. There, you will obtain your employee badge (3) all documents necessary to start work. Note that because of its large size, the Leicester campus of Arolis can be difficult to navigate. Studying a campus map will help orient you to the location of the different buildings. (4)\nShould you have any questions, please do not hesitate to contact me.\nSincerely,\nBrandon Takemoto HR Administrative Officer\n\n__(1)__ is:",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "offering",
+                  "accepting",
+                  "discussing",
+                  "advertising"
+                ],
+                "trueAnswer": "accepting",
+                "explain": "A. đề nghị\nB. nhận / đồng ý\nC. thảo luận\nD. quảng cáo\nGiải thích: Cảm ơn bạn đã nhận vị trí trợ lý phòng thí nghiệm toàn thời gian, lâu dài.",
+                "key": ""
+              },
+              {
+                "title": "To: [email protected] From: [email protected]\nDate: 15 July\nSubject: Your first day at Arolis\nDear Mr. Contini,\nWelcome to Arolis Chemicals! Thank you for (1) the full-time, permanent position of laboratory assistant. We look forward to your arrival on 1 August in the Harris Building. Please report to the front desk and ask for Jack McNolan. He (2) you to the Human Resources office. There, you will obtain your employee badge (3) all documents necessary to start work. Note that because of its large size, the Leicester campus of Arolis can be difficult to navigate. Studying a campus map will help orient you to the location of the different buildings. (4)\nShould you have any questions, please do not hesitate to contact me.\nSincerely,\nBrandon Takemoto HR Administrative Officer\n\n__(2)__ is:",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "accompany",
+                  "did accompany",
+                  "accompanies",
+                  "will accompany"
+                ],
+                "trueAnswer": "will accompany",
+                "explain": "A. đi cùng\nB. đã đi cùng\nC. đi cùng\nD. sẽ đi cùng\nGiải thích: Ngày 1/8 là thời gian trong tương lai so với thời điểm gửi mail (15/7) nên chia ở thì tương lai đơn: Anh ấy sẽ đi cùng bạn đến phòng.",
+                "key": ""
+              },
+              {
+                "title": "To: [email protected] From: [email protected]\nDate: 15 July\nSubject: Your first day at Arolis\nDear Mr. Contini,\nWelcome to Arolis Chemicals! Thank you for (1) the full-time, permanent position of laboratory assistant. We look forward to your arrival on 1 August in the Harris Building. Please report to the front desk and ask for Jack McNolan. He (2) you to the Human Resources office. There, you will obtain your employee badge (3) all documents necessary to start work. Note that because of its large size, the Leicester campus of Arolis can be difficult to navigate. Studying a campus map will help orient you to the location of the different buildings. (4)\nShould you have any questions, please do not hesitate to contact me.\nSincerely,\nBrandon Takemoto HR Administrative Officer\n\n__(3)__ is:",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "too",
+                  "also",
+                  "as well as",
+                  "additionally"
+                ],
+                "trueAnswer": "as well as",
+                "explain": "A. too: cũng\nB. also: cũng\nC. as well as: cũng như\nD. additionally: ngoài ra\nGiải thích: “as well as” để nối 2 bộ phận cùng chức năng trong câu: You will obtain your employee badge (danh từ) as well as all documents (danh từ) necessary to start work.",
+                "key": ""
+              },
+              {
+                "title": "To: [email protected] From: [email protected]\nDate: 15 July\nSubject: Your first day at Arolis\nDear Mr. Contini,\nWelcome to Arolis Chemicals! Thank you for (1) the full-time, permanent position of laboratory assistant. We look forward to your arrival on 1 August in the Harris Building. Please report to the front desk and ask for Jack McNolan. He (2) you to the Human Resources office. There, you will obtain your employee badge (3) all documents necessary to start work. Note that because of its large size, the Leicester campus of Arolis can be difficult to navigate. Studying a campus map will help orient you to the location of the different buildings. (4)\nShould you have any questions, please do not hesitate to contact me.\nSincerely,\nBrandon Takemoto HR Administrative Officer\n\n__(4)__ is:",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "Please sign all the documents",
+                  "I will provide you with a replacement",
+                  "Construction will be completed next year",
+                  "You can download one from our Web site"
+                ],
+                "trueAnswer": "You can download one from our Web site",
+                "explain": "A. Vui lòng kí tất cả tài liệu\nB. Tôi sẽ thay thế cái khác cho bạn\nC. Công trình xây dựng sẽ hoàn thành vào năm sau\nD. Bạn có thể tải một cái từ website xuống\nGiải thích: Căn cứ nội dung câu đứng trước: Studying a campus map will help orient you to the location of the different buildings. (Xem kĩ bản đồ khuôn viên sẽ giúp bạn định hướng vị trí của các tòa nhà khác nhau.)",
+                "key": ""
+              },
+              {
+                "title": "(18 April)-MKZ Foods, Inc., the region’s largest exporter of pecans, expects its outgoing shipments to increase significantly over the next few months. This (1) is based on the fact that the region’s pecan farmers expanded their land area by 20 percent last year. According to spokesperson Katharina Seiler, MKZ’s exports could reach a colossal 50,000 metric tons this year. (2)\nMKZ buys most of the yield from the region’s pecan farms and processes it (3) export throughout the world. “The availability of new land for (4) in the region is creating opportunities for growth,” said Ms. Seiler. “I believe MKZ is going to have a truly outstanding year.”\n\n__(1)__ is:",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "cost",
+                  "delay",
+                  "decision",
+                  "forecast"
+                ],
+                "trueAnswer": "forecast",
+                "explain": "A. giá cả\nB. trì hoãn\nC. quyết định\nD. dự kiến / dự báo\nGiải thích: Nội dung câu đứng trước là một dự báo: “expects its outgoing shipments to increase significantly over the next few months” (dự kiến các lô hàng xuất đi của họ sẽ tăng đáng kể trong vài tháng tới).",
+                "key": ""
+              },
+              {
+                "title": "(18 April)-MKZ Foods, Inc., the region’s largest exporter of pecans, expects its outgoing shipments to increase significantly over the next few months. This (1) is based on the fact that the region’s pecan farmers expanded their land area by 20 percent last year. According to spokesperson Katharina Seiler, MKZ’s exports could reach a colossal 50,000 metric tons this year. (2)\nMKZ buys most of the yield from the region’s pecan farms and processes it (3) export throughout the world. “The availability of new land for (4) in the region is creating opportunities for growth,” said Ms. Seiler. “I believe MKZ is going to have a truly outstanding year.”\n\n__(2)__ is:",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "Such a figure is unprecedented in the company's history",
+                  "Moreover, Ms. Seiler holds an advanced degree in economics",
+                  "Pecans are high in vitamins and minerals",
+                  "Still, MKZ shares have been profitable in recent years"
+                ],
+                "trueAnswer": "Such a figure is unprecedented in the company's history",
+                "explain": "A. Đó là con số chưa từng có trong lịch sử của công ty. \nB. Hơn nữa, bà Seiler tốt nghiệp bằng giỏi ngành Kinh tế\nC. Hồ đào chứa hàm lượng vitamin và khoáng chất rất cao\nD. Hơn nữa, cổ phiếu của MKZ vẫn có lãi trong những năm gần đây\nGiải thích: Nội dung câu đứng trước nhắc tới sản lượng 50.000 tấn: MKZ’s exports could reach a colossal 50,000 metric tons this year (xuất khẩu của MKZ có thể đạt một con số khổng lồ 50.000 tấn trong năm nay)",
+                "key": ""
+              },
+              {
+                "title": "(18 April)-MKZ Foods, Inc., the region’s largest exporter of pecans, expects its outgoing shipments to increase significantly over the next few months. This (1) is based on the fact that the region’s pecan farmers expanded their land area by 20 percent last year. According to spokesperson Katharina Seiler, MKZ’s exports could reach a colossal 50,000 metric tons this year. (2)\nMKZ buys most of the yield from the region’s pecan farms and processes it (3) export throughout the world. “The availability of new land for (4) in the region is creating opportunities for growth,” said Ms. Seiler. “I believe MKZ is going to have a truly outstanding year.”\n\n__(3)__ is:",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "on",
+                  "for",
+                  "in",
+                  "by"
+                ],
+                "trueAnswer": "for",
+                "explain": "A. trên\nB. cho\nC. trong\nD. bởi\nGiải thích: Processes it for export: chế biến để xuất khẩu",
+                "key": ""
+              },
+              {
+                "title": "(18 April)-MKZ Foods, Inc., the region’s largest exporter of pecans, expects its outgoing shipments to increase significantly over the next few months. This (1) is based on the fact that the region’s pecan farmers expanded their land area by 20 percent last year. According to spokesperson Katharina Seiler, MKZ’s exports could reach a colossal 50,000 metric tons this year. (2)\nMKZ buys most of the yield from the region’s pecan farms and processes it (3) export throughout the world. “The availability of new land for (4) in the region is creating opportunities for growth,” said Ms. Seiler. “I believe MKZ is going to have a truly outstanding year.”\n\n__(4)__ is:",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "farming",
+                  "farmer",
+                  "farmed",
+                  "farm"
+                ],
+                "trueAnswer": "farming",
+                "explain": "A. canh tác\nB. nông dân\nC. đã canh tác\nD. canh tác\nGiải thích: For + Ving (farming)",
+                "key": ""
+              }
+            ]
+          },
+          {
+            "type": "Reading Comprehension",
+            "description": "In this part you will read a selection of texts, such as magezine and newspaper articles, letters, and advertisements. Each text is followed by several questions. Select the best answer for each question and mark the letter A, B, C or D on your answer sheet.",
+            "questions": [
+              {
+                "title": "Chakia Brown [ 3:32 P.M. ]\nHi, Ziva. I just met with the Han board of directors, and they’re interested in our redesign proposal for their downtown office buildings. Amy Han asked for another work sample, but I didn’t have the right portfolio with me. I’m heading to another meeting, so please have a messenger deliver a copy of the Grainger Centre files to her. Include the full set of plans. Thanks!\n\nWhere does Ms. Brown most likely work?",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "At an accounting firm",
+                  "At an architectural firm",
+                  "At a Web design company",
+                  "At a market research company"
+                ],
+                "trueAnswer": "At an architectural firm",
+                "explain": "Cô Brown có khả năng làm việc ở đâu nhất?\nA. Công ty kế toán\nB. Công ty kiến trúc\nC. Công ty thiết kế Web\nD. Công ty nghiên cứu thị trường\nGiải thích: They’re interested in our redesign proposal for their downtown office buildings.",
+                "key": ""
+              },
+              {
+                "title": "Chakia Brown [ 3:32 P.M. ]\nHi, Ziva. I just met with the Han board of directors, and they’re interested in our redesign proposal for their downtown office buildings. Amy Han asked for another work sample, but I didn’t have the right portfolio with me. I’m heading to another meeting, so please have a messenger deliver a copy of the Grainger Centre files to her. Include the full set of plans. Thanks!\n\nWhat is Ziva asked to do?",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "Reply to a text message",
+                  "Create a portfolio",
+                  "Set up a meeting",
+                  "Send a work sample"
+                ],
+                "trueAnswer": "Send a work sample",
+                "explain": "Ziva được yêu cầu làm gì?\nA. Trả lời tin nhắn\nB. Tạo danh mục đầu tư\nC. Tạo cuộc họp\nD. Gửi bản mẫu công việc\n\nGiải thích: Amy Han asked for another work sample",
+                "key": ""
+              },
+              {
+                "title": "E-Mail Message\nTo: Oak Lane Fashion cashiers From: Jane Benson Date: July 8 Subject: Update\nBeginning August 1, Oak Lane Fashion will only accept returns or exchanges of unworn and undamaged clothing that has the original receipt.\nThis information will be posted at all checkout counters by next week. We will also send an email to our existing customers so that they are aware of the new rule. If a customer wishes to make a return without a receipt, please call the manager on duty for assistance. Thanks for your help.\nJane Benson\nDirector of Operations\n\nWhat is the purpose of the e-mail?",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "To request a sales report",
+                  "To announce a new policy",
+                  "To discuss a fashion trend",
+                  "To describe an upcoming sale"
+                ],
+                "trueAnswer": "To announce a new policy",
+                "explain": "Mục đích của e-mail là gì?\nA. Yêu cầu báo cáo doanh số bán hàng\nB. Thông báo chính sách mới\nC. Thảo luận xu hướng thời trang\nD. Mô tả chiến lược bán hàng sắp tới\n\nGiải thích: Beginning August 1, Oak Lane Fashion will only accept returns or exchanges of unworn and undamaged clothing that has the original receipt.",
+                "key": ""
+              },
+              {
+                "title": "E-Mail Message\nTo: Oak Lane Fashion cashiers From: Jane Benson Date: July 8 Subject: Update\nBeginning August 1, Oak Lane Fashion will only accept returns or exchanges of unworn and undamaged clothing that has the original receipt.\nThis information will be posted at all checkout counters by next week. We will also send an email to our existing customers so that they are aware of the new rule. If a customer wishes to make a return without a receipt, please call the manager on duty for assistance. Thanks for your help.\nJane Benson\nDirector of Operations\n\nAccording to the e-mail, what will managers do?",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "Decide how to display new merchandise",
+                  "Train staff to use the cash register",
+                  "Help customers with special requests",
+                  "Decide what items get price discounts"
+                ],
+                "trueAnswer": "Help customers with special requests",
+                "explain": "Theo email, các nhà quản lý sẽ làm gì?\nA. Quyết định trưng bày mặt hàng mới như thế nào\nB. Đào tạo nhân viên sử dụng máy tính tiền\nC. Giúp đỡ khách hàng có những yêu cầu đặc biệt\nD. Quyết định mặt hàng nào được giảm giá\n\nGiải thích: If a customer wishes to make a return without a receipt, please call the manager on duty for assistance.",
+                "key": ""
+              },
+              {
+                "title": "Carmont Media’s Culture\nAt Carmont Media, our work culture is mission-driven. We hire people who share a common goal of enriching listeners’ minds through engaging and truthful news stories. We also actively recruit a diverse staff to reflect our Trinidadian and Tobagonian audiences. Carmont Media’s diversity contributes to its Star teams. These teams, composed of workers from all levels of the organization, meet regularly to hold brainstorming sessions aimed at improving efficiency and productivity. Carmont Media offers opportunities for professional advancement and encourages work-life balance.\n\nWhat is mentioned about Carmont Media's employees?",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "They get experience in various departments",
+                  "They enjoy working for the organization",
+                  "They come from a variety of backgrounds",
+                  "They are recruited through a staffing agency"
+                ],
+                "trueAnswer": "They come from a variety of backgrounds",
+                "explain": "Điều nào sau đây được nhắc đến khi nói về nhân viên của Carmont Media?\nA. Họ có kinh nghiệm ở vô số bộ phận\nB. Họ thích làm việc cho tổ chức\nC. Họ đến từ nhiều tầng lớp khác nhau\nD. Họ được tuyển dụng qua một cơ quan nhân sự\n\nGiải thích: These teams, composed of workers from all levels of the organization,",
+                "key": ""
+              },
+              {
+                "title": "Carmont Media’s Culture\nAt Carmont Media, our work culture is mission-driven. We hire people who share a common goal of enriching listeners’ minds through engaging and truthful news stories. We also actively recruit a diverse staff to reflect our Trinidadian and Tobagonian audiences. Carmont Media’s diversity contributes to its Star teams. These teams, composed of workers from all levels of the organization, meet regularly to hold brainstorming sessions aimed at improving efficiency and productivity. Carmont Media offers opportunities for professional advancement and encourages work-life balance.\n\nWhat is a purpose of Carmont Media's Star teams?",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "Seeking new employees",
+                  "Raising funds for projects",
+                  "Promoting work-life balance",
+                  "Finding creative solutions"
+                ],
+                "trueAnswer": "Finding creative solutions",
+                "explain": "Mục tiêu của đội Star ở Carmont Media là gì?\nA. Tìm kiếm nhân lực mới\nB. Gây quỹ cho dự án\nC. Thúc đẩy sự cân bằng giữa công việc và cuộc sống\nD. Tìm ra những giải pháp sáng tạo\n\nGiải thích: To hold brainstorming sessions aimed at improving efficiency and productivity.",
+                "key": ""
+              },
+              {
+                "title": "Louisa Santos 9:30 A.M.\nKenji, where are you? The job candidates are here.\nKenji Maro 9:31 A.M.\nSorry! The bridge is closed. My bus had to take a detour. I should be there in 30 minutes. Please start without me.\nLouisa Santos 9:34 A.M.\nOK. I’m going to interview Elena Crenshaw first.\nKenji Muro 9:34 A.M.\nGood. She’s the one with experience at another T-shirt company.\nLouisa Santos 9:35 A.M.\nYes. Can you believe our small company has grown so much that we need to hire someone just to process orders?\nKenji Muro 9:36 A.M.\nI know! OK. I’ll see you soon.\n\nWhat does Mr. Muro want Ms. Santos to do?",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "Process some orders",
+                  "Make a hiring decision",
+                  "Reschedule a meeting",
+                  "Talk to a job candidate"
+                ],
+                "trueAnswer": "Talk to a job candidate",
+                "explain": "Ông Muro muốn bà Santos làm gì?\nA. Xử lý đơn đặt hàng\nB. Ra quyết định tuyển dụng\nC. Đặt lại lịch họp\nD. Phỏng vấn các ứng cử viên\n\nGiải thích: Kenji, where are you? The job candidates are here.",
+                "key": ""
+              },
+              {
+                "title": "Louisa Santos 9:30 A.M.\nKenji, where are you? The job candidates are here.\nKenji Maro 9:31 A.M.\nSorry! The bridge is closed. My bus had to take a detour. I should be there in 30 minutes. Please start without me.\nLouisa Santos 9:34 A.M.\nOK. I’m going to interview Elena Crenshaw first.\nKenji Muro 9:34 A.M.\nGood. She’s the one with experience at another T-shirt company.\nLouisa Santos 9:35 A.M.\nYes. Can you believe our small company has grown so much that we need to hire someone just to process orders?\nKenji Muro 9:36 A.M.\nI know! OK. I’ll see you soon.\n\nAt 9:36A.M., what does Mr. Muro mean when he writes, \"I know\"?",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "He is also surprised by the company's growth",
+                  "He thinks salaries should be higher",
+                  "He has met Ms. Crenshaw before",
+                  "He is certain his bus will arrive in 30 minutes"
+                ],
+                "trueAnswer": "He is also surprised by the company's growth",
+                "explain": "Lúc 9.36 sáng, ý của ông Muro là gì khi trả lời “tôi biết”?\nA. Ông ấy cũng rất ngạc nhiên với tốc độ phát triển của công ty\nB. Ông ấy nghĩ mức lương nên cao hơn\nC. Ông ấy đã gặp cô Crenshaw trước đó\nD. Ông ấy chắc chắn rằng xe buýt sẽ tới trong 30 phút nữa\n\nGiải thích: Can you believe our small company has grown so much that we need to hire someone just to process orders?",
+                "key": ""
+              },
+              {
+                "title": "Mark Chandler is Back!\nThe Administrative Services Division welcomes back to headquarters Associate Director Mark Chandler. -[1]-. Mark spent the last month in Ottawa attending an advanced training session about corporate information security. Corporate-security training allows a company to safeguard its sensitive, confidential, and proprietary information. Mark is among a growing number of corporate executives who have successfully graduated from this rigorous course. -[2]-. A member of the National Organization of Corporate Security Officers (NOCSO), Mark was formally recognized by the organization for his part in developing software that keeps electronic documents safe. -[3]-. Well done, Mark! -[4]-.\n\nWhat is the purpose of the article?",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "To recognize an employee's accomplishments",
+                  "To introduce a new staff member",
+                  "To clarify what information is considered confidential",
+                  "To describe the challenges of corporate security"
+                ],
+                "trueAnswer":  "To recognize an employee's accomplishments",
+                "explain": "Mục đích của đoạn văn là gì?\nA. Ghi nhận thành tích nhân viên\nB. Giới thiệu nhân viên mới\nC. Làm rõ thông tin nào được coi là bảo mật\nD. Mô tả thách thức về an ninh doanh nghiệp\n\nGiải thích: The Administrative Services Division welcomes back to headquarters Associate Director Mark Chandler. Mark spent the last month in Ottawa attending an advanced training session about corporate information security.",
+                "key": ""
+              },
+              {
+                "title": "Mark Chandler is Back!\nThe Administrative Services Division welcomes back to headquarters Associate Director Mark Chandler. -[1]-. Mark spent the last month in Ottawa attending an advanced training session about corporate information security. Corporate-security training allows a company to safeguard its sensitive, confidential, and proprietary information. Mark is among a growing number of corporate executives who have successfully graduated from this rigorous course. -[2]-. A member of the National Organization of Corporate Security Officers (NOCSO), Mark was formally recognized by the organization for his part in developing software that keeps electronic documents safe. -[3]-. Well done, Mark! -[4]-.\n\nHow did Mr. Chandler improve corporate security?",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "He trained his company's security officers",
+                  "He helped design a system for securely storing documents",
+                  "He assisted in developing new safety guidelines",
+                  "He recruited employees who specialize in corporate security"
+                ],
+                "trueAnswer": "He helped design a system for securely storing documents",
+                "explain": "Ông Chandler đã cải thiện an ninh doanh nghiệp thế nào?\nA. Ông ấy đào tạo các nhân viên an ninh của công ty\nB. Ông ấy giúp thiết kế hệ thống lưu trữ tài liệu an toàn\nC. Ông ấy hỗ trợ phát triển các hướng dẫn an toàn mới\nD. Ông ấy tuyển dụng những nhân viên chuyên về bảo mật\n\nGiải thích: Mark was formally recognized by the organization for his part in developing software that keeps electronic documents safe.",
+                "key": ""
+              },
+              {
+                "title": "Mark Chandler is Back!\nThe Administrative Services Division welcomes back to headquarters Associate Director Mark Chandler. -[1]-. Mark spent the last month in Ottawa attending an advanced training session about corporate information security. Corporate-security training allows a company to safeguard its sensitive, confidential, and proprietary information. Mark is among a growing number of corporate executives who have successfully graduated from this rigorous course. -[2]-. A member of the National Organization of Corporate Security Officers (NOCSO), Mark was formally recognized by the organization for his part in developing software that keeps electronic documents safe. -[3]-. Well done, Mark! -[4]-.\n\nIn which of the positions marked [1], [2], [3], and [4] does the following sentence best belong? \"The training included 60 hours of instruction and a comprehensive written exam.\"",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "[1]",
+                  "[2]",
+                  "[3]",
+                  "[4]"
+                ],
+                "trueAnswer": "[2]",
+                "explain": "Câu “khóa đào tạo bao gồm 60 giờ giảng dạy và kỳ thi viết toàn diện” nằm ở vị trí nào trong bài?\nA. [1]\nB. [2]\nC. [3]\nD. [4]\n\nGiải thích: “The training” đồng nghĩa với “the course” trong bài: Mark is among a growing number of corporate executives who have successfully graduated from this rigorous course.",
+                "key": ""
+              },
+              {
+                "title": "Congratulations on purchasing Megagroome, the world’s finest rechargeable shaver? To keep your shaver in top condition, clean your shaver weekly by running it under hot water. Once a month, disassemble the shaver and clean the internal portion thoroughly as shown in the owner’s manual. The shaving heads should be replaced every year with the replacement parts listed in the manual.\nThe Megagroome shaver has a lithium ion battery that should last for several years. Please charge the shaver as often as needed. It is not necessary to fully discharge the battery before recharging it. Use only the included charger, because use of any other charger may void the warranty. Complete instructions and details can be found in the owner’s manual.\nMegagroome\n\nWhere would the card most likely be found?",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "Inside a box with a product",
+                  "On a bulletin board",
+                  "In a product display at a store",
+                  "In the pages of a magazine"
+                ],
+                "trueAnswer": "Inside a box with a product",
+                "explain": "Tấm thiệp có khả năng được tìm thấy ở đâu nhất?\nA. Trong hộp đựng sản phẩm\nB. Trên bảng thông báo\nC. Trong cửa hàng trưng bày sản phẩm\nD. Trong tạp chí\n\nGiải thích: Congratulations on purchasing Megagroome",
+                "key": ""
+              },
+              {
+                "title": "Congratulations on purchasing Megagroome, the world’s finest rechargeable shaver? To keep your shaver in top condition, clean your shaver weekly by running it under hot water. Once a month, disassemble the shaver and clean the internal portion thoroughly as shown in the owner’s manual. The shaving heads should be replaced every year with the replacement parts listed in the manual.\nThe Megagroome shaver has a lithium ion battery that should last for several years. Please charge the shaver as often as needed. It is not necessary to fully discharge the battery before recharging it. Use only the included charger, because use of any other charger may void the warranty. Complete instructions and details can be found in the owner’s manual.\nMegagroome\n\nHow often should the shaver be taken apart?",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "Daily",
+                  "Weekly",
+                  "Monthly",
+                  "Annually"
+                ],
+                "trueAnswer": "Monthly",
+                "explain": "Bao lâu thì nên tháo dao cạo 1 lần?\nA. Hằng ngày\nB. Hằng tuần\nC. Hằng tháng\nD. Hằng năm\n\nGiải thích: Once a month, disassemble the shaver and clean the internal portion thoroughly as shown in the owner’s manual.",
+                "key": ""
+              },
+              {
+                "title": "Congratulations on purchasing Megagroome, the world’s finest rechargeable shaver? To keep your shaver in top condition, clean your shaver weekly by running it under hot water. Once a month, disassemble the shaver and clean the internal portion thoroughly as shown in the owner’s manual. The shaving heads should be replaced every year with the replacement parts listed in the manual.\nThe Megagroome shaver has a lithium ion battery that should last for several years. Please charge the shaver as often as needed. It is not necessary to fully discharge the battery before recharging it. Use only the included charger, because use of any other charger may void the warranty. Complete instructions and details can be found in the owner’s manual.\nMegagroome\n\nWhat is indicated about the shaver's battery?",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "It must run out before charging",
+                  "It may be charged whenever necessary",
+                  "It is able to hold a charge for a week",
+                  "It will work with different chargers"
+                ],
+                "trueAnswer": "It may be charged whenever necessary",
+                "explain": "Điều nào sau đây nói về pin của dao cạo?\nA. Phải xả hết pin trước khi sạc\nB. Chỉ cần sạc khi nào cần\nC. Pin có thể sử dụng trong vòng 1 tuần\nD. Nó có thể sạc với nhiều loại sạc khác nhau\n\nGiải thích: It is not necessary to fully discharge the battery before recharging it.",
+                "key": ""
+              },
+              {
+                "title": "DIVERSIFY MUSEUM\nA Museum of Cross-Cultural History and Artifacts\nWe are proud to announce our newest exhibit: South American Art.\nThe exhibit will open on 7 June as part of the museum’s ongoing Arts Around the World programme. All museum patrons who have paid the museum entrance fee may view the exhibit. It will feature historical and contemporary artwork displays from renowned South American artists.\nThe curator of the six-week exhibition, Julio Carrera, will bring his vast expertise to the museum. Before joining the museum’s management in March of this year, Mr. Carrera was the curator for the Brazilian Institute of the Arts for six years and spent three years studying ancient artifacts for the Centro de la Historia del Arte, an art preservation centre in Venezuela.\nThe South American Art exhibit will include paintings, sculptures, crafting tools, clothing, jewelry, murals, and clay pottery from six South American countries. Visiting artists from these countries will provide art workshops on select dates in July. The cost for each workshop is £10 in addition to the regular admission fee and includes basic art supplies.\n\nWhat is indicated about the South American Art exhibit?",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "It is the first exhibit in the Arts Around the World program",
+                  "It will be on display only through the end of June",
+                  "It includes both old and new art",
+                  "It focuses on wall hangings and murals"
+                ],
+                "trueAnswer": "It includes both old and new art",
+                "explain": "Điều nào sau đây nói về Triển lãm Nghệ thuật Nam Mỹ?\nA. Nó là triển lãm đầu tiên trong chương trình nghệ thuật trên toàn thế giới\nB. Nó chỉ được diễn ra vào cuối tháng 6\nC. Nó có cả nghệ thuật lịch sử và đương đại\nD. Nó tập trung chủ yếu vào tranh tường\n\nGiải thích: It will feature historical and contemporary artwork displays from renowned South American artists.",
+                "key": ""
+              },
+              {
+                "title": "DIVERSIFY MUSEUM\nA Museum of Cross-Cultural History and Artifacts\nWe are proud to announce our newest exhibit: South American Art.\nThe exhibit will open on 7 June as part of the museum’s ongoing Arts Around the World programme. All museum patrons who have paid the museum entrance fee may view the exhibit. It will feature historical and contemporary artwork displays from renowned South American artists.\nThe curator of the six-week exhibition, Julio Carrera, will bring his vast expertise to the museum. Before joining the museum’s management in March of this year, Mr. Carrera was the curator for the Brazilian Institute of the Arts for six years and spent three years studying ancient artifacts for the Centro de la Historia del Arte, an art preservation centre in Venezuela.\nThe South American Art exhibit will include paintings, sculptures, crafting tools, clothing, jewelry, murals, and clay pottery from six South American countries. Visiting artists from these countries will provide art workshops on select dates in July. The cost for each workshop is £10 in addition to the regular admission fee and includes basic art supplies.\n\nWho is Mr. Carrera?",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "A visiting artist",
+                  "An art journalist",
+                  "A volunteer tour guide",
+                  "A museum employee"
+                ],
+                "trueAnswer": "A museum employee",
+                "explain": "Ông Carrera là ai?\nA. Một nghệ sĩ đến thăm\nB. Một nhà báo nghệ thuật\nC. Một hướng dẫn viên tình nguyện\nD. Một nhân viên bảo tàng\n\nGiải thích: The curator of the six-week exhibition, Julio Carrera, will bring his vast expertise to the museum.",
+                "key": ""
+              },
+              {
+                "title": "DIVERSIFY MUSEUM\nA Museum of Cross-Cultural History and Artifacts\nWe are proud to announce our newest exhibit: South American Art.\nThe exhibit will open on 7 June as part of the museum’s ongoing Arts Around the World programme. All museum patrons who have paid the museum entrance fee may view the exhibit. It will feature historical and contemporary artwork displays from renowned South American artists.\nThe curator of the six-week exhibition, Julio Carrera, will bring his vast expertise to the museum. Before joining the museum’s management in March of this year, Mr. Carrera was the curator for the Brazilian Institute of the Arts for six years and spent three years studying ancient artifacts for the Centro de la Historia del Arte, an art preservation centre in Venezuela.\nThe South American Art exhibit will include paintings, sculptures, crafting tools, clothing, jewelry, murals, and clay pottery from six South American countries. Visiting artists from these countries will provide art workshops on select dates in July. The cost for each workshop is £10 in addition to the regular admission fee and includes basic art supplies.\n\nAccording to the Web page, what can museum patrons do for an extra fee?",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "Watch a video on South America",
+                  "Attend an art class",
+                  "Explore a new exhibit",
+                  "Sponsor an upcoming exhibit"
+                ],
+                "trueAnswer": "Attend an art class",
+                "explain": "Theo trang Web, các nhà bảo trợ dùng khoản phụ phí để làm gì?\nA. Xem video về Nam Mỹ\nB. Tham gia lớp học nghệ thuật\nC. Khám phá các buổi triển lãm mới\nD. Tài trợ cho buổi triển lãm sắp tới\n\nGiải thích: The cost for each workshop is £10 in addition to the regular admission fee and includes basic art supplies.",
+                "key": ""
+              },
+              {
+                "title": "Oliver Koh (10:15 A.M.)\nHi, Aaron and Denise. Do you know if a package has arrived for me? I was supposed to get a delivery of some documents today, but maybe they were sent to someone else by mistake. It’s from Schrantz Farm Organics and should be labeled urgent.\nAaron Koskinen (10:17 A.M.)\nThere’s nothing for you here at the front desk. You might want to check with the print shop on the ground floor.\nDenise Matova (10:18 A.M.)\nThere’s a package from Schrantz Farm Organics here in the mail room, but there’s no name on it.\nOliver Koh (10:18 A.M.)\nThat must be the one for me. Could you please look at the delivery slip again?\nDenise Matova (10:19 A.M.)\nSorry, it does have your name on it. It was so small I didn’t notice it.\nOliver Koh (10:20 A.M.)\nGreat! Could you have the package sent up to my office, please?\nDenise Matova (10:20 A.M.)\nNo problem. I’m going upstairs in a minute anyway.\nOliver Koh (10:21 A.M.)\nOK, thanks for your help.\n\nWhy did Mr. Koh start the online chat discussion?",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "He received a damaged package",
+                  "He has a meeting with a client soon",
+                  "He is expecting some important documents",
+                  "He delivered a shipment to the wrong person"
+                ],
+                "trueAnswer": "He is expecting some important documents",
+                "explain": "Tại sao ông Koh phải thảo luận trực tuyến?\nA. Ông ấy nhận được một kiện hàng nguy hiểm\nB. Ông ấy có cuộc họp với khách hàng ngay bây giờ\nC. Ông ấy mong đợi nhận một số tài liệu quan trọng\nD. Ông ấy đã giao hàng nhầm người\n\nGiải thích: Do you know if a package has arrived for me? I was supposed to get a delivery of some documents today, but maybe they were sent to someone else by mistake.",
+                "key": ""
+              },
+              {
+                "title": "Oliver Koh (10:15 A.M.)\nHi, Aaron and Denise. Do you know if a package has arrived for me? I was supposed to get a delivery of some documents today, but maybe they were sent to someone else by mistake. It’s from Schrantz Farm Organics and should be labeled urgent.\nAaron Koskinen (10:17 A.M.)\nThere’s nothing for you here at the front desk. You might want to check with the print shop on the ground floor.\nDenise Matova (10:18 A.M.)\nThere’s a package from Schrantz Farm Organics here in the mail room, but there’s no name on it.\nOliver Koh (10:18 A.M.)\nThat must be the one for me. Could you please look at the delivery slip again?\nDenise Matova (10:19 A.M.)\nSorry, it does have your name on it. It was so small I didn’t notice it.\nOliver Koh (10:20 A.M.)\nGreat! Could you have the package sent up to my office, please?\nDenise Matova (10:20 A.M.)\nNo problem. I’m going upstairs in a minute anyway.\nOliver Koh (10:21 A.M.)\nOK, thanks for your help.\n\nWhat does Mr. Koskinen recommend doing?",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "Calling Schrantz Farm Organics",
+                  "Changing a meeting place",
+                  "Going to the front desk",
+                  "Checking a different location"
+                ],
+                "trueAnswer": "Checking a different location",
+                "explain": "Anh Koshinen gợi ý điều gì?\nA. Gọi đến Schrantz Farm Organics\nB. Thay đổi địa điểm họp\nC. Đến quầy lễ tân\nD. Kiểm tra ở địa điểm khác\n\nGiải thích: You might want to check with the print shop on the ground floor.",
+                "key": ""
+              },
+              {
+                "title": "Oliver Koh (10:15 A.M.)\nHi, Aaron and Denise. Do you know if a package has arrived for me? I was supposed to get a delivery of some documents today, but maybe they were sent to someone else by mistake. It’s from Schrantz Farm Organics and should be labeled urgent.\nAaron Koskinen (10:17 A.M.)\nThere’s nothing for you here at the front desk. You might want to check with the print shop on the ground floor.\nDenise Matova (10:18 A.M.)\nThere’s a package from Schrantz Farm Organics here in the mail room, but there’s no name on it.\nOliver Koh (10:18 A.M.)\nThat must be the one for me. Could you please look at the delivery slip again?\nDenise Matova (10:19 A.M.)\nSorry, it does have your name on it. It was so small I didn’t notice it.\nOliver Koh (10:20 A.M.)\nGreat! Could you have the package sent up to my office, please?\nDenise Matova (10:20 A.M.)\nNo problem. I’m going upstairs in a minute anyway.\nOliver Koh (10:21 A.M.)\nOK, thanks for your help.\n\nAt 10:19 A.M., what does Ms. Matova most likely mean when she writes, \"Sorry\"?",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "She misplaced a delivery slip",
+                  "She arrived late to work today",
+                  "She would like Mr. Koh to repeat his instructions",
+                  "She made a mistake reading a label"
+                ],
+                "trueAnswer": "She made a mistake reading a label",
+                "explain": "Lúc 10h19, ý của cô Matova là gì khi nói “xin lỗi”?\nA. Cô ấy làm thất lạc phiếu giao hàng\nB. Hôm nay cô ấy đi làm muộn\nC. Cô ấy muốn ông Kol lặp lại hướng dẫn của mình\nD. Cô ấy mắc lỗi khi đọc nhãn\n\nGiải thích: It does have your name on it. It was so small I didn’t notice it.",
+                "key": ""
+              },
+              {
+                "title": "Oliver Koh (10:15 A.M.)\nHi, Aaron and Denise. Do you know if a package has arrived for me? I was supposed to get a delivery of some documents today, but maybe they were sent to someone else by mistake. It’s from Schrantz Farm Organics and should be labeled urgent.\nAaron Koskinen (10:17 A.M.)\nThere’s nothing for you here at the front desk. You might want to check with the print shop on the ground floor.\nDenise Matova (10:18 A.M.)\nThere’s a package from Schrantz Farm Organics here in the mail room, but there’s no name on it.\nOliver Koh (10:18 A.M.)\nThat must be the one for me. Could you please look at the delivery slip again?\nDenise Matova (10:19 A.M.)\nSorry, it does have your name on it. It was so small I didn’t notice it.\nOliver Koh (10:20 A.M.)\nGreat! Could you have the package sent up to my office, please?\nDenise Matova (10:20 A.M.)\nNo problem. I’m going upstairs in a minute anyway.\nOliver Koh (10:21 A.M.)\nOK, thanks for your help.\n\nWhat will Ms. Matova probably do with the package?",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "Take it to Mr. Koh",
+                  "Send it out by express mail",
+                  "Leave it at the front desk",
+                  "Remove the items from it"
+                ],
+                "trueAnswer": "Take it to Mr. Koh",
+                "explain": "Cô Matova sẽ làm gì với kiện hàng?\nA. Mang nó tới cho ông Koh\nB. Gửi chuyển phát nhanh\nC. Để ở quầy lễ tân\nD. Bỏ một số thứ ra khỏi kiện hàng\n\nGiải thích: I’m going upstairs in a minute anyway.",
+                "key": ""
+              },
+              {
+                "title": "From: Won Ho Kim\nTo: Management Team\nDate: 12 August\nSubject: Improving employee satisfaction\nManagement Team:\n— [1] —. Over the next few months, the Human Resources department will be engaging with the Management Team in a variety of conversations about increasing productivity and employee satisfaction. — [2] —.\nTelecommuting, in which employees are permitted to work from home all or part of the time, is an approach that many companies are using because it allows employees to work on tasks that may be difficult to complete in an office full of disruptions. With the building reconfiguration project coming up in January, we would like to take the opportunity to consider whether telecommuting would be a good solution for our company. Our final decision on this matter will influence the way in which the workspace is reorganized.\nI am writing to ask for your feedback. — [3] —. At this point, Human Resources is simply gathering information. Please complete the telecommuting survey, which is found on the Human Resources Website. — [4] —. Just look for the link on the left side of the home page.\nThank you in advance, and please let me know if you have any questions.\nWon Ho Kim\nHuman Resources Manager\nGHTY Engineering Inc.\n\nWhy was the e-mail sent?",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "To remind employees about a policy",
+                  "To request participation in a survey",
+                  "To discuss upcoming meetings",
+                  "To encourage employees to attend an event"
+                ],
+                "trueAnswer": "To request participation in a survey",
+                "explain": "Lý do mà email này được gửi đi là gì?\nA. Để nhắc nhân viên về chính sách công ty\nB. Để yêu cầu tham gia làm khảo sát\nC. Để thảo luận về cuộc họp sắp tới\nD. Để khuyến khích nhân viên tham gia sự kiện\n\nGiải thích: Please complete the telecommuting survey",
+                "key": ""
+              },
+              {
+                "title": "From: Won Ho Kim\nTo: Management Team\nDate: 12 August\nSubject: Improving employee satisfaction\nManagement Team:\n— [1] —. Over the next few months, the Human Resources department will be engaging with the Management Team in a variety of conversations about increasing productivity and employee satisfaction. — [2] —.\nTelecommuting, in which employees are permitted to work from home all or part of the time, is an approach that many companies are using because it allows employees to work on tasks that may be difficult to complete in an office full of disruptions. With the building reconfiguration project coming up in January, we would like to take the opportunity to consider whether telecommuting would be a good solution for our company. Our final decision on this matter will influence the way in which the workspace is reorganized.\nI am writing to ask for your feedback. — [3] —. At this point, Human Resources is simply gathering information. Please complete the telecommuting survey, which is found on the Human Resources Website. — [4] —. Just look for the link on the left side of the home page.\nThank you in advance, and please let me know if you have any questions.\nWon Ho Kim\nHuman Resources Manager\nGHTY Engineering Inc.\n\nWhat is mentioned as a benefit of telecommuting?",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "It helps employees work without interruptions",
+                  "It frees up space in the building for new workers",
+                  "It is good for the environment",
+                  "It saves the company money"
+                ],
+                "trueAnswer": "It helps employees work without interruptions",
+                "explain": "Lợi ích của việc làm việc từ xa được đề cập đến là gì?\nA. Giúp nhân viên làm việc mà không bị gián đoạn\nB. Giải phóng không gian trong tòa nhà cho những người lao động mới\nC. Tốt cho môi trường\nD. Tiết kiệm tiền cho công ty\n\nGiải thích: Telecommuting […] allows employees to work on tasks that may be difficult to complete in an office full of disruptions.",
+                "key": ""
+              },
+              {
+                "title": "From: Won Ho Kim\nTo: Management Team\nDate: 12 August\nSubject: Improving employee satisfaction\nManagement Team:\n— [1] —. Over the next few months, the Human Resources department will be engaging with the Management Team in a variety of conversations about increasing productivity and employee satisfaction. — [2] —.\nTelecommuting, in which employees are permitted to work from home all or part of the time, is an approach that many companies are using because it allows employees to work on tasks that may be difficult to complete in an office full of disruptions. With the building reconfiguration project coming up in January, we would like to take the opportunity to consider whether telecommuting would be a good solution for our company. Our final decision on this matter will influence the way in which the workspace is reorganized.\nI am writing to ask for your feedback. — [3] —. At this point, Human Resources is simply gathering information. Please complete the telecommuting survey, which is found on the Human Resources Website. — [4] —. Just look for the link on the left side of the home page.\nThank you in advance, and please let me know if you have any questions.\nWon Ho Kim\nHuman Resources Manager\nGHTY Engineering Inc.\n\nWhat is the company planning to do in the new year?",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "Hire a new human resources manager",
+                  "Reorganize the management team",
+                  "Change the layout of its building",
+                  "Introduce a new Web site"
+                ],
+                "trueAnswer": "Change the layout of its building",
+                "explain": "Năm tới công ty có kế hoạch gì?\nA. Tuyển một quản lý nhân sự mới\nB. Tổ chức lại đội ngũ quản lý\nC. Thay đổi bố cục tòa nhà\nD. Giới thiệu trang web mới\n\nGiải thích: The building reconfiguration project coming up in January",
+                "key": ""
+              },
+              {
+                "title": "From: Won Ho Kim\nTo: Management Team\nDate: 12 August\nSubject: Improving employee satisfaction\nManagement Team:\n— [1] —. Over the next few months, the Human Resources department will be engaging with the Management Team in a variety of conversations about increasing productivity and employee satisfaction. — [2] —.\nTelecommuting, in which employees are permitted to work from home all or part of the time, is an approach that many companies are using because it allows employees to work on tasks that may be difficult to complete in an office full of disruptions. With the building reconfiguration project coming up in January, we would like to take the opportunity to consider whether telecommuting would be a good solution for our company. Our final decision on this matter will influence the way in which the workspace is reorganized.\nI am writing to ask for your feedback. — [3] —. At this point, Human Resources is simply gathering information. Please complete the telecommuting survey, which is found on the Human Resources Website. — [4] —. Just look for the link on the left side of the home page.\nThank you in advance, and please let me know if you have any questions.\nWon Ho Kim\nHuman Resources Manager\nGHTY Engineering Inc.\n\nIn which of the positions marked [1], [2], [3], and [4] does the following sentence best belong? \"It should be noted that no decisions about telecommuting have been made.\"",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "[1]",
+                  "[2]",
+                  "[3]",
+                  "[4]"
+                ],
+                "trueAnswer": "[3]",
+                "explain": "Câu văn “Lưu ý rằng vẫn chưa có quyết định nào về việc làm việc từ xa được đưa ra”\nA. [1]\nB. [2]\nC. [3]\nD. [4]\n\nGiải thích: At this point, Human Resources is simply gathering information",
+                "key": ""
+              },
+              {
+                "title": "The Uppsala International Book Fair\n22-24 September • Berglund Conference Hall • Uppsala, Sweden\nSchedule for Friday, 22 September\nOutthinking Public Opinion: 12:00 noon - 1:00 P.M., Salon A Touring to promote his latest book, Outthinking Public Opinion, author Damian Schnauz makes a stop at the Uppsala International Book Fair to discuss his latest subject, take questions, and sign his books.\nIntroductory Course in Graphic Design: 1:30 – 2:30 P.M., Visual Media Centre Professional digital designers Allen Doubek and Ivanette Lacasse will present useful techniques and provide attendees with hands-on practice opportunities.\nSeminar on Online Publishing: 3:00 - 4:30 P.M., Lindqvist Auditorium Releasing and promoting ebooks and audiobooks on the Internet. Speakers: Kenneth Pulaski, editor-in-chief of Vendler Publishing, and Tina Savona, marketing manager at Vendler Publishing. All accompanying materials will be sold at the venue immediately before and after the seminar.\nReadership in the Digital Age: 5:00 - 6:30 P.M., Room 210 Is literacy promoted or inhibited by digital media? Debate moderated by Greg Gunnarson.\n• To attend these or any other sessions, purchase a daily admission ticket for 100 KR. • Note that reservations are not required for any session, but seating is limited, so please arrive a few minutes before the scheduled time to ensure a seat. Also note that while photos are permitted, no video recordings may be made of any presentation. • Meals are available for purchase at locations throughout Berglund Conference Hall. Information about accommodations may be obtained on our Web site at uibf.se/hotels.\n\nWhat is suggested about the first day of the Uppsala International Book Fair?",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "It is being organized by a team of publishers",
+                  "No sessions are scheduled for the morning hours",
+                  "Attendance is expected to be the highest on that day",
+                  "Mr. Schnauz will announce the subject of his next book"
+                ],
+                "trueAnswer": "No sessions are scheduled for the morning hours",
+                "explain": "Điều nào sau đây là đúng khi nói về ngày đầu tiên của Hội chợ Quốc tế Sách Uppsala?\nA. Được tổ chức bởi đội ngũ nhà xuất bản\nB. Không có phiên nào diễn ra vào buổi sáng\nC. Dự kiến lượng người tham gia đông nhất ngày hôm đó\nD. Ông Schnauz sẽ thông báo chủ đề của cuốn sách tiếp theo\n\nGiải thích:\nOutthinking Public Opinion 12:00 noon-1:00 P.M\nIntroductory Course in Graphic Design 1:30-2:30 P.M\nSeminar on Online Publishing 3:00-4:30 P.M\nReadership in the Digital Age 5:00-6:30 P.M",
+                "key": ""
+              },
+              {
+                "title": "The Uppsala International Book Fair\n22-24 September • Berglund Conference Hall • Uppsala, Sweden\nSchedule for Friday, 22 September\nOutthinking Public Opinion: 12:00 noon - 1:00 P.M., Salon A Touring to promote his latest book, Outthinking Public Opinion, author Damian Schnauz makes a stop at the Uppsala International Book Fair to discuss his latest subject, take questions, and sign his books.\nIntroductory Course in Graphic Design: 1:30 – 2:30 P.M., Visual Media Centre Professional digital designers Allen Doubek and Ivanette Lacasse will present useful techniques and provide attendees with hands-on practice opportunities.\nSeminar on Online Publishing: 3:00 - 4:30 P.M., Lindqvist Auditorium Releasing and promoting ebooks and audiobooks on the Internet. Speakers: Kenneth Pulaski, editor-in-chief of Vendler Publishing, and Tina Savona, marketing manager at Vendler Publishing. All accompanying materials will be sold at the venue immediately before and after the seminar.\nReadership in the Digital Age: 5:00 - 6:30 P.M., Room 210 Is literacy promoted or inhibited by digital media? Debate moderated by Greg Gunnarson.\n• To attend these or any other sessions, purchase a daily admission ticket for 100 KR. • Note that reservations are not required for any session, but seating is limited, so please arrive a few minutes before the scheduled time to ensure a seat. Also note that while photos are permitted, no video recordings may be made of any presentation. • Meals are available for purchase at locations throughout Berglund Conference Hall. Information about accommodations may be obtained on our Web site at uibf.se/hotels.\n\nWhere will book fair attendees be able to participate in interactive activities?",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "In Salon A",
+                  "In the Visual Media Centre",
+                  "In Lindqvist Auditorium",
+                  "In Room 210"
+                ],
+                "trueAnswer": "In the Visual Media Centre",
+                "explain": "Những người tham dự hội chợ sách sẽ có thể tham gia các hoạt động tương tác ở đâu?\nA. Trong Salon A\nB. Trong Trung tâm Phương tiện Trực quan\nC. Trong Thính phòng Lindqvist\nD. Trong phòng 210\n\nGiải thích: Professional digital designers Allen Doubek and Ivanette Lacasse will present useful techniques and provide attendees with hands-on practice opportunities.",
+                "key": ""
+              },
+              {
+                "title": "The Uppsala International Book Fair\n22-24 September • Berglund Conference Hall • Uppsala, Sweden\nSchedule for Friday, 22 September\nOutthinking Public Opinion: 12:00 noon - 1:00 P.M., Salon A Touring to promote his latest book, Outthinking Public Opinion, author Damian Schnauz makes a stop at the Uppsala International Book Fair to discuss his latest subject, take questions, and sign his books.\nIntroductory Course in Graphic Design: 1:30 – 2:30 P.M., Visual Media Centre Professional digital designers Allen Doubek and Ivanette Lacasse will present useful techniques and provide attendees with hands-on practice opportunities.\nSeminar on Online Publishing: 3:00 - 4:30 P.M., Lindqvist Auditorium Releasing and promoting ebooks and audiobooks on the Internet. Speakers: Kenneth Pulaski, editor-in-chief of Vendler Publishing, and Tina Savona, marketing manager at Vendler Publishing. All accompanying materials will be sold at the venue immediately before and after the seminar.\nReadership in the Digital Age: 5:00 - 6:30 P.M., Room 210 Is literacy promoted or inhibited by digital media? Debate moderated by Greg Gunnarson.\n• To attend these or any other sessions, purchase a daily admission ticket for 100 KR. • Note that reservations are not required for any session, but seating is limited, so please arrive a few minutes before the scheduled time to ensure a seat. Also note that while photos are permitted, no video recordings may be made of any presentation. • Meals are available for purchase at locations throughout Berglund Conference Hall. Information about accommodations may be obtained on our Web site at uibf.se/hotels.\n\nWhat is mentioned about the accompanying materials for the seminar?",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "They can be purchased on-site",
+                  "They can be downloaded online",
+                  "They are available in limited numbers",
+                  "They should be ordered from the presenters"
+                ],
+                "trueAnswer": "They can be purchased on-site",
+                "explain": "Điều nào sau đây nói về những tài liệu đi kèm cho buổi hội thảo?\nA. Chúng có thể được mua tại chỗ\nB. Chúng có thể được tải xuống trực tuyến\nC. Chúng có sẵn với số lượng hạn chế\nD. Chúng phải được đặt trước từ diễn giả\n\nGiải thích: To attend these or any other sessions, purchase a daily admission ticket for 100 kr.",
+                "key": ""
+              },
+              {
+                "title": "The Uppsala International Book Fair\n22-24 September • Berglund Conference Hall • Uppsala, Sweden\nSchedule for Friday, 22 September\nOutthinking Public Opinion: 12:00 noon - 1:00 P.M., Salon A Touring to promote his latest book, Outthinking Public Opinion, author Damian Schnauz makes a stop at the Uppsala International Book Fair to discuss his latest subject, take questions, and sign his books.\nIntroductory Course in Graphic Design: 1:30 – 2:30 P.M., Visual Media Centre Professional digital designers Allen Doubek and Ivanette Lacasse will present useful techniques and provide attendees with hands-on practice opportunities.\nSeminar on Online Publishing: 3:00 - 4:30 P.M., Lindqvist Auditorium Releasing and promoting ebooks and audiobooks on the Internet. Speakers: Kenneth Pulaski, editor-in-chief of Vendler Publishing, and Tina Savona, marketing manager at Vendler Publishing. All accompanying materials will be sold at the venue immediately before and after the seminar.\nReadership in the Digital Age: 5:00 - 6:30 P.M., Room 210 Is literacy promoted or inhibited by digital media? Debate moderated by Greg Gunnarson.\n• To attend these or any other sessions, purchase a daily admission ticket for 100 KR. • Note that reservations are not required for any session, but seating is limited, so please arrive a few minutes before the scheduled time to ensure a seat. Also note that while photos are permitted, no video recordings may be made of any presentation. • Meals are available for purchase at locations throughout Berglund Conference Hall. Information about accommodations may be obtained on our Web site at uibf.se/hotels.\n\nWhat are book fair attendees encouraged to do?",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "Ask questions after sessions",
+                  "Post photos on social media",
+                  "Rearrange seats as necessary",
+                  "Arrive early for sessions"
+                ],
+                "trueAnswer": "Arrive early for sessions",
+                "explain": "Người tham gia hội sách được khuyến khích làm gì?\nA. Hỏi các câu hỏi sau mỗi phiên diễn thuyết\nB. Đăng ảnh lên mạng xã hội\nC. Sắp xếp lại chỗ ngồi khi cần thiết\nD. Đến sớm hơn mỗi phiên diễn thuyết\n\nGiải thích: So please arrive a few minutes before the scheduled time to ensure a seat.",
+                "key": ""
+              },
+              {
+                "title": "Mountain and Forest Company\nThe Leader in Quality Camping and Hiking Gear\nPlease note that most regular electronic or phone orders can be processed and made ready for shipping almost immediately. Custom and personalized orders may take up to five days for processing before they are shipped.\nPlease direct any questions or concerns to our customer service department at service@mountainandforest.ca. We will respond within 24 hours.\nOur shipping rates:\nOrder cost with tax Overnight shipping (1 day) Express shipping (3 days) Standard (6-8 days)\nUnder $25 $8 $5 $3\n$25 to $100 $13 $7 $5\nOver $100 $18 $15 FREE\nTo: service@mountainandforest.ca\nFrom: jinheeshin@sharemail.ca\nDate: 10 January\nSubject: Order B75022\nI recently placed an order for $135 for hiking boots and a thermal jacket intended for a camping trip this weekend. According to the confirmation I received at the time of my purchase, my order should have arrived yesterday. Since I paid an additional fee for three-day shipping, I was expecting that my order would arrive in a timely fashion. As it has not, I am requesting a refund of the shipping cost. Additionally, if my order has not been delivered by tomorrow, please cancel my order as I will have to purchase similar items at a local shop.\nSincerely,\nJin - Hee Shin\n\nIn the Web page, what is indicated about Mountain and Forest's shipping?",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "Standard shipping is free for orders under $25",
+                  "Some shipped orders may take up to eight days to arrive",
+                  "The shipping cost depends on the total weight of an order",
+                  "Custom orders are not eligible for standard delivery"
+                ],
+                "trueAnswer": "Some shipped orders may take up to eight days to arrive",
+                "explain": "Theo trang Web, điều nào sau đây đúng về dịch vụ giao hàng của Mountain and Forest?\nA. Giao hàng tiêu chuẩn miễn phí cho các đơn đặt hàng dưới $25\nB. Một số đơn đặt hàng đã vận chuyển có thể mất đến tám ngày để đến nơi\nC. Chi phí vận chuyển phụ thuộc vào tổng trọng lượng của một đơn đặt hàng\nD. Đơn đặt hàng tùy chỉnh không đủ điều kiện để giao hàng tiêu chuẩn\n\nGiải thích: Nhìn phần bảng số liệu",
+                "key": ""
+              },
+              {
+                "title": "Mountain and Forest Company\nThe Leader in Quality Camping and Hiking Gear\nPlease note that most regular electronic or phone orders can be processed and made ready for shipping almost immediately. Custom and personalized orders may take up to five days for processing before they are shipped.\nPlease direct any questions or concerns to our customer service department at service@mountainandforest.ca. We will respond within 24 hours.\nOur shipping rates:\nOrder cost with tax Overnight shipping (1 day) Express shipping (3 days) Standard (6-8 days)\nUnder $25 $8 $5 $3\n$25 to $100 $13 $7 $5\nOver $100 $18 $15 FREE\nTo: service@mountainandforest.ca\nFrom: jinheeshin@sharemail.ca\nDate: 10 January\nSubject: Order B75022\nI recently placed an order for $135 for hiking boots and a thermal jacket intended for a camping trip this weekend. According to the confirmation I received at the time of my purchase, my order should have arrived yesterday. Since I paid an additional fee for three-day shipping, I was expecting that my order would arrive in a timely fashion. As it has not, I am requesting a refund of the shipping cost. Additionally, if my order has not been delivered by tomorrow, please cancel my order as I will have to purchase similar items at a local shop.\nSincerely,\nJin - Hee Shin\n\nIn the Web page, the word \"direct\" in paragraph 2, line 1, is closest in meaning to",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "address",
+                  "supervise",
+                  "prescribe",
+                  "handle"
+                ],
+                "trueAnswer": "address",
+                "explain": "Trong trang Web, từ “trực tiếp hỏi” (direct) trong đoạn 2, dòng 1, gần nghĩa nhất với\nA. đặt câu hỏi\nB. giám sát\nC. kê đơn\nD. xử lý\n\nGiải thích: direct = address",
+                "key": ""
+              },
+              {
+                "title": "Mountain and Forest Company\nThe Leader in Quality Camping and Hiking Gear\nPlease note that most regular electronic or phone orders can be processed and made ready for shipping almost immediately. Custom and personalized orders may take up to five days for processing before they are shipped.\nPlease direct any questions or concerns to our customer service department at service@mountainandforest.ca. We will respond within 24 hours.\nOur shipping rates:\nOrder cost with tax Overnight shipping (1 day) Express shipping (3 days) Standard (6-8 days)\nUnder $25 $8 $5 $3\n$25 to $100 $13 $7 $5\nOver $100 $18 $15 FREE\nTo: service@mountainandforest.ca\nFrom: jinheeshin@sharemail.ca\nDate: 10 January\nSubject: Order B75022\nI recently placed an order for $135 for hiking boots and a thermal jacket intended for a camping trip this weekend. According to the confirmation I received at the time of my purchase, my order should have arrived yesterday. Since I paid an additional fee for three-day shipping, I was expecting that my order would arrive in a timely fashion. As it has not, I am requesting a refund of the shipping cost. Additionally, if my order has not been delivered by tomorrow, please cancel my order as I will have to purchase similar items at a local shop.\nSincerely,\nJin - Hee Shin\n\nWhat is the purpose of the e-mail?",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "To suggest a new service policy",
+                  "To inquire about an order packing error",
+                  "To request a personalized item",
+                  "To report a delivery problem"
+                ],
+                "trueAnswer": "To report a delivery problem",
+                "explain": "Mục đích của email là gì?\nA. Gợi ý một chính sách dịch vụ mới\nB. Khiếu nại lỗi đóng gói đơn hàng\nC. Yêu cầu một vật phẩm cá nhân hóa\nD. Báo cáo vấn đề vận chuyển\n\nGiải thích: According to the confirmation I received at the time of my purchase, my order should have arrived yesterday.",
+                "key": ""
+              },
+              {
+                "title": "Mountain and Forest Company\nThe Leader in Quality Camping and Hiking Gear\nPlease note that most regular electronic or phone orders can be processed and made ready for shipping almost immediately. Custom and personalized orders may take up to five days for processing before they are shipped.\nPlease direct any questions or concerns to our customer service department at service@mountainandforest.ca. We will respond within 24 hours.\nOur shipping rates:\nOrder cost with tax Overnight shipping (1 day) Express shipping (3 days) Standard (6-8 days)\nUnder $25 $8 $5 $3\n$25 to $100 $13 $7 $5\nOver $100 $18 $15 FREE\nTo: service@mountainandforest.ca\nFrom: jinheeshin@sharemail.ca\nDate: 10 January\nSubject: Order B75022\nI recently placed an order for $135 for hiking boots and a thermal jacket intended for a camping trip this weekend. According to the confirmation I received at the time of my purchase, my order should have arrived yesterday. Since I paid an additional fee for three-day shipping, I was expecting that my order would arrive in a timely fashion. As it has not, I am requesting a refund of the shipping cost. Additionally, if my order has not been delivered by tomorrow, please cancel my order as I will have to purchase similar items at a local shop.\nSincerely,\nJin - Hee Shin\n\nHow much did Ms. Shin pay for shipping?",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "$5",
+                  "$8",
+                  "$15",
+                  "$18"
+                ],
+                "trueAnswer": "$15",
+                "explain": "Cô Shin đã trả bao nhiêu cho dịch vụ giao hàng?\nA. $5\nB. $8\nC. $15\nD. $18\n\nGiải thích: I paid an additional fee for three-day shipping (an order of $135)",
+                "key": ""
+              },
+              {
+                "title": "Mountain and Forest Company\nThe Leader in Quality Camping and Hiking Gear\nPlease note that most regular electronic or phone orders can be processed and made ready for shipping almost immediately. Custom and personalized orders may take up to five days for processing before they are shipped.\nPlease direct any questions or concerns to our customer service department at service@mountainandforest.ca. We will respond within 24 hours.\nOur shipping rates:\nOrder cost with tax Overnight shipping (1 day) Express shipping (3 days) Standard (6-8 days)\nUnder $25 $8 $5 $3\n$25 to $100 $13 $7 $5\nOver $100 $18 $15 FREE\nTo: service@mountainandforest.ca\nFrom: jinheeshin@sharemail.ca\nDate: 10 January\nSubject: Order B75022\nI recently placed an order for $135 for hiking boots and a thermal jacket intended for a camping trip this weekend. According to the confirmation I received at the time of my purchase, my order should have arrived yesterday. Since I paid an additional fee for three-day shipping, I was expecting that my order would arrive in a timely fashion. As it has not, I am requesting a refund of the shipping cost. Additionally, if my order has not been delivered by tomorrow, please cancel my order as I will have to purchase similar items at a local shop.\nSincerely,\nJin - Hee Shin\n\nAccording to the e-mail, why might Ms . Shin decide to visit a local shop?",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "She expects to purchase her items for a lower price",
+                  "She wants to support businesses in her town",
+                  "She needs to have her items before a certain date",
+                  "She hopes to find a greater selection of sportswear"
+                ],
+                "trueAnswer": "She needs to have her items before a certain date",
+                "explain": "Theo e-mail, tại sao cô Shin có thể quyết định ghé thăm một cửa hàng địa phương?\nA. Cô ấy muốn mua các mặt hàng của mình với giá thấp hơn\nB. Cô ấy muốn hỗ trợ các doanh nghiệp trong thị trấn của cô ấy\nC. Cô ấy cần có đồ của mình trước một ngày nhất định\nD. Cô ấy hy vọng sẽ tìm được nhiều lựa chọn quần áo thể thao hơn\n\nGiải thích: Additionally, if my order has not been delivered by tomorrow, please cancel my order as I will have to purchase similar items at a local shop.",
+                "key": ""
+              },
+              {
+                "title": "Society for Trade and Industry (STI)\n“The Role of Distance Education in Professional Training”\nCity University of Abu Dhabi, 11-13 October\nDRAFT: Schedule for Wednesday, 11 October\n7:30 A.M. - 9:00 A.M. Conference Registration\n9:00 A.M. - 9:10 A.M. Welcome and Opening Remarks: Yasmin Al Gaood, Conference Chair\n9:15 A.M. - 10:00 A.M. Opening Keynote Address: Ayumi Murakami, STI President\n10:05 A.M. - 10:50 A.M. Title of presentation unknown: representative to be selected, Yaoundé College of Agriculture, Cameroon\n10:55 A.M. - 11:40 A.M. Innovative Online Resources: Chia Po Cheng, Taipei Business Management Institute, Taiwan\n11:45 A.M. - 1:20 P.M. Lunch (Turquoise Center, central campus)\n1:30 P.M. - 2:15 P.M. Distance Education in the Film Industry: representative from Scotland to be selected\n2:20 P.M. - 3:05 P.M. Improving Course Content Quality: Andrei Durchenko, Moscow Journalism Academy, Russia\n3:10 P.M. - 4:00 P.M. Learner Support Systems: Marcel Peralta, School of Pediatric Dentistry, Asunción, Paraguay\nFrom: Ayumi Murakami amurakami@sti.orgs\nTo: Yasmin Al Gaood yasmin.algaood@cuad.ac.ae\nSubject: Re: Draft conference schedule for Wednesday\nDate: 25 August\nHello, Yasmin,\nAs per your request, I have filled the slots that were listed as still available on the tentative conference schedule for Wednesday. Dr. Alban Buchanan in Scotland says that he is eager to talk about distance education as it is practiced within the film academies in his country. Also, my contact in Yaoundé wrote to let me know that Ms. Marie-Thérèse Tchangou will be the school’s representative.\nMr. Andrei Durchenko has informed me that he is withdrawing from the conference. His replacement from the same school, Ms. Melina Vakhitova, will submit the title of her presentation shortly. I also wanted to add that I will be arriving in Abu Dhabi at 6:00 A.M. on Wednesday. That should give me plenty of time to set up for my presentation.\nRegards, Ayumi\n\nWhat is indicated about Ms. Murakami?",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "She will speak on the first day of the conference",
+                  "She was recently elected STI president",
+                  "She will be available to answer questions",
+                  "She is scheduled to present in the afternoon"
+                ],
+                "trueAnswer": "She will speak on the first day of the conference",
+                "explain": "Điều nào sau đây nói về cô Murakami?\nA. Cô ấy phát biểu vào ngày đầu tiên của hội nghị\nB. Cô ấy mới được bầu làm chủ tịch STI\nC. Cô ấy luôn sẵn sàng trả lời các câu hỏi\nD. Cô ấy có lịch thuyết trình vào buổi chiều\n\nGiải thích: Opening Keynote Address: Ayumi Murakami, STI President",
+                "key": ""
+              },
+              {
+                "title": "Society for Trade and Industry (STI)\n“The Role of Distance Education in Professional Training”\nCity University of Abu Dhabi, 11-13 October\nDRAFT: Schedule for Wednesday, 11 October\n7:30 A.M. - 9:00 A.M. Conference Registration\n9:00 A.M. - 9:10 A.M. Welcome and Opening Remarks: Yasmin Al Gaood, Conference Chair\n9:15 A.M. - 10:00 A.M. Opening Keynote Address: Ayumi Murakami, STI President\n10:05 A.M. - 10:50 A.M. Title of presentation unknown: representative to be selected, Yaoundé College of Agriculture, Cameroon\n10:55 A.M. - 11:40 A.M. Innovative Online Resources: Chia Po Cheng, Taipei Business Management Institute, Taiwan\n11:45 A.M. - 1:20 P.M. Lunch (Turquoise Center, central campus)\n1:30 P.M. - 2:15 P.M. Distance Education in the Film Industry: representative from Scotland to be selected\n2:20 P.M. - 3:05 P.M. Improving Course Content Quality: Andrei Durchenko, Moscow Journalism Academy, Russia\n3:10 P.M. - 4:00 P.M. Learner Support Systems: Marcel Peralta, School of Pediatric Dentistry, Asunción, Paraguay\nFrom: Ayumi Murakami amurakami@sti.orgs\nTo: Yasmin Al Gaood yasmin.algaood@cuad.ac.ae\nSubject: Re: Draft conference schedule for Wednesday\nDate: 25 August\nHello, Yasmin,\nAs per your request, I have filled the slots that were listed as still available on the tentative conference schedule for Wednesday. Dr. Alban Buchanan in Scotland says that he is eager to talk about distance education as it is practiced within the film academies in his country. Also, my contact in Yaoundé wrote to let me know that Ms. Marie-Thérèse Tchangou will be the school’s representative.\nMr. Andrei Durchenko has informed me that he is withdrawing from the conference. His replacement from the same school, Ms. Melina Vakhitova, will submit the title of her presentation shortly. I also wanted to add that I will be arriving in Abu Dhabi at 6:00 A.M. on Wednesday. That should give me plenty of time to set up for my presentation.\nRegards, Ayumi\n\nWhen will a specialist in business management be speaking?",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "At 10:05 M",
+                  "At 10:55 A.M",
+                  "At 2:20 P.M",
+                  "At 3:10 P.M"
+                ],
+                "trueAnswer": "At 10:55 A.M",
+                "explain": "Khi nào chuyên gia trong lĩnh vực điều hành doanh nghiệp phát biểu?\nA. 10:05 AM\nB. 10:55 AM\nC. 2:20 PM\nD. 3:10 PM\n\nGiải thích: 10:55 A.M.-11:40 A.M. Innovative Online Resources: Chia Po Cheng, Taipei Business Management Institute, Taiwan",
+                "key": ""
+              },
+              {
+                "title": "Society for Trade and Industry (STI)\n“The Role of Distance Education in Professional Training”\nCity University of Abu Dhabi, 11-13 October\nDRAFT: Schedule for Wednesday, 11 October\n7:30 A.M. - 9:00 A.M. Conference Registration\n9:00 A.M. - 9:10 A.M. Welcome and Opening Remarks: Yasmin Al Gaood, Conference Chair\n9:15 A.M. - 10:00 A.M. Opening Keynote Address: Ayumi Murakami, STI President\n10:05 A.M. - 10:50 A.M. Title of presentation unknown: representative to be selected, Yaoundé College of Agriculture, Cameroon\n10:55 A.M. - 11:40 A.M. Innovative Online Resources: Chia Po Cheng, Taipei Business Management Institute, Taiwan\n11:45 A.M. - 1:20 P.M. Lunch (Turquoise Center, central campus)\n1:30 P.M. - 2:15 P.M. Distance Education in the Film Industry: representative from Scotland to be selected\n2:20 P.M. - 3:05 P.M. Improving Course Content Quality: Andrei Durchenko, Moscow Journalism Academy, Russia\n3:10 P.M. - 4:00 P.M. Learner Support Systems: Marcel Peralta, School of Pediatric Dentistry, Asunción, Paraguay\nFrom: Ayumi Murakami amurakami@sti.orgs\nTo: Yasmin Al Gaood yasmin.algaood@cuad.ac.ae\nSubject: Re: Draft conference schedule for Wednesday\nDate: 25 August\nHello, Yasmin,\nAs per your request, I have filled the slots that were listed as still available on the tentative conference schedule for Wednesday. Dr. Alban Buchanan in Scotland says that he is eager to talk about distance education as it is practiced within the film academies in his country. Also, my contact in Yaoundé wrote to let me know that Ms. Marie-Thérèse Tchangou will be the school’s representative.\nMr. Andrei Durchenko has informed me that he is withdrawing from the conference. His replacement from the same school, Ms. Melina Vakhitova, will submit the title of her presentation shortly. I also wanted to add that I will be arriving in Abu Dhabi at 6:00 A.M. on Wednesday. That should give me plenty of time to set up for my presentation.\nRegards, Ayumi\n\nIn the e-mail , in paragraph 1, line 1, the word \"slots\" is closest in meaning to:",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "reservations",
+                  "machines",
+                  "openings",
+                  "buildings"
+                ],
+                "trueAnswer": "openings",
+                "explain": "Trong e-mail, ở đoạn 1, dòng 1, từ “slot” (chỗ trống) gần nghĩa nhất với\nA. đặt chỗ\nB. máy móc\nC. chỗ trống\nD. tòa nhà\n\nGiải thích: Slots = openings: chỗ trống",
+                "key": ""
+              },
+              {
+                "title": "Society for Trade and Industry (STI)\n“The Role of Distance Education in Professional Training”\nCity University of Abu Dhabi, 11-13 October\nDRAFT: Schedule for Wednesday, 11 October\n7:30 A.M. - 9:00 A.M. Conference Registration\n9:00 A.M. - 9:10 A.M. Welcome and Opening Remarks: Yasmin Al Gaood, Conference Chair\n9:15 A.M. - 10:00 A.M. Opening Keynote Address: Ayumi Murakami, STI President\n10:05 A.M. - 10:50 A.M. Title of presentation unknown: representative to be selected, Yaoundé College of Agriculture, Cameroon\n10:55 A.M. - 11:40 A.M. Innovative Online Resources: Chia Po Cheng, Taipei Business Management Institute, Taiwan\n11:45 A.M. - 1:20 P.M. Lunch (Turquoise Center, central campus)\n1:30 P.M. - 2:15 P.M. Distance Education in the Film Industry: representative from Scotland to be selected\n2:20 P.M. - 3:05 P.M. Improving Course Content Quality: Andrei Durchenko, Moscow Journalism Academy, Russia\n3:10 P.M. - 4:00 P.M. Learner Support Systems: Marcel Peralta, School of Pediatric Dentistry, Asunción, Paraguay\nFrom: Ayumi Murakami amurakami@sti.orgs\nTo: Yasmin Al Gaood yasmin.algaood@cuad.ac.ae\nSubject: Re: Draft conference schedule for Wednesday\nDate: 25 August\nHello, Yasmin,\nAs per your request, I have filled the slots that were listed as still available on the tentative conference schedule for Wednesday. Dr. Alban Buchanan in Scotland says that he is eager to talk about distance education as it is practiced within the film academies in his country. Also, my contact in Yaoundé wrote to let me know that Ms. Marie-Thérèse Tchangou will be the school’s representative.\nMr. Andrei Durchenko has informed me that he is withdrawing from the conference. His replacement from the same school, Ms. Melina Vakhitova, will submit the title of her presentation shortly. I also wanted to add that I will be arriving in Abu Dhabi at 6:00 A.M. on Wednesday. That should give me plenty of time to set up for my presentation.\nRegards, Ayumi\n\nWhat presentation will have to be canceled?",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "Innovative Online Resources",
+                  "Distance Education in the Film Industry",
+                  "Improving Course Content Quality",
+                  "Learner Support Systems"
+                ],
+                "trueAnswer": "Improving Course Content Quality",
+                "explain": "Phần thuyết trình nào sẽ bị hủy?\nA. Tài nguyên Trực tuyến Sáng tạo\nB. Ngành công nghiệp giáo dục từ xa\nC. Cải thiện chất lượng nội dung khóa học\nD. Hệ thống hỗ trợ người học\n\nGiải thích: Mr. Andrei Durchenko has informed me that he is withdrawing from the conference. His replacement from the same school, Ms. Melina Vakhitova, will submit the title of her presentation shortly.",
+                "key": ""
+              },
+              {
+                "title": "Society for Trade and Industry (STI)\n“The Role of Distance Education in Professional Training”\nCity University of Abu Dhabi, 11-13 October\nDRAFT: Schedule for Wednesday, 11 October\n7:30 A.M. - 9:00 A.M. Conference Registration\n9:00 A.M. - 9:10 A.M. Welcome and Opening Remarks: Yasmin Al Gaood, Conference Chair\n9:15 A.M. - 10:00 A.M. Opening Keynote Address: Ayumi Murakami, STI President\n10:05 A.M. - 10:50 A.M. Title of presentation unknown: representative to be selected, Yaoundé College of Agriculture, Cameroon\n10:55 A.M. - 11:40 A.M. Innovative Online Resources: Chia Po Cheng, Taipei Business Management Institute, Taiwan\n11:45 A.M. - 1:20 P.M. Lunch (Turquoise Center, central campus)\n1:30 P.M. - 2:15 P.M. Distance Education in the Film Industry: representative from Scotland to be selected\n2:20 P.M. - 3:05 P.M. Improving Course Content Quality: Andrei Durchenko, Moscow Journalism Academy, Russia\n3:10 P.M. - 4:00 P.M. Learner Support Systems: Marcel Peralta, School of Pediatric Dentistry, Asunción, Paraguay\nFrom: Ayumi Murakami amurakami@sti.orgs\nTo: Yasmin Al Gaood yasmin.algaood@cuad.ac.ae\nSubject: Re: Draft conference schedule for Wednesday\nDate: 25 August\nHello, Yasmin,\nAs per your request, I have filled the slots that were listed as still available on the tentative conference schedule for Wednesday. Dr. Alban Buchanan in Scotland says that he is eager to talk about distance education as it is practiced within the film academies in his country. Also, my contact in Yaoundé wrote to let me know that Ms. Marie-Thérèse Tchangou will be the school’s representative.\nMr. Andrei Durchenko has informed me that he is withdrawing from the conference. His replacement from the same school, Ms. Melina Vakhitova, will submit the title of her presentation shortly. I also wanted to add that I will be arriving in Abu Dhabi at 6:00 A.M. on Wednesday. That should give me plenty of time to set up for my presentation.\nRegards, Ayumi\n\nAccording to the e-mail, what information is Ms. Murakami expecting to receive?",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "The title of a presentation",
+                  "The name of a replacement speaker",
+                  "The conference schedule for Thursday",
+                  "The contact information for Mr. Buchanan"
+                ],
+                "trueAnswer": "The title of a presentation",
+                "explain": "Theo email, cô Murakami sẽ mong nhận được thông tin nào?\nA. Tiêu đề bài phát biểu\nB. Tên của diễn giả thay thế\nC. Lịch hội nghị vào thứ Năm\nD. Thông tin liên lạc của ông Buchanan\n\nGiải thích: Ms. Melina Vakhitova, will submit the title of her presentation shortly.",
+                "key": ""
+              },
+              {
+                "title": "From: mstoch@hesidionclinic.com\nTo: Istawinski@nostilde.com\nDate: March 20\nSubject: Hesidion Clinic’s Health Awareness Day\nDear Ms. Stawinski,\nIn appreciation of your loyalty as a long-time patient of Hesidion Clinic, we are pleased to invite you to our clinic’s Health Awareness Day to be held at the clinic on Saturday, April 10. We would be delighted to see you attend, as we will offer a number of activities designed to promote health awareness in our community. If you sign up for this special event by responding to this email by March 31, you will receive a code to present at the clinic for a surprise benefit.\nMartin Stoch, Communications Director, Hesidion Clinic\nHesidion Clinic Health Awareness Day, April 10 Tasks and Responsibilities\n• Communications: Martin Stoch\n• Advertising: Adilene Walker\n• Presentations: Jillian Opala (Nutrition), Lance Verhoeven (Fitness)\n• Kids’ Health Game: Susan Hayashi\n• Health Checkups / Talks: Anne Spillane, Rami Al-Araj, Kurt Yin, Thierry Daumas\nHealth Day at Hesidion Clinic\nby Shai Herzog on April 14\nHesidion Clinic hosted a successful Health Awareness Day this past Saturday. The event was held as a way to thank the community for supporting the clinic over the past 15 years. It was well attended by both Hesidion Clinic patients and members of the general public.\nAttendees participated in a variety of presentations and everyone received free water bottles, notepads, and other items from event sponsors. Participants who provided a special code were offered a complimentary physical checkup from the team of clinic physicians.\nDuring the event, a sizable line formed at Dr. Thierry Daumas’ table. “I came out today to learn about skincare and advances in eye-care technology. But Dr. Daumas’ talk about how to prevent cavities and improve oral health provided me with the most helpful information,” said attendee Liana Stawinski.\nBy far the most popular event was nutritionist Jillian Opala’s presentation on healthy eating habits. More than 100 people, many of them retirees, flocked to hear the latest on super foods. The event took nearly twice as long as expected, as Ms. Opala answered a steady stream of participant questions.\nChildren were delighted to take part in a health contest involving questions about general health and hygiene. The winners received toys and certificates from the game host. The day was such a success that Hesidion Clinic director, Lance Verhoeven, is already considering making it an annual event.\n\nWhat is Ms. Slawinski encouraged to do?",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "Complete a survey",
+                  "Go to an event",
+                  "Organize some activities",
+                  "Meet with Mr. Stoch"
+                ],
+                "trueAnswer": "Go to an event",
+                "explain": "Cô Slawinski được khuyến khích điều gì?\nA. Hoàn thành khảo sát\nB. Tham dự sự kiện\nC. Tổ chức hoạt động\nD. Gặp ông Stoch\n\nGiải thích: We are pleased to invite you to our clinic’s Health Awareness Day to be held at the clinic",
+                "key": ""
+              },
+              {
+                "title": "From: mstoch@hesidionclinic.com\nTo: Istawinski@nostilde.com\nDate: March 20\nSubject: Hesidion Clinic’s Health Awareness Day\nDear Ms. Stawinski,\nIn appreciation of your loyalty as a long-time patient of Hesidion Clinic, we are pleased to invite you to our clinic’s Health Awareness Day to be held at the clinic on Saturday, April 10. We would be delighted to see you attend, as we will offer a number of activities designed to promote health awareness in our community. If you sign up for this special event by responding to this email by March 31, you will receive a code to present at the clinic for a surprise benefit.\nMartin Stoch, Communications Director, Hesidion Clinic\nHesidion Clinic Health Awareness Day, April 10 Tasks and Responsibilities\n• Communications: Martin Stoch\n• Advertising: Adilene Walker\n• Presentations: Jillian Opala (Nutrition), Lance Verhoeven (Fitness)\n• Kids’ Health Game: Susan Hayashi\n• Health Checkups / Talks: Anne Spillane, Rami Al-Araj, Kurt Yin, Thierry Daumas\nHealth Day at Hesidion Clinic\nby Shai Herzog on April 14\nHesidion Clinic hosted a successful Health Awareness Day this past Saturday. The event was held as a way to thank the community for supporting the clinic over the past 15 years. It was well attended by both Hesidion Clinic patients and members of the general public.\nAttendees participated in a variety of presentations and everyone received free water bottles, notepads, and other items from event sponsors. Participants who provided a special code were offered a complimentary physical checkup from the team of clinic physicians.\nDuring the event, a sizable line formed at Dr. Thierry Daumas’ table. “I came out today to learn about skincare and advances in eye-care technology. But Dr. Daumas’ talk about how to prevent cavities and improve oral health provided me with the most helpful information,” said attendee Liana Stawinski.\nBy far the most popular event was nutritionist Jillian Opala’s presentation on healthy eating habits. More than 100 people, many of them retirees, flocked to hear the latest on super foods. The event took nearly twice as long as expected, as Ms. Opala answered a steady stream of participant questions.\nChildren were delighted to take part in a health contest involving questions about general health and hygiene. The winners received toys and certificates from the game host. The day was such a success that Hesidion Clinic director, Lance Verhoeven, is already considering making it an annual event.\n\nHow did some attendees get a free health checkup?",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "By arriving when the clinic opened",
+                  "By attending Dr. Daumas' talk",
+                  "By responding to an e-mail from Mr. Stach",
+                  "By winning a competition"
+                ],
+                "trueAnswer": "By responding to an e-mail from Mr. Stach",
+                "explain": "Người tham dự sự kiện nhận được dịch vụ khám sức khỏe miễn phí như thế nào?\nA. Bằng việc đến dự khi phòng khám mở cửa\nB. Bằng việc tham dự buổi diễn thuyết của ông Daumas\nC. Bằng việc phản hồi email của ông Stoch\nD. Bằng việc chiến thắng cuộc thi\n\nGiải thích: If you sign up for this special event by responding to this e-mail by March 31, you will receive a code to present at the clinic for a surprise benefit.",
+                "key": ""
+              },
+              {
+                "title": "From: mstoch@hesidionclinic.com\nTo: Istawinski@nostilde.com\nDate: March 20\nSubject: Hesidion Clinic’s Health Awareness Day\nDear Ms. Stawinski,\nIn appreciation of your loyalty as a long-time patient of Hesidion Clinic, we are pleased to invite you to our clinic’s Health Awareness Day to be held at the clinic on Saturday, April 10. We would be delighted to see you attend, as we will offer a number of activities designed to promote health awareness in our community. If you sign up for this special event by responding to this email by March 31, you will receive a code to present at the clinic for a surprise benefit.\nMartin Stoch, Communications Director, Hesidion Clinic\nHesidion Clinic Health Awareness Day, April 10 Tasks and Responsibilities\n• Communications: Martin Stoch\n• Advertising: Adilene Walker\n• Presentations: Jillian Opala (Nutrition), Lance Verhoeven (Fitness)\n• Kids’ Health Game: Susan Hayashi\n• Health Checkups / Talks: Anne Spillane, Rami Al-Araj, Kurt Yin, Thierry Daumas\nHealth Day at Hesidion Clinic\nby Shai Herzog on April 14\nHesidion Clinic hosted a successful Health Awareness Day this past Saturday. The event was held as a way to thank the community for supporting the clinic over the past 15 years. It was well attended by both Hesidion Clinic patients and members of the general public.\nAttendees participated in a variety of presentations and everyone received free water bottles, notepads, and other items from event sponsors. Participants who provided a special code were offered a complimentary physical checkup from the team of clinic physicians.\nDuring the event, a sizable line formed at Dr. Thierry Daumas’ table. “I came out today to learn about skincare and advances in eye-care technology. But Dr. Daumas’ talk about how to prevent cavities and improve oral health provided me with the most helpful information,” said attendee Liana Stawinski.\nBy far the most popular event was nutritionist Jillian Opala’s presentation on healthy eating habits. More than 100 people, many of them retirees, flocked to hear the latest on super foods. The event took nearly twice as long as expected, as Ms. Opala answered a steady stream of participant questions.\nChildren were delighted to take part in a health contest involving questions about general health and hygiene. The winners received toys and certificates from the game host. The day was such a success that Hesidion Clinic director, Lance Verhoeven, is already considering making it an annual event.\n\nWhat does Dr. Daumas most likely specialize in?",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "Skin",
+                  "Ears",
+                  "Eyes",
+                  "Teeth"
+                ],
+                "trueAnswer": "Teeth",
+                "explain": "Bác sĩ Daumas là chuyên gia trong lĩnh vực nào?\nA. Da\nB. Tai\nC. Mắt\nD. Răng\n\nGiải thích: Dr. Daumas’ talk about how to prevent cavities and improve oral health provided me with the most helpful information",
+                "key": ""
+              },
+              {
+                "title": "From: mstoch@hesidionclinic.com\nTo: Istawinski@nostilde.com\nDate: March 20\nSubject: Hesidion Clinic’s Health Awareness Day\nDear Ms. Stawinski,\nIn appreciation of your loyalty as a long-time patient of Hesidion Clinic, we are pleased to invite you to our clinic’s Health Awareness Day to be held at the clinic on Saturday, April 10. We would be delighted to see you attend, as we will offer a number of activities designed to promote health awareness in our community. If you sign up for this special event by responding to this email by March 31, you will receive a code to present at the clinic for a surprise benefit.\nMartin Stoch, Communications Director, Hesidion Clinic\nHesidion Clinic Health Awareness Day, April 10 Tasks and Responsibilities\n• Communications: Martin Stoch\n• Advertising: Adilene Walker\n• Presentations: Jillian Opala (Nutrition), Lance Verhoeven (Fitness)\n• Kids’ Health Game: Susan Hayashi\n• Health Checkups / Talks: Anne Spillane, Rami Al-Araj, Kurt Yin, Thierry Daumas\nHealth Day at Hesidion Clinic\nby Shai Herzog on April 14\nHesidion Clinic hosted a successful Health Awareness Day this past Saturday. The event was held as a way to thank the community for supporting the clinic over the past 15 years. It was well attended by both Hesidion Clinic patients and members of the general public.\nAttendees participated in a variety of presentations and everyone received free water bottles, notepads, and other items from event sponsors. Participants who provided a special code were offered a complimentary physical checkup from the team of clinic physicians.\nDuring the event, a sizable line formed at Dr. Thierry Daumas’ table. “I came out today to learn about skincare and advances in eye-care technology. But Dr. Daumas’ talk about how to prevent cavities and improve oral health provided me with the most helpful information,” said attendee Liana Stawinski.\nBy far the most popular event was nutritionist Jillian Opala’s presentation on healthy eating habits. More than 100 people, many of them retirees, flocked to hear the latest on super foods. The event took nearly twice as long as expected, as Ms. Opala answered a steady stream of participant questions.\nChildren were delighted to take part in a health contest involving questions about general health and hygiene. The winners received toys and certificates from the game host. The day was such a success that Hesidion Clinic director, Lance Verhoeven, is already considering making it an annual event.\n\nWhat is indicated about the presentation on food?",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "It was filmed",
+                  "It was postponed",
+                  "It attracted a lot of attention",
+                  "It was given by a retired clinic employee"
+                ],
+                "trueAnswer": "It attracted a lot of attention",
+                "explain": "Điều nào đúng khi nói về buổi diễn thuyết ẩm thực?\nA. Nó được quay phim lại\nB. Nó bị trì hoãn\nC. Nó thu hút rất nhiều sự chú ý\nD. Nó được trình bày bởi một nhân viên phòng khám đã về hưu\n\nGiải thích: More than 100 people, many of them retirees, flocked to hear the latest on super foods.",
+                "key": ""
+              },
+              {
+                "title": "From: mstoch@hesidionclinic.com\nTo: Istawinski@nostilde.com\nDate: March 20\nSubject: Hesidion Clinic’s Health Awareness Day\nDear Ms. Stawinski,\nIn appreciation of your loyalty as a long-time patient of Hesidion Clinic, we are pleased to invite you to our clinic’s Health Awareness Day to be held at the clinic on Saturday, April 10. We would be delighted to see you attend, as we will offer a number of activities designed to promote health awareness in our community. If you sign up for this special event by responding to this email by March 31, you will receive a code to present at the clinic for a surprise benefit.\nMartin Stoch, Communications Director, Hesidion Clinic\nHesidion Clinic Health Awareness Day, April 10 Tasks and Responsibilities\n• Communications: Martin Stoch\n• Advertising: Adilene Walker\n• Presentations: Jillian Opala (Nutrition), Lance Verhoeven (Fitness)\n• Kids’ Health Game: Susan Hayashi\n• Health Checkups / Talks: Anne Spillane, Rami Al-Araj, Kurt Yin, Thierry Daumas\nHealth Day at Hesidion Clinic\nby Shai Herzog on April 14\nHesidion Clinic hosted a successful Health Awareness Day this past Saturday. The event was held as a way to thank the community for supporting the clinic over the past 15 years. It was well attended by both Hesidion Clinic patients and members of the general public.\nAttendees participated in a variety of presentations and everyone received free water bottles, notepads, and other items from event sponsors. Participants who provided a special code were offered a complimentary physical checkup from the team of clinic physicians.\nDuring the event, a sizable line formed at Dr. Thierry Daumas’ table. “I came out today to learn about skincare and advances in eye-care technology. But Dr. Daumas’ talk about how to prevent cavities and improve oral health provided me with the most helpful information,” said attendee Liana Stawinski.\nBy far the most popular event was nutritionist Jillian Opala’s presentation on healthy eating habits. More than 100 people, many of them retirees, flocked to hear the latest on super foods. The event took nearly twice as long as expected, as Ms. Opala answered a steady stream of participant questions.\nChildren were delighted to take part in a health contest involving questions about general health and hygiene. The winners received toys and certificates from the game host. The day was such a success that Hesidion Clinic director, Lance Verhoeven, is already considering making it an annual event.\n\nWho most likely distributed certificates?",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "Mr. Stoch",
+                  "Ms. Hayashi",
+                  "Ms. Spillane",
+                  "Mr. Verhoeven"
+                ],
+                "trueAnswer": "Ms. Hayashi",
+                "explain": "Ai có nhiều khả năng đã phát chứng chỉ?\nA. Ông Stoch\nB. Cô Hayashi\nC. Cô Spillane\nD. Ông Verhoeven\n\nGiải thích: The winners received toys and certificates from the game host. The day was such a success that Hesidion Clinic director, Lance Verhoeven, is already considering making it an annual event.",
+                "key": ""
+              },
+              {
+                "title": "STUDY BUSINESS IN SINGAPORE\nThe Singapore Business School (SBS) is located in the heart of Singapore’s financial district. We offer a range of high-quality courses aimed at preparing students for graduate school. Between classroom sessions you can explore the city and cultivate business connections. We offer content-based classes, such as finance, economics, and international marketing, as well as classes on preparing graduate school applications, including developing CVs and writing personal statements.\nWe have helped thousands of students gain entry into graduate programmes around the world. We boast a number of high-profile part-time instructors who are experts in their fields, including Diara Rhodes, chief financial officer of Auto Drive Korea, and Farah Wan, vice president of the Kuala Lumpur Union Lenders. For more information about our impressive faculty and course offerings, or to enroll online, visit our Web site at www.sbs.edu.sg.\nWhat Our Students Are Saying\n3 June by Atsushi Koshi\nI took a finance course at SBS. The school I am now attending in the United Kingdom had a prerequisite that I had not fulfilled while earning my Bachelor’s degree, so the eight-week course was convenient. However, I couldn’t afford the high rent in the area, so I had to commute, and the traffic in that area is terrible. I wish SBS offered a dormitory for students at the school. The quality of instruction was superb. My lecturer was Diara Rhodes. Though she tended to rush through lectures, discussing a wide range of topics in a small amount of time, I did learn a lot from the reading and from her descriptions of real-world experiences. The way she solved business problems was a source of inspiration during my graduate school interview, and it is also helping me in my current classes.\nEmail\nTo: atsushi.koshi@scholarmail.co.uk\nFrom: Isommersell@sbs.edu.sg\nSubject: Your review\nDate: 15 August\nDear Mr. Koshi,\nThank you for your feedback. You’re not the first person to voice this particular concern. Just so you know, we plan on addressing it by following your recommendation. Students who take classes with us starting as early as 1 January will be able to take advantage of this new benefit. Please be sure to mention this to anyone you know who is thinking about taking a class with us.\nKind regards, Lauri Sommersell\n\nWho is the brochure intended for?",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "Business professionals",
+                  "Potential graduate students",
+                  "Instructors seeking employment",
+                  "Aspiring writers"
+                ],
+                "trueAnswer": "Potential graduate students",
+                "explain": "Bảng thông tin này dành cho ai?\nA. Chuyên gia kinh doanh\nB. Sinh viên tốt nghiệp tiềm năng\nC. Người hướng dẫn tìm việc làm\nD. Nhà văn triển vọng\n\nGiải thích: We offer a range of high-quality courses aimed at preparing students for graduate school.",
+                "key": ""
+              },
+              {
+                "title": "STUDY BUSINESS IN SINGAPORE\nThe Singapore Business School (SBS) is located in the heart of Singapore’s financial district. We offer a range of high-quality courses aimed at preparing students for graduate school. Between classroom sessions you can explore the city and cultivate business connections. We offer content-based classes, such as finance, economics, and international marketing, as well as classes on preparing graduate school applications, including developing CVs and writing personal statements.\nWe have helped thousands of students gain entry into graduate programmes around the world. We boast a number of high-profile part-time instructors who are experts in their fields, including Diara Rhodes, chief financial officer of Auto Drive Korea, and Farah Wan, vice president of the Kuala Lumpur Union Lenders. For more information about our impressive faculty and course offerings, or to enroll online, visit our Web site at www.sbs.edu.sg.\nWhat Our Students Are Saying\n3 June by Atsushi Koshi\nI took a finance course at SBS. The school I am now attending in the United Kingdom had a prerequisite that I had not fulfilled while earning my Bachelor’s degree, so the eight-week course was convenient. However, I couldn’t afford the high rent in the area, so I had to commute, and the traffic in that area is terrible. I wish SBS offered a dormitory for students at the school. The quality of instruction was superb. My lecturer was Diara Rhodes. Though she tended to rush through lectures, discussing a wide range of topics in a small amount of time, I did learn a lot from the reading and from her descriptions of real-world experiences. The way she solved business problems was a source of inspiration during my graduate school interview, and it is also helping me in my current classes.\nEmail\nTo: atsushi.koshi@scholarmail.co.uk\nFrom: Isommersell@sbs.edu.sg\nSubject: Your review\nDate: 15 August\nDear Mr. Koshi,\nThank you for your feedback. You’re not the first person to voice this particular concern. Just so you know, we plan on addressing it by following your recommendation. Students who take classes with us starting as early as 1 January will be able to take advantage of this new benefit. Please be sure to mention this to anyone you know who is thinking about taking a class with us.\nKind regards, Lauri Sommersell\n\nWhat is indicated about SBS?",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "It is located in a busy area",
+                  "It offers financial assistance",
+                  "It provides internship opportunities",
+                  "It has employment-assistance services"
+                ],
+                "trueAnswer": "It is located in a busy area",
+                "explain": "Điều gì được chỉ ra về SBS?\nA. Nó nằm trong một khu vực sầm uất\nB. Nó cung cấp hỗ trợ tài chính\nC. Nó cung cấp cơ hội thực tập\nD. Nó có các dịch vụ hỗ trợ việc làm\n\nGiải thích: The Singapore Business School (SBS) is located in the heart of Singapore’s financial district.",
+                "key": ""
+              },
+              {
+                "title": "STUDY BUSINESS IN SINGAPORE\nThe Singapore Business School (SBS) is located in the heart of Singapore’s financial district. We offer a range of high-quality courses aimed at preparing students for graduate school. Between classroom sessions you can explore the city and cultivate business connections. We offer content-based classes, such as finance, economics, and international marketing, as well as classes on preparing graduate school applications, including developing CVs and writing personal statements.\nWe have helped thousands of students gain entry into graduate programmes around the world. We boast a number of high-profile part-time instructors who are experts in their fields, including Diara Rhodes, chief financial officer of Auto Drive Korea, and Farah Wan, vice president of the Kuala Lumpur Union Lenders. For more information about our impressive faculty and course offerings, or to enroll online, visit our Web site at www.sbs.edu.sg.\nWhat Our Students Are Saying\n3 June by Atsushi Koshi\nI took a finance course at SBS. The school I am now attending in the United Kingdom had a prerequisite that I had not fulfilled while earning my Bachelor’s degree, so the eight-week course was convenient. However, I couldn’t afford the high rent in the area, so I had to commute, and the traffic in that area is terrible. I wish SBS offered a dormitory for students at the school. The quality of instruction was superb. My lecturer was Diara Rhodes. Though she tended to rush through lectures, discussing a wide range of topics in a small amount of time, I did learn a lot from the reading and from her descriptions of real-world experiences. The way she solved business problems was a source of inspiration during my graduate school interview, and it is also helping me in my current classes.\nEmail\nTo: atsushi.koshi@scholarmail.co.uk\nFrom: Isommersell@sbs.edu.sg\nSubject: Your review\nDate: 15 August\nDear Mr. Koshi,\nThank you for your feedback. You’re not the first person to voice this particular concern. Just so you know, we plan on addressing it by following your recommendation. Students who take classes with us starting as early as 1 January will be able to take advantage of this new benefit. Please be sure to mention this to anyone you know who is thinking about taking a class with us.\nKind regards, Lauri Sommersell\n\nWhat does Mr. Koshi mention about his lecturer?",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "She required a lot of reading",
+                  "She covered topics quickly",
+                  "She provided few examples",
+                  "She encouraged in-class participation"
+                ],
+                "trueAnswer": "She covered topics quickly",
+                "explain": "Koshi nói gì về giảng viên của mình?\nA. Cô ấy yêu cầu đọc rất nhiều\nB. Cô ấy nói nhanh các chủ đề\nC. Cô ấy cung cấp một vài ví dụ\nD. Cô ấy khuyến khích sự tham gia xây dựng bài trong lớp\n\nGiải thích: My lecturer was Diara Rhodes. She tended to rush through lectures",
+                "key": ""
+              },
+              {
+                "title": "STUDY BUSINESS IN SINGAPORE\nThe Singapore Business School (SBS) is located in the heart of Singapore’s financial district. We offer a range of high-quality courses aimed at preparing students for graduate school. Between classroom sessions you can explore the city and cultivate business connections. We offer content-based classes, such as finance, economics, and international marketing, as well as classes on preparing graduate school applications, including developing CVs and writing personal statements.\nWe have helped thousands of students gain entry into graduate programmes around the world. We boast a number of high-profile part-time instructors who are experts in their fields, including Diara Rhodes, chief financial officer of Auto Drive Korea, and Farah Wan, vice president of the Kuala Lumpur Union Lenders. For more information about our impressive faculty and course offerings, or to enroll online, visit our Web site at www.sbs.edu.sg.\nWhat Our Students Are Saying\n3 June by Atsushi Koshi\nI took a finance course at SBS. The school I am now attending in the United Kingdom had a prerequisite that I had not fulfilled while earning my Bachelor’s degree, so the eight-week course was convenient. However, I couldn’t afford the high rent in the area, so I had to commute, and the traffic in that area is terrible. I wish SBS offered a dormitory for students at the school. The quality of instruction was superb. My lecturer was Diara Rhodes. Though she tended to rush through lectures, discussing a wide range of topics in a small amount of time, I did learn a lot from the reading and from her descriptions of real-world experiences. The way she solved business problems was a source of inspiration during my graduate school interview, and it is also helping me in my current classes.\nEmail\nTo: atsushi.koshi@scholarmail.co.uk\nFrom: Isommersell@sbs.edu.sg\nSubject: Your review\nDate: 15 August\nDear Mr. Koshi,\nThank you for your feedback. You’re not the first person to voice this particular concern. Just so you know, we plan on addressing it by following your recommendation. Students who take classes with us starting as early as 1 January will be able to take advantage of this new benefit. Please be sure to mention this to anyone you know who is thinking about taking a class with us.\nKind regards, Lauri Sommersell\n\nWhere does Mr. Koshi's instructor work when she is not teaching?",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "At SBS",
+                  "At a bank in Singapore's financial district",
+                  "At Auto Drive Korea",
+                  "At Kuala Lumpur Union Lenders"
+                ],
+                "trueAnswer": "At Auto Drive Korea",
+                "explain": "Người hướng dẫn của Koshi làm việc ở đâu khi cô ấy không dạy?\nA. Tại SBS\nB. Tại một ngân hàng ở khu tài chính của Singapore\nC. Tại Auto Drive Korea\nD. Tại Kuala Lumpur Union Lenders\n\nGiải thích: We boast a number of high-profile part-time instructors who are experts in their fields, including Diara Rhodes, chief financial officer of Auto Drive Korea",
+                "key": ""
+              },
+              {
+                "title": "STUDY BUSINESS IN SINGAPORE\nThe Singapore Business School (SBS) is located in the heart of Singapore’s financial district. We offer a range of high-quality courses aimed at preparing students for graduate school. Between classroom sessions you can explore the city and cultivate business connections. We offer content-based classes, such as finance, economics, and international marketing, as well as classes on preparing graduate school applications, including developing CVs and writing personal statements.\nWe have helped thousands of students gain entry into graduate programmes around the world. We boast a number of high-profile part-time instructors who are experts in their fields, including Diara Rhodes, chief financial officer of Auto Drive Korea, and Farah Wan, vice president of the Kuala Lumpur Union Lenders. For more information about our impressive faculty and course offerings, or to enroll online, visit our Web site at www.sbs.edu.sg.\nWhat Our Students Are Saying\n3 June by Atsushi Koshi\nI took a finance course at SBS. The school I am now attending in the United Kingdom had a prerequisite that I had not fulfilled while earning my Bachelor’s degree, so the eight-week course was convenient. However, I couldn’t afford the high rent in the area, so I had to commute, and the traffic in that area is terrible. I wish SBS offered a dormitory for students at the school. The quality of instruction was superb. My lecturer was Diara Rhodes. Though she tended to rush through lectures, discussing a wide range of topics in a small amount of time, I did learn a lot from the reading and from her descriptions of real-world experiences. The way she solved business problems was a source of inspiration during my graduate school interview, and it is also helping me in my current classes.\nEmail\nTo: atsushi.koshi@scholarmail.co.uk\nFrom: Isommersell@sbs.edu.sg\nSubject: Your review\nDate: 15 August\nDear Mr. Koshi,\nThank you for your feedback. You’re not the first person to voice this particular concern. Just so you know, we plan on addressing it by following your recommendation. Students who take classes with us starting as early as 1 January will be able to take advantage of this new benefit. Please be sure to mention this to anyone you know who is thinking about taking a class with us.\nKind regards, Lauri Sommersell\n\nHow will SBS be addressing Mr. Koshi's complaint?",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "By hiring more faculty",
+                  "By reducing the length of classes",
+                  "By adding more transportation options",
+                  "By building student housing on campus"
+                ],
+                "trueAnswer": "By building student housing on campus",
+                "explain": "SBS sẽ giải quyết khiếu nại của Koshi như thế nào?\nA. Bằng cách thuê thêm giảng viên\nB. Bằng cách giảm thời lượng tiết học\nC. Bằng cách thêm nhiều tùy chọn phương tiện giao thông\nD. Bằng cách xây dựng nhà ở sinh viên trong khuôn viên trường\n\nGiải thích: Just so you know, we plan on addressing it by following your recommendation",
+                "key": ""
+              },
+              {
+                "title": "SEEKING FULL-TIME LINE COOK\nThe Delphine Street Grill is a high-profile restaurant serving New Orleans since 1924. We are seeking a line cook to prepare select sauteed items and sauces under the supervision of the executive chef. The ideal candidate will have at least one year of related cooking experience or will have completed a two-year apprenticeship in a well-established restaurant. Demonstrated ability to prepare innovative dishes as well as classic Cajun-style cuisine is required. To apply, go to www.delphinestreetgrill.com/careers.\nName: Anton Hoang\nEmail: antonh94@textmail.com\nPhone: 504.555.0177\nRelated education: Associates degree in culinary arts, Boudreau Community College\nCurrent employer/title: River Ferry Café, Line Cook | Time employed: Six months\nPrevious employer/title: Hotel Lenoir, Apprentice | Time employed: Two years\nPrevious employer/title: Picard Seafood, Intern | Time employed: Three months\nRésumé: ✓ Attached\nReference list: ✓ Attached\nCover letter:\nI am very interested in the position of line cook at the Delphine Street Grill. For the past six months, I have been the line cook for a café serving traditional Cajun meals. Since the café has only recently been opened, I am responsible for preparing nearly all menu items. I completed my apprenticeship at the famous Hotel Lenoir, working side-by-side with Celebrity Chef Eugénie Mirone. In addition, as Ted Overbeck (my mentor and instructor at Boudreau Community College) can confirm, I am able to develop creative new recipes. In fact, while at the college, I was awarded the Excellence in Innovation Prize for a Vietnamese-style sandwich recipe I crafted, which is now on the menu at the college’s cafeteria.\nBOUDREAU COMMUNITY COLLEGE\nSchool of Culinary Arts\nMarie Beaumont\nDelphine Street Grill\n3248 Delphine Street\nNew Orleans, LA 70117\nDear Ms. Beaumont:\nI am writing in regard to Anton Hoang’s application for employment. Since Mr. Overbeck is on leave this semester, he asked me to respond in his place. Mr. Hoang, who graduated in the top five of his class, demonstrated exceptional culinary skill and a strong desire to learn. He received a glowing review from Sabine Riou, the renowned chef who supervised his three-month internship. I am confident Mr. Hoang will be a valuable asset to your establishment.\nSincerely,\nLiz Flores\nAssociate Director of Culinary Arts\n\nWhat is indicated about the line cook position?",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "It is a two-year contract",
+                  "It requires working the late-night shift",
+                  "It includes supervising the apprentices",
+                  "It involves preparing a limited variety of dishes"
+                ],
+                "trueAnswer": "It involves preparing a limited variety of dishes",
+                "explain": "Điều gì nói về về vị trí bếp trưởng?\nA. Đó là một hợp đồng hai năm\nB. Nó yêu cầu làm việc ca đêm muộn\nC. Nó bao gồm việc giám sát những người học việc\nD. Nó liên quan đến việc chuẩn bị một số món ăn độc đáo\n\nGiải thích: Demonstrated ability to prepare innovative dishes as well as classic Cajun-style cuisine is required.",
+                "key": ""
+              },
+              {
+                "title": "SEEKING FULL-TIME LINE COOK\nThe Delphine Street Grill is a high-profile restaurant serving New Orleans since 1924. We are seeking a line cook to prepare select sauteed items and sauces under the supervision of the executive chef. The ideal candidate will have at least one year of related cooking experience or will have completed a two-year apprenticeship in a well-established restaurant. Demonstrated ability to prepare innovative dishes as well as classic Cajun-style cuisine is required. To apply, go to www.delphinestreetgrill.com/careers.\nName: Anton Hoang\nEmail: antonh94@textmail.com\nPhone: 504.555.0177\nRelated education: Associates degree in culinary arts, Boudreau Community College\nCurrent employer/title: River Ferry Café, Line Cook | Time employed: Six months\nPrevious employer/title: Hotel Lenoir, Apprentice | Time employed: Two years\nPrevious employer/title: Picard Seafood, Intern | Time employed: Three months\nRésumé: ✓ Attached\nReference list: ✓ Attached\nCover letter:\nI am very interested in the position of line cook at the Delphine Street Grill. For the past six months, I have been the line cook for a café serving traditional Cajun meals. Since the café has only recently been opened, I am responsible for preparing nearly all menu items. I completed my apprenticeship at the famous Hotel Lenoir, working side-by-side with Celebrity Chef Eugénie Mirone. In addition, as Ted Overbeck (my mentor and instructor at Boudreau Community College) can confirm, I am able to develop creative new recipes. In fact, while at the college, I was awarded the Excellence in Innovation Prize for a Vietnamese-style sandwich recipe I crafted, which is now on the menu at the college’s cafeteria.\nBOUDREAU COMMUNITY COLLEGE\nSchool of Culinary Arts\nMarie Beaumont\nDelphine Street Grill\n3248 Delphine Street\nNew Orleans, LA 70117\nDear Ms. Beaumont:\nI am writing in regard to Anton Hoang’s application for employment. Since Mr. Overbeck is on leave this semester, he asked me to respond in his place. Mr. Hoang, who graduated in the top five of his class, demonstrated exceptional culinary skill and a strong desire to learn. He received a glowing review from Sabine Riou, the renowned chef who supervised his three-month internship. I am confident Mr. Hoang will be a valuable asset to your establishment.\nSincerely,\nLiz Flores\nAssociate Director of Culinary Arts\n\nWhat is true about Mr. Hoang?",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "He is applying to work at several restaurants",
+                  "He meets the requirements of the position",
+                  "He has appeared on television with Ms. Mirone",
+                  "He taught at a culinary school in Vietnam"
+                ],
+                "trueAnswer": "He meets the requirements of the position",
+                "explain": "Điều sau đây là đúng khi nói về anh Hoàng?\nA. Anh ấy đang xin làm việc tại một số nhà hàng\nB. Anh ấy đáp ứng các yêu cầu của vị trí\nC. Anh ấy đã xuất hiện trên truyền hình với cô Mirone\nD. Anh ấy dạy tại một trường dạy nấu ăn ở Việt Nam\n\nGiải thích: Nhìn vào hồ sơ xin việc của anh ấy",
+                "key": ""
+              },
+              {
+                "title": "SEEKING FULL-TIME LINE COOK\nThe Delphine Street Grill is a high-profile restaurant serving New Orleans since 1924. We are seeking a line cook to prepare select sauteed items and sauces under the supervision of the executive chef. The ideal candidate will have at least one year of related cooking experience or will have completed a two-year apprenticeship in a well-established restaurant. Demonstrated ability to prepare innovative dishes as well as classic Cajun-style cuisine is required. To apply, go to www.delphinestreetgrill.com/careers.\nName: Anton Hoang\nEmail: antonh94@textmail.com\nPhone: 504.555.0177\nRelated education: Associates degree in culinary arts, Boudreau Community College\nCurrent employer/title: River Ferry Café, Line Cook | Time employed: Six months\nPrevious employer/title: Hotel Lenoir, Apprentice | Time employed: Two years\nPrevious employer/title: Picard Seafood, Intern | Time employed: Three months\nRésumé: ✓ Attached\nReference list: ✓ Attached\nCover letter:\nI am very interested in the position of line cook at the Delphine Street Grill. For the past six months, I have been the line cook for a café serving traditional Cajun meals. Since the café has only recently been opened, I am responsible for preparing nearly all menu items. I completed my apprenticeship at the famous Hotel Lenoir, working side-by-side with Celebrity Chef Eugénie Mirone. In addition, as Ted Overbeck (my mentor and instructor at Boudreau Community College) can confirm, I am able to develop creative new recipes. In fact, while at the college, I was awarded the Excellence in Innovation Prize for a Vietnamese-style sandwich recipe I crafted, which is now on the menu at the college’s cafeteria.\nBOUDREAU COMMUNITY COLLEGE\nSchool of Culinary Arts\nMarie Beaumont\nDelphine Street Grill\n3248 Delphine Street\nNew Orleans, LA 70117\nDear Ms. Beaumont:\nI am writing in regard to Anton Hoang’s application for employment. Since Mr. Overbeck is on leave this semester, he asked me to respond in his place. Mr. Hoang, who graduated in the top five of his class, demonstrated exceptional culinary skill and a strong desire to learn. He received a glowing review from Sabine Riou, the renowned chef who supervised his three-month internship. I am confident Mr. Hoang will be a valuable asset to your establishment.\nSincerely,\nLiz Flores\nAssociate Director of Culinary Arts\n\nWho is Mr. Overbeck?",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "An executive chef",
+                  "An associate director",
+                  "A culinary teacher",
+                  "A restaurant owner"
+                ],
+                "trueAnswer": "A culinary teacher",
+                "explain": "Anh Overbeck là ai?\nA. Một bếp trưởng\nB. Một giám đốc liên kết\nC. Một giáo viên dạy nấu ăn\nD. Một chủ nhà hàng\n\nGiải thích: As Ted Overbeck (my mentor and instructor at Boudreau Community College)",
+                "key": ""
+              },
+              {
+                "title": "SEEKING FULL-TIME LINE COOK\nThe Delphine Street Grill is a high-profile restaurant serving New Orleans since 1924. We are seeking a line cook to prepare select sauteed items and sauces under the supervision of the executive chef. The ideal candidate will have at least one year of related cooking experience or will have completed a two-year apprenticeship in a well-established restaurant. Demonstrated ability to prepare innovative dishes as well as classic Cajun-style cuisine is required. To apply, go to www.delphinestreetgrill.com/careers.\nName: Anton Hoang\nEmail: antonh94@textmail.com\nPhone: 504.555.0177\nRelated education: Associates degree in culinary arts, Boudreau Community College\nCurrent employer/title: River Ferry Café, Line Cook | Time employed: Six months\nPrevious employer/title: Hotel Lenoir, Apprentice | Time employed: Two years\nPrevious employer/title: Picard Seafood, Intern | Time employed: Three months\nRésumé: ✓ Attached\nReference list: ✓ Attached\nCover letter:\nI am very interested in the position of line cook at the Delphine Street Grill. For the past six months, I have been the line cook for a café serving traditional Cajun meals. Since the café has only recently been opened, I am responsible for preparing nearly all menu items. I completed my apprenticeship at the famous Hotel Lenoir, working side-by-side with Celebrity Chef Eugénie Mirone. In addition, as Ted Overbeck (my mentor and instructor at Boudreau Community College) can confirm, I am able to develop creative new recipes. In fact, while at the college, I was awarded the Excellence in Innovation Prize for a Vietnamese-style sandwich recipe I crafted, which is now on the menu at the college’s cafeteria.\nBOUDREAU COMMUNITY COLLEGE\nSchool of Culinary Arts\nMarie Beaumont\nDelphine Street Grill\n3248 Delphine Street\nNew Orleans, LA 70117\nDear Ms. Beaumont:\nI am writing in regard to Anton Hoang’s application for employment. Since Mr. Overbeck is on leave this semester, he asked me to respond in his place. Mr. Hoang, who graduated in the top five of his class, demonstrated exceptional culinary skill and a strong desire to learn. He received a glowing review from Sabine Riou, the renowned chef who supervised his three-month internship. I am confident Mr. Hoang will be a valuable asset to your establishment.\nSincerely,\nLiz Flores\nAssociate Director of Culinary Arts\n\nWhat is suggested about Boudreau Community College?",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "It gives out culinary awards",
+                  "It offers free cooking workshops",
+                  "It needs a new chef for its cafeteria",
+                  "It invites celebrity chefs as guest speakers"
+                ],
+                "trueAnswer": "It gives out culinary awards",
+                "explain": "Điều gì đúng khi nói về Boudreau Community College?\nA. Nơi đây trao giải thưởng ẩm thực\nB. Nơi đây tổ chức các buổi hội thảo nấu ăn miễn phí\nC. Nơi đây cần một đầu bếp mới cho quán cà phê của nó\nD. Nơi đây mời các đầu bếp nổi tiếng làm diễn giả khách mời\n\nGiải thích: In fact, while at the college, I was awarded the Excellence in Innovation Prize for a Vietnamese-style sandwich recipe I crafted",
+                "key": ""
+              },
+              {
+                "title": "SEEKING FULL-TIME LINE COOK\nThe Delphine Street Grill is a high-profile restaurant serving New Orleans since 1924. We are seeking a line cook to prepare select sauteed items and sauces under the supervision of the executive chef. The ideal candidate will have at least one year of related cooking experience or will have completed a two-year apprenticeship in a well-established restaurant. Demonstrated ability to prepare innovative dishes as well as classic Cajun-style cuisine is required. To apply, go to www.delphinestreetgrill.com/careers.\nName: Anton Hoang\nEmail: antonh94@textmail.com\nPhone: 504.555.0177\nRelated education: Associates degree in culinary arts, Boudreau Community College\nCurrent employer/title: River Ferry Café, Line Cook | Time employed: Six months\nPrevious employer/title: Hotel Lenoir, Apprentice | Time employed: Two years\nPrevious employer/title: Picard Seafood, Intern | Time employed: Three months\nRésumé: ✓ Attached\nReference list: ✓ Attached\nCover letter:\nI am very interested in the position of line cook at the Delphine Street Grill. For the past six months, I have been the line cook for a café serving traditional Cajun meals. Since the café has only recently been opened, I am responsible for preparing nearly all menu items. I completed my apprenticeship at the famous Hotel Lenoir, working side-by-side with Celebrity Chef Eugénie Mirone. In addition, as Ted Overbeck (my mentor and instructor at Boudreau Community College) can confirm, I am able to develop creative new recipes. In fact, while at the college, I was awarded the Excellence in Innovation Prize for a Vietnamese-style sandwich recipe I crafted, which is now on the menu at the college’s cafeteria.\nBOUDREAU COMMUNITY COLLEGE\nSchool of Culinary Arts\nMarie Beaumont\nDelphine Street Grill\n3248 Delphine Street\nNew Orleans, LA 70117\nDear Ms. Beaumont:\nI am writing in regard to Anton Hoang’s application for employment. Since Mr. Overbeck is on leave this semester, he asked me to respond in his place. Mr. Hoang, who graduated in the top five of his class, demonstrated exceptional culinary skill and a strong desire to learn. He received a glowing review from Sabine Riou, the renowned chef who supervised his three-month internship. I am confident Mr. Hoang will be a valuable asset to your establishment.\nSincerely,\nLiz Flores\nAssociate Director of Culinary Arts\n\nWhere does Ms. Riou most likely work?",
+                "media": "",
+                "img": "",
+                "answers": [
+                  "At the River Ferry Cafe",
+                  "At Hotel Lenoir",
+                  "At Picard Seafood",
+                  "At the Delphine Street Grill"
+                ],
+                "trueAnswer": "At Picard Seafood",
+                "explain": "Cô Riou có khả năng làm việc ở đâu?\nA. Tại quán cà phê River Ferry\nB. Tại khách sạn Lenoir\nC. Tại Picard Seafood\nD. Tại Delphine Street Grill\n\nGiải thích: He received a glowing review from Sabine Riou, the renowned chef who supervised his three-month internship.",
                 "key": ""
               }
             ]

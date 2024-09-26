@@ -1,35 +1,32 @@
 package com.locnguyen.toeicexercises.fragment.word
 
-import android.app.Dialog
 import android.os.Bundle
-import android.util.Log
+import android.text.Html
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.SearchView
-import androidx.activity.OnBackPressedCallback
+import android.widget.LinearLayout
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
-import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.navigation.fragment.navArgs
 import com.locnguyen.toeicexercises.R
-import com.locnguyen.toeicexercises.adapter.WordAdapter
 import com.locnguyen.toeicexercises.databinding.WordFragmentBinding
 import com.locnguyen.toeicexercises.model.Word
-import com.locnguyen.toeicexercises.utils.DialogHelper
-import com.locnguyen.toeicexercises.viewmodel.MainVM
+import com.locnguyen.toeicexercises.utils.GlobalHelper
+import com.locnguyen.toeicexercises.utils.dpToPx
+import com.locnguyen.toeicexercises.utils.pxToDp
 import com.locnguyen.toeicexercises.viewmodel.WordVM
 
 class WordFragment: Fragment() {
-
     private lateinit var binding: WordFragmentBinding
-    private lateinit var wordAdapter: WordAdapter
-    private lateinit var mainVM: MainVM
+    private lateinit var word: Word
     private lateinit var wordVM: WordVM
     private lateinit var navController: NavController
 
-    private val loadingDialog: Dialog by lazy { DialogHelper.getLoadingDialog(requireActivity()) }
+    private val args by navArgs<WordFragmentArgs>()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -43,83 +40,119 @@ class WordFragment: Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        mainVM = ViewModelProvider(requireActivity())[MainVM::class.java]
-        wordVM = ViewModelProvider(requireActivity())[WordVM::class.java]
         navController = Navigation.findNavController(view)
-
-        binding.lifecycleOwner = this
-        binding.wordVM = wordVM
-
-        if (loadingDialog.isShowing) loadingDialog.dismiss()
-
-        val allWords = wordVM.words.value ?: emptyList()
-
-        wordAdapter = WordAdapter(allWords) { word ->
-            handleItemWordClick(word)
-        }
-
-        wordVM.searchResult.value = allWords
+        wordVM = ViewModelProvider(requireActivity())[WordVM::class.java]
+        word = args.word
 
         initViews()
         initListeners()
-        initObserves()
     }
 
     private fun initViews() {
-        binding.title.text = requireContext().getString(R.string.Word)
+        binding.headerTitle.text = word.title
 
-        binding.words.apply {
-            layoutManager = LinearLayoutManager(requireContext())
-            adapter = wordAdapter
+        word.listMeans?.let{ listMeans ->
+            for (means in listMeans) {
+                val kindView = TextView(requireContext()).apply {
+                    layoutParams = LinearLayout.LayoutParams(
+                        LinearLayout.LayoutParams.MATCH_PARENT,
+                        LinearLayout.LayoutParams.WRAP_CONTENT
+                    ).apply {
+                        setMargins(
+                            0,
+                            10.dpToPx(requireContext()),
+                            0,
+                            0
+                        )
+                    }
+                    text = means.kind
+                    textSize = requireContext().resources.getDimension(R.dimen.small_title).pxToDp(requireContext())
+                    setTextColor(requireContext().getColor(R.color.primary))
+                    typeface = GlobalHelper(requireContext()).tinosBold
+                }
+
+                binding.wordMeans.addView(kindView)
+
+                means.means?.let{ listMean ->
+                    for (mean in listMean) {
+                        val wordMeanView = TextView(requireContext()).apply {
+                            layoutParams = LinearLayout.LayoutParams(
+                                LinearLayout.LayoutParams.MATCH_PARENT,
+                                LinearLayout.LayoutParams.WRAP_CONTENT
+                            ).apply {
+                                setMargins(
+                                    10.dpToPx(requireContext()),
+                                    5.dpToPx(requireContext()),
+                                    0,
+                                    0
+                                )
+                            }
+                            text = requireContext().getString(R.string.Word_mean_regex, mean.mean)
+                            textSize = requireContext().resources.getDimension(R.dimen.medium_content).pxToDp(requireContext())
+                            setTextColor(requireContext().getColor(R.color.secondPrimary))
+                            typeface = GlobalHelper(requireContext()).tinosBold
+                        }
+
+                        binding.wordMeans.addView(wordMeanView)
+
+                        mean.examples?.let{ examples ->
+                            if (examples.isNotEmpty()){
+                                val exTitle = TextView(requireContext()).apply {
+                                    layoutParams = LinearLayout.LayoutParams(
+                                        LinearLayout.LayoutParams.MATCH_PARENT,
+                                        LinearLayout.LayoutParams.WRAP_CONTENT
+                                    ).apply {
+                                        setMargins(
+                                            20.dpToPx(requireContext()),
+                                            0,
+                                            0,
+                                            0
+                                        )
+                                    }
+                                    text = requireContext().getString(R.string.Example_title)
+                                    textSize = requireContext().resources.getDimension(R.dimen.small_content).pxToDp(requireContext())
+                                    setTextColor(requireContext().getColor(R.color.black))
+                                    typeface = GlobalHelper(requireContext()).tinosBold
+                                }
+
+                                binding.wordMeans.addView(exTitle)
+
+                                for (ex in examples){
+                                    val wordMeanExView = TextView(requireContext()).apply {
+                                        layoutParams = LinearLayout.LayoutParams(
+                                            LinearLayout.LayoutParams.MATCH_PARENT,
+                                            LinearLayout.LayoutParams.WRAP_CONTENT
+                                        ).apply {
+                                            setMargins(
+                                                20.dpToPx(requireContext()),
+                                                0,
+                                                0,
+                                                0
+                                            )
+                                        }
+                                        text = Html.fromHtml( requireContext().getString(
+                                            R.string.Word_mean_example_regex,
+                                            wordVM.getExEngContent(ex),
+                                            wordVM.getExVieContent(ex)
+                                        ), Html.FROM_HTML_MODE_LEGACY)
+                                        textSize = requireContext().resources.getDimension(R.dimen.small_content).pxToDp(requireContext())
+                                        setTextColor(requireContext().getColor(R.color.black))
+                                        typeface = GlobalHelper(requireContext()).tinosItalic
+                                    }
+
+                                    binding.wordMeans.addView(wordMeanExView)
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 
     private fun initListeners(){
-        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner, object: OnBackPressedCallback(true){
-            override fun handleOnBackPressed() {
-                handlePressedBack()
-            }
-        })
-
-        binding.searchBar.setOnQueryTextListener(object: SearchView.OnQueryTextListener{
-            override fun onQueryTextSubmit(query: String?): Boolean {
-               onQueryTextChange(query)
-                return true
-            }
-
-            override fun onQueryTextChange(newText: String?): Boolean {
-                newText?.let{
-                    if (it.isBlank()){
-                        wordAdapter.stopSearchAction()
-                        wordVM.searchResult.value = wordVM.words.value
-                    }
-                    else{
-                        wordVM.handleSearchWord(it)
-                    }
-                }
-                return true
-            }
-        })
-
         binding.icBack.setOnClickListener {
-            handlePressedBack()
+            navController.popBackStack()
         }
-    }
-
-    private  fun initObserves(){
-        wordVM.searchResult.observe(viewLifecycleOwner){ result ->
-            Log.d("ABCXYZ", result.size.toString() + "----" + wordAdapter.defaultList.size.toString())
-            wordAdapter.setSearchResult(result)
-        }
-    }
-
-    private fun handlePressedBack(){
-        navController.popBackStack()
-        mainVM.itemTheoryClicked.value = null
-    }
-
-    private fun handleItemWordClick(word: Word){
-        val action = WordFragmentDirections.actionWordFragmentToListMeansFragment(word)
-        navController.navigate(action)
     }
 }

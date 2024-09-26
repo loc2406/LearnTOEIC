@@ -1,32 +1,36 @@
 package com.locnguyen.toeicexercises.fragment
 
-import android.Manifest
-import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.locnguyen.toeicexercises.MainActivity
 import com.locnguyen.toeicexercises.R
 import com.locnguyen.toeicexercises.adapter.ExerciseAdapter
-import com.locnguyen.toeicexercises.adapter.NoteAdapter
 import com.locnguyen.toeicexercises.adapter.TheoryAdapter
 import com.locnguyen.toeicexercises.databinding.PracticeFragmentBinding
 import com.locnguyen.toeicexercises.model.Exam
+import com.locnguyen.toeicexercises.sharedpreference.MySharedPreference
 import com.locnguyen.toeicexercises.utils.DialogHelper
+import com.locnguyen.toeicexercises.viewmodel.GrammarVM
 import com.locnguyen.toeicexercises.viewmodel.MainVM
+import com.locnguyen.toeicexercises.viewmodel.WordVM
 
 class PracticeFragment: Fragment() {
 
     private lateinit var binding: PracticeFragmentBinding
     private lateinit var theoryAdapter: TheoryAdapter
     private lateinit var exerciseAdapter: ExerciseAdapter
-    private lateinit var noteAdapter: NoteAdapter
-    private lateinit var mainVM: MainVM
+
+    private val mainVM: MainVM by activityViewModels<MainVM>()
+    private val wordVM: WordVM by activityViewModels<WordVM>()
+    private val grammarVM: GrammarVM by activityViewModels<GrammarVM>()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -40,44 +44,52 @@ class PracticeFragment: Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        mainVM = ViewModelProvider(requireActivity())[MainVM::class.java]
-
-        theoryAdapter = TheoryAdapter(listOf(Pair("Từ vựng", R.drawable.ic_theory1), Pair("Ngữ pháp", R.drawable.ic_theory2))){ typeName ->
-            DialogHelper.getLoadingDialog(requireActivity()).show()
-            mainVM.itemTheoryClicked.value = typeName
-        }
-        exerciseAdapter = ExerciseAdapter(listOf(Exam("Chọn câu đúng"), Exam("Nối câu"))){ exerciseName ->
-            mainVM.itemExerciseClicked.value = exerciseName
-        }
-        noteAdapter = NoteAdapter(listOf(Pair("Từ vựng", R.drawable.ic_theory1), Pair("Ngữ pháp", R.drawable.ic_theory2))) { noteName ->
-
-        }
+        theoryAdapter = TheoryAdapter(listOf("Từ vựng", "Ngữ pháp"))
+        exerciseAdapter = ExerciseAdapter(listOf("Chọn câu đúng", "Nối câu"))
 
         initViews()
         initListeners()
+        initObserves()
     }
 
     private fun initViews() {
         binding.theoryContent.apply {
             adapter = theoryAdapter
-            layoutManager = LinearLayoutManager(requireContext(), RecyclerView.HORIZONTAL, false)
+            layoutManager = GridLayoutManager(requireContext(), 2)
         }
 
         binding.exerciseContent.apply {
             adapter = exerciseAdapter
-            layoutManager = LinearLayoutManager(requireContext(), RecyclerView.HORIZONTAL, false)
-        }
-
-        binding.noteContent.apply {
-            adapter = noteAdapter
-            layoutManager = object: LinearLayoutManager(requireContext()){
-                override fun canScrollVertically(): Boolean {
-                    return false
-                }
-            }
+            layoutManager = GridLayoutManager(requireContext(), 2)
         }
     }
 
+    private fun loadFavoriteWords(){
+        binding.wordQuantity.text = wordVM.getFavoriteWords().size.toString()
+    }
+
+    private fun loadFavoriteGrammars() {
+        binding.grammarQuantity.text = grammarVM.getFavoriteGrammars().size.toString()
+    }
+
     private fun initListeners(){
+        theoryAdapter.itemClicked = { typeName ->
+            DialogHelper.getLoadingDialog(requireActivity()).show()
+            mainVM.itemTheoryClicked.value = typeName
+        }
+
+        exerciseAdapter.itemClicked = { exerciseName ->
+            mainVM.itemExerciseClicked.value = exerciseName
+        }
+    }
+
+    private fun initObserves(){
+        wordVM.loadFavoriteWords.observe(viewLifecycleOwner){ needLoad ->
+            needLoad.takeIf { it == true }?.let{ loadFavoriteWords() }
+        }
+
+        grammarVM.loadFavoriteGrammars.observe(viewLifecycleOwner){ needLoad ->
+            needLoad.takeIf { it == true }?.let{ loadFavoriteGrammars() }
+        }
     }
 }

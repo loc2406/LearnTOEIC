@@ -17,6 +17,7 @@
             android:fontFamily="@font/tinos_bold"
             android:textColor="@color/black"
             android:textSize="@dimen/small_content"
+            android:lineSpacingExtra="5dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"

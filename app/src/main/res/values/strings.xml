@@ -78,4 +78,9 @@
     <string name="Grammar">Ngữ pháp</string>
     <string name="Select_lesson_title">Chọn bài học:</string>
     <string name="Intro_image">Ảnh bìa</string>
+    <string name="Added_favorite_word">Đã thêm từ vựng yêu thích vào sổ tay!</string>
+    <string name="Removed_favorite_word">Đã xóa từ vựng yêu thích khỏi sổ tay!</string>
+    <string name="Added_favorite_grammar">Đã thêm ngữ pháp yêu thích vào sổ tay!</string>
+    <string name="Removed_favorite_grammar">Đã xóa ngữ pháp yêu thích khỏi sổ tay!</string>
+    <string name="Check_internet_connection">Vui lòng kiểm tra kết nối mạng và thử lại!</string>
 </resources>

@@ -8,10 +8,14 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.locnguyen.toeicexercises.model.Example
 import com.locnguyen.toeicexercises.model.Word
+import com.locnguyen.toeicexercises.sharedpreference.MySharedPreference
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-class WordVM : ViewModel(){
+class WordVM(private val application: Application) : AndroidViewModel(application){
+    private val sharedRef: MySharedPreference by lazy {MySharedPreference(application)}
+    val loadFavoriteWords: MutableLiveData<Boolean> by lazy {MutableLiveData(true)}
+
     val words: MutableLiveData<List<Word>> by lazy {MutableLiveData(emptyList())}
     val examples: MutableLiveData<List<Example>> by lazy {MutableLiveData(emptyList())}
     val searchResult: MutableLiveData<List<Word>> by lazy { MutableLiveData(emptyList()) }
@@ -30,5 +34,17 @@ class WordVM : ViewModel(){
 
     fun getExVieContent(exId: Int): String {
         return examples.value?.find { ex -> ex.id == exId }?.viContent ?: ""
+    }
+
+    fun addFavoriteWord(word: Word){
+        sharedRef.addFavoriteWord(word, MySharedPreference.FAVORITE_WORDS)
+    }
+
+    fun removeFavoriteWord(word: Word){
+        sharedRef.removeFavoriteWord(word, MySharedPreference.FAVORITE_WORDS)
+    }
+
+    fun getFavoriteWords(): Set<Word> {
+        return sharedRef.getFavoriteWords(MySharedPreference.FAVORITE_WORDS)
     }
 }

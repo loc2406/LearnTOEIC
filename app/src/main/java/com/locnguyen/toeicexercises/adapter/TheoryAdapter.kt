@@ -6,28 +6,35 @@ import android.view.ViewGroup
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.recyclerview.widget.RecyclerView
 import com.locnguyen.toeicexercises.R
-import com.locnguyen.toeicexercises.databinding.ItemTheoryBinding
+import com.locnguyen.toeicexercises.databinding.ItemPracticeBinding
 
-class TheoryAdapter(private val listType: List<Pair<String, Int>>, private var itemClicked : (String) -> Unit): RecyclerView.Adapter<TheoryAdapter.TheoryVH>() {
+class TheoryAdapter(private val types: List<String>, var itemClicked : (String) -> Unit = {}): RecyclerView.Adapter<TheoryAdapter.TheoryVH>() {
 
-    class TheoryVH(val binding: ItemTheoryBinding): RecyclerView.ViewHolder(binding.root)
+    class TheoryVH(val binding: ItemPracticeBinding): RecyclerView.ViewHolder(binding.root){
+        fun getImgDrawable(name: String): Drawable? {
+            return when(name){
+                "Từ vựng" -> AppCompatResources.getDrawable(binding.root.context, R.drawable.ic_word)!!
+                "Ngữ pháp" -> AppCompatResources.getDrawable(binding.root.context, R.drawable.ic_grammar)!!
+                else -> null
+            }
+        }
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TheoryVH {
-        return TheoryVH(ItemTheoryBinding.inflate(LayoutInflater.from(parent.context), parent, false))
+        return TheoryVH(ItemPracticeBinding.inflate(LayoutInflater.from(parent.context), parent, false))
     }
 
     override fun getItemCount(): Int {
-        return listType.size
+        return types.size
     }
 
     override fun onBindViewHolder(holder: TheoryVH, position: Int) {
-        val data = listType[position]
-        val context = holder.binding.root.context
+        val data = types[position]
 
-        holder.binding.content.text = data.first
-        holder.binding.ic.setImageDrawable(AppCompatResources.getDrawable(context, data.second)!!)
+        holder.binding.content.text = data
+        holder.binding.ic.setImageDrawable(holder.getImgDrawable(data))
         holder.binding.root.setOnClickListener {
-            itemClicked.invoke(data.first)
+            itemClicked.invoke(data)
         }
     }
 }

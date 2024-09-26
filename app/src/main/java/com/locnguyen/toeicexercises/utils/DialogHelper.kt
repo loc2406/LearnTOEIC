@@ -72,7 +72,7 @@ class DialogHelper(private val context: Context) {
                     15.dpToPx(context),
                     0
                 )
-                textSize = this@DialogHelper.context.resources.getDimension(R.dimen.big_title)
+                textSize = this@DialogHelper.context.resources.getDimension(R.dimen.big_title).pxToDp(context)
             }
 
             val contentView = TextView(this@DialogHelper.context).apply {

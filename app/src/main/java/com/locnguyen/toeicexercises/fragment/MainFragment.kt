@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
@@ -22,8 +23,8 @@ class MainFragment: Fragment() {
     private lateinit var binding: MainFragmentBinding
     private lateinit var navController: NavController
     private lateinit var bottomNavAdapter: BottomNavAdapter
-    private lateinit var mainVM: MainVM
-    private lateinit var examVM: ExamVM
+    private val mainVM: MainVM by activityViewModels<MainVM>()
+    private val examVM: ExamVM by activityViewModels<ExamVM>()
 
     private var backPressedTime: Long = 0
 
@@ -39,8 +40,6 @@ class MainFragment: Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        mainVM = ViewModelProvider(requireActivity())[MainVM::class.java]
-        examVM = ViewModelProvider(requireActivity())[ExamVM::class.java]
         navController = Navigation.findNavController(view)
 
         initViews()
@@ -115,10 +114,10 @@ class MainFragment: Fragment() {
     private fun handleItemTheoryClicked(name: String) {
         when(name){
             "Từ vựng" -> {
-                navController.navigate(R.id.action_mainFragment_to_wordFragment)
+                navController.navigate(R.id.action_mainFragment_to_listWordFragment)
             }
             "Ngữ pháp" -> {
-                navController.navigate(R.id.action_mainFragment_to_grammarFragment)
+                navController.navigate(R.id.action_mainFragment_to_listGrammarFragment)
             }
         }
     }

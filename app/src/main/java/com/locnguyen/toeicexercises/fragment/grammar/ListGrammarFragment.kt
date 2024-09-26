@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
@@ -25,8 +26,8 @@ class ListGrammarFragment: Fragment() {
     private lateinit var navController: NavController
     private lateinit var grammarLessonAdapter: GrammarLessonAdapter
     private lateinit var grammarAdapter: GrammarAdapter
-    private lateinit var mainVM: MainVM
-    private lateinit var grammarVM: GrammarVM
+    private val mainVM: MainVM by activityViewModels<MainVM>()
+    private val grammarVM: GrammarVM by activityViewModels<GrammarVM>()
 
     private val loadingDialog: Dialog by lazy { DialogHelper.getLoadingDialog(requireActivity()) }
 
@@ -44,9 +45,6 @@ class ListGrammarFragment: Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         navController = Navigation.findNavController(view)
-
-        mainVM = ViewModelProvider(requireActivity())[MainVM::class.java]
-        grammarVM = ViewModelProvider(requireActivity())[GrammarVM::class.java]
 
         val grammarLessons = grammarVM.grammars.value?.map{ grammar -> grammar.level}?.toSet()?.toList() ?: emptyList()
         grammarLessonAdapter = GrammarLessonAdapter(grammarLessons){ lesson ->
@@ -103,6 +101,7 @@ class ListGrammarFragment: Fragment() {
     private fun handlePressedBack(){
         navController.popBackStack()
         mainVM.itemTheoryClicked.value = null
+        grammarVM.loadFavoriteGrammars.value = true
     }
 
     private fun handleGrammarClicked(grammar: Grammar) {

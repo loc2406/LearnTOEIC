@@ -1,8 +1,11 @@
-package com.locnguyen.toeicexercises.utils
+package com.locnguyen.toeicexercises.database
 
+import android.content.ContentValues
 import android.content.Context
 import android.database.Cursor
+import android.database.SQLException
 import android.database.sqlite.SQLiteDatabase
+import android.database.sqlite.SQLiteException
 import android.database.sqlite.SQLiteOpenHelper
 import com.locnguyen.toeicexercises.R
 import com.locnguyen.toeicexercises.model.Example
@@ -59,18 +62,34 @@ class TheoryDB(private val context: Context, version: Int = 1) :
         }
     }
 
-    override fun onCreate(db: SQLiteDatabase?) {}
+    override fun onCreate(db: SQLiteDatabase?) {
+        db?.let{
+            it.execSQL("CREATE TABLE IF NOT EXISTS words (id INTEGER PRIMARY KEY NOT NULL, word TEXT, short_mean TEXT, means TEXT, level INTEGER, pronounce TEXT)")
+            it.execSQL("CREATE TABLE IF NOT EXISTS examples (id INTEGER PRIMARY KEY NOT NULL, e TEXT, m TEXT)")
+            it.execSQL("CREATE TABLE IF NOT EXISTS grammars (id INTEGER PRIMARY KEY NOT NULL, level INTEGER, title TEXT, tag TEXT, contents TEXT)")
+        }
+    }
 
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
+        db?.let{
+            it.execSQL("DROP TABLE IF EXISTS words")
+            it.execSQL("DROP TABLE IF EXISTS examples")
+            it.execSQL("DROP TABLE IF EXISTS grammars")
+            onCreate(it)
+        }
     }
 
     private fun openDb(): SQLiteDatabase? {
         val dbFile = context.getDatabasePath(context.getString(R.string.db_name))
 
-        return if (!dbFile.exists()) {
-            null
+        return if (isExistedDatabase()) {
+            try{
+                SQLiteDatabase.openDatabase(dbFile.absolutePath, null, SQLiteDatabase.OPEN_READONLY)
+            }catch(e: SQLiteException){
+                null
+            }
         } else {
-            SQLiteDatabase.openDatabase(dbFile.absolutePath, null, SQLiteDatabase.OPEN_READONLY)
+            null
         }
     }
 
