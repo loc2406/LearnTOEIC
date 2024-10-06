@@ -120,4 +120,10 @@ dependencies {
 
     //gg ads
     implementation(libs.play.services.ads)
+
+    // circle indicator
+    implementation(libs.circleindicator)
+
+    //các thư viện không được chuyển sang kiểu khai báo mới vì sẽ không nhận
+    implementation("com.github.yarolegovich:DiscreteScrollView:1.5.1")
 }

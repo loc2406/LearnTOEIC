@@ -9,4 +9,5 @@
     <dimen name="smaller_content">12sp</dimen>
     <dimen name="smallest_content">11sp</dimen>
     <dimen name="exam_score">40sp</dimen>
+    <dimen name="item_offset">16dp</dimen>
 </resources>

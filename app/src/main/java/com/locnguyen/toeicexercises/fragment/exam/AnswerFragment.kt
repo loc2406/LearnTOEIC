@@ -23,6 +23,7 @@ import com.locnguyen.toeicexercises.model.Question
 import com.locnguyen.toeicexercises.utils.GlobalHelper
 import com.locnguyen.toeicexercises.utils.dpToPx
 import com.locnguyen.toeicexercises.utils.dpToPx
+import com.locnguyen.toeicexercises.utils.loadImg
 import kotlin.properties.Delegates
 
 class AnswerFragment: Fragment() {
@@ -76,14 +77,14 @@ class AnswerFragment: Fragment() {
             title.text = question.title
 
             if (question.img.isNotEmpty()){
-                GlobalHelper(requireContext()).loadImg(question.img, img)
+                requireContext().loadImg(question.img, img)
             }
             else{
                 img.visibility = GONE
             }
 
             if (question.explain.isNotEmpty()){
-                explainContent.text = Html.fromHtml(question.explain, Html.FROM_HTML_MODE_LEGACY)
+                explainContent.text = question.explain
             }
             else{
                 explainTitle.visibility = GONE

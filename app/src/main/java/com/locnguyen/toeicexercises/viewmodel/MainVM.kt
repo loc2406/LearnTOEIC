@@ -8,6 +8,8 @@ import com.locnguyen.toeicexercises.model.Exam
 class MainVM: ViewModel() {
 
     val itemExamClicked: MutableLiveData<Exam> by lazy { MutableLiveData() }
-    val itemTheoryClicked: MutableLiveData<String> by lazy {MutableLiveData("")}
-    val itemExerciseClicked: MutableLiveData<String> by lazy {MutableLiveData("")}
+    val itemTheoryClicked: MutableLiveData<String> by lazy {MutableLiveData()}
+    val itemExerciseClicked: MutableLiveData<String> by lazy {MutableLiveData()}
+    val wordsNoteClicked: MutableLiveData<Boolean> by lazy {MutableLiveData(false)}
+    val grammarsNoteClicked: MutableLiveData<Boolean> by lazy {MutableLiveData(false)}
 }

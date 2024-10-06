@@ -6,10 +6,7 @@ plugins {
     kotlin("kapt") version "2.0.0"
 }
 buildscript{
-    repositories {
-        google()
-    }
     dependencies {
-        classpath("androidx.navigation:navigation-safe-args-gradle-plugin:2.7.7")
+        classpath("androidx.navigation:navigation-safe-args-gradle-plugin:2.8.1")
     }
 }

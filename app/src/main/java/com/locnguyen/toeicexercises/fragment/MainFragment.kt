@@ -99,6 +99,14 @@ class MainFragment: Fragment() {
                 examVM.exam.value = exam
             }
         }
+
+        mainVM.wordsNoteClicked.observe(viewLifecycleOwner){ isClicked ->
+            isClicked.takeIf { it == true }?.let{ handleWordNoteClicked() }
+        }
+
+        mainVM.grammarsNoteClicked.observe(viewLifecycleOwner){ isClicked ->
+            isClicked.takeIf { it == true }?.let{ handleGrammarNoteClicked() }
+        }
     }
 
     private fun handlePressedBack(){
@@ -124,5 +132,13 @@ class MainFragment: Fragment() {
 
     private fun handleItemExamClicked(){
         navController.navigate(R.id.action_mainFragment_to_detailFragment)
+    }
+
+    private fun handleWordNoteClicked(){
+        navController.navigate(R.id.action_mainFragment_to_favoriteWordsFragment)
+    }
+
+    private fun handleGrammarNoteClicked() {
+        navController.navigate(R.id.action_mainFragment_to_favoriteGrammarsFragment)
     }
 }

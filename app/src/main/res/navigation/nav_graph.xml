@@ -19,6 +19,12 @@
         <action
             android:id="@+id/action_mainFragment_to_listGrammarFragment"
             app:destination="@id/listGrammarFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_favoriteWordsFragment"
+            app:destination="@id/favoriteWordsFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_favoriteGrammarsFragment"
+            app:destination="@id/favoriteGrammarsFragment" />
     </fragment>
 
     <fragment
@@ -125,6 +131,24 @@
             android:name="grammar"
             app:argType="com.locnguyen.toeicexercises.model.Grammar"
             app:nullable="false"/>
+    </fragment>
+    <fragment
+        android:id="@+id/favoriteWordsFragment"
+        android:name="com.locnguyen.toeicexercises.fragment.word.FavoriteWordsFragment"
+        android:label="FavoriteWordsFragment"
+        tools:layout="@layout/favorite_words_fragment">
+        <action
+            android:id="@+id/action_favoriteWordsFragment_to_wordFragment"
+            app:destination="@id/wordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoriteGrammarsFragment"
+        android:name="com.locnguyen.toeicexercises.fragment.grammar.FavoriteGrammarsFragment"
+        android:label="FavoriteGrammarsFragment"
+        tools:layout="@layout/favorite_grammars_fragment">
+        <action
+            android:id="@+id/action_favoriteGrammarsFragment_to_grammarFragment"
+            app:destination="@id/grammarFragment" />
     </fragment>
 
 

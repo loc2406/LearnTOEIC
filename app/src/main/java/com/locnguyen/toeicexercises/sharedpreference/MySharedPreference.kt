@@ -42,7 +42,7 @@ class MySharedPreference(private val application: Application) {
         favoriteWordsJson?.let {
             if (it != "empty"){
                 val type: Type = object: TypeToken<Set<Word>>() {}.type
-                favoriteWords = Gson().fromJson(favoriteWordsJson, type)
+                favoriteWords = Gson().fromJson(it, type)
             }
         }
 
@@ -75,7 +75,7 @@ class MySharedPreference(private val application: Application) {
         favoriteGrammarsJson?.let {
             if (it != "empty"){
                 val type: Type = object: TypeToken<Set<Grammar>>() {}.type
-                favoriteGrammars = Gson().fromJson(favoriteGrammarsJson, type)
+                favoriteGrammars = Gson().fromJson(it, type)
             }
         }
 

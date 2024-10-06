@@ -8,7 +8,7 @@
 
     <style name="MySplashScreen" parent="Theme.SplashScreen">
         <item name="postSplashScreenTheme">@style/Theme.TOEICExercises</item>
-        <item name="android:windowSplashScreenAnimatedIcon">@drawable/logo</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@mipmap/ic_launcher</item>
         <item name="android:windowSplashScreenBackground">@color/white</item>
     </style>
 </resources>

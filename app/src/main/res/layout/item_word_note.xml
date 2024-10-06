@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:background="@drawable/bg_white_rectangle_primary_stroke_10dp_corners"
+    android:padding="15dp">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:fontFamily="@font/tinos_bold"
+        android:gravity="center"
+        android:maxLines="1"
+        android:textColor="@color/primary"
+        android:textSize="@dimen/small_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tool:text="Từ vựng" />
+
+    <TextView
+        android:id="@+id/pronounce"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/tinos_italic"
+        android:maxLines="1"
+        android:textColor="@color/black"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintEnd_toStartOf="@id/ic_pronounce"
+        android:textSize="@dimen/smaller_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        tool:text="Phát âm" />
+
+    <TextView
+        android:id="@+id/mean"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/tinos_bold"
+        android:maxLines="1"
+        android:textColor="@color/black"
+        android:textSize="@dimen/small_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pronounce"
+        app:layout_constraintEnd_toStartOf="@id/ic_pronounce"
+        android:layout_marginEnd="5dp"
+        tool:text="Nghĩa của từ" />
+
+    <ImageView
+        android:id="@+id/ic_pronounce"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_pronounce"
+        android:scaleType="centerInside"
+        android:contentDescription="@string/Pronounce"
+        app:layout_constraintTop_toTopOf="@id/pronounce"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/mean"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,7 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.core.content.res.ResourcesCompat
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
@@ -18,15 +20,18 @@ import com.locnguyen.toeicexercises.model.Word
 import com.locnguyen.toeicexercises.utils.GlobalHelper
 import com.locnguyen.toeicexercises.utils.dpToPx
 import com.locnguyen.toeicexercises.utils.pxToDp
+import com.locnguyen.toeicexercises.utils.toastMessage
 import com.locnguyen.toeicexercises.viewmodel.WordVM
 
 class WordFragment: Fragment() {
     private lateinit var binding: WordFragmentBinding
     private lateinit var word: Word
-    private lateinit var wordVM: WordVM
     private lateinit var navController: NavController
 
+    private var isFavorite: Boolean = false
+
     private val args by navArgs<WordFragmentArgs>()
+    private val wordVM: WordVM by activityViewModels<WordVM>()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -41,7 +46,6 @@ class WordFragment: Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         navController = Navigation.findNavController(view)
-        wordVM = ViewModelProvider(requireActivity())[WordVM::class.java]
         word = args.word
 
         initViews()
@@ -49,7 +53,12 @@ class WordFragment: Fragment() {
     }
 
     private fun initViews() {
-        binding.headerTitle.text = word.title
+        binding.title.text = word.title
+
+        wordVM.getFavoriteWords().takeIf { it.contains(word) }?.let{
+            isFavorite = true
+            checkFavoriteWord()
+        }
 
         word.listMeans?.let{ listMeans ->
             for (means in listMeans) {
@@ -154,5 +163,28 @@ class WordFragment: Fragment() {
         binding.icBack.setOnClickListener {
             navController.popBackStack()
         }
+
+        binding.icFavorite.setOnClickListener {
+            isFavorite = !isFavorite
+
+            if (isFavorite){
+                requireContext().toastMessage(R.string.Added_favorite_grammar)
+                wordVM.addFavoriteWord(word)
+                checkFavoriteWord()
+            }
+            else{
+                requireContext().toastMessage(R.string.Removed_favorite_grammar)
+                wordVM.removeFavoriteWord(word)
+                uncheckFavoriteWord()
+            }
+        }
+    }
+
+    private fun checkFavoriteWord() {
+        binding.icFavorite.setImageDrawable(ResourcesCompat.getDrawable(requireContext().resources, R.drawable.ic_favorite, null))
+    }
+
+    private fun uncheckFavoriteWord() {
+        binding.icFavorite.setImageDrawable(ResourcesCompat.getDrawable(requireContext().resources, R.drawable.ic_unfavorite, null))
     }
 }

@@ -20,6 +20,7 @@ import androidx.appcompat.content.res.AppCompatResources
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.MediatorLiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModelProvider
@@ -33,6 +34,7 @@ import com.locnguyen.toeicexercises.model.Question
 import com.locnguyen.toeicexercises.utils.DialogHelper
 import com.locnguyen.toeicexercises.utils.GlobalHelper
 import com.locnguyen.toeicexercises.utils.dpToPx
+import com.locnguyen.toeicexercises.utils.loadImg
 import com.locnguyen.toeicexercises.viewmodel.ExamVM
 import java.util.Locale
 import kotlin.properties.Delegates
@@ -41,7 +43,7 @@ class QuestionDetailFragment : Fragment(), Runnable {
     private lateinit var binding: QuestionDetailFragmentBinding
     private lateinit var question: Question
     private lateinit var answerViews: List<TextView>
-    private lateinit var examVM: ExamVM
+    private val examVM: ExamVM by activityViewModels<ExamVM>()
     private var isShowAnswer by Delegates.notNull<Boolean>()
 
     private var questionPosition: Int = -1
@@ -86,8 +88,6 @@ class QuestionDetailFragment : Fragment(), Runnable {
         questionPosition = arguments?.getInt("POSITION") ?: -1
         isShowAnswer = arguments?.getBoolean("IS_SHOW_ANSWER") ?: false
 
-        examVM = ViewModelProvider(requireActivity())[ExamVM::class.java]
-
         initViews()
         initListeners()
         initObserves()
@@ -125,7 +125,7 @@ class QuestionDetailFragment : Fragment(), Runnable {
             binding.img.visibility = GONE
         }
         else{
-            GlobalHelper(requireContext()).loadImg(
+            requireContext().loadImg(
                 question.img,
                 binding.img,
                 object : RequestListener<Drawable> {

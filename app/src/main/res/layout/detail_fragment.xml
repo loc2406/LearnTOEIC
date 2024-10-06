@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:tool="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
         <variable
@@ -9,9 +11,7 @@
         <import type="android.view.View" />
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tool="http://schemas.android.com/tools"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/white">
@@ -62,97 +62,100 @@
                 app:layout_constraintTop_toTopOf="@id/ic_back"
                 tool:text="Tên bài kiểm tra" />
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/clock_space"
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clock_space"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/bg_white_rectangle_primary_stroke_10dp_corners"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="10dp"
+            app:layout_constraintEnd_toStartOf="@id/order_question_space"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/order_question_space"
+            app:layout_constraintBottom_toBottomOf="@id/order_question_space">
+
+            <ImageView
+                android:id="@+id/ic_clock"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:contentDescription="@string/Previous_question"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_clock"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/time_remaining"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:background="@drawable/bg_white_rectangle_no_stroke_20dp_corners"
-                android:paddingHorizontal="15dp"
-                android:paddingVertical="10dp"
-                app:layout_constraintEnd_toStartOf="@id/order_question_space"
+                android:layout_marginHorizontal="10dp"
+                android:fontFamily="@font/tinos_bold"
+                android:gravity="center_vertical"
+                android:text="@string/Default_time"
+                android:textColor="@color/black"
+                android:textSize="@dimen/small_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ic_clock"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/order_question_space"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/bg_white_rectangle_primary_stroke_10dp_corners"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/clock_space"
+            app:layout_constraintTop_toBottomOf="@id/header_space">
+
+            <ImageView
+                android:id="@+id/ic_previous_question"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:contentDescription="@string/Previous_question"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_previous"
+                android:visibility="@{examVM.currentQuestion.intValue() > 0 ? View.VISIBLE : View.INVISIBLE}"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/title">
+                app:layout_constraintTop_toTopOf="parent" />
 
-                <ImageView
-                    android:id="@+id/ic_clock"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:contentDescription="@string/Previous_question"
-                    android:scaleType="centerInside"
-                    android:src="@drawable/ic_clock"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+            <ImageView
+                android:id="@+id/ic_next_question"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:contentDescription="@string/Previous_question"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_next"
+                android:visibility="@{examVM.currentQuestion.intValue() &lt; examVM.examQuestions.size() - 1  ? View.VISIBLE : View.INVISIBLE}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-                <TextView
-                    android:id="@+id/time_remaining"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="10dp"
-                    android:fontFamily="@font/tinos_bold"
-                    android:gravity="center_vertical"
-                    android:text="@string/Default_time"
-                    android:textColor="@color/black"
-                    android:textSize="@dimen/small_content"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/ic_clock"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/order_question_space"
+            <TextView
+                android:id="@+id/order_question"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:background="@drawable/bg_white_rectangle_no_stroke_20dp_corners"
-                android:paddingHorizontal="15dp"
-                android:paddingVertical="10dp"
-                android:layout_marginStart="10dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/clock_space"
-                app:layout_constraintTop_toTopOf="@id/clock_space">
-
-                <ImageView
-                    android:id="@+id/ic_previous_question"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:contentDescription="@string/Previous_question"
-                    android:scaleType="centerInside"
-                    android:src="@drawable/ic_previous"
-                    android:visibility="@{examVM.currentQuestion.intValue() > 0 ? View.VISIBLE : View.INVISIBLE}"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <ImageView
-                    android:id="@+id/ic_next_question"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:contentDescription="@string/Previous_question"
-                    android:scaleType="centerInside"
-                    android:src="@drawable/ic_next"
-                    android:visibility="@{examVM.currentQuestion.intValue() &lt; examVM.examQuestions.size() - 1  ? View.VISIBLE : View.INVISIBLE}"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/order_question"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="10dp"
-                    android:fontFamily="@font/tinos_bold"
-                    android:gravity="center"
-                    android:textColor="@color/black"
-                    android:textSize="@dimen/small_content"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@id/ic_next_question"
-                    app:layout_constraintStart_toEndOf="@id/ic_previous_question"
-                    app:layout_constraintTop_toTopOf="parent"
-                    tool:text="1/200" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
+                android:layout_marginHorizontal="10dp"
+                android:fontFamily="@font/tinos_bold"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/small_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/ic_next_question"
+                app:layout_constraintStart_toEndOf="@id/ic_previous_question"
+                app:layout_constraintTop_toTopOf="parent"
+                tool:text="1/200" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -160,10 +163,10 @@
             android:id="@+id/questions"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_margin="10dp"
+            android:layout_margin="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/header_space" />
+            app:layout_constraintTop_toBottomOf="@id/order_question_space" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

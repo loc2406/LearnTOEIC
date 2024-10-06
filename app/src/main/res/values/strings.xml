@@ -5,7 +5,7 @@
     <string name="Exam">Kiểm tra</string>
     <string name="Upgrade">Nâng cấp</string>
     <string name="Setting">Cài đặt</string>
-    <string name="about_app_title">Bắt đầu hành trình chinh phục\nchứng chỉ TOEIC nào!</string>
+    <string name="Intro_title">Bắt đầu chinh phục TOEIC nào!</string>
     <string name="benefit_1">Làm quen với nhiều dạng bài nghe hiểu, đọc hiểu khác nhau!</string>
     <string name="benefit_2">Ôn lại các từ vựng đã học bằng nhiều hình thức giúp người học hứng thú và nhớ lâu hơn!</string>
     <string name="benefit_3">Thử sức với nhiều đề thi thử được lựa chọn kĩ càng giúp người học đánh giá được trình độ bản thân!</string>
@@ -66,7 +66,7 @@
     <string name="Exam_instruction_title">Hướng dẫn làm bài</string>
     <string name="Exam_instruction_content_regex">Part: %s - %s\n\n%s</string>
     <string name="Title">Tiêu đề</string>
-    <string name="Explain_title">Giải thích:</string>
+    <string name="Translate_answer_title">Dịch nghĩa đáp án:</string>
     <string name="Key_title">Từ khóa:</string>
     <string name="Default_time">00:00:00</string>
     <string name="Percent">%d %%</string>
@@ -83,4 +83,24 @@
     <string name="Added_favorite_grammar">Đã thêm ngữ pháp yêu thích vào sổ tay!</string>
     <string name="Removed_favorite_grammar">Đã xóa ngữ pháp yêu thích khỏi sổ tay!</string>
     <string name="Check_internet_connection">Vui lòng kiểm tra kết nối mạng và thử lại!</string>
+    <string name="_3_months">3 tháng</string>
+    <string name="_200000_vnđ">200.000 vnđ</string>
+    <string name="_250000_vnđ">250.000 vnđ</string>
+    <string name="_20_percentages">20%</string>
+    <string name="_6_months">6 tháng</string>
+    <string name="_350000_vnđ">350.000 vnđ</string>
+    <string name="_500000_vnđ">500.000 vnđ</string>
+    <string name="_30_percentages">30%</string>
+    <string name="User_evaluate">Đánh giá từ người dùng</string>
+    <string name="email_title">Email:</string>
+    <string name="password_title">Mật khẩu:</string>
+    <string name="Edit_info">Chỉnh sửa thông tin</string>
+    <string name="Evaluate_app">Đánh giá ứng dụng</string>
+    <string name="Logout">Đăng xuất</string>
+    <string name="Log_out">Đăng xuất</string>
+    <string name="Word_note">Sổ tay từ vựng</string>
+    <string name="Grammar_note">Sổ tay ngữ pháp</string>
+    <string name="Dont_have_favorite_grammar">Bạn chưa có ngữ pháp yêu thích nào!</string>
+    <string name="Dont_have_favorite_word">Bạn không có từ vựng yêu thích nào!</string>
+    <string name="example_media_time">00:00/00:00</string>
 </resources>

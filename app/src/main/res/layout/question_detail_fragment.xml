@@ -7,8 +7,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="15dp">
+        android:layout_height="wrap_content">
 
         <TextView
             android:id="@+id/title"
@@ -51,7 +50,7 @@
                 android:layout_marginStart="10dp"
                 android:contentDescription="@string/Control_media"
                 android:scaleType="centerInside"
-                tool:src="@drawable/ic_play"
+                android:src="@drawable/ic_play"
                 android:layout_marginTop="10dp"
                 app:layout_constraintStart_toStartOf="@id/media_progress"
                 app:layout_constraintTop_toBottomOf="@id/media_progress" />
@@ -68,7 +67,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/ic_control_media"
                 app:layout_constraintTop_toTopOf="@id/ic_control_media"
-                tool:text="00:00/00:00" />
+                android:text="@string/example_media_time" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

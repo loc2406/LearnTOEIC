@@ -81,6 +81,14 @@ class PracticeFragment: Fragment() {
         exerciseAdapter.itemClicked = { exerciseName ->
             mainVM.itemExerciseClicked.value = exerciseName
         }
+
+        binding.noteWordSpace.setOnClickListener {
+            mainVM.wordsNoteClicked.value = true
+        }
+
+        binding.noteGrammarSpace.setOnClickListener {
+            mainVM.grammarsNoteClicked.value = true
+        }
     }
 
     private fun initObserves(){

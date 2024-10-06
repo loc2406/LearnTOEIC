@@ -20,7 +20,7 @@
                   "She's holding some flowers"
                 ],
                 "trueAnswer": "She's looking in a display case",
-                "explain": "A. She's searching in her handbag<br>B. She's looking in a display case<br>C. She's paying for a purchase<br>D. She's holding some flowers",
+                "explain": "A. Cô ấy đang tìm đồ trong túi xách của mình\nB. Cô ấy đang nhìn vào một chiếc tủ trưng bày\nC. Cô ấy đang trả tiền để mua hàng\nD. Cô ấy đang cầm vài bông hoa",
                 "key": ""
               },
               {
@@ -34,7 +34,7 @@
                   "The man is hanging some photographs on the wall"
                 ],
                 "trueAnswer": "The man is seated by a window",
-                "explain": "A. The man is switching off a lamp<br>B. The man is opening some curtains<br>C. The man is seated by a window<br>D. The man is hanging some photographs on the wall",
+                "explain": "A. Người đàn ông đang tắt đèn\nB. Người đàn ông đang mở rèm cửa\nC. Người đàn ông đang ngồi bên cửa sổ\nD. Người đàn ông đang treo một số bức ảnh lên tường",
                 "key": ""
               },
               {
@@ -48,7 +48,7 @@
                   "A tree is being trimmed"
                 ],
                 "trueAnswer": "Some chairs are arranged in a circle",
-                "explain": "A. Some chairs are arranged in a circle<br>B. Some stairs are being cleaned<br>C. A roof is being repaired<br>D. A tree is being trimmed",
+                "explain": "A. Một số ghế được sắp xếp thành vòng tròn\nB. Một số cầu thang đang được lau dọn\nC. Một mái nhà đang được sửa chữa\nD. Một cái cây đang được cắt tỉa",
                 "key": ""
               },
               {
@@ -62,7 +62,7 @@
                   "The people are closing their menus"
                 ],
                 "trueAnswer": "One of the women is wearing a scarf",
-                "explain": "A. One of the women is wearing a scarf<br>B. The women are talking to each other<br>C. The man is pouring coffee into a cup<br>D. The people are closing their menus",
+                "explain": "A. Một trong những người phụ nữ đang đeo khăn quàng cổ \nB. Những người phụ nữ đang nói chuyện với nhau\nC. Người đàn ông đang rót cà phê vào cốc\nD. Mọi người đang đóng thực đơn của họ",
                 "key": ""
               },
               {
@@ -76,7 +76,7 @@
                   "A basket is being removed from a car"
                 ],
                 "trueAnswer": "The women are walking toward a doorway",
-                "explain": "A. A notice is being hung on a post<br>B. The women are walking toward a doorway<br>C. The man is changing a bicycle tire<br>D. A basket is being removed from a cart",
+                "explain": "A. Một thông báo đang được treo lên cột\nB. Những người phụ nữ đang đi về phía cửa ra vào\nC. Người đàn ông đang thay lốp xe đạp\nD. Một cái giỏ đang được lấy ra khỏi xe đẩy",
                 "key": ""
               },
               {
@@ -90,7 +90,7 @@
                   "Some customers are waiting in line"
                 ],
                 "trueAnswer": "Some customers are waiting in line",
-                "explain": "A. A shop assistant is giving a man some money<br>B. Some people are entering a supermarket<br>C. A cashier is putting merchandise into a bag<br>D. Some customers are waiting in line",
+                "explain": "A. Một nhân viên cửa hàng đang đưa tiền cho một người đàn ông\nB. Một số người đang vào siêu thị\nC. Một nhân viên thu ngân đang bỏ hàng hóa vào túi\nD. Một số khách hàng đang xếp hàng chờ đợi",
                 "key": ""
               }
             ]
@@ -109,7 +109,7 @@
                   "I think it's the same number"
                 ],
                 "trueAnswer": "Last week when it was on sale",
-                "explain": "When did you buy your new phone?<br>A. The store is close to my house<br>B. Last week when it was on sale<br>C. I think it's the same number",
+                "explain": "Điện thoại mới của bạn được mua vào lúc nào?\nA. Cửa hàng gần nhà tôi\nB. Tuần trước khi nó đang giảm giá\nC. Tôi nghĩ đó là cùng một số",
                 "key": "when, last week, sale"
               },
               {
@@ -122,7 +122,7 @@
                   "It's on the second floor"
                 ],
                 "trueAnswer": "It's on the second floor",
-                "explain": "Do you know where Keiko's office is?<br>A. That's the official logo<br>B. To reserve a room<br>C. It's on the second floor",
+                "explain": "Bạn có biết văn phòng của Keiko ở đâu không?\nA. Đó là logo chính thức\nB. Để đặt phòng\nC. Nó ở tầng hai",
                 "key": "where, second floor"
               },
               {
@@ -135,7 +135,7 @@
                   "I must have misplaced it"
                 ],
                 "trueAnswer": "You're right - it was only an hour!",
-                "explain": "That was a short movie, wasn't it?<br>A. The theater on Glenn Road<br>B. You're right - it was only an hour!<br>C. I must have misplaced it",
+                "explain": "Đó là một bộ phim ngắn, phải không?\nA. Rạp chiếu phim trên đường Glenn\nB. Bạn đúng rồi - nó chỉ có một giờ thôi!\nC. Tôi chắc là đã để lạc mất nó",
                 "key": "wasn't it?, right, an hour"
               },
               {
@@ -148,7 +148,7 @@
                   "Near the front entrance"
                 ],
                 "trueAnswer": "Near the front entrance",
-                "explain": "Where can I find a building directory?<br>A. In two weeks<br>B. No, thank you<br>C. Near the front entrance",
+                "explain": "Tôi có thể tìm danh bạ tòa nhà ở đâu?\nA. Trong hai tuần\nB. Không, cảm ơn\nC. Gần lối vào chính",
                 "key": "where, near, front entrance"
               },
               {
@@ -161,7 +161,7 @@
                   "No, that's not mine"
                 ],
                 "trueAnswer": "John Sanchez",
-                "explain": "Who's going to lead the merger negotiations?<br>A. John Sanchez is<br>B. Thanks, I appreciate it<br>C. No, that's not mine",
+                "explain": "Ai sẽ dẫn dắt các cuộc đàm phán sáp nhập?\nA. John Sanchez sẽ\nB. Cảm ơn, tôi rất trân trọng\nC. Không, đó không phải của tôi",
                 "key": "who, John"
               },
               {
@@ -174,7 +174,7 @@
                   "In a few more days"
                 ],
                 "trueAnswer": "He left his business card",
-                "explain": "How do I contact the financial consultant?<br>A. A free consultation<br>B. He left his business card<br>C. In a few more days",
+                "explain": "Làm thế nào để tôi liên hệ với tư vấn tài chính?\nA. Một buổi tư vấn miễn phí\nB. Anh ấy đã để lại danh thiếp\nC. Trong vài ngày nữa",
                 "key": "How, business card"
               },
               {
@@ -187,7 +187,7 @@
                   "At the back door"
                 ],
                 "trueAnswer": "Anytime this week",
-                "explain": "When is the health inspector coming?<br>A. Anytime this week<br>B. It's good for your health<br>C. At the back door",
+                "explain": "Khi nào thanh tra y tế đến?\nA. Bất cứ lúc nào trong tuần này\nB. Nó tốt cho sức khỏe của bạn\nC. Ở cửa sau",
                 "key": "when, anytime, this week"
               },
               {
@@ -200,7 +200,7 @@
                   "No, you don't need permission"
                 ],
                 "trueAnswer": "It's talking longer than we thought",
-                "explain": "Wasn't this assignment due last week?<br>A. It's talking longer than we thought<br>B. Sign at the bottom of the page<br>C. No, you don't need permission",
+                "explain": "Bài tập này không phải đã đến hạn vào tuần trước sao?\nA. Nó mất nhiều thời gian hơn chúng tôi nghĩ\nB. Ký ở cuối trang\nC. Không, bạn không cần sự cho phép",
                 "key": "wasn't, longer"
               },
               {
@@ -213,7 +213,7 @@
                   "I already bought it"
                 ],
                 "trueAnswer": "I already bought it",
-                "explain": "Whose turn is it to buy coffee?<br>A. Two sugars please<br>B. In the kitchen<br>C. I already bought it",
+                "explain": "Đến lượt ai mua cà phê?\nA. Hai phần đường, làm ơn\nB. Trong bếp\nC. Tôi đã mua rồi",
                 "key": "whose turn, already bought"
               },
               {
@@ -226,7 +226,7 @@
                   "Yes, I've been there"
                 ],
                 "trueAnswer": "It hasn't been decided yet",
-                "explain": "Where will the company retreat be next year?<br>A. Every year<br>B. It hasn't been decided yet<br>C. Yes, I've been there",
+                "explain": "Kỳ nghỉ của công ty năm tới sẽ ở đâu?\nA. Mỗi năm\nB. Vẫn chưa được quyết định\nC. Vâng, tôi đã đến đó",
                 "key": "where, hasn't been decided"
               },
               {
@@ -239,7 +239,7 @@
                   "Does he work in that building, too?"
                 ],
                 "trueAnswer": "We can do it this afternoon instead",
-                "explain": "Let's discuss the building designs this morning<br>A. We can do it this afternoon instead<br>B. The sign on the wall<br>C. Does he work in that building, too?",
+                "explain": "Hãy thảo luận về các thiết kế tòa nhà vào sáng nay\nA. Chúng ta có thể làm điều đó vào buổi chiều thay thế\nB. Biển báo trên tường\nC. Anh ấy cũng làm việc trong tòa nhà đó phải không?",
                 "key": "afternoon instead"
               },
               {
@@ -252,7 +252,7 @@
                   "Because Barb's party is today"
                 ],
                 "trueAnswer": "Because Barb's party is today",
-                "explain": "Why is there a cake sitting out on the front desk?<br>A. The potted plant on the ground<br>B. I'll answer the phone<br>C. Because Barb's party is today",
+                "explain": "Tại sao có một chiếc bánh đặt trên bàn tiếp tân?\nA. Chậu cây trên mặt đất\nB. Tôi sẽ trả lời điện thoại\nC. Vì hôm nay là tiệc của Barb",
                 "key": "why, Because"
               },
               {
@@ -265,7 +265,7 @@
                   "Have a seat by the window"
                 ],
                 "trueAnswer": "Sergio will help us",
-                "explain": "How are we going to move all of these office chairs?<br>A. Sergio will help us<br>B. Across the hallway<br>C. Have a seat by the window",
+                "explain": "Chúng ta sẽ di chuyển tất cả những chiếc ghế văn phòng này như thế nào?\nA. Sergio sẽ giúp chúng ta\nB. Qua hành lang\nC. Ngồi cạnh cửa sổ",
                 "key": "How, Sergio, help"
               },
               {
@@ -278,7 +278,7 @@
                   "I didn't know it was required"
                 ],
                 "trueAnswer": "I didn't know it was required",
-                "explain": "Have you gone to the leadership training yet?<br>A. A new training manual<br>B. Sure, we can leave some for you<br>C. I didn't know it was required",
+                "explain": "Bạn đã tham gia khóa đào tạo lãnh đạo chưa?\nA. Một sổ tay đào tạo mới\nB. Chắc chắn, chúng tôi có thể để lại một ít cho bạn\nC. Tôi không biết là nó bắt buộc",
                 "key": "Have you gone, didn't know, required"
               },
               {
@@ -291,7 +291,7 @@
                   "Fifteen should be enough"
                 ],
                 "trueAnswer": "That's a really good idea",
-                "explain": "Why don't we start marketing to a younger audience?<br>A. That's a really good idea<br>B. The film starts at nine<br>C. Fifteen should be enough",
+                "explain": "Tại sao chúng ta không bắt đầu tiếp thị đến đối tượng trẻ hơn?\nA. Đó là một ý tưởng rất hay\nB. Bộ phim bắt đầu lúc chín giờ\nC. Mười lăm là đủ rồi",
                 "key": "why don't we, good idea"
               },
               {
@@ -304,7 +304,7 @@
                   "Are you thinking of buying one?"
                 ],
                 "trueAnswer": "Are you thinking of buying one?",
-                "explain": "What kind of tablet computer do you have?<br>A. I have a few more minutes<br>B. An electronics store nearby<br>C. Are you thinking of buying one?",
+                "explain": "Bạn đang sử dụng loại máy tính bảng nào?\nA. Tôi còn vài phút nữa\nB. Một cửa hàng điện tử gần đây\nC. Bạn đang nghĩ đến việc mua một cái à?",
                 "key": "what kind, thinking, buying"
               },
               {
@@ -317,7 +317,7 @@
                   "I would follow up with Sahar"
                 ],
                 "trueAnswer": "I'm planning to paint my house",
-                "explain": "Wouldn't you rather travel somewhere during your time off?<br>A. A round-trip ticket for two thousand dollars<br>B. I'm planning to paint my house<br>C. I would follow up with Sahar",
+                "explain": "Bạn không muốn đi du lịch đâu đó trong thời gian nghỉ của mình sao?\nA. Một vé khứ hồi giá hai nghìn đô la\nB. Tôi dự định sơn lại nhà\nC. Tôi sẽ theo dõi với Sahar",
                 "key": "wouldn't you, paint, house"
               },
               {
@@ -330,7 +330,7 @@
                   "Hasn't the payment arrived yet?"
                 ],
                 "trueAnswer": "Hasn't the payment arrived yet?",
-                "explain": "You gave the customers the bill, didn't you?<br>A. A reliable delivery service<br>B. That's an impressive offer<br>C. Hasn't the payment arrived yet?",
+                "explain": "Bạn đã đưa hóa đơn cho khách hàng rồi, phải không?\nA. Một dịch vụ giao hàng đáng tin cậy\nB. Đó là một đề nghị ấn tượng\nC. Thanh toán chưa đến à?",
                 "key": "didn't you, payment, arrived"
               },
               {
@@ -343,7 +343,7 @@
                   "Please make ten copies"
                 ],
                 "trueAnswer": "I'll be done before lunch",
-                "explain": "How soon can you finish the Sterling report?<br>A. He's a reporter there<br>B. I'll be done before lunch<br>C. Please make ten copies",
+                "explain": "Bạn có thể hoàn thành báo cáo Sterling sớm nhất khi nào?\nA. Anh ấy là phóng viên ở đó\nB. Tôi sẽ xong trước bữa trưa\nC. Vui lòng làm mười bản sao",
                 "key": "how soon, before lunch"
               },
               {
@@ -356,7 +356,7 @@
                   "That's a great looking sweater"
                 ],
                 "trueAnswer": "Just put it in my bag, thanks",
-                "explain": "Would you like your receipt now, or shall I put it in the bag?<br>A. Just put it in my bag, thanks<br>B. About twenty-five euros<br>C. That's a great looking sweater",
+                "explain": "Bạn muốn nhận hóa đơn ngay bây giờ, hay tôi sẽ bỏ nó vào túi?\nA. Chỉ cần bỏ vào túi của tôi, cảm ơn\nB. Khoảng hai mươi lăm euro\nC. Đó là một chiếc áo len đẹp",
                 "key": "shall I put, put, bag"
               },
               {
@@ -369,7 +369,7 @@
                   "Yes, I'd like to"
                 ],
                 "trueAnswer": "Where did you hear that?",
-                "explain": "The registration deadline is on Friday<br>A. Where did you hear that?<br>B. They arrived already<br>C. Yes, I'd like to",
+                "explain": "Hạn chót đăng ký là vào thứ Sáu\nA. Bạn nghe điều đó ở đâu?\nB. Họ đã đến rồi\nC. Vâng, tôi muốn",
                 "key": "where, hear"
               },
               {
@@ -382,7 +382,7 @@
                   "Usually at a hotel downtown"
                 ],
                 "trueAnswer": "Yes, it departs at 8pm",
-                "explain": "Your airline has an overnight flight to Delhi, doesn't it?<br>A. The nearest train station<br>B. Yes, it departs at 8pm<br>C. Usually at a hotel downtown",
+                "explain": "Hãng hàng không của bạn có chuyến bay qua đêm đến Delhi, phải không?\nA. Nhà ga xe lửa gần nhất\nB. Vâng, nó khởi hành lúc 8 giờ tối\nC. Thường là ở một khách sạn trung tâm",
                 "key": "departs, 8pm"
               },
               {
@@ -395,7 +395,7 @@
                   "We can't see that far either"
                 ],
                 "trueAnswer": "Sorry - I'll try sending it again",
-                "explain": "I can't seem to open the file you sent me<br>A. Yes, the post office is still open<br>B. Sorry - I'll try sending it again<br>C. We can't see that far either",
+                "explain": "Tôi dường như không thể mở tệp bạn đã gửi cho tôi\nA. Vâng, bưu điện vẫn mở\nB. Xin lỗi - tôi sẽ thử gửi lại\nC. Chúng tôi cũng không thể nhìn xa đến thế",
                 "key": "send, again"
               },
               {
@@ -408,7 +408,7 @@
                   "A view of the ocean, if possible"
                 ],
                 "trueAnswer": "Sure, that'll be fine",
-                "explain": "Would you like to include breakfast in your room reservation?<br>A. Sure, that'll be fine<br>B. Check-in is at three o'clock<br>C. A view of the ocean, if possible",
+                "explain": "Bạn có muốn bao gồm bữa sáng trong đặt phòng của mình không?\nA. Chắc chắn, điều đó sẽ ổn\nB. Nhận phòng lúc ba giờ\nC. Một tầm nhìn ra biển, nếu có thể",
                 "key": "sure"
               },
               {
@@ -421,7 +421,7 @@
                   "Everyone there will have a laptop"
                 ],
                 "trueAnswer": "Everyone there will have a laptop",
-                "explain": "Should I print copies of the budget for the meeting or e-mail it to everyone?<br>A. The last page of the order form<br>B. Four million dollars this year<br>C. Everyone there will have a laptop",
+                "explain": "Tôi nên in bản sao ngân sách cho cuộc họp hay gửi email cho mọi người?\nA. Trang cuối của mẫu đơn đặt hàng\nB. Bốn triệu đô la trong năm nay\nC. Mọi người ở đó sẽ có máy tính xách tay",
                 "key": "everyone, laptop"
               }
             ]
@@ -441,7 +441,7 @@
                   "To apply for a position"
                 ],
                 "trueAnswer": "To ask about a fee",
-                "explain": "Why is the woman calling?<br>A. To make an appointment<br>B. To rent a car<br>C. To ask about a fee<br>D. To apply for a position<br>Information:<br>Hi. I got my car repaired last week and used your shuttle service to get a ride back to my office. Can you tell me why there's a service charge on my invoice for using the shuttle? I've never had to pay that before.",
+                "explain": "Tại sao người phụ nữ gọi điện?\nA. Để đặt lịch hẹn\nB. Để thuê xe\nC. Để hỏi về một khoản phí\nD. Để nộp đơn xin việc\nGiải thích:\nChào bạn. Tôi đã sửa xe tuần trước và sử dụng dịch vụ đưa đón của bạn để trở lại văn phòng. Bạn có thể cho tôi biết tại sao lại có phí dịch vụ trên hóa đơn của tôi khi sử dụng dịch vụ đưa đón không? Trước đây tôi chưa bao giờ phải trả phí đó.",
                 "key": ""
               },
               {
@@ -455,7 +455,7 @@
                   "A company policy"
                 ],
                 "trueAnswer": "A company policy",
-                "explain": "According to the man, what has recently changed?<br>A. Office hours<br>B. Job requirements<br>C. A computer systems<br>D. A company policy<br>Information:<br>Yes, unfortunately the cost of auto fuel has risen quite a bit, so the company now requires us to charge for the shuttle.",
+                "explain": "Theo người đàn ông, điều gì đã thay đổi gần đây?\nA. Giờ làm việc\nB. Yêu cầu công việc\nC. Hệ thống máy tính\nD. Chính sách của công ty\n\nGiải thích:\nVâng, thật không may là chi phí nhiên liệu ô tô đã tăng khá nhiều, vì vậy công ty bây giờ yêu cầu chúng tôi tính phí dịch vụ đưa đón.",
                 "key": ""
               },
               {
@@ -469,7 +469,7 @@
                   "Repair a vehicle"
                 ],
                 "trueAnswer": "Waive a fee",
-                "explain": "What does the man agree to do?<br>A. Waive a fee<br>B. Reschedule a meeting<br>C. Sign a contract<br>D. Repair a vehicle<br>Information: I'm sorry we didn't inform you of this ahead of time. I'll waive the fee now...",
+                "explain": "Người đàn ông đồng ý làm gì?\nA. Miễn phí\nB. Sắp xếp lại cuộc họp\nC. Ký hợp đồng\nD. Sửa xe\n\nGiải thích:\nTôi xin lỗi vì chúng tôi đã không thông báo cho bạn trước về điều này. Tôi sẽ miễn phí ngay bây giờ…",
                 "key": ""
               },
               {
@@ -483,7 +483,7 @@
                   "Finance"
                 ],
                 "trueAnswer": "Sports",
-                "explain": "What is the topic of the conversation?<br>A. Health B. Traffic<br>C. Sports<br>D. Finance<br>Information:<br>In sports news, our own Easton Jaguars won today's soccer match against the Portville Lions.",
+                "explain": "Chủ đề của cuộc trò chuyện là gì?\nA. Sức khỏe\nB. Giao thông\nC. Thể thao\nD. Tài chính\n\nGiải thích:\nTrong tin tức thể thao, đội Easton Jaguars của chúng ta đã thắng trận bóng đá hôm nay trước đội Portville Lions.",
                 "key": ""
               },
               {
@@ -497,7 +497,7 @@
                   "A road closure"
                 ],
                 "trueAnswer": "A rainstorm",
-                "explain": "What caused a problem?<br>A. A staffing change<br>B. A rainstorm<br>C. A typographical error<br>D. A road closure<br>Information:<br>Today's game was challenging - it started to rain early on, and the storm didn't let up for nearly an hour.",
+                "explain": "Điều gì đã gây ra vấn đề?\nA. Thay đổi nhân sự\nB. Cơn mưa bão\nC. Lỗi đánh máy\nD. Đóng đường\n\nGiải thích:\nTrận đấu hôm nay rất khó khăn - trời bắt đầu mưa sớm, và cơn bão không ngớt trong gần một giờ.",
                 "key": ""
               },
               {
@@ -511,7 +511,7 @@
                   "A reading from a book"
                 ],
                 "trueAnswer": "A commercial",
-                "explain": "What will the listeners hear next?<br>A. A commercial<br>B. A song<br>C. A wether report<br>D. A reading from book<br>Information:<br>Now, it's time for a commercial break.",
+                "explain": "Người nghe sẽ nghe gì tiếp theo?\nA. Quảng cáo\nB. Bài hát\nC. Dự báo thời tiết\nD. Đọc sách\n\nGiải thích:\nBây giờ, đã đến lúc nghỉ quảng cáo.",
                 "key": ""
               },
               {
@@ -525,7 +525,7 @@
                   "She is planning to give a speech"
                 ],
                 "trueAnswer":  "She cannot attend a business trip",
-                "explain": "What does the woman notify the man about?<br>A. She is unable to meet a deadline<br>B. She needs a replacement laptop<br>C. She cannot attend a business trip<br>D. She is planning to give a speech<br>Information:<br>I know we were planning to work at the trade show together next week, but something has come up. Do you think you could find someone else to go in my place?",
+                "explain": "Người phụ nữ thông báo cho người đàn ông về điều gì?\nA. Cô ấy không thể hoàn thành đúng hạn\nB. Cô ấy cần một chiếc laptop thay thế\nC. Cô ấy không thể tham gia chuyến công tác\nD. Cô ấy dự định phát biểu\n\nGiải thích:\nTôi biết chúng ta đã lên kế hoạch làm việc tại triển lãm thương mại cùng nhau vào tuần tới, nhưng có chuyện xảy ra. Bạn có thể tìm người khác đi thay tôi được không?",
                 "key": ""
               },
               {
@@ -539,7 +539,7 @@
                   "New employees were hired"
                 ],
                 "trueAnswer":  "New employees were hired",
-                "explain": "According to the woman, what recently happened in her department?<br>A. A corporate policy was updated<br>B. A supply order was mishandled<br>C. Client contracts were renewed<br>D. New employees were hired<br>Information:<br>My department recently hired several new people",
+                "explain": "Theo người phụ nữ, điều gì đã xảy ra gần đây trong bộ phận của cô ấy?\nA. Chính sách công ty được cập nhật\nB. Đơn hàng cung cấp bị xử lý sai\nC. Hợp đồng khách hàng được gia hạn\nD. Nhân viên mới được tuyển dụng\n\nGiải thích:\nBộ phận của tôi gần đây đã tuyển dụng một số người mới.",
                 "key": ""
               },
               {
@@ -553,7 +553,7 @@
                   "Draft a travel itinerary"
                 ],
                 "trueAnswer":  "Speak with a colleague",
-                "explain": "What does the man say he will do next?<br>A. Speak with a colleague<br>B. Conduct an interview<br>C. Calculate a budget<br>D. Draft a travel itinerary<br>Information:<br>I'll call Ramona and ask her if she'd be able to attend the show instead",
+                "explain": "Người đàn ông nói rằng anh ấy sẽ làm gì tiếp theo?\nA. Nói chuyện với đồng nghiệp\nB. Thực hiện một cuộc phỏng vấn\nC. Tính toán ngân sách\nD. Soạn thảo lịch trình du lịch\n\nGiải thích:\nTôi sẽ gọi cho Ramona và hỏi cô ấy có thể tham dự buổi triển lãm thay tôi không.",
                 "key": ""
               },
               {
@@ -567,7 +567,7 @@
                   "Book a bus tour"
                 ],
                 "trueAnswer":  "Book a bus tour",
-                "explain": "What does the man want to do?<br>A. Purchase an area map<br>B. See an event schedule<br>C. Cancel a hotel reservation<br>D. Book a bus tour<br>Information:<br>I'd like to book two tickets for tonight's city bus tour",
+                "explain": "Người đàn ông muốn làm gì?\nA. Mua bản đồ khu vực\nB. Xem lịch sự kiện\nC. Hủy đặt phòng khách sạn\nD. Đặt tour xe buýt\n\nGiải thích:\nTôi muốn đặt hai vé cho tour xe buýt thành phố tối nay.",
                 "key": ""
               },
               {
@@ -581,7 +581,7 @@
                   "What to eat"
                 ],
                 "trueAnswer":  "What to eat",
-                "explain": "What is the man asked to choose?<br>A. When to arrive<br>B. What to visit<br>C. How to pay<br>D. What to eat<br>Information:<br>You have a choice between the chicken with vegetables or the beef with rice",
+                "explain": "Người đàn ông được yêu cầu chọn gì?\nA. Khi nào đến\nB. Tham quan gì\nC. Cách thanh toán\nD. Ăn gì\n\nGiải thích:\nBạn có thể chọn giữa gà với rau hoặc bò với cơm.",
                 "key": ""
               },
               {
@@ -595,7 +595,7 @@
                   "Looking for a coupon"
                 ],
                 "trueAnswer":  "Bringing a camera",
-                "explain": "What does the woman suggest doing?<br>A. Wearing a jacket<br>B. Using a credit card<br>C. Bringing a camera<br>D. Looking for a coupon<br>Information:<br>You'll definitely want to bring your camera.",
+                "explain": "Người phụ nữ gợi ý làm gì?\nA. Mặc áo khoác\nB. Sử dụng thẻ tín dụng\nC. Mang theo máy ảnh\nD. Tìm phiếu giảm giá\n\nGiải thích:\nBạn chắc chắn sẽ muốn mang theo máy ảnh của mình.",
                 "key": ""
               },
               {
@@ -609,7 +609,7 @@
                   "Delay a meeting"
                 ],
                 "trueAnswer": "Carry some files",
-                "explain": "What does the man offer to do?<br>A. Meet in the lobby<br>B. Contact a receptionist<br>C. Carry some files<br>D. Delay a meeting<br>Information:<br>Do you need help taking those files up to our office?",
+                "explain": "Người đàn ông đề nghị làm gì?\nA. Gặp ở sảnh\nB. Liên hệ với lễ tân\nC. Mang một số tài liệu\nD. Trì hoãn cuộc họp\n\nGiải thích:\nBạn có cần giúp mang những tài liệu đó lên văn phòng của chúng ta không?",
                 "key": ""
               },
               {
@@ -623,7 +623,7 @@
                   "A document was lost"
                 ],
                 "trueAnswer": "An elevator stopped working.",
-                "explain": "According to the man, what happened last week?<br>A. An office door would not lock<br>B. A sink was installed incorrectly<br>C. An elevator stopped working<br>D. A document was lost<br>Information:<br>But that broke last week (\"that\" refers to \"the elevator\")",
+                "explain": "Theo người đàn ông, điều gì đã xảy ra vào tuần trước?\nA. Cửa văn phòng không khóa được\nB. Bồn rửa được lắp đặt sai\nC. Thang máy ngừng hoạt động\nD. Một tài liệu bị mất\n\nGiải thích:\nNhưng thang máy đã hỏng vào tuần trước.",
                 "key": ""
               },
               {
@@ -637,7 +637,7 @@
                   "To express regret for a purchase"
                 ],
                 "trueAnswer": "To explain a delay",
-                "explain": "Why does the woman say, \"a piece of hardware had to be custom made\"?<br>A. To justify a price<br>B. To explain a delay<br>C. To illustrate a product's age<br>D. To express regret for a purchase<br>Information:<br>But that broke last week - the maintenance crew should have repaired that by now",
+                "explain": "Tại sao người phụ nữ nói, “một bộ phận phần cứng phải được làm theo yêu cầu”?\nA. Để biện minh cho giá cả\nB. Để giải thích sự chậm trễ\nC. Để minh họa tuổi của sản phẩm\nD. Để bày tỏ sự hối tiếc về một mua hàng\n\nGiải thích:\nNhưng thang máy đã hỏng vào tuần trước - đội bảo trì lẽ ra phải sửa chữa nó rồi.",
                 "key": ""
               },
               {
@@ -651,7 +651,7 @@
                   "Clothing"
                 ],
                 "trueAnswer": "Clothing",
-                "explain": "What product are the speakers discussing?<br>A. Electronics<br>B. Office furniture<br>C. Calendars<br>D. Clothing<br>Information:<br>How were our clothing sales for June?",
+                "explain": "Sản phẩm mà các diễn giả đang thảo luận là gì?\nA. Điện tử\nB. Nội thất văn phòng\nC. Lịch\nD. Quần áo\n\nGiải thích:\nDoanh số bán quần áo của chúng ta trong tháng Sáu như thế nào?",
                 "key": ""
               },
               {
@@ -665,7 +665,7 @@
                   "Reducing prices"
                 ],
                 "trueAnswer": "Revising a budget",
-                "explain": "What does Donna suggest?<br>A. Hiring additional staff<br>B. Revising a budget<br>C. Posting some photos online<br>D. Reducing prices<br>Information:<br>I think clothing sales weren't as strong because the advertising budget was cut this year. I'd like to see that money put back into our budget.",
+                "explain": "Donna gợi ý điều gì?\nA. Thuê thêm nhân viên\nB. Sửa đổi ngân sách\nC. Đăng một số ảnh trực tuyến\nD. Giảm giá\n\nGiải thích:\nTôi nghĩ doanh số bán quần áo không mạnh vì ngân sách quảng cáo đã bị cắt giảm trong năm nay. Tôi muốn thấy số tiền đó được đưa trở lại vào ngân sách của chúng ta.",
                 "key": ""
               },
               {
@@ -679,7 +679,7 @@
                   "Opening another location"
                 ],
                 "trueAnswer": "Postponing a decision",
-                "explain": "What does the man propose?<br>A. Postponing a decision<br>B. Conducting a survey<br>C. Developing new products<br>D. Opening another location<br>Information:<br>Let's wait another month. If sales are still low, we may have to increase the advertising budget, but I prefer to wait on that decision.",
+                "explain": "Người đàn ông đề xuất điều gì?\nA. Hoãn quyết định\nB. Tiến hành khảo sát\nC. Phát triển sản phẩm mới\nD. Mở thêm địa điểm\n\nGiải thích:\nHãy chờ thêm một tháng nữa. Nếu doanh số vẫn thấp, chúng ta có thể phải tăng ngân sách quảng cáo, nhưng tôi muốn hoãn quyết định đó.",
                 "key": ""
               },
               {
@@ -693,7 +693,7 @@
                   "A trainee"
                 ],
                 "trueAnswer": "A trainee",
-                "explain": "Who is the man most likely to be?<br>A. A manager<br>B. A consultant<br>C. A client<br>D. A trainee.<br>Information:<br>So you've been training with us for a couple of months now.",
+                "explain": "Người đàn ông có khả năng là ai nhất?\nA. Quản lý\nB. Tư vấn viên\nC. Khách hàng\nD. Thực tập sinh\n\nGiải thích:\nVậy là bạn đã được đào tạo với chúng tôi trong vài tháng nay.",
                 "key": ""
               },
               {
@@ -707,7 +707,7 @@
                   "Some dates"
                 ],
                 "trueAnswer": "Some feedback",
-                "explain": "What does the woman ask the man for?<br>A. Some feedback<br>B. Some assistance<br>C. Some references<br>D. Some dates<br>Information:<br>I'd like to hear how your apprenticeship's been going",
+                "explain": "Người phụ nữ yêu cầu người đàn ông điều gì?\nA. Một số phản hồi\nB. Một số trợ giúp\nC. Một số tài liệu tham khảo\nD. Một số ngày\n\nGiải thích:\nTôi muốn nghe về quá trình thực tập của bạn đã diễn ra như thế nào.",
                 "key": ""
               },
               {
@@ -721,7 +721,7 @@
                   "An award"
                 ],
                 "trueAnswer": "A promotion",
-                "explain": "What will the man receive?<br>A. Extra time off<br>B. A promotion<br>C. Bonus pay<br>D. An award<br>Information:<br>Your work is so good that we've decided to offer you a promotion when your training is complete.",
+                "explain": "Người đàn ông sẽ nhận được gì?\nA. Thêm thời gian nghỉ\nB. Thăng chức\nC. Tiền thưởng\nD. Giải thưởng\n\nGiải thích:\nCông việc của bạn rất tốt nên chúng tôi đã quyết định thăng chức cho bạn khi bạn hoàn thành khóa đào tạo.",
                 "key": ""
               },
               {
@@ -735,7 +735,7 @@
                   "A tablet computer"
                 ],
                 "trueAnswer": "A tablet computer",
-                "explain": "What type of product is being discussed?<br>A. A musical instrument<br>B. A kitchen appliance<br>C. A power tool<br>D. A tablet computer<br>Information:<br>We can't wait to see the latest design plans for the company's new, lightweight tablet",
+                "explain": "Loại sản phẩm nào đang được thảo luận?\nA. Nhạc cụ\nB. Thiết bị nhà bếp\nC. Dụng cụ điện\nD. Máy tính bảng\n\nGiải thích:\nChúng tôi rất mong chờ được xem các kế hoạch thiết kế mới nhất cho chiếc máy tính bảng nhẹ mới của công ty.",
                 "key": ""
               },
               {
@@ -749,7 +749,7 @@
                   "The size"
                 ],
                 "trueAnswer": "The battery life",
-                "explain": "Which product feature is the man most proud of?<br>A. The battery life<br>B. The color selection<br>C. The sound quality<br>D. The size<br>Information:<br>This model has our best battery life ever.",
+                "explain": "Tính năng sản phẩm nào mà người đàn ông tự hào nhất?\nA. Thời lượng pin\nB. Lựa chọn màu sắc\nC. Chất lượng âm thanh\nD. Kích thước\n\nGiải thích:\nMẫu này có thời lượng pin tốt nhất từ trước đến nay của chúng tôi.",
                 "key": ""
               },
               {
@@ -763,7 +763,7 @@
                   "To recommend a musician"
                 ],
                 "trueAnswer": "To decline an invitation",
-                "explain": "Why does the man say, \"my favorite singer is performing that night\"?<br>A. To request a schedule change<br>B. To explain a late arrival<br>C. To decline an invitation<br>D. To recommend a musician<br>Information:<br>That's OK. We'll see you soon",
+                "explain": "Tại sao người đàn ông nói, “ca sĩ yêu thích của tôi sẽ biểu diễn vào đêm đó”?\nA. Để yêu cầu thay đổi lịch trình\nB. Để giải thích việc đến muộn\nC. Để từ chối lời mời\nD. Để giới thiệu một nhạc sĩ\n\nGiải thích:\nKhông sao đâu. Chúng tôi sẽ gặp bạn sớm.",
                 "key": ""
               },
               {
@@ -777,7 +777,7 @@
                   "A wedding"
                 ],
                 "trueAnswer": "An awards ceremony",
-                "explain": "What type of event is being planned?<br>A. A trade show<br>B. An awards ceremony<br>C. A film festival<br>D. A wedding<br>Information:<br>We're planning our annual awards banquet for June-for about a hundred guests.",
+                "explain": "Loại sự kiện nào đang được lên kế hoạch?\nA. Triển lãm thương mại\nB. Lễ trao giải\nC. Liên hoan phim\nD. Đám cưới\n\nGiải thích:\nChúng tôi đang lên kế hoạch cho buổi tiệc trao giải hàng năm vào tháng Sáu - cho khoảng một trăm khách.",
                 "key": ""
               },
               {
@@ -791,7 +791,7 @@
                   "Outdoor seating"
                 ],
                 "trueAnswer": "Accommodations",
-                "explain": "What does the man ask about?<br>A. Accommodations<br>B. Entertainment<br>C. Meal options<br>D. Outdoor seating<br>Information:<br>Do you have enough rooms available for them to stay here?",
+                "explain": "Người đàn ông hỏi về điều gì?\nA. Chỗ ở\nB. Giải trí\nC. Lựa chọn bữa ăn\nD. Chỗ ngồi ngoài trời\n\nGiải thích:\nBạn có đủ phòng để họ ở lại đây không?",
                 "key": ""
               },
               {
@@ -805,7 +805,7 @@
                   "Parking"
                 ],
                 "trueAnswer": "Transportation",
-                "explain": "What does the hotel offer for free?<br>A. Meals<br>B. Internet access<br>C. Transportation<br>D. Parking<br>Information:<br>And additionally, we do offer free shuttle service to and from the airport.",
+                "explain": "Khách sạn cung cấp miễn phí dịch vụ gì?\nA. Bữa ăn\nB. Truy cập Internet\nC. Vận chuyển\nD. Đỗ xe\n\nGiải thích:\nNgoài ra, chúng tôi cung cấp dịch vụ đưa đón miễn phí đến và từ sân bay.",
                 "key": ""
               },
               {
@@ -819,7 +819,7 @@
                   "He forgot his wallet"
                 ],
                 "trueAnswer": "His phone battery is empty",
-                "explain": "What problem does the man mention?<br>A. His car is out of fuel<br>B. His phone battery is empty<br>C. He is late for an appointment<br>D. He forgot his wallet<br>Information:<br>My mobile phone is out of power.",
+                "explain": "Người đàn ông đề cập đến vấn đề gì?\nA. Xe của anh ấy hết nhiên liệu\nB. Pin điện thoại của anh ấy hết\nC. Anh ấy trễ hẹn\nD. Anh ấy quên ví\n\nGiải thích:\nĐiện thoại di động của tôi hết pin.",
                 "key": ""
               },
               {
@@ -833,7 +833,7 @@
                   "At a coffee shop"
                 ],
                 "trueAnswer": "At a coffee shop",
-                "explain": "Where are the speakers?<br>A. At a train station<br>B. At an electronics repair shop<br>C. At a furniture store<br>D. At a coffee shop<br>Information:<br>Are there any tables here at the cafe that are near a wall socket, so I can charge my phone while I have some coffee?",
+                "explain": "Các diễn giả đang ở đâu?\nA. Tại nhà ga\nB. Tại cửa hàng sửa chữa điện tử\nC. Tại cửa hàng nội thất\nD. Tại quán cà phê\n\nGiải thích:\nCó bàn nào ở đây gần ổ cắm điện không, để tôi có thể sạc điện thoại trong khi uống cà phê?",
                 "key": ""
               },
               {
@@ -847,7 +847,7 @@
                   "Go to the library"
                 ],
                 "trueAnswer": "Go to the library",
-                "explain": "What does the woman suggest the man do?<br>A. Check a Web site<br>B. Call a taxi<br>C. Return at a later time<br>D. Go to the library<br>Information:<br>You know, the public library would be perfect for that",
+                "explain": "Người phụ nữ gợi ý người đàn ông làm gì?\nA. Kiểm tra trang web\nB. Gọi taxi\nC. Quay lại sau\nD. Đến thư viện\n\nGiải thích:\nBạn biết đấy, thư viện công cộng sẽ rất phù hợp cho việc đó.",
                 "key": ""
               },
               {
@@ -861,7 +861,7 @@
                   "Shipping an order"
                 ],
                 "trueAnswer": "Preparing a bill",
-                "explain": "What is the man having trouble with?<br>A. Conducting a test<br>B. Preparing a bill<br>C. Contacting a patient<br>D. Shipping an order<br>Information:<br>I'm working on the bill for one of Dr. Singh's patients, and I keep getting an error message for the code I'm using...",
+                "explain": "Người đàn ông gặp khó khăn với điều gì?\nA. Thực hiện một bài kiểm tra\nB. Chuẩn bị hóa đơn\nC. Liên hệ với bệnh nhân\nD. Gửi đơn hàng\n\nGiải thích:\nTôi đang làm hóa đơn cho một trong những bệnh nhân của Dr. Singh, và tôi liên tục nhận được thông báo lỗi cho mã mà tôi đang sử dụng...",
                 "key": ""
               },
               {
@@ -875,7 +875,7 @@
                   "021"
                 ],
                 "trueAnswer": "018",
-                "explain": "Look at the graphic. Which code should the man use?<br>A. 018<br>B. 019<br>C. 020<br>D. 021<br>Information:<br>A blood test",
+                "explain": "Nhìn vào biểu đồ. Mã nào mà người đàn ông nên sử dụng?\nA. 018\nB. 019\nC. 020\nD. 021\n\nGiải thích:\nXét nghiệm máu",
                 "key": ""
               },
               {
@@ -889,7 +889,7 @@
                   "A doctor will begin a medical procedure"
                 ],
                 "trueAnswer": "A list will be available electronically",
-                "explain": "What does the woman say will happen soon?<br>A. Some patients will be transferred to another doctor<br>B. Some employees will join a medical practice<br>C. A list will be available electronically<br>D. A doctor will begin a medical procedure<br>Information:<br>But I heard they'll be adding the codes to our billing software soon, so we won't need to deal with paper lists anymore.",
+                "explain": "Người phụ nữ nói rằng điều gì sẽ xảy ra sớm?\nA. Một số bệnh nhân sẽ được chuyển sang bác sĩ khác\nB. Một số nhân viên sẽ tham gia vào một phòng khám y tế\nC. Một danh sách sẽ có sẵn dưới dạng điện tử\nD. Một bác sĩ sẽ bắt đầu một thủ tục y tế\n\nGiải thích:\n Nhưng tôi nghe nói rằng họ sẽ sớm thêm các mã vào phần mềm thanh toán của chúng ta, vì vậy chúng ta sẽ không cần phải xử lý danh sách giấy nữa.",
                 "key": ""
               },
               {
@@ -903,7 +903,7 @@
                   "Update some equipment"
                 ],
                 "trueAnswer": "Increase production",
-                "explain": "What does the woman say they will need to do?<br>A. Rent storage space<br>B. Increase production<br>C. Organize a fashion show<br>D. Update some equipment<br>Information:<br>We'd better increase production to be sure we have a supply of all garment sizes.",
+                "explain": "Người phụ nữ nói rằng họ sẽ cần làm gì?\nA. Thuê không gian lưu trữ\nB. Tăng sản xuất\nC. Tổ chức một buổi trình diễn thời trang\nD. Cập nhật một số thiết bị\n\nGiải thích:\nChúng ta nên tăng sản xuất để đảm bảo có đủ nguồn cung cấp tất cả các kích cỡ trang phục.",
                 "key": ""
               },
               {
@@ -917,7 +917,7 @@
                   "Changing suppliers"
                 ],
                 "trueAnswer": "Contacting another department",
-                "explain": "What does the man suggest?<br>A. Conferring with a client<br>B. Contacting another department<br>C. Photographing some designs<br>D. Changing suppliers<br>Information:<br>I suggest we let the human resources department know that we'll need more workers.",
+                "explain": "Người đàn ông đề xuất điều gì?\nA. Thảo luận với khách hàng\nB. Liên hệ với bộ phận khác\nC. Chụp ảnh một số thiết kế\nD. Thay đổi nhà cung cấp\n\nGiải thích:\nTôi đề nghị chúng ta thông báo cho bộ phận nhân sự rằng chúng ta sẽ cần thêm nhân viên.",
                 "key": ""
               },
               {
@@ -931,7 +931,7 @@
                   "The country of origin"
                 ],
                 "trueAnswer": "The care instructions",
-                "explain": "Look at the graphic. Which section of the label will the man need to revise?<br>A. The logo<br>B. The material<br>C. The care instructions<br>D. The country of origin<br>Information:<br>These garments are 100 percent cotton; so they shouldn't be washed in warm water.",
+                "explain": "Nhìn vào hình ảnh. Phần nào của nhãn mà người đàn ông cần chỉnh sửa?\nA. Logo\nB. Chất liệu\nC. Hướng dẫn chăm sóc\nD. Nước xuất xứ\n\nGiải thích:\nNhững trang phục này là 100% cotton; vì vậy chúng không nên được giặt bằng nước ấm.",
                 "key": ""
               },
               {
@@ -945,7 +945,7 @@
                   "A landscaping project"
                 ],
                 "trueAnswer": "A job interview",
-                "explain": "What are the speakers mainly discussing?<br>A. A job interview<br>B. A company celebration<br>C. An office relocation<br>D. A landscaping project<br>Information:<br>We've reviewed your job application and would like you to come in for an interview.",
+                "explain": "Các diễn giả chủ yếu đang thảo luận về điều gì?\nA. Một buổi phỏng vấn xin việc\nB. Một buổi lễ kỷ niệm của công ty\nC. Một cuộc di dời văn phòng\nD. Một dự án cảnh quan\n\nGiải thích:\nChúng tôi đã xem xét đơn xin việc của bạn và muốn bạn đến phỏng vấn.",
                 "key": ""
               },
               {
@@ -959,7 +959,7 @@
                   "Building 4"
                 ],
                 "trueAnswer": "Building 2",
-                "explain": "Look at the graphic. Which building is Silverby Industries located in?<br>A. Building 1<br>B. Building 2<br>C. Building 3<br>D. Building 4<br>Information:<br>0ur building is on Tinley Avenue, and we're right next to the lake.",
+                "explain": "Nhìn vào hình ảnh. Tòa nhà nào là nơi đặt trụ sở của Silverby Industries?\nA. Tòa nhà 1\nB. Tòa nhà 2\nC. Tòa nhà 3\nD. Tòa nhà 4\n\nGiải thích:\nTòa nhà của chúng tôi nằm trên đường Tinley, và chúng tôi ở ngay cạnh hồ.",
                 "key": ""
               },
               {
@@ -973,7 +973,7 @@
                   "The parking area fills up quickly"
                 ],
                 "trueAnswer": "He should park in a visitor's space",
-                "explain": "What does the woman tell the man about parking?<br>A. He should park in a visitor's space<br>B. He will have to pay at a meter<br>C. A parking pass is required<br>D. The parking area fills up quickly<br>Information:<br>Just make sure you're in a space marked Visitor, and you won't get a parking violation.",
+                "explain": "Người phụ nữ nói với người đàn ông điều gì về việc đỗ xe?\nA. Anh ấy nên đỗ xe ở chỗ dành cho khách\nB. Anh ấy sẽ phải trả tiền tại máy đo\nC. Cần có thẻ đỗ xe\nD. Khu vực đỗ xe nhanh chóng đầy\n\nGiải thích:\nChỉ cần đảm bảo rằng bạn đang ở chỗ có biển báo Khách, và bạn sẽ không bị vi phạm đỗ xe.",
                 "key": ""
               }
             ]
@@ -993,7 +993,7 @@
                   "A sporting goods store"
                 ],
                 "trueAnswer": "A fitness center",
-                "explain": "What type of business is being advertised?<br>A. A farmers market<br>B. A fitness center<br>C. A medical clinic<br>D. A sporting goods store<br>Information:<br>Attention all listeners! Palmer's Gym now has several locations in your area.",
+                "explain": "Loại hình kinh doanh nào đang được quảng cáo?\nA. Chợ nông sản\nB. Trung tâm thể dục\nC. Phòng khám y tế\nD. Cửa hàng đồ thể thao\n\nGiải thích:\nChú ý tất cả các thính giả! Palmer’s Gym hiện có nhiều chi nhánh trong khu vực của bạn.",
                 "key": ""
               },
               {
@@ -1007,7 +1007,7 @@
                   "Enter a contest"
                 ],
                 "trueAnswer": "Use multiple locations",
-                "explain": "What will the listeners be able to do starting in April?<br>A. Use multiple locations<br>B. Try free samples<br>C. Meet with a nutritionist<br>D. Enter a contest<br>Information:<br>Starting in April, your membership gives you access to any of our locations across the country.",
+                "explain": "Người nghe sẽ có thể làm gì bắt đầu từ tháng Tư?\nA. Sử dụng nhiều địa điểm\nB. Thử các mẫu miễn phí\nC. Gặp gỡ chuyên gia dinh dưỡng\nD. Tham gia một cuộc thi\n\nGiải thích:\nBắt đầu từ tháng Tư, thẻ thành viên của bạn sẽ cho phép bạn truy cập vào bất kỳ chi nhánh nào của chúng tôi trên toàn quốc.",
                 "key": ""
               },
               {
@@ -1021,7 +1021,7 @@
                   "To look at a map"
                 ],
                 "trueAnswer": "To look at a map",
-                "explain": "Why does the speaker invite the listeners to visit a Web site?<br>A. To write a review<br>B. To register for a class<br>C. To check a policy<br>D. To look at a map<br>Information:<br>Visit our Web site to see a map of all the Palmer's Gym locations across the nation!",
+                "explain": "Tại sao người nói mời người nghe truy cập trang web?\nA. Để viết đánh giá\nB. Để đăng ký một lớp học\nC. Để kiểm tra chính sách\nD. Để xem bản đồ\n\nGiải thích:\nTruy cập trang web của chúng tôi để xem bản đồ của tất cả các chi nhánh Palmer’s Gym trên toàn quốc!",
                 "key": ""
               },
               {
@@ -1035,7 +1035,7 @@
                   "For earning a certification"
                 ],
                 "trueAnswer": "For working overtime",
-                "explain": "Why does the speaker thank the listeners?<br>A. For submitting design ideas<br>B. For training new employees<br>C. For working overtime<br>D. For earning a certification<br>Information:<br>I want to thank everyone for the extra hours you've put in getting our new line of camera accessories ready for market.",
+                "explain": "Tại sao người nói cảm ơn người nghe?\nA. Vì đã gửi ý tưởng thiết kế\nB. Vì đã đào tạo nhân viên mới\nC. Vì đã làm thêm giờ\nD. Vì đã đạt được chứng chỉ\n\nGiải thích:\nTôi muốn cảm ơn mọi người vì những giờ làm thêm mà các bạn đã bỏ ra để chuẩn bị dòng phụ kiện máy ảnh mới của chúng ta ra thị trường.",
                 "key": ""
               },
               {
@@ -1049,7 +1049,7 @@
                   "A store opening"
                 ],
                 "trueAnswer":  "A trade show",
-                "explain": "According to the speaker, what is scheduled for next month?< br>A. A retirement celebration< br>B. A trade show< br>C. A factory tour< br>D. A store opening< br>Information:<br>The new products will be ready in time for the trade show coming up next month in Shanghai.",
+                "explain": "Theo người nói, điều gì được lên lịch cho tháng tới?\nA. Một buổi lễ nghỉ hưu\nB. Một hội chợ thương mại\nC. Một chuyến tham quan nhà máy\nD. Một buổi khai trương cửa hàng\n\nGiải thích:\nCác sản phẩm mới sẽ sẵn sàng kịp thời cho hội chợ thương mại diễn ra vào tháng tới tại Thượng Hải.",
                 "key": ""
               },
               {
@@ -1063,7 +1063,7 @@
                   "There is not enough staff for an event"
                 ],
                 "trueAnswer":  "There is room to display new merchandise",
-                "explain": "What does the speaker imply when she says, \"it's a large space\"?< br>A. There is room to display new merchandise< br>B. High attendance is anticipated< br>C. A venue is too expensive< br>D. There is not enough staff for an event< br>Information:<br>We've reserved a booth at the front of the exhibition hall this year, and it's a large space.",
+                "explain": "Người nói ngụ ý điều gì khi cô ấy nói, “đó là một không gian lớn”?\nA. Có chỗ để trưng bày hàng hóa mới\nB. Dự kiến sẽ có đông người tham dự\nC. Địa điểm quá đắt\nD. Không đủ nhân viên cho một sự kiện\n\nGiải thích:\nChúng tôi đã đặt một gian hàng ở phía trước của hội trường triển lãm năm nay, và đó là một không gian lớn.",
                 "key": ""
               },
               {
@@ -1077,7 +1077,7 @@
                   "It has weekly cooking classes"
                 ],
                 "trueAnswer":  "It has a vegetable garden",
-                "explain": "According to the speaker, what is special about the restaurant?<br>A. It has private outdoor seating<br>B. It has been recently renovated<br>C. It has a vegetable garden<br>D. It has weekly cooking classes<br>Information:<br>All the vegetable products you see on the menu come from our very own vegetable garden.",
+                "explain": "Theo người nói, điều gì đặc biệt về nhà hàng?\nA. Có chỗ ngồi ngoài trời riêng tư\nB. Đã được cải tạo gần đây\nC. Có một vườn rau\nD. Có các lớp học nấu ăn hàng tuần\n\nGiải thích:\nTất cả các sản phẩm rau bạn thấy trong thực đơn đều đến từ vườn rau của chính chúng tôi.",
                 "key": ""
               },
               {
@@ -1091,7 +1091,7 @@
                   "A food writer"
                 ],
                 "trueAnswer":  "A business owner",
-                "explain": "Who is Natasha?<br>A. A business owner<br>B. An interior decorator<br>C. An event organizer<br>D. A food writer<br>Information:<br>The owner of the cafe, Natasha, is a talented gardener who grows our fresh produce herself.",
+                "explain": "Natasha là ai?\nA. Một chủ doanh nghiệp\nB. Một nhà trang trí nội thất\nC. Một nhà tổ chức sự kiện\nD. Một nhà văn về ẩm thực\n\nGiải thích:\nChủ quán cà phê, Natasha, là một người làm vườn tài năng, tự mình trồng rau tươi cho chúng tôi.",
                 "key": ""
               },
               {
@@ -1105,7 +1105,7 @@
                   "He understands a dish is popular"
                 ],
                 "trueAnswer":  "He is recommending a dish",
-                "explain": "Why does the speaker say, \"I eat it all the time\"?<br>A. He wants to eat something different<br>B. He is recommending a dish<br>C. He knows the ingredients<br>D. He understands a dish is popular<br>Information:<br>It's poached salmon, caught fresh today. It's a simple dish, served with a lemon sauce and a salad.",
+                "explain": "Tại sao người nói nói, “Tôi ăn nó suốt”?\nA. Anh ấy muốn ăn món khác\nB. Anh ấy đang giới thiệu một món ăn\nC. Anh ấy biết các thành phần\nD. Anh ấy hiểu một món ăn được ưa chuộng\n\nGiải thích:\nĐó là cá hồi luộc, được bắt tươi hôm nay. Đó là một món ăn đơn giản, được phục vụ với sốt chanh và salad.",
                 "key": ""
               },
               {
@@ -1119,7 +1119,7 @@
                   "On an airplane"
                 ],
                 "trueAnswer":  "On an airplane",
-                "explain": "Where is the announcement being made?<br>A. On a bus<br>B. On a ferry boat<br>C. On a train<br>D. On an airplane<br>Information:<br>So welcome aboard this morning's direct flight to Toronto.",
+                "explain": "Thông báo đang được thực hiện ở đâu?\nA. Trên xe buýt\nB. Trên phà\nC. Trên tàu hỏa\nD. Trên máy bay\n\nGiải thích:\nVì vậy, chào mừng bạn lên chuyến bay thẳng đến Toronto sáng nay.",
                 "key": ""
               },
               {
@@ -1133,7 +1133,7 @@
                   "A piece of equipment is being repaired"
                 ],
                 "trueAnswer":  "There is no more room for large bags",
-                "explain": "What problem does the speaker mention?<br>A. There is no more room for large bags<br>B. Too many tickets have been sold<br>C. Weather conditions have changed<br>D. A piece of equipment is being repaired<br>Information:<br>Unfortunately, we've run out of space in the overhead bins for larger carry-on bags.",
+                "explain": "Người nói đề cập đến vấn đề gì?\nA. Không còn chỗ cho các túi lớn\nB. Đã bán quá nhiều vé\nC. Điều kiện thời tiết đã thay đổi\nD. Một thiết bị đang được sửa chữa\n\nGiải thích:\nThật không may, chúng tôi đã hết chỗ trong các ngăn trên đầu cho các túi xách lớn.",
                 "key": ""
               },
               {
@@ -1147,7 +1147,7 @@
                   "To get free headphones"
                 ],
                 "trueAnswer":  "To buy some food",
-                "explain": "According to the speaker, why should the listeners talk with a staff member?<br>A. To receive a voucher<br>B. To reserve a seat<br>C. To buy some food<br>D. To get free headphones<br>Information:<br>If you would like to purchase a meal, please notify a flight attendant.",
+                "explain": "Theo người nói, tại sao người nghe nên nói chuyện với nhân viên?\nA. Để nhận phiếu giảm giá\nB. Để đặt chỗ ngồi\nC. Để mua thức ăn\nD. Để nhận tai nghe miễn phí\n\nGiải thích:\nNếu bạn muốn mua bữa ăn, vui lòng thông báo cho tiếp viên hàng không.",
                 "key": ""
               },
               {
@@ -1161,7 +1161,7 @@
                   "A truck driver"
                 ],
                 "trueAnswer":  "A truck driver",
-                "explain": "Who is the speaker?<br>A. A repair person<br>B. A store clerk<br>C. A factory worker<br>D. A truck driver<br>Information:<br>It's Dana, one of your truck drivers.",
+                "explain": "Người nói là ai?\nA. Một người sửa chữa\nB. Một nhân viên cửa hàng\nC. Một công nhân nhà máy\nD. Một tài xế xe tải\n\nGiải thích:\nĐây là Dana, một trong những tài xế xe tải của bạn.",
                 "key": ""
               },
               {
@@ -1175,7 +1175,7 @@
                   "Construction equipment"
                 ],
                 "trueAnswer":  "Kitchen appliances",
-                "explain": "What does the company sell?<br>A. Household furniture<br>B. Kitchen appliances<br>C. Packaged foods<br>D. Construction equipment<br>Information:<br>I'm supposed to deliver kitchen appliances to our store branches in Syracuse.",
+                "explain": "Công ty bán gì?\nA. Đồ nội thất gia đình\nB. Thiết bị nhà bếp\nC. Thực phẩm đóng gói\nD. Thiết bị xây dựng\n\nGiải thích:\nTôi phải giao thiết bị nhà bếp đến các chi nhánh cửa hàng của chúng ta ở Syracuse.",
                 "key": ""
               },
               {
@@ -1189,7 +1189,7 @@
                   "A development plan cannot be approved"
                 ],
                 "trueAnswer":  "She thinks a mistake has been made",
-                "explain": "What does the speaker imply when she says, \"all I see are houses\"?<br>A. She is concerned about some regulations<br>B. She thinks a mistake has been made<br>C. A loan application has been completed<br>D. A development plan cannot be approved<br>###<br>Information: Could you please get back to me with the correct address?",
+                "explain": "Người nói ngụ ý điều gì khi cô ấy nói, “tất cả những gì tôi thấy là nhà cửa”?\nA. Cô ấy lo lắng về một số quy định\nB. Cô ấy nghĩ rằng đã có một sai lầm\nC. Một đơn xin vay đã được hoàn thành\nD. Một kế hoạch phát triển không thể được phê duyệt\n\nGiải thích:\nBạn có thể vui lòng gửi lại cho tôi địa chỉ chính xác không?",
                 "key": ""
               },
               {
@@ -1203,7 +1203,7 @@
                   "Business scheduling software"
                 ],
                 "trueAnswer":  "Business scheduling software",
-                "explain": "What is the talk mainly about?<br>A. A mobile phone model<br>B. An office security system<br>C. High-speed Internet service<br>D. Business scheduling software<br>Information:<br>I'll be conducting the training on how to use our company's new scheduling software - Spark Schedule.",
+                "explain": "Cuộc nói chuyện chủ yếu về điều gì?\nA. Một mẫu điện thoại di động\nB. Một hệ thống an ninh văn phòng\nC. Dịch vụ Internet tốc độ cao\nD. Phần mềm lập lịch kinh doanh\n\nGiải thích:\nTôi sẽ tiến hành đào tạo về cách sử dụng phần mềm lập lịch mới của công ty chúng ta - Spark Schedule.",
                 "key": ""
               },
               {
@@ -1217,7 +1217,7 @@
                   "It has received positive reviews"
                 ],
                 "trueAnswer":  "It makes arranging meetings easy",
-                "explain": "Why did the company choose the product?<br>A. It makes arranging meetings easy<br>B. It is reasonably priced<br>C. It has good security features<br>D. It has received positive reviews<br>Information: The reason we chose this particular software is because it makes it easy for you to schedule meetings with people in different time zones.",
+                "explain": "Tại sao công ty chọn sản phẩm này?\nA. Nó giúp sắp xếp các cuộc họp dễ dàng\nB. Nó có giá cả hợp lý\nC. Nó có các tính năng bảo mật tốt\nD. Nó đã nhận được đánh giá tích cực\n\nGiải thích:\nLý do chúng tôi chọn phần mềm này là vì nó giúp bạn dễ dàng lên lịch các cuộc họp với những người ở các múi giờ khác nhau.",
                 "key": ""
               },
               {
@@ -1231,7 +1231,7 @@
                   "A customer-service help line"
                 ],
                 "trueAnswer":  "A mobile phone application",
-                "explain": "What does the speaker say is offered with the product?<br>A. An annual upgrade<br>B. A money-back guarantee<br>C. A mobile phone application<br>D. A customer-service help line<br>Information:<br>And best of all, there's a mobile phone application that you can download for free.",
+                "explain": "Người nói nói rằng sản phẩm đi kèm với điều gì?\nA. Nâng cấp hàng năm\nB. Đảm bảo hoàn tiền\nC. Ứng dụng điện thoại di động\nD. Đường dây hỗ trợ khách hàng\n\nGiải thích:\nVà điều tuyệt vời nhất là có một ứng dụng điện thoại di động mà bạn có thể tải xuống miễn phí.",
                 "key": ""
               },
               {
@@ -1245,7 +1245,7 @@
                   "A change in regulations"
                 ],
                 "trueAnswer":  "A change in regulations",
-                "explain": "What does the speaker say has recently been announced?<br>A. An increase in funding<br>B. A factory opening<br>C. A new venue for an event<br>D. A change in regulations<br>Information:<br>The announcement of new federal safety regulations means that major modifications must be made to the tracks.",
+                "explain": "Người nói nói rằng điều gì đã được thông báo gần đây?\nA. Tăng nguồn tài trợ\nB. Khai trương nhà máy\nC. Địa điểm mới cho một sự kiện\nD. Thay đổi quy định\n\nGiải thích:\nThông báo về các quy định an toàn liên bang mới có nghĩa là các đường ray phải được sửa đổi lớn.",
                 "key": ""
               },
               {
@@ -1259,7 +1259,7 @@
                   "Because of the loud noise"
                 ],
                 "trueAnswer":  "Because it costs too much",
-                "explain": "According to the speaker, why do some people dislike a construction project?<br>A. Because it caused a power outage<br>B. Because it costs too much<br>C. Because roads have been closed<br>D. Because of the loud noise<br>Information:<br>Some residents say they don't approve of how much money is being spent on the project",
+                "explain": "Theo người nói, tại sao một số người không thích dự án xây dựng?\nA. Vì nó gây ra mất điện\nB. Vì nó tốn quá nhiều tiền\nC. Vì đường bị đóng\nD. Vì tiếng ồn lớn\n\nGiải thích:\nMột số cư dân nói rằng họ không đồng ý với số tiền đang được chi cho dự án.",
                 "key": ""
               },
               {
@@ -1273,7 +1273,7 @@
                   "End a broadcast"
                 ],
                 "trueAnswer":  "Interview some people",
-                "explain": "What will the speaker do next?<br>A. Introduce an advertiser<br>B. Attend a press conference<br>C. Interview some people<br>D. End a broadcast<br>Information:<br>I'll ask a few passersby how they feel about this latest development in the project",
+                "explain": "Người nói sẽ làm gì tiếp theo?\nA. Giới thiệu một nhà quảng cáo\nB. Tham dự một cuộc họp báo\nC. Phỏng vấn một số người\nD. Kết thúc một buổi phát sóng\n\nGiải thích:\nTôi sẽ hỏi một vài người qua đường xem họ cảm thấy thế nào về sự phát triển mới nhất trong dự án này.",
                 "key": ""
               },
               {
@@ -1287,7 +1287,7 @@
                   "Attending a training"
                 ],
                 "trueAnswer":  "Working on a Saturday",
-                "explain": "What does the speaker thank the listeners for?< br>A. Reorganizing some files< br>B. Cleaning a work area< br>C. Working on a Saturday< br>D. Attending a training< br>Information:<br>Thanks for coming into the warehouse today to work on a Saturday.",
+                "explain": "Người nói cảm ơn người nghe vì điều gì?\nA. Sắp xếp lại một số hồ sơ\nB. Dọn dẹp khu vực làm việc\nC. Làm việc vào thứ Bảy\nD. Tham dự một buổi đào tạo\n\nGiải thích:\nCảm ơn các bạn đã đến kho hôm nay để làm việc vào thứ Bảy.",
                 "key": ""
               },
               {
@@ -1301,7 +1301,7 @@
                   "Accounting"
                 ],
                 "trueAnswer":  "Shipping and Receiving",
-                "explain": "In which division do the listeners most likely work?<br>A. Shipping and Receiving<br>B. Maintenance<br>C. Sales and Marketing<br>D. Accounting<br>Information:<br>There are hundreds of boxes, and we have to check what's inside them and put the information into our warehouse database.",
+                "explain": "Trong bộ phận nào thì người nghe có khả năng làm việc nhất?\nA. Giao nhận hàng hóa\nB. Bảo trì\nC. Bán hàng và Tiếp thị\nD. Kế toán\n\nGiải thích:\nCó hàng trăm hộp, và chúng tôi phải kiểm tra bên trong chúng và đưa thông tin vào cơ sở dữ liệu kho của chúng tôi.",
                 "key": ""
               },
               {
@@ -1315,7 +1315,7 @@
                   "A temporary password"
                 ],
                 "trueAnswer":  "Group numbers",
-                "explain": "What does the speaker say he will provide?<br>A. A building name<br>B. Group numbers<br>C. Shift schedules<br>D. A temporary password<br>Information:<br>Now, I'm going to assign you all to groups. Once you have your group number, go ahead and join your group members.",
+                "explain": "Diễn giả nói rằng anh ấy sẽ cung cấp gì?\nA. Tên tòa nhà\nB. Số nhóm\nC. Lịch làm việc\nD. Mật khẩu tạm thời\n\nGiải thích:\nBây giờ, tôi sẽ phân công các bạn vào các nhóm.\nKhi bạn có số nhóm của mình, hãy tham gia cùng các thành viên trong nhóm của bạn.",
                 "key": ""
               },
               {
@@ -1329,7 +1329,7 @@
                   "A cooking contest"
                 ],
                 "trueAnswer":  "A cooking contest",
-                "explain": "What event is being described?<br>A. A sports competition<br>B. A government ceremony<br>C. A music festival<br>D. A cooking contest<br>###<br>Information: And now, an event we've all been waiting for since last year - Danville's Annual Cook-Off.",
+                "explain": "Sự kiện nào đang được mô tả?\nA. Một cuộc thi thể thao\nB. Một buổi lễ của chính phủ\nC. Một lễ hội âm nhạc\nD. Một cuộc thi nấu ăn\n\nGiải thích:\nVà bây giờ, sự kiện mà tất cả chúng ta đã chờ đợi từ năm ngoái - Cuộc thi Nấu ăn Hàng năm của Danville.",
                 "key": ""
               },
               {
@@ -1343,7 +1343,7 @@
                   "An entry form"
                 ],
                 "trueAnswer":  "An entry form",
-                "explain": "According to the speaker, what can the listeners find on a Web site?<br>A. A city map<br>B. A list of vendors<br>C. A demonstration video<br>D. An entry form<br>Information:<br>If you're interested in participating, the contest registration form is available on the city's Web site.",
+                "explain": "Theo diễn giả, người nghe có thể tìm thấy gì trên trang web?\nA. Bản đồ thành phố\nB. Danh sách các nhà cung cấp\nC. Video hướng dẫn\nD. Mẫu đăng ký\n\nGiải thích:\nNếu bạn quan tâm đến việc tham gia, mẫu đăng ký cuộc thi có sẵn trên trang web của thành phố.",
                 "key": ""
               },
               {
@@ -1357,7 +1357,7 @@
                   "Tuesday"
                 ],
                 "trueAnswer":  "Sunday",
-                "explain": "Look at the graphic. Which day is the event being held?<br>A. Saturday<br>B. Sunday<br>C. Monday<br>D. Tuesday<br>Information:<br>Now, keep in mind we're expecting a cloudy day for this year's event. (Sunday is cloudy)",
+                "explain": "Nhìn vào hình ảnh. Ngày nào sự kiện được tổ chức?\nA. Thứ Bảy\nB. Chủ Nhật\nC. Thứ Hai\nD. Thứ Ba\n\nThông tin:\nHãy nhớ rằng chúng ta đang mong đợi một ngày nhiều mây cho sự kiện năm nay. (Chủ Nhật có mây)",
                 "key": ""
               },
               {
@@ -1371,7 +1371,7 @@
                   "To discuss a new product"
                 ],
                 "trueAnswer":  "To make a job offer",
-                "explain": "What is the purpose of the call?<br>A. To confirm a deadline<br>B. To explain a company policy<br>C. To make a job offer<br>D. To discuss a new product<br>Information:<br>I'm calling because I'd like to hire you to discuss ways to make my company's database more secure.",
+                "explain": "Mục đích của cuộc gọi là gì?\nA. Xác nhận thời hạn\nB. Giải thích chính sách của công ty\nC. Đưa ra lời mời làm việc\nD. Thảo luận về sản phẩm mới\n\nThông tin:\nTôi gọi vì tôi muốn thuê bạn để thảo luận về các cách làm cho cơ sở dữ liệu của công ty tôi an toàn hơn.",
                 "key": ""
               },
               {
@@ -1385,7 +1385,7 @@
                   "Alex Lehmann"
                 ],
                 "trueAnswer":  "Carla Wynn",
-                "explain": "Look at the graphic. Who is the speaker calling?<br>A. Carla Wynn<br>B. Jae-Ho Kim<br>C. Kaori Aoki<br>D. Alex Lehmann<br>Information:<br>I'd like to hire you to discuss ways to make my company's database more secure. I know you specialize in this type of work.",
+                "explain": "Nhìn vào hình ảnh. Người nói đang gọi cho ai?\nA. Carla Wynn\nB. Jae-Ho Kim\nC. Kaori Aoki\nD. Alex Lehmann\n\nThông tin:\nTôi muốn thuê bạn để thảo luận về các cách làm cho cơ sở dữ liệu của công ty tôi an toàn hơn. Tôi biết bạn chuyên về loại công việc này.",
                 "key": ""
               },
               {
@@ -1399,7 +1399,7 @@
                   "Update a conference schedule"
                 ],
                 "trueAnswer":  "Send fee information",
-                "explain": "What does the speaker ask the listener to do?<br>A. Check a catalog<br>B. Send fee information<br>C. Submit a travel itinerary<br>D. Update a conference schedule<br>Information:<br>Could you please e-mail me a list of your consultant fees?",
+                "explain": "Người nói yêu cầu người nghe làm gì?\nA. Kiểm tra danh mục\nB. Gửi thông tin phí\nC. Nộp lịch trình du lịch\nD. Cập nhật lịch hội nghị\n\nThông tin:\nBạn có thể vui lòng gửi cho tôi danh sách phí tư vấn của bạn qua email không?",
                 "key": ""
               }
             ]
@@ -1424,7 +1424,7 @@
                   "herself"
                 ],
                 "trueAnswer": "her",
-                "explain": "Ms. Durkin asked for volunteers to help her with the employee fitness program.\nA. She: Subject\nB. Her: Object or Possessive Adjective (+N)\nC. Hers: Possessive Pronoun\nD. Herself: Reflexive Pronoun\nExplanation: Help (V) + her (O)",
+                "explain": "Cô Durkin đã yêu cầu các tình nguyện viên giúp cô ấy với chương trình thể dục cho nhân viên.\nA. Cô ấy: Chủ ngữ\nB. Cô ấy: Tân ngữ hoặc Tính từ sở hữu (+N)\nC. Của cô ấy: Đại từ sở hữu\nD. Chính cô ấy: Đại từ phản thân\n\nGiải thích:\nGiúp (V) + cô ấy (O)",
                 "key": ""
               },
               {
@@ -1438,7 +1438,7 @@
                   "knowledgeable"
                 ],
                 "trueAnswer": "knowledge",
-                "explain": "Lasner Electronics staff have extensive knowledge of current hardware systems.\nA. Know: Verb\nB. Known: Past Participle\nC. Knowledge: Noun</p><p>D. Knowledgeable: Adjective\nExplanation:\nExtensive (Adj) + Knowledge (N) =&gt; Noun Phrase",
+                "explain": "Nhân viên của Lasner Electronics có kiến thức sâu rộng về các hệ thống phần cứng hiện tại.\nA. Biết: Động từ\nB. Đã biết: Quá khứ phân từ\nC. Kiến thức: Danh từ\nD. Hiểu biết: Tính từ\n\nGiải thích:\nSâu rộng (Adj) + Kiến thức (N) => Cụm danh từ",
                 "key": ""
               },
               {
@@ -1452,7 +1452,7 @@
                   "Yet"
                 ],
                 "trueAnswer": "Once",
-                "explain": "Once a year, Tarrin Industrial Supply audits the accounts of all of its factories\nA. Once + time (month, year...)\nB. Immediately: without delay\nC. Directly\nD. Yet = but\nExplanation:\n\"Once a year\" makes sense, the others can stand alone.",
+                "explain": "Mỗi năm một lần, Tarrin Industrial Supply kiểm toán các tài khoản của tất cả các nhà máy của mình.\nA. Một lần + thời gian (tháng, năm…)\nB. Ngay lập tức: không chậm trễ\nC. Trực tiếp\nD. Tuy nhiên = nhưng\n\nGiải thích:\n\"Mỗi năm một lần\" có ý nghĩa, các từ khác có thể đứng một mình.",
                 "key": ""
               },
               {
@@ -1466,7 +1466,7 @@
                   "because"
                 ],
                 "trueAnswer": "because",
-                "explain": "Ms. Pham requested a refund because the coffeemaker she received was damaged\nA. despite + Ving/N\nB. why: used in the question to ask\nC. concerning +N\nD. because +clause\nExplanation:\nBecause is the conjunction to connect cause-effect clauses\nClause 1: Ms. Pham requested a refund\nClause 2: the coffeemaker she received was damaged",
+                "explain": "Cô Phạm yêu cầu hoàn tiền vì máy pha cà phê cô nhận được bị hỏng\nA. mặc dù + Ving/N\nB. tại sao: dùng trong câu hỏi để hỏi\nC. liên quan đến +N\nD. vì + mệnh đề\n\nGiải thích:\nVì là liên từ để kết nối các mệnh đề nguyên nhân-kết quả\nMệnh đề 1: Cô Phạm yêu cầu hoàn tiền\nMệnh đề 2: máy pha cà phê cô nhận được bị hỏng",
                 "key": ""
               },
               {
@@ -1480,7 +1480,7 @@
                   "except"
                 ],
                 "trueAnswer": "about",
-                "explain": "Information about the artwork in the lobby is available at the reception desk\nA. across\nB. about\nC. upon\nD. except",
+                "explain": "Thông tin về tác phẩm nghệ thuật trong sảnh có sẵn tại bàn tiếp tân\nA. ngang qua\nB. về\nC. trên\nD. ngoại trừ",
                 "key": ""
               },
               {
@@ -1494,7 +1494,7 @@
                   "easier"
                 ],
                 "trueAnswer": "easily",
-                "explain": "With the Gema XTI binoculars, users can easily see objects that are more than 100 meters away\nA. ease: Noun\nB. easy: Adj\nC. easily: Adv\nD. easier: Comparative form\nExplanation:\nUsers (N) + can + easily (Adv) + see (V)",
+                "explain": "Với ống nhòm Gema XTI, người dùng có thể dễ dàng nhìn thấy các vật thể cách xa hơn 100 mét\nA. sự dễ dàng: Danh từ\nB. dễ dàng: Tính từ\nC. dễ dàng: Trạng từ\nD. dễ dàng hơn: Dạng so sánh\n\nGiải thích:\nNgười dùng (N) + có thể + dễ dàng (Adv) + nhìn thấy (V)",
                 "key": ""
               },
               {
@@ -1508,7 +1508,7 @@
                   "necessary"
                 ],
                 "trueAnswer": "affordable",
-                "explain": "The Physical Therapy Association is committed to keeping costs affordable for its certification programs\nA. affordable: cheap enough that people can afford to pay it or buy it\nB. permitted = allowed\nC. cutting\nD. necessary: essential, vital",
+                "explain": "Hiệp hội Vật lý trị liệu cam kết giữ chi phí hợp lý cho các chương trình chứng nhận của mình\nA. hợp lý: đủ rẻ để mọi người có thể chi trả hoặc mua\nB. được phép = cho phép\nC. cắt giảm\nD. cần thiết: thiết yếu, quan trọng",
                 "key": ""
               },
               {
@@ -1522,7 +1522,7 @@
                   "occupied"
                 ],
                 "trueAnswer": "occupied",
-                "explain": "Mr. Brennel occupied positions in various areas of the company before he became president\nA. Occupation: Noun\nB. Occupational: Adj\nC. Occupying: Ving\nD. Occupied: V (simple past)\nExplanation:\nMr. Brennel (S) + occupied (V) + positions in various areas (O)",
+                "explain": "Ông Brennel đã đảm nhiệm các vị trí trong nhiều lĩnh vực khác nhau của công ty trước khi trở thành chủ tịch\nA. Nghề nghiệp: Danh từ\nB. Thuộc về nghề nghiệp: Tính từ\nC. Đảm nhiệm: Ving\nD. Đảm nhiệm: Động từ (quá khứ đơn)\n\nGiải thích:\nÔng Brennel (S) + đảm nhiệm (V) + các vị trí trong nhiều lĩnh vực khác nhau (O)",
                 "key": ""
               },
               {
@@ -1536,7 +1536,7 @@
                   "suggestions"
                 ],
                 "trueAnswer": "revisions",
-                "explain": "To remain on schedule, editors must submit all revisions to the book to the authors by Friday\nA. Ideas (of/about/for sth): a plan or thought, especially about what to do in a particular situation\nB. Essays (on/about sth): a short piece of writing by a student as part of a course of study\nC. Revisions (to sth): a change or set of changes to something\nD. Suggestions (on/about sth):an idea or a plan that you mention for somebody else to think about",
+                "explain": "Để giữ đúng tiến độ, các biên tập viên phải nộp tất cả các bản chỉnh sửa của cuốn sách cho các tác giả trước thứ Sáu\nA. Ý tưởng (về cái gì): một kế hoạch hoặc suy nghĩ, đặc biệt là về những gì cần làm trong một tình huống cụ thể\nB. Bài luận (về cái gì): một đoạn văn ngắn của học sinh như một phần của khóa học\nC. Chỉnh sửa (của cái gì): một thay đổi hoặc một loạt các thay đổi đối với một cái gì đó\nD. Gợi ý (về cái gì): một ý tưởng hoặc một kế hoạch mà bạn đề cập để người khác suy nghĩ",
                 "key": ""
               },
               {
@@ -1550,7 +1550,7 @@
                   "Quite"
                 ],
                 "trueAnswer": "Only",
-                "explain": "Only industry professionals are allowed to purchase tickets to the Kuo Photography Fair\nA. only\nB. until\nC. unless\nD. quite",
+                "explain": "Chỉ những chuyên gia trong ngành mới được phép mua vé tham dự Hội chợ Nhiếp ảnh Kuo\nA. chỉ\nB. cho đến khi\nC. trừ khi\nD. khá",
                 "key": ""
               },
               {
@@ -1564,7 +1564,7 @@
                   "hoped"
                 ],
                 "trueAnswer": "accepted",
-                "explain": "At Pharmbeck's banquet, Mr. Jones accepted a trophy for his performance in this year's quality-improvement initiative\nA. accepted: to take willingly something that is offered\nB. congratulated: to tell somebody that you are pleased about their success or achievements\nC. nominated: to formally suggest that somebody/something should be chosen for an important role, prize, position\nD. hoped: to want something to happen and think that it is possible",
+                "explain": "Tại buổi tiệc của Pharmbeck, ông Jones đã nhận một chiếc cúp cho thành tích của mình trong sáng kiến cải thiện chất lượng năm nay\nA. nhận: chấp nhận một cách sẵn lòng điều gì đó được đề nghị\nB. chúc mừng: nói với ai đó rằng bạn hài lòng về thành công hoặc thành tựu của họ\nC. đề cử: chính thức đề nghị rằng ai đó/cái gì đó nên được chọn cho một vai trò, giải thưởng, vị trí quan trọng\nD. hy vọng: muốn điều gì đó xảy ra và nghĩ rằng điều đó có thể",
                 "key": ""
               },
               {
@@ -1578,7 +1578,7 @@
                   "predictably"
                 ],
                 "trueAnswer": "predictable",
-                "explain": "Ms. Suto claims that important market trends become predictable with the use of data analysis\nA. predict: Verb\nB. prediction: Noun\nC. predictable: Adj\nD. predictably: Adv\nExplanation:\nbecome + Adj\n",
+                "explain": "Cô Suto tuyên bố rằng các xu hướng thị trường quan trọng trở nên có thể dự đoán được với việc sử dụng phân tích dữ liệu\nA. dự đoán: Động từ\nB. sự dự đoán: Danh từ\nC. có thể dự đoán: Tính từ\nD. có thể dự đoán được: Trạng từ\n\nGiải thích:\ntrở nên + Tính từ",
                 "key": ""
               },
               {
@@ -1592,7 +1592,7 @@
                   "between"
                 ],
                 "trueAnswer": "between",
-                "explain": "One of Groomer Consulting's goals is to enhance the relationship between salespeople and their customers\nA. inside\nB. within\nC. around\nD. between\nExplanation:\nrelationship between A and B",
+                "explain": "Một trong những mục tiêu của Groomer Consulting là nâng cao mối quan hệ giữa nhân viên bán hàng và khách hàng của họ\nA. bên trong\nB. trong vòng\nC. xung quanh\nD. giữa\n\nGiải thích:\nmối quan hệ giữa A và B",
                 "key": ""
               },
               {
@@ -1606,7 +1606,7 @@
                   "must be calling"
                 ],
                 "trueAnswer": "may call",
-                "explain": "Depending on your answers to the survey, we may call you to collect additional information\nA. may call\nB. are calling\nC. have been called\nD. must be calling\nExplanation:\n\"may\" describes sth likely to happen",
+                "explain": "Tùy thuộc vào câu trả lời của bạn trong khảo sát, chúng tôi có thể gọi cho bạn để thu thập thêm thông tin\nA. có thể gọi\nB. đang gọi\nC. đã được gọi\nD. phải đang gọi\n\nGiải thích:\n\"có thể\" mô tả điều gì đó có khả năng xảy ra",
                 "key": ""
               },
               {
@@ -1620,7 +1620,7 @@
                   "After all"
                 ],
                 "trueAnswer": "When",
-                "explain": "When Jemburger opened its newest franchise, the first 100 customers were given free hamburgers\nA. Now\nB. When\nC. As if\nD. After all",
+                "explain": "Khi Jemburger mở cửa hàng nhượng quyền mới nhất của mình, 100 khách hàng đầu tiên đã được tặng bánh hamburger miễn phí\nA. Bây giờ\nB. Khi\nC. Như thể\nD. Sau tất cả",
                 "key": ""
               },
               {
@@ -1634,7 +1634,7 @@
                   "correspondent"
                 ],
                 "trueAnswer": "correspondence",
-                "explain": "Please include the serial number of your product in any correspondence with the customer service department\nA. corresponds: Verb\nB. correspondence: Noun\nC. correspondingly: Adv\nD. correspondent: Adj\nExplanation:\nAny + N (correspondence)",
+                "explain": "Vui lòng bao gồm số sê-ri của sản phẩm của bạn trong bất kỳ thư từ nào với bộ phận dịch vụ khách hàng\nA. tương ứng: Động từ\nB. thư từ: Danh từ\nC. tương ứng: Trạng từ\nD. phóng viên: Tính từ\nGiải thích:\nBất kỳ + Danh từ (thư từ)",
                 "key": ""
               },
               {
@@ -1648,7 +1648,7 @@
                   "with"
                 ],
                 "trueAnswer": "of",
-                "explain": "The award-winning film UnderWater Secrets promotes awareness of ocean pollution and its effects on our planet\nA. of\nB. to\nC. from\nD. with\nExplanation:\nCollocation: awareness of sth",
+                "explain": "Bộ phim đoạt giải UnderWater Secrets nâng cao nhận thức về ô nhiễm đại dương và tác động của nó đối với hành tinh của chúng ta\nA. về\nB. đến\nC. từ\nD. với\n\nGiải thích:\nCụm từ cố định: nhận thức về cái gì",
                 "key": ""
               },
               {
@@ -1662,7 +1662,7 @@
                   "personalizes"
                 ],
                 "trueAnswer": "personalized",
-                "explain": "BYF Company specializes in personalized promotional items to help companies advertise their brand\nA. personally: Adv\nB. personalized: Adj\nC. personality: Noun\nD. personalizes: Verb\nExplanation:\nThe blank can be filled with an adj or an adv, but the adv \"personally\" is not suitable in this context",
+                "explain": "Công ty BYF chuyên về các mặt hàng quảng cáo cá nhân hóa để giúp các công ty quảng bá thương hiệu của họ\nA. cá nhân: Trạng từ\nB. cá nhân hóa: Tính từ\nC. tính cách: Danh từ\nD. cá nhân hóa: Động từ\n\nGiải thích:\nChỗ trống có thể được điền bằng một tính từ hoặc trạng từ, nhưng trạng từ “cá nhân” không phù hợp trong ngữ cảnh này",
                 "key": ""
               },
               {
@@ -1676,7 +1676,7 @@
                   "Otherwise"
                 ],
                 "trueAnswer": "As long as",
-                "explain": "As long as the rent increase is less than 2 percent, Selwin Electrical Supply will continue to lease the space\nA. As long as + clause\nB. Along with +N\nC. Not only (... but also)\nD. Otherwise + clause",
+                "explain": "Miễn là mức tăng tiền thuê ít hơn 2 phần trăm, Selwin Electrical Supply sẽ tiếp tục thuê không gian này\nA. Miễn là + mệnh đề\nB. Cùng với +N\nC. Không chỉ (… mà còn)\nD. Nếu không thì + mệnh đề",
                 "key": ""
               },
               {
@@ -1690,7 +1690,7 @@
                   "are being performed"
                 ],
                 "trueAnswer": "are being performed",
-                "explain": "Belden Hospital's chief of staff meets regularly with the staff to ensure that procedures are being performed correctly\nA. To be performed\nB. would have performed: want to do but did not do\nC. had been performed: done\nD. are being performed: still going on\nExplanation:\nThe action of performing the procedures are happening in the present",
+                "explain": "Miễn là mức tăng tiền thuê ít hơn 2 phần trăm, Selwin Electrical Supply sẽ tiếp tục thuê không gian này\nA. Miễn là + mệnh đề\nB. Cùng với +N\nC. Không chỉ (… mà còn)\nD. Nếu không thì + mệnh đề",
                 "key": ""
               },
               {
@@ -1704,7 +1704,7 @@
                   "deliverable"
                 ],
                 "trueAnswer": "appropriate",
-                "explain": "Any requests for time off should be addressed to the appropriate department supervisor\nA. urgent: that needs to be dealt with or happen immediately\nB. appropriate: suitable\nC. subsequent: happening or coming after something else\nD. deliverable",
+                "explain": "Bất kỳ yêu cầu nghỉ phép nào nên được gửi đến giám sát viên của bộ phận thích hợp\nA. khẩn cấp: cần được xử lý hoặc xảy ra ngay lập tức\nB. thích hợp: phù hợp\nC. tiếp theo: xảy ra hoặc đến sau một cái gì đó khác\nD. có thể giao được",
                 "key": ""
               },
               {
@@ -1718,7 +1718,7 @@
                   "preservation"
                 ],
                 "trueAnswer": "preservation",
-                "explain": "World Fish Supply delivers the freshest fish possible thanks to innovative preservation and shipping methods\nA. preserves: V (present simple)\nB. preserved: V (past simple)\nC. preserve: V-infinitive\nD. preservation: Noun\nExplanation:\nThanks to + Noun",
+                "explain": "World Fish Supply cung cấp cá tươi nhất có thể nhờ vào các phương pháp bảo quản và vận chuyển sáng tạo\nA. bảo quản: Động từ (hiện tại đơn)\nB. đã bảo quản: Động từ (quá khứ đơn)\nC. bảo quản: Động từ nguyên mẫu\nD. sự bảo quản: Danh từ\n\nGiải thích:\nNhờ vào + Danh từ",
                 "key": ""
               },
               {
@@ -1732,7 +1732,7 @@
                   "qualities"
                 ],
                 "trueAnswer": "requirements",
-                "explain": "Company executives are currently reviewing the annual budget requirements submitted to them by the Financial Planning department\nA. requirements\nB. deliveries\nC. developers\nD. qualities",
+                "explain": "Các giám đốc điều hành của công ty hiện đang xem xét các yêu cầu ngân sách hàng năm do bộ phận Kế hoạch Tài chính gửi đến họ\nA. yêu cầu\nB. giao hàng\nC. nhà phát triển\nD. phẩm chất",
                 "key": ""
               },
               {
@@ -1746,7 +1746,7 @@
                   "parting"
                 ],
                 "trueAnswer": "partly",
-                "explain": "Even the CEO had to admit that Prasma Designs' win was partly the result of fortunate timing\nA. part: Noun\nB. parted: Adj\nC. partly: Adv\nD. parting: Noun (the act or occasion of leaving a person or place)",
+                "explain": "Ngay cả CEO cũng phải thừa nhận rằng chiến thắng của Prasma Designs một phần là do thời điểm may mắn\nA. phần: Danh từ\nB. chia tay: Tính từ\nC. một phần: Trạng từ\nD. chia tay: Danh từ (hành động hoặc dịp rời khỏi một người hoặc nơi)",
                 "key": ""
               },
               {
@@ -1760,7 +1760,7 @@
                   "everything"
                 ],
                 "trueAnswer": "everything",
-                "explain": "Mr. Singh took notes on everything the focus group discussed during the morning session\nA. each + singular N\nB. several + plural N\nC. another + singular N\nD. everything",
+                "explain": "Ông Singh đã ghi chú về mọi thứ mà nhóm tập trung đã thảo luận trong phiên họp buổi sáng\nA. mỗi + Danh từ số ít\nB. một vài + Danh từ số nhiều\nC. một cái khác + Danh từ số ít\nD. mọi thứ",
                 "key": ""
               },
               {
@@ -1774,7 +1774,7 @@
                   "generally"
                 ],
                 "trueAnswer": "overall",
-                "explain": "Last year, Tadaka Computer Solutions ranked third overall in regional earnings\nNăm ngoái, Giải pháp máy tính Tadaka xếp thứ ba về tổng thu nhập trong khu vực\nA. together: cùng nhau \nB. overall: tổng\nC. consecutively: liên tiếp\nD. generally: nhìn chung",
+                "explain": "Năm ngoái, Giải pháp máy tính Tadaka xếp thứ ba về tổng thu nhập trong khu vực\nA. cùng nhau\nB. tổng\nC. liên tiếp\nD. nhìn chung",
                 "key": ""
               },
               {
@@ -1788,7 +1788,7 @@
                   "As a result of"
                 ],
                 "trueAnswer": "As a result of",
-                "explain": "As a result of the popularity of the BPT39 wireless speaker, production will be increased fivefold starting next month. (Do sự phổ biến của loa không dây BPT39, sản lượng sẽ tăng gấp 5 lần bắt đầu từ tháng tới.)\nA. On behalf of + danh từ: đại diện cho\nB. Whether: liệu rằng\nC. Moreover: hơn nữa (trạng từ liên kết 2 câu)\nD. As a result of + danh từ: là kết quả của, vì\nGiải thích: As a result of + the popularity (danh từ)",
+                "explain": "Do sự phổ biến của loa không dây BPT39, sản lượng sẽ tăng gấp 5 lần bắt đầu từ tháng tới.\nA. On behalf of + danh từ: đại diện cho\nB. Whether: liệu rằng\nC. Moreover: hơn nữa (trạng từ liên kết 2 câu)\nD. As a result of + danh từ: là kết quả của, vì\n\nGiải thích:\nAs a result of + the popularity (danh từ)",
                 "key": ""
               },
               {
@@ -1802,7 +1802,7 @@
                   "wherever"
                 ],
                 "trueAnswer": "whose",
-                "explain": "Zypo Properties has just signed a lease agreement with the law firm whose offices are on the third floor\nZypo Properties vừa ký hợp đồng thuê với công ty luật có văn phòng trên tầng 3\nA. how: như thế nào (từ để hỏi)\nB. what: cái gì (từ để hỏi)\nC. whose + danh từ: của ai\nD. wherever: bất cứ nơi đâu\nGiải thích: The law firm (danh từ 1) + whose + offices (danh từ 2) + are (động từ)",
+                "explain": "Zypo Properties vừa ký hợp đồng thuê với công ty luật có văn phòng trên tầng 3\nA. how: như thế nào (từ để hỏi)\nB. what: cái gì (từ để hỏi)\nC. whose + danh từ: của ai\nD. wherever: bất cứ nơi đâu\n\nGiải thích: The law firm (danh từ 1) + whose + offices (danh từ 2) + are (động từ)",
                 "key": ""
               },
               {
@@ -1816,7 +1816,7 @@
                   "Unforeseen"
                 ],
                 "trueAnswer": "Unforeseen",
-                "explain": "Unforeseen events this year caused profits in the second and third quarters to differ significantly from original projections\nNhững sự kiện không lường trước được trong năm nay khiến lợi nhuận trong quý 2 và quý 3 chênh lệch đáng kể so với dự báo ban đầu\nA. Total: tổng\nB. Marginal: Bên lề\nC. Representative: đại diện\nD. Unforeseen: không đoán trước được",
+                "explain": "Những sự kiện không lường trước được trong năm nay khiến lợi nhuận trong quý 2 và quý 3 chênh lệch đáng kể so với dự báo ban đầu\nA. Total: tổng\nB. Marginal: Bên lề\nC. Representative: đại diện\nD. Unforeseen: không đoán trước được",
                 "key": ""
               },
               {
@@ -1830,7 +1830,7 @@
                   "allow for"
                 ],
                 "trueAnswer": "allow for",
-                "explain": "The timeline for the pathway lighting project was extended to allow for input from the environmental commission\nLịch trình của dự án chiếu sáng lối đi được kéo dài để cân nhắc các thông tin từ ủy ban môi trường\nA. use up: sử dụng hết\nB. believe in: tin tưởng vào\nC. make into: tạo thành\nD. allow for: cân nhắc",
+                "explain": "Lịch trình của dự án chiếu sáng lối đi được kéo dài để cân nhắc các thông tin từ ủy ban môi trường\nA. use up: sử dụng hết\nB. believe in: tin tưởng vào\nC. make into: tạo thành\nD. allow for: cân nhắc",
                 "key": ""
               }
             ]
