@@ -19,8 +19,6 @@ class AdsInterval(private val context: Context): AdListener() {
     private var dataBundle: Bundle? = null
     private var idAds: String? = null
 
-
-
     init{
         initDataInterval()
         createFullAds()

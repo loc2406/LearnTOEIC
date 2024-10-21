@@ -4,6 +4,7 @@ plugins {
     alias(libs.plugins.compose.compiler)
     id("kotlin-kapt")
     id("androidx.navigation.safeargs.kotlin")
+    alias(libs.plugins.google.gms.google.services)
 }
 
 android {
@@ -65,6 +66,7 @@ dependencies {
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
     implementation(libs.androidx.appcompat)
+    implementation(libs.firebase.database)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -123,6 +125,14 @@ dependencies {
 
     // circle indicator
     implementation(libs.circleindicator)
+
+    // kotlin coroutine
+    implementation(libs.kotlinx.coroutines.core)
+    implementation(libs.kotlinx.coroutines.android)
+
+    //lifecycle
+    implementation(libs.androidx.lifecycle.runtime.ktx.v286)
+    implementation(libs.androidx.lifecycle.viewmodel.ktx.v286)
 
     //các thư viện không được chuyển sang kiểu khai báo mới vì sẽ không nhận
     implementation("com.github.yarolegovich:DiscreteScrollView:1.5.1")

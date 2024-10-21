@@ -7,20 +7,19 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.locnguyen.toeicexercises.R
+import com.google.android.gms.ads.AdRequest
+import com.locnguyen.toeicexercises.Api
 import com.locnguyen.toeicexercises.adapter.ExerciseAdapter
 import com.locnguyen.toeicexercises.adapter.TheoryAdapter
 import com.locnguyen.toeicexercises.databinding.PracticeFragmentBinding
-import com.locnguyen.toeicexercises.model.Exam
-import com.locnguyen.toeicexercises.sharedpreference.MySharedPreference
 import com.locnguyen.toeicexercises.utils.DialogHelper
 import com.locnguyen.toeicexercises.viewmodel.GrammarVM
 import com.locnguyen.toeicexercises.viewmodel.MainVM
 import com.locnguyen.toeicexercises.viewmodel.WordVM
+import kotlinx.coroutines.DelicateCoroutinesApi
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 
 class PracticeFragment: Fragment() {
 
@@ -41,6 +40,7 @@ class PracticeFragment: Fragment() {
         return binding.root
     }
 
+    @OptIn(DelicateCoroutinesApi::class)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -50,9 +50,16 @@ class PracticeFragment: Fragment() {
         initViews()
         initListeners()
         initObserves()
+
+//        GlobalScope.launch {
+//            val users = Api().allUsers()
+//            Log.d("CALLAPI", users.toString())
+//        }
     }
 
     private fun initViews() {
+        binding.ads.loadAd(AdRequest.Builder().build())
+
         binding.theoryContent.apply {
             adapter = theoryAdapter
             layoutManager = GridLayoutManager(requireContext(), 2)

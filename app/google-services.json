@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "832634299837",
+    "firebase_url": "https://toeic-b3b7e-default-rtdb.firebaseio.com",
+    "project_id": "toeic-b3b7e",
+    "storage_bucket": "toeic-b3b7e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:832634299837:android:8a5c1ca7cf6c9e8d369ed4",
+        "android_client_info": {
+          "package_name": "com.locnguyen.toeicexercises"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCBh5w-mNO8-2gXgXn6YcIise66cohWDmU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

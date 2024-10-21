@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tool="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="registerVM"
+            type="com.locnguyen.toeicexercises.viewmodel.RegisterVM" />
+
+        <import type="android.view.View" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/primary">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:background="@drawable/bg_white_rectangle_no_stroke_20dp_corners"
+            android:padding="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:fontFamily="@font/tinos_bold"
+                android:gravity="center"
+                android:text="@string/Create_new_account"
+                android:textColor="@color/primary"
+                android:textSize="@dimen/medium_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/email_space"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/bg_white_rectangle_primary_stroke_10dp_corners"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/title">
+
+                <ImageView
+                    android:id="@+id/ic_user"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginVertical="10dp"
+                    android:layout_marginStart="10dp"
+                    android:contentDescription="@string/Email"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_email"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/input_email"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginVertical="5dp"
+                    android:autofillHints="emailAddress"
+                    android:background="@null"
+                    android:hint="@string/Email"
+                    android:inputType="textEmailAddress"
+                    android:text="@={registerVM.email}"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/small_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/ic_user"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/name_space"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_white_rectangle_primary_stroke_10dp_corners"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/email_space">
+
+                <ImageView
+                    android:id="@+id/ic_name"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginVertical="10dp"
+                    android:layout_marginStart="10dp"
+                    android:contentDescription="@string/Password"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_user"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/input_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginVertical="5dp"
+                    android:autofillHints="name"
+                    android:background="@null"
+                    android:hint="@string/Username"
+                    android:inputType="textPersonName"
+                    android:text="@={registerVM.name}"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/small_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/ic_name"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/password_space"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_white_rectangle_primary_stroke_10dp_corners"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/name_space">
+
+                <ImageView
+                    android:id="@+id/ic_password"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginVertical="10dp"
+                    android:layout_marginStart="10dp"
+                    android:contentDescription="@string/Password"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_password"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/input_password"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginVertical="5dp"
+                    android:autofillHints="password"
+                    android:background="@null"
+                    android:hint="@string/Password"
+                    android:inputType="textPassword"
+                    android:text="@={registerVM.password}"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/small_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/ic_password"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/confirm_password_space"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_white_rectangle_primary_stroke_10dp_corners"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/password_space">
+
+                <ImageView
+                    android:id="@+id/ic_confirm_password"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginVertical="10dp"
+                    android:layout_marginStart="10dp"
+                    android:contentDescription="@string/Confirm_password"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_password"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/input_confirm_password"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginVertical="5dp"
+                    android:autofillHints="password"
+                    android:background="@null"
+                    android:hint="@string/Confirm_password"
+                    android:inputType="textPassword"
+                    android:text="@={registerVM.confirmPassword}"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/small_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/ic_confirm_password"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/err_message"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tinos_bold"
+                android:gravity="center"
+                android:textColor="@color/secondPrimary"
+                android:textSize="@dimen/small_content"
+                android:visibility="@{registerVM.errMessage != null ? View.VISIBLE : View.GONE}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/confirm_password_space"
+                tool:text="Lỗi đăng kí" />
+
+            <TextView
+                android:id="@+id/btn_register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_primary_rectangle_no_stroke_10dp_corners"
+                android:fontFamily="@font/tinos_bold"
+                android:onClick="@{() -> registerVM.handleBtnRegisterClicked()}"
+                android:padding="15dp"
+                android:text="@string/Register"
+                android:textColor="@color/white"
+                android:textSize="@dimen/small_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/err_message" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

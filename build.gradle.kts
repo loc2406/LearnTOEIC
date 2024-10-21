@@ -4,6 +4,7 @@ plugins {
     alias(libs.plugins.jetbrains.kotlin.android) apply false
     alias(libs.plugins.compose.compiler) apply false
     kotlin("kapt") version "2.0.0"
+    alias(libs.plugins.google.gms.google.services) apply false
 }
 buildscript{
     dependencies {

@@ -25,6 +25,11 @@
         <action
             android:id="@+id/action_mainFragment_to_favoriteGrammarsFragment"
             app:destination="@id/favoriteGrammarsFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/mainFragment"
+            app:popUpToInclusive="true"/>
     </fragment>
 
     <fragment
@@ -37,6 +42,9 @@
             app:destination="@id/mainFragment"
             app:popUpTo="@id/introFragment"
             app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_introFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
     </fragment>
     <fragment
         android:id="@+id/listWordFragment"
@@ -149,6 +157,31 @@
         <action
             android:id="@+id/action_favoriteGrammarsFragment_to_grammarFragment"
             app:destination="@id/grammarFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.locnguyen.toeicexercises.fragment.login.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/login_fragment">
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:popUpTo="@id/introFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.locnguyen.toeicexercises.fragment.login.RegisterFragment"
+        android:label="RegisterFragment"
+        tools:layout="@layout/register_fragment">
+        <action
+            android:id="@+id/action_registerFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:popUpTo="@id/registerFragment"
+            app:popUpToInclusive="true"/>
     </fragment>
 
 

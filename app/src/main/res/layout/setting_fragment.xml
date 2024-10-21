@@ -1,275 +1,281 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tool="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/primary">
+<layout>
+    <data>
+        <variable name="mainVM"
+            type="com.locnguyen.toeicexercises.viewmodel.MainVM"/>
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tool="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/primary">
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/img_space"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="100dp"
-        app:cardCornerRadius="70dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        <androidx.cardview.widget.CardView
+            android:id="@+id/img_space"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="70dp"
+            app:cardCornerRadius="100dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
-            android:id="@+id/img"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:importantForAccessibility="no"
-            android:scaleType="centerInside"
-            android:src="@drawable/ic_user" />
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:importantForAccessibility="no"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_user" />
 
-    </androidx.cardview.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
-    <TextView
-        android:id="@+id/user_name"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="20dp"
-        android:fontFamily="@font/tinos_bold"
-        android:gravity="center"
-        android:lineSpacingExtra="5dp"
-        android:maxLines="2"
-        android:textColor="@color/white"
-        android:textSize="@dimen/medium_title"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/img_space"
-        tool:text="Tên người dùng" />
-
-    <ScrollView
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="100dp"
-        android:background="@drawable/bg_white_rectangle_no_stroke_20dp_topstart_topend_corners"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/img_space">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:padding="20dp">
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/tinos_bold"
+            android:gravity="center"
+            android:lineSpacingExtra="5dp"
+            android:maxLines="2"
+            android:textColor="@color/white"
+            android:textSize="@dimen/medium_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/img_space"
+            android:text="@{mainVM.user.name ?? `Tên người dùng`}" />
+
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="70dp"
+            android:background="@drawable/bg_white_rectangle_no_stroke_20dp_topstart_topend_corners"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/img_space">
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/email_space"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/bg_white_rectangle_primary_stroke_10dp_corners"
-                android:padding="15dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                android:padding="20dp">
 
-                <TextView
-                    android:id="@+id/email_title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/tinos_bold"
-                    android:text="@string/email_title"
-                    android:textColor="@color/black"
-                    android:textSize="@dimen/small_content"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/email_value"
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/email_space"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="5dp"
-                    android:ellipsize="end"
-                    android:maxLines="1"
-                    android:textColor="@color/black"
-                    android:textSize="@dimen/smaller_content"
-                    app:layout_constraintBottom_toBottomOf="@id/email_title"
+                    android:background="@drawable/bg_white_rectangle_primary_stroke_10dp_corners"
+                    android:padding="15dp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/email_title"
-                    app:layout_constraintTop_toTopOf="@id/email_title"
-                    tool:text="abc@gmail.com" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
 
+                    <TextView
+                        android:id="@+id/email_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/tinos_bold"
+                        android:text="@string/email_title"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/small_content"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/email_value"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/smaller_content"
+                        app:layout_constraintBottom_toBottomOf="@id/email_title"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/email_title"
+                        app:layout_constraintTop_toTopOf="@id/email_title"
+                        android:text="@{mainVM.user.email ?? ``}" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/password_space"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/bg_white_rectangle_primary_stroke_10dp_corners"
+                    android:padding="15dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/email_space">
+
+                    <TextView
+                        android:id="@+id/password_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/tinos_bold"
+                        android:text="@string/password_title"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/small_content"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/ic_hide_password"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_invisible"
+                        android:scaleType="centerInside"
+                        android:importantForAccessibility="no"
+                        app:layout_constraintTop_toTopOf="@id/password_title"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="@id/password_title"/>
+
+                    <TextView
+                        android:id="@+id/password_value"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:autofillHints=""
+                        android:background="@android:color/transparent"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/smaller_content"
+                        app:layout_constraintBottom_toBottomOf="@id/password_title"
+                        app:layout_constraintEnd_toStartOf="@id/ic_hide_password"
+                        app:layout_constraintStart_toEndOf="@id/password_title"
+                        app:layout_constraintTop_toTopOf="@id/password_title"
+                        android:text="@{mainVM.user.password ?? ``}"  />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/edit_info_space"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_white_rectangle_primary_stroke_10dp_corners"
+                    android:padding="15dp"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/password_space">
+
+                    <ImageView
+                        android:id="@+id/ic_edit_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/Edit_info"
+                        android:src="@drawable/ic_edit"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/edit_info"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/small_content"
+                        android:fontFamily="@font/tinos_bold"
+                        app:layout_constraintBottom_toBottomOf="@id/ic_edit_info"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/ic_edit_info"
+                        app:layout_constraintTop_toTopOf="@id/ic_edit_info"
+                        android:text="@string/Edit_info" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/evaluate_space"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_white_rectangle_primary_stroke_10dp_corners"
+                    android:padding="15dp"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/edit_info_space">
+
+                    <ImageView
+                        android:id="@+id/ic_evaluate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/Evaluate_app"
+                        android:src="@drawable/ic_evaluate"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/evaluate_app"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/small_content"
+                        android:fontFamily="@font/tinos_bold"
+                        app:layout_constraintBottom_toBottomOf="@id/ic_evaluate"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/ic_evaluate"
+                        app:layout_constraintTop_toTopOf="@id/ic_evaluate"
+                        android:text="@string/Evaluate_app" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/logout_space"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_white_rectangle_primary_stroke_10dp_corners"
+                    android:padding="15dp"
+                    android:onClick="@{() -> mainVM.logoutClicked()}"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/evaluate_space">
+
+                    <ImageView
+                        android:id="@+id/ic_logout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/Logout"
+                        android:src="@drawable/ic_logout"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/logout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/small_content"
+                        android:fontFamily="@font/tinos_bold"
+                        app:layout_constraintBottom_toBottomOf="@id/ic_logout"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/ic_logout"
+                        app:layout_constraintTop_toTopOf="@id/ic_logout"
+                        android:text="@string/Log_out" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/password_space"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/bg_white_rectangle_primary_stroke_10dp_corners"
-                android:padding="15dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/email_space">
+        </ScrollView>
 
-                <TextView
-                    android:id="@+id/password_title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/tinos_bold"
-                    android:text="@string/password_title"
-                    android:textColor="@color/black"
-                    android:textSize="@dimen/small_content"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <ImageView
-                    android:id="@+id/ic_hide_password"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:src="@drawable/ic_invisible"
-                    android:scaleType="centerInside"
-                    android:importantForAccessibility="no"
-                    app:layout_constraintTop_toTopOf="@id/password_title"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintBottom_toBottomOf="@id/password_title"/>
-
-                <EditText
-                    android:id="@+id/password_value"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="5dp"
-                    android:autofillHints=""
-                    android:background="@android:color/transparent"
-                    android:ellipsize="end"
-                    android:maxLines="1"
-                    android:textColor="@color/black"
-                    android:textSize="@dimen/smaller_content"
-                    android:inputType="textPassword"
-                    app:layout_constraintBottom_toBottomOf="@id/password_title"
-                    app:layout_constraintEnd_toStartOf="@id/ic_hide_password"
-                    app:layout_constraintStart_toEndOf="@id/password_title"
-                    app:layout_constraintTop_toTopOf="@id/password_title"
-                    tool:text="abc@gmail.com" />
-
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/edit_info_space"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:background="@drawable/bg_white_rectangle_primary_stroke_10dp_corners"
-                android:padding="15dp"
-                android:layout_marginTop="20dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/password_space">
-
-                <ImageView
-                    android:id="@+id/ic_edit_info"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:contentDescription="@string/Edit_info"
-                    android:src="@drawable/ic_edit"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/edit_info"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:ellipsize="end"
-                    android:maxLines="1"
-                    android:textColor="@color/black"
-                    android:textSize="@dimen/small_content"
-                    android:fontFamily="@font/tinos_bold"
-                    app:layout_constraintBottom_toBottomOf="@id/ic_edit_info"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/ic_edit_info"
-                    app:layout_constraintTop_toTopOf="@id/ic_edit_info"
-                    android:text="@string/Edit_info" />
-
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/evaluate_space"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:background="@drawable/bg_white_rectangle_primary_stroke_10dp_corners"
-                android:padding="15dp"
-                android:layout_marginTop="20dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/edit_info_space">
-
-                <ImageView
-                    android:id="@+id/ic_evaluate"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:contentDescription="@string/Evaluate_app"
-                    android:src="@drawable/ic_evaluate"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/evaluate_app"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:ellipsize="end"
-                    android:maxLines="1"
-                    android:textColor="@color/black"
-                    android:textSize="@dimen/small_content"
-                    android:fontFamily="@font/tinos_bold"
-                    app:layout_constraintBottom_toBottomOf="@id/ic_evaluate"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/ic_evaluate"
-                    app:layout_constraintTop_toTopOf="@id/ic_evaluate"
-                    android:text="@string/Evaluate_app" />
-
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/logout_space"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:background="@drawable/bg_white_rectangle_primary_stroke_10dp_corners"
-                android:padding="15dp"
-                android:layout_marginTop="20dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/evaluate_space">
-
-                <ImageView
-                    android:id="@+id/ic_logout"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:contentDescription="@string/Logout"
-                    android:src="@drawable/ic_logout"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/logout"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:ellipsize="end"
-                    android:maxLines="1"
-                    android:textColor="@color/black"
-                    android:textSize="@dimen/small_content"
-                    android:fontFamily="@font/tinos_bold"
-                    app:layout_constraintBottom_toBottomOf="@id/ic_logout"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/ic_logout"
-                    app:layout_constraintTop_toTopOf="@id/ic_logout"
-                    android:text="@string/Log_out" />
-
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-    </ScrollView>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

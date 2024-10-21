@@ -13,6 +13,7 @@ import com.google.android.gms.ads.AdRequest
 import com.locnguyen.toeicexercises.viewmodel.MainVM
 import com.locnguyen.toeicexercises.R
 import com.locnguyen.toeicexercises.databinding.IntroFragmentBinding
+import com.locnguyen.toeicexercises.sharedpreference.MySharedPreference
 
 class IntroFragment: Fragment() {
 
@@ -38,7 +39,11 @@ class IntroFragment: Fragment() {
 
     private fun initListeners(){
         binding.btnStartLearn.setOnClickListener{
-            navController.navigate(R.id.action_introFragment_to_mainFragment)
+            if (MySharedPreference.getInstance(requireActivity().application).getIsLoggedIn()){
+                navController.navigate(R.id.action_introFragment_to_mainFragment)
+            }else{
+                navController.navigate(R.id.action_introFragment_to_loginFragment)
+            }
         }
     }
 }
