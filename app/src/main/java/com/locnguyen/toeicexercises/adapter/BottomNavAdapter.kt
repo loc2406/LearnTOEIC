@@ -3,7 +3,7 @@ package com.locnguyen.toeicexercises.adapter
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.locnguyen.toeicexercises.fragment.exam.ExamFragment
+import com.locnguyen.toeicexercises.fragment.exam.ListExamFragment
 import com.locnguyen.toeicexercises.fragment.PracticeFragment
 import com.locnguyen.toeicexercises.fragment.SettingFragment
 import com.locnguyen.toeicexercises.fragment.UpgradeFragment
@@ -11,7 +11,7 @@ import com.locnguyen.toeicexercises.fragment.UpgradeFragment
 class BottomNavAdapter(fm: FragmentActivity): FragmentStateAdapter(fm) {
 
     private val practiceFragment: PracticeFragment by lazy {PracticeFragment()}
-    private val examFragment: ExamFragment by lazy { ExamFragment() }
+    private val examFragment: ListExamFragment by lazy { ListExamFragment() }
     private val upgradeFragment: UpgradeFragment by lazy {UpgradeFragment()}
     private val settingFragment: SettingFragment by lazy {SettingFragment()}
 

@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.locnguyen.toeicexercises.databinding.ItemWordNoteBinding
 import com.locnguyen.toeicexercises.model.Word
 
-class WordNoteAdapter(private val words: List<Word>, var pronounceClicked: (String) -> Unit = {}, var itemClicked: (Word) -> Unit = {}) :
+class WordNoteAdapter(var words: List<Word> = emptyList(), var pronounceClicked: (String) -> Unit = {}, var itemClicked: (Word) -> Unit = {}) :
     RecyclerView.Adapter<WordNoteAdapter.WordNoteVH>() {
     class WordNoteVH(val binding: ItemWordNoteBinding) : RecyclerView.ViewHolder(binding.root)
 

@@ -10,7 +10,7 @@ import com.locnguyen.toeicexercises.R
 import com.locnguyen.toeicexercises.databinding.ItemExamBinding
 import com.locnguyen.toeicexercises.model.Exam
 
-class ExamAdapter(private val listExam: List<Exam>, private val itemClicked: (Exam) -> Unit) : RecyclerView.Adapter<ExamAdapter.ExamVH>(){
+class ExamAdapter(var listExam: List<Exam> = emptyList(), var itemClicked: (Exam) -> Unit = {}) : RecyclerView.Adapter<ExamAdapter.ExamVH>(){
 
     class ExamVH(val binding: ItemExamBinding): RecyclerView.ViewHolder(binding.root){
 

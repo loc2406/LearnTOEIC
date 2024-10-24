@@ -50,12 +50,13 @@ class WordFragment: Fragment() {
 
         initViews()
         initListeners()
+        initObserves()
     }
 
     private fun initViews() {
         binding.title.text = word.title
 
-        wordVM.getFavoriteWords().takeIf { it.contains(word) }?.let{
+        wordVM.favWords.value.takeIf { it?.contains(word) == true }?.let{
             isFavorite = true
             checkFavoriteWord()
         }
@@ -168,14 +169,21 @@ class WordFragment: Fragment() {
             isFavorite = !isFavorite
 
             if (isFavorite){
-                requireContext().toastMessage(R.string.Added_favorite_grammar)
                 wordVM.addFavoriteWord(word)
                 checkFavoriteWord()
             }
             else{
-                requireContext().toastMessage(R.string.Removed_favorite_grammar)
                 wordVM.removeFavoriteWord(word)
                 uncheckFavoriteWord()
+            }
+        }
+    }
+
+    private fun initObserves(){
+        wordVM.message.observe(viewLifecycleOwner){ message ->
+            message?.let {
+                requireContext().toastMessage(it)
+                wordVM.message.value = null
             }
         }
     }

@@ -1,61 +1,60 @@
 package com.locnguyen.toeicexercises.viewmodel
 
+import android.app.Application
 import android.content.Context
+import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import com.locnguyen.toeicexercises.R
 import com.locnguyen.toeicexercises.model.Exam
 import com.locnguyen.toeicexercises.model.Question
-import java.io.BufferedReader
-import java.io.IOException
-import java.io.InputStreamReader
-import java.nio.charset.StandardCharsets
+import com.locnguyen.toeicexercises.repo.DataRepo
+import com.locnguyen.toeicexercises.repo.UserRepo
+import com.locnguyen.toeicexercises.utils.toastMessage
+import kotlinx.coroutines.launch
 
-class ExamVM : ViewModel() {
-    val exam: MutableLiveData<Exam?> by lazy {MutableLiveData()}
-    val currentQuestion: MutableLiveData<Int> by lazy {MutableLiveData(0)}
+class ExamVM(val app: Application) : AndroidViewModel(app) {
+    val dataRepo: DataRepo by lazy { DataRepo(app) }
+    val exams: MutableLiveData<List<Exam>> by lazy { MutableLiveData(emptyList()) }
+    val exam: MutableLiveData<Exam?> by lazy { MutableLiveData() }
+    val currentQuestion: MutableLiveData<Int> by lazy { MutableLiveData(0) }
     var examQuestions: ArrayList<Pair<String, Question>> = ArrayList()
     var userAnswers: HashMap<Int, String> = HashMap()
-    val answerCorrect: ArrayList<Question> by lazy { ArrayList()}
+    val answerCorrect: ArrayList<Question> by lazy { ArrayList() }
     var listenCorrectAnswers: List<Question> = emptyList()
     var readCorrectAnswers: List<Question> = emptyList()
 
-    fun getListExamFromAsset(context: Context, fileName: String): String {
-        try{
-            val builder = StringBuilder()
-            val json = context.assets.open(fileName)
-            val bufferReader = BufferedReader(InputStreamReader(json, StandardCharsets.UTF_8))
-            var result: String
-            while (bufferReader.readLine().also { result = it } != null){
-                builder.append(result)
+    fun getAllExamInFb() {
+        viewModelScope.launch {
+            val result: List<Exam>? = try{
+                dataRepo.allExams()
+            }catch (e: Exception){
+                null
             }
-            bufferReader.close()
-            return builder.toString()
-        }catch(e: IOException){
-            return ""
+            exams.postValue(result)
         }
     }
 
-    fun calculateExamScore(){
-        for (i in examQuestions.indices){
+    fun calculateExamScore() {
+        for (i in examQuestions.indices) {
             val isAnswered = userAnswers[i]
 
-            if (isAnswered != null){
-                if (examQuestions[i].second.trueAnswer == isAnswered){
+            if (isAnswered != null) {
+                if (examQuestions[i].second.trueAnswer == isAnswered) {
                     answerCorrect.add(examQuestions[i].second)
                 }
             }
         }
     }
 
-    fun getExamScore(): Int{
-        listenCorrectAnswers = answerCorrect.filter{question -> question.media.isNotEmpty()}
+    fun getExamScore(): Int {
+        listenCorrectAnswers = answerCorrect.filter { question -> question.media.isNotEmpty() }
         readCorrectAnswers = (answerCorrect - listenCorrectAnswers.toSet())
 
         var score = 0
 
-        when(listenCorrectAnswers.size){
-            in 0.. 6 -> score += 5
+        when (listenCorrectAnswers.size) {
+            in 0..6 -> score += 5
             7 -> score += 10
             8 -> score += 15
             9 -> score += 20
@@ -139,11 +138,11 @@ class ExamVM : ViewModel() {
             87 -> score += 480
             88 -> score += 485
             89 -> score += 490
-            else ->  score += 495 // 90 .. 100
+            else -> score += 495 // 90 .. 100
         }
 
-        when(readCorrectAnswers.size){
-            in 0.. 15 -> score += 5
+        when (readCorrectAnswers.size) {
+            in 0..15 -> score += 5
             16 -> score += 10
             17 -> score += 15
             18 -> score += 20
@@ -225,7 +224,7 @@ class ExamVM : ViewModel() {
             94 -> score += 480
             95 -> score += 485
             96 -> score += 490
-            else ->  score += 495 // 97 .. 100
+            else -> score += 495 // 97 .. 100
         }
 
         return score
@@ -234,10 +233,15 @@ class ExamVM : ViewModel() {
     fun getAllQuestionsFollowEachPart(context: Context): List<Pair<String, Question>> {
         val allQuestions = ArrayList<Pair<String, Question>>()
 
-        exam.value?.let{
+        exam.value?.let {
             it.parts.forEach { part ->
                 part.contents.forEach { content ->
-                    val quesKey = context.getString(R.string.Exam_instruction_content_regex, part.title.uppercase(), content.type.uppercase(), content.description)
+                    val quesKey = context.getString(
+                        R.string.Exam_instruction_content_regex,
+                        part.title.uppercase(),
+                        content.type.uppercase(),
+                        content.description
+                    )
 
                     content.questions.forEach { question ->
                         allQuestions.add(Pair(quesKey, question))

@@ -132,7 +132,7 @@ class MainFragment : Fragment() {
     }
 
     private fun handleItemExamClicked() {
-        navController.navigate(R.id.action_mainFragment_to_detailFragment)
+        navController.navigate(R.id.action_mainFragment_to_examFragment)
     }
 
     private fun handleWordNoteClicked() {

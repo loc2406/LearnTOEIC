@@ -14,8 +14,8 @@
             android:id="@+id/action_mainFragment_to_listWordFragment"
             app:destination="@id/listWordFragment" />
         <action
-            android:id="@+id/action_mainFragment_to_detailFragment"
-            app:destination="@id/detailFragment" />
+            android:id="@+id/action_mainFragment_to_examFragment"
+            app:destination="@id/examFragment" />
         <action
             android:id="@+id/action_mainFragment_to_listGrammarFragment"
             app:destination="@id/listGrammarFragment" />
@@ -56,20 +56,20 @@
             app:destination="@id/wordFragment" />
     </fragment>
     <fragment
-        android:id="@+id/detailFragment"
-        android:name="com.locnguyen.toeicexercises.fragment.exam.DetailFragment"
-        android:label="DetailFragment"
-        tools:layout="@layout/detail_fragment">
+        android:id="@+id/examFragment"
+        android:name="com.locnguyen.toeicexercises.fragment.exam.ExamFragment"
+        android:label="ExamFragment"
+        tools:layout="@layout/exam_fragment">
         <action
-            android:id="@+id/action_detailFragment_to_scoreFragment"
-            app:destination="@id/scoreFragment" />
+            android:id="@+id/action_examFragment_to_scoreFragment"
+            app:destination="@id/examScoreFragment" />
 
     </fragment>
     <fragment
-        android:id="@+id/scoreFragment"
-        android:name="com.locnguyen.toeicexercises.fragment.exam.ScoreFragment"
-        android:label="ScoreFragment"
-        tools:layout="@layout/score_fragment">
+        android:id="@+id/examScoreFragment"
+        android:name="com.locnguyen.toeicexercises.fragment.exam.ExamScoreFragment"
+        android:label="ExamScoreFragment"
+        tools:layout="@layout/exam_score_fragment">
         <action
             android:id="@+id/action_scoreFragment_to_listAnswersFragment"
             app:destination="@id/listAnswersFragment" />

@@ -152,4 +152,54 @@ class DialogHelper(private val context: Context) {
             }
         }.create()
     }
+
+    fun getLogOutDialog(
+        positiveAction: (() -> Unit)?
+    ): AlertDialog{
+        return AlertDialog.Builder(context, R.style.MyAlertDialog).apply {
+            val titleView = TextView(this@DialogHelper.context).apply {
+                text = this@DialogHelper.context.getString(R.string.Ask_for_logout)
+                typeface = tinosBold
+                setTextColor(this@DialogHelper.context.getColor(R.color.secondPrimary))
+                textAlignment = View.TEXT_ALIGNMENT_CENTER
+                layoutParams = ViewGroup.LayoutParams(
+                    ViewGroup.LayoutParams.MATCH_PARENT,
+                    ViewGroup.LayoutParams.WRAP_CONTENT
+                )
+                setPadding(
+                    15.dpToPx(context),
+                    15.dpToPx(context),
+                    15.dpToPx(context),
+                    0
+                )
+                textSize = this@DialogHelper.context.resources.getDimension(R.dimen.big_title).pxToDp(context)
+            }
+
+            val contentView = TextView(this@DialogHelper.context).apply {
+                text = this@DialogHelper.context.getString(R.string.User_finished_exam_content)
+                typeface = tinosRegular
+                setTextColor(this@DialogHelper.context.getColor(R.color.black))
+                layoutParams = ViewGroup.LayoutParams(
+                    ViewGroup.LayoutParams.MATCH_PARENT,
+                    ViewGroup.LayoutParams.WRAP_CONTENT
+                )
+                setPadding(
+                    15.dpToPx(context),
+                    15.dpToPx(context),
+                    15.dpToPx(context),
+                    0
+                )
+            }
+
+            setCustomTitle(titleView)
+            setView(contentView)
+            setNegativeButton("Hủy") { dialog, _ ->
+                dialog.dismiss()
+            }
+            setPositiveButton("Nộp bài") { dialog, _ ->
+                positiveAction?.invoke()
+                dialog.dismiss()
+            }
+        }.create()
+    }
 }

@@ -23,7 +23,7 @@ import com.locnguyen.toeicexercises.utils.toastMessage
 import com.locnguyen.toeicexercises.viewmodel.MainVM
 import com.locnguyen.toeicexercises.viewmodel.WordVM
 
-class FavoriteWordsFragment: Fragment() {
+class FavoriteWordsFragment : Fragment() {
     private lateinit var binding: FavoriteWordsFragmentBinding
     private lateinit var wordNoteAdapter: WordNoteAdapter
     private lateinit var navController: NavController
@@ -44,19 +44,12 @@ class FavoriteWordsFragment: Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         navController = Navigation.findNavController(view)
+        wordNoteAdapter = WordNoteAdapter()
+        wordVM.fetchFavoriteWords()
 
-        val favoriteWords = wordVM.getFavoriteWords()
-
-        if (favoriteWords.isEmpty()){
-            binding.dontHaveDataMessage.visibility = VISIBLE
-            binding.favoriteWords.visibility = INVISIBLE
-        }
-        else{
-            wordNoteAdapter = WordNoteAdapter(favoriteWords.toList())
-            initViews()
-        }
-
+        initViews()
         initListeners()
+        initObserves()
     }
 
     private fun initViews() {
@@ -68,30 +61,44 @@ class FavoriteWordsFragment: Fragment() {
     }
 
     private fun initListeners() {
-        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner, object: OnBackPressedCallback(true){
-            override fun handleOnBackPressed() {
-               handlePressedBack()
-            }
-        })
+        requireActivity().onBackPressedDispatcher.addCallback(
+            viewLifecycleOwner,
+            object : OnBackPressedCallback(true) {
+                override fun handleOnBackPressed() {
+                    handlePressedBack()
+                }
+            })
 
         binding.icBack.setOnClickListener {
             handlePressedBack()
         }
 
-       if (::wordNoteAdapter.isInitialized){
-           wordNoteAdapter.pronounceClicked = { pronounce ->
-               if (requireContext().isHasNetWork()){
-                   SpeakTextHelper(requireContext()).speakText(pronounce, "en")
-               }
-               else{
-                   requireContext().toastMessage(R.string.Check_internet_connection)
-               }
-           }
+        if (::wordNoteAdapter.isInitialized) {
+            wordNoteAdapter.pronounceClicked = { pronounce ->
+                if (requireContext().isHasNetWork()) {
+                    SpeakTextHelper(requireContext()).speakText(pronounce, "en")
+                } else {
+                    requireContext().toastMessage(R.string.Check_internet_connection)
+                }
+            }
 
-           wordNoteAdapter.itemClicked = { word ->
-               handleItemWordClicked(word)
-           }
-       }
+            wordNoteAdapter.itemClicked = { word ->
+                handleItemWordClicked(word)
+            }
+        }
+    }
+
+    private fun initObserves() {
+        wordVM.favWords.observe(viewLifecycleOwner) { favoriteWords ->
+            favoriteWords?.let {
+                if (it.isEmpty()) {
+                    binding.dontHaveDataMessage.visibility = VISIBLE
+                    binding.favoriteWords.visibility = INVISIBLE
+                } else {
+                    wordNoteAdapter.words = favoriteWords
+                }
+            }
+        }
     }
 
     private fun handlePressedBack() {
@@ -101,7 +108,8 @@ class FavoriteWordsFragment: Fragment() {
     }
 
     private fun handleItemWordClicked(word: Word) {
-        val direction = FavoriteWordsFragmentDirections.actionFavoriteWordsFragmentToWordFragment(word)
+        val direction =
+            FavoriteWordsFragmentDirections.actionFavoriteWordsFragmentToWordFragment(word)
         navController.navigate(direction)
     }
 }

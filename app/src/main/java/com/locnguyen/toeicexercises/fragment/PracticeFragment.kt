@@ -72,7 +72,7 @@ class PracticeFragment: Fragment() {
     }
 
     private fun loadFavoriteWords(){
-        binding.wordQuantity.text = wordVM.getFavoriteWords().size.toString()
+        binding.wordQuantity.text = (wordVM.favWords.value?.size ?: 0).toString()
     }
 
     private fun loadFavoriteGrammars() {
@@ -100,7 +100,10 @@ class PracticeFragment: Fragment() {
 
     private fun initObserves(){
         wordVM.loadFavoriteWords.observe(viewLifecycleOwner){ needLoad ->
-            needLoad.takeIf { it == true }?.let{ loadFavoriteWords() }
+            needLoad.takeIf { it == true }?.let{
+                wordVM.fetchFavoriteWords()
+                loadFavoriteWords()
+            }
         }
 
         grammarVM.loadFavoriteGrammars.observe(viewLifecycleOwner){ needLoad ->

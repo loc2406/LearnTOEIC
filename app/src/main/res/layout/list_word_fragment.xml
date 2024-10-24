@@ -42,7 +42,7 @@
                 android:layout_marginEnd="44dp"
                 android:fontFamily="@font/tinos_bold"
                 android:gravity="center"
-                android:text="@string/Title"
+                android:text="@string/Word"
                 android:textColor="@color/white"
                 android:textSize="@dimen/medium_title"
                 app:layout_constraintEnd_toEndOf="parent"

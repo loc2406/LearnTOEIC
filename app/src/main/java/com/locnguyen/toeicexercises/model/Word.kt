@@ -7,12 +7,12 @@ import com.google.gson.JsonSyntaxException
 import com.google.gson.reflect.TypeToken
 
 data class Word(
-    var id: Int?,
-    var title: String?,
-    var shortMean: String?,
-    var listMeans: List<WordKindMean>?,
-    var level: Int?,
-    var pronounce: String?): Parcelable {
+    var id: Int? = null,
+    var title: String? = null,
+    var shortMean: String? = null,
+    var listMeans: List<WordKindMean>? = null,
+    var level: Int? = null,
+    var pronounce: String? = null): Parcelable {
     constructor(parcel: Parcel) : this(
         parcel.readValue(Int::class.java.classLoader) as? Int,
         parcel.readString(),
@@ -48,8 +48,8 @@ data class Word(
 }
 
 data class WordKindMean(
-    var kind: String?,
-    var means: List<WordMean>?
+    var kind: String? = null,
+    var means: List<WordMean>? = null
 ): Parcelable{
     constructor(parcel: Parcel) : this(
         parcel.readString(),
@@ -88,8 +88,8 @@ data class WordKindMean(
 }
 
 data class WordMean(
-    var mean: String?,
-    var examples: List<Int>?
+    var mean: String? = null,
+    var examples: List<Int>? = null
 ): Parcelable {
     constructor(parcel: Parcel) : this(
         parcel.readString(),

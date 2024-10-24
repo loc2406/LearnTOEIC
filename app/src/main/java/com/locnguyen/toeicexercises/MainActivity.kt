@@ -20,9 +20,6 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: MainActivityBinding
     private lateinit var navController: NavController
-    private val wordVM: WordVM by viewModels<WordVM>()
-    private val grammarVM: GrammarVM by viewModels<GrammarVM>()
-    private lateinit var theoryDb: TheoryDB
     private var backPressedTime: Long = 0
 //    private var adsInterval: AdsInterval? = null
 

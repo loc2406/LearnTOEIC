@@ -15,7 +15,7 @@ enum class FavoriteWordAction{
     ADD, REMOVE, NONE
 }
 
-class WordAdapter(var words: List<Word>, var favoriteWords: Set<Word>, var itemClicked: (Word) -> Unit = {}, var pronounceWord: (String) -> Unit = {}): RecyclerView.Adapter<WordAdapter.WordVH>() {
+class WordAdapter(var words: List<Word> = emptyList(), var favoriteWords: List<Word> = emptyList(), var itemClicked: (Word) -> Unit = {}, var pronounceWord: (String) -> Unit = {}): RecyclerView.Adapter<WordAdapter.WordVH>() {
 
     private var defaultList: List<Word> = words
     val favoriteWordsChange: MutableLiveData<Pair<FavoriteWordAction, Word?>> by lazy {MutableLiveData(Pair(FavoriteWordAction.NONE, null))}

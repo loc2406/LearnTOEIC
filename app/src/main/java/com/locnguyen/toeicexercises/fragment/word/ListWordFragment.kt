@@ -29,13 +29,13 @@ import com.locnguyen.toeicexercises.utils.toastMessage
 import com.locnguyen.toeicexercises.viewmodel.MainVM
 import com.locnguyen.toeicexercises.viewmodel.WordVM
 
-class ListWordFragment: Fragment() {
+class ListWordFragment : Fragment() {
 
     private lateinit var binding: ListWordFragmentBinding
     private lateinit var wordAdapter: WordAdapter
     private lateinit var navController: NavController
 
-    private val loadingDialog: Dialog by lazy { DialogHelper.getLoadingDialog(requireActivity()) }
+    private val loadingDialog: Dialog by lazy { DialogHelper.getLoadingDialog(requireContext()) }
     private val mainVM: MainVM by activityViewModels<MainVM>()
     private val wordVM: WordVM by activityViewModels<WordVM>()
 
@@ -45,6 +45,8 @@ class ListWordFragment: Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = ListWordFragmentBinding.inflate(inflater, container, false)
+        binding.lifecycleOwner = this
+        binding.wordVM = wordVM
         return binding.root
     }
 
@@ -53,14 +55,8 @@ class ListWordFragment: Fragment() {
 
         navController = Navigation.findNavController(view)
 
-        binding.lifecycleOwner = this
-        binding.wordVM = wordVM
-
-        val allWords = wordVM.words.value ?: emptyList()
-
-        wordAdapter = WordAdapter(allWords, wordVM.getFavoriteWords())
-
-        wordVM.searchResult.value = allWords
+        wordVM.fetchFavoriteWords()
+        wordAdapter = WordAdapter(wordVM.words.value ?: emptyList())
 
         initViews()
         initListeners()
@@ -70,34 +66,33 @@ class ListWordFragment: Fragment() {
     }
 
     private fun initViews() {
-        binding.title.text = requireContext().getString(R.string.Word)
-
         binding.words.apply {
             layoutManager = LinearLayoutManager(requireContext())
             adapter = wordAdapter
         }
     }
 
-    private fun initListeners(){
-        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner, object: OnBackPressedCallback(true){
-            override fun handleOnBackPressed() {
-                handlePressedBack()
-            }
-        })
+    private fun initListeners() {
+        requireActivity().onBackPressedDispatcher.addCallback(
+            viewLifecycleOwner,
+            object : OnBackPressedCallback(true) {
+                override fun handleOnBackPressed() {
+                    handlePressedBack()
+                }
+            })
 
-        binding.searchBar.setOnQueryTextListener(object: SearchView.OnQueryTextListener{
+        binding.searchBar.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
-               onQueryTextChange(query)
+                onQueryTextChange(query)
                 return true
             }
 
             override fun onQueryTextChange(newText: String?): Boolean {
-                newText?.let{
-                    if (it.isBlank()){
+                newText?.let {
+                    if (it.isBlank()) {
                         wordAdapter.stopSearchAction()
                         wordVM.searchResult.value = wordVM.words.value
-                    }
-                    else{
+                    } else {
                         wordVM.handleSearchWord(it)
                     }
                 }
@@ -114,48 +109,58 @@ class ListWordFragment: Fragment() {
         }
 
         wordAdapter.pronounceWord = { string ->
-            if (requireContext().isHasNetWork()){
+            if (requireContext().isHasNetWork()) {
                 SpeakTextHelper(requireContext()).speakText(string, "en")
-            }
-            else{
+            } else {
                 requireContext().toastMessage(R.string.Check_internet_connection)
             }
         }
     }
 
-    private  fun initObserves(){
-        wordVM.searchResult.observe(viewLifecycleOwner){ result ->
+    private fun initObserves() {
+        wordVM.favWords.observe(viewLifecycleOwner) { favoriteWords ->
+            favoriteWords?.let {
+                wordAdapter.favoriteWords = it
+            }
+        }
+
+        wordVM.searchResult.observe(viewLifecycleOwner) { result ->
             wordAdapter.setSearchResult(result)
         }
 
-        wordAdapter.favoriteWordsChange.observe(viewLifecycleOwner){ change ->
-            change.second?.let{ word ->
-                when(change.first){
+        wordVM.message.observe(viewLifecycleOwner) { message ->
+            message?.let {
+                requireContext().toastMessage(it)
+                wordVM.message.value = null
+            }
+        }
+
+        wordAdapter.favoriteWordsChange.observe(viewLifecycleOwner) { change ->
+            change.second?.let { word ->
+                when (change.first) {
                     FavoriteWordAction.ADD -> {
-                        requireContext().toastMessage(R.string.Added_favorite_word)
                         wordVM.addFavoriteWord(word)
-                        wordAdapter.favoriteWords = wordVM.getFavoriteWords()
+                        wordVM.fetchFavoriteWords()
                     }
 
                     FavoriteWordAction.REMOVE -> {
-                        requireContext().toastMessage(R.string.Removed_favorite_word)
                         wordVM.removeFavoriteWord(word)
-                        wordAdapter.favoriteWords = wordVM.getFavoriteWords()
+                        wordVM.fetchFavoriteWords()
                     }
 
-                     else -> {}
+                    else -> {}
                 }
             }
         }
     }
 
-    private fun handlePressedBack(){
+    private fun handlePressedBack() {
         navController.popBackStack()
         mainVM.itemTheoryClicked.value = null
         wordVM.loadFavoriteWords.value = true
     }
 
-    private fun handleItemWordClick(word: Word){
+    private fun handleItemWordClick(word: Word) {
         val action = ListWordFragmentDirections.actionListWordFragmentToWordFragment(word)
         navController.navigate(action)
     }
