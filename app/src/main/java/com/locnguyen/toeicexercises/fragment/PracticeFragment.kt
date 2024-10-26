@@ -50,11 +50,6 @@ class PracticeFragment: Fragment() {
         initViews()
         initListeners()
         initObserves()
-
-//        GlobalScope.launch {
-//            val users = Api().allUsers()
-//            Log.d("CALLAPI", users.toString())
-//        }
     }
 
     private fun initViews() {

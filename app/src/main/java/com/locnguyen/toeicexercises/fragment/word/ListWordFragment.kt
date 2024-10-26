@@ -55,7 +55,7 @@ class ListWordFragment : Fragment() {
 
         navController = Navigation.findNavController(view)
 
-        wordVM.fetchFavoriteWords()
+//        wordVM.fetchFavoriteWords()
         wordAdapter = WordAdapter(wordVM.words.value ?: emptyList())
 
         initViews()
@@ -125,6 +125,7 @@ class ListWordFragment : Fragment() {
         }
 
         wordVM.searchResult.observe(viewLifecycleOwner) { result ->
+            Log.d("RESULT", result.toString())
             wordAdapter.setSearchResult(result)
         }
 

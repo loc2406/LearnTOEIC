@@ -21,11 +21,13 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: MainActivityBinding
     private lateinit var navController: NavController
     private var backPressedTime: Long = 0
-//    private var adsInterval: AdsInterval? = null
+    private val wordVM: WordVM by viewModels<WordVM>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         val splashScreen = installSplashScreen()
-        splashScreen.setKeepOnScreenCondition { true }
+        splashScreen.setKeepOnScreenCondition {
+            wordVM.fetchFavoriteWords()
+        }
 
         super.onCreate(savedInstanceState)
         binding = MainActivityBinding.inflate(layoutInflater)
@@ -37,26 +39,12 @@ class MainActivity : AppCompatActivity() {
         navController =
             (supportFragmentManager.findFragmentById(R.id.nav_host) as NavHostFragment).navController
 
-        if (navController.currentDestination?.id == R.id.introFragment) {
-            splashScreen.setKeepOnScreenCondition { false }
-        }
-
         onBackPressedDispatcher.addCallback(object: OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
                 handlePressedBack()
             }
         })
-
-//        adsInterval = AdsInterval(this)
     }
-
-//    private fun onShowAdsInterval(){
-//        try{
-//            adsInterval?.showIntervalAds()
-//        }catch (e: OutOfMemoryError){
-//            e.printStackTrace()
-//        }
-//    }
 
     private fun handlePressedBack(){
         if (backPressedTime + 5000 > System.currentTimeMillis()) {

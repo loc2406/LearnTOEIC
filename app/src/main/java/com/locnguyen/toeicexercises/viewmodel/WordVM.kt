@@ -23,7 +23,7 @@ class WordVM(private val app: Application) : AndroidViewModel(app) {
     private val userRepo: UserRepo by lazy { UserRepo(app) }
 
     val loadFavoriteWords: MutableLiveData<Boolean> by lazy { MutableLiveData(true) }
-    val words: MutableLiveData<List<Word>> by lazy { MutableLiveData(theoryDb.getListWord()) }
+    val words: MutableLiveData<List<Word>> by lazy { MutableLiveData() }
     val examples: MutableLiveData<List<Example>> by lazy { MutableLiveData(theoryDb.getListExamples()) }
     val searchResult: MutableLiveData<List<Word>> by lazy { MutableLiveData(emptyList()) }
     val favWords: MutableLiveData<List<Word>> by lazy { MutableLiveData() }
@@ -89,4 +89,6 @@ class WordVM(private val app: Application) : AndroidViewModel(app) {
             favWords.postValue(result)
         }
     }
+FLASFLSA SFSGGSG
+
 }
