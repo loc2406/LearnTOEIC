@@ -100,7 +100,7 @@
                     android:layout_marginStart="10dp"
                     android:contentDescription="@string/Password"
                     android:scaleType="centerInside"
-                    android:src="@drawable/ic_password"
+                    android:src="@drawable/ic_input_password"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />

@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.activity.OnBackPressedCallback
 import androidx.core.content.res.ResourcesCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
@@ -61,7 +62,7 @@ class WordFragment: Fragment() {
             checkFavoriteWord()
         }
 
-        word.listMeans?.let{ listMeans ->
+        word.listMeans.let{ listMeans ->
             for (means in listMeans) {
                 val kindView = TextView(requireContext()).apply {
                     layoutParams = LinearLayout.LayoutParams(
@@ -83,7 +84,7 @@ class WordFragment: Fragment() {
 
                 binding.wordMeans.addView(kindView)
 
-                means.means?.let{ listMean ->
+                means.means.let{ listMean ->
                     for (mean in listMean) {
                         val wordMeanView = TextView(requireContext()).apply {
                             layoutParams = LinearLayout.LayoutParams(
@@ -105,7 +106,7 @@ class WordFragment: Fragment() {
 
                         binding.wordMeans.addView(wordMeanView)
 
-                        mean.examples?.let{ examples ->
+                        mean.examples.let{ examples ->
                             if (examples.isNotEmpty()){
                                 val exTitle = TextView(requireContext()).apply {
                                     layoutParams = LinearLayout.LayoutParams(
@@ -161,8 +162,14 @@ class WordFragment: Fragment() {
     }
 
     private fun initListeners(){
+        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner, object: OnBackPressedCallback(true){
+            override fun handleOnBackPressed() {
+                handlePressedCallback()
+            }
+        })
+
         binding.icBack.setOnClickListener {
-            navController.popBackStack()
+            handlePressedCallback()
         }
 
         binding.icFavorite.setOnClickListener {
@@ -177,6 +184,11 @@ class WordFragment: Fragment() {
                 uncheckFavoriteWord()
             }
         }
+    }
+
+    private fun handlePressedCallback() {
+        navController.popBackStack()
+        wordVM.loadFavoriteWords.value = true
     }
 
     private fun initObserves(){

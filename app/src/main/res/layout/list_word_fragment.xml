@@ -70,7 +70,8 @@
             android:id="@+id/words"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_margin="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -82,12 +83,13 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/tinos_bold"
             android:gravity="center_horizontal"
+            android:layout_marginHorizontal="20dp"
             android:text="@string/Dont_find_word_message"
             android:textColor="@color/primary"
             android:textSize="@dimen/small_content"
             android:visibility="@{wordVM.searchResult.empty ? View.VISIBLE : View.GONE}"
-            app:layout_constraintEnd_toEndOf="@id/words"
-            app:layout_constraintStart_toStartOf="@id/words"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@id/words" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,30 +5,31 @@ import androidx.activity.OnBackPressedCallback
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import androidx.core.splashscreen.SplashScreen
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
-import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.lifecycleScope
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import com.locnguyen.toeicexercises.databinding.MainActivityBinding
-import com.locnguyen.toeicexercises.database.TheoryDB
 import com.locnguyen.toeicexercises.utils.toastMessage
 import com.locnguyen.toeicexercises.viewmodel.GrammarVM
 import com.locnguyen.toeicexercises.viewmodel.MainVM
 import com.locnguyen.toeicexercises.viewmodel.WordVM
+import kotlinx.coroutines.flow.collect
+import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: MainActivityBinding
     private lateinit var navController: NavController
+    private lateinit var splashScreen: SplashScreen
+
     private var backPressedTime: Long = 0
-    private val wordVM: WordVM by viewModels<WordVM>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        val splashScreen = installSplashScreen()
-        splashScreen.setKeepOnScreenCondition {
-            wordVM.fetchFavoriteWords()
+        splashScreen = installSplashScreen().apply {
+            setKeepOnScreenCondition{true}
         }
-
         super.onCreate(savedInstanceState)
         binding = MainActivityBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -44,6 +45,24 @@ class MainActivity : AppCompatActivity() {
                 handlePressedBack()
             }
         })
+
+        initData()
+    }
+
+    private fun initData() {
+        lifecycleScope.launch {
+            DataManager.initData(this@MainActivity)
+
+            DataManager.isDataLoaded.collect{ isLoaded ->
+                if (isLoaded){
+                    splashScreen.setKeepOnScreenCondition{false}
+                }
+                else{
+                    DataManager.err.value?.let { this@MainActivity.toastMessage(it) }
+                    finish()
+                }
+            }
+        }
     }
 
     private fun handlePressedBack(){

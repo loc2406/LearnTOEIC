@@ -18,6 +18,7 @@ import com.locnguyen.toeicexercises.sharedpreference.MySharedPreference
 import com.locnguyen.toeicexercises.utils.toastMessage
 import com.locnguyen.toeicexercises.viewmodel.ExamVM
 import com.locnguyen.toeicexercises.viewmodel.MainVM
+import com.locnguyen.toeicexercises.viewmodel.WordVM
 
 class MainFragment : Fragment() {
 
@@ -25,6 +26,7 @@ class MainFragment : Fragment() {
     private lateinit var navController: NavController
     private lateinit var bottomNavAdapter: BottomNavAdapter
     private val mainVM: MainVM by activityViewModels<MainVM>()
+    private val wordVM: WordVM by activityViewModels<WordVM>()
     private val examVM: ExamVM by activityViewModels<ExamVM>()
 
     override fun onCreateView(

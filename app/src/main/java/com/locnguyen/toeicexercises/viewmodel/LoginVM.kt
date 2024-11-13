@@ -68,7 +68,7 @@ class LoginVM(val app: Application) : AndroidViewModel(app) {
     fun getUserInFb() {
         viewModelScope.launch {
             val result: User? = try{
-                userRepo.findUserInFb(email.value!!, password.value!!)
+                userRepo.login(email.value!!, password.value!!)
             }catch (e: Exception){
                 errMessage.value = e.message
                 null

@@ -6,6 +6,8 @@ import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.google.android.gms.tasks.Tasks
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DatabaseReference
@@ -28,10 +30,10 @@ import kotlinx.coroutines.withContext
 class UserRepo(private val context: Context) {
 
     private val fbDbInstance: FirebaseDatabase by lazy { Firebase.database }
+    private val fbAuthInstance: FirebaseAuth by lazy { Firebase.auth }
     private val usersDbRef: DatabaseReference by lazy { fbDbInstance.getReference("users") }
-    private var user: User? = null
 
-    suspend fun findUserInFb(
+    suspend fun login(
         email: String,
         password: String,
     ): User? {
@@ -53,8 +55,15 @@ class UserRepo(private val context: Context) {
                             if (u.email == email) {
                                 isEmailFound = true
                                 if (u.password == password) {
-                                    userFound = u
-                                    this@UserRepo.user = u
+                                    val loginTask =
+                                        Firebase.auth.signInWithEmailAndPassword(email, password)
+                                            .await()
+
+                                    if (loginTask.user != null) {
+                                        userFound = u
+                                    } else {
+                                        throw Exception(context.getString(R.string.Login_firebase_failed))
+                                    }
                                 } else {
                                     throw Exception(context.getString(R.string.Wrong_password))
                                 }
@@ -81,16 +90,21 @@ class UserRepo(private val context: Context) {
         password: String
     ): User {
         return withContext(Dispatchers.IO) {
-            val user: User
             val isCreated = checkIfUserExist(email)
 
-            if (!isCreated) {
-                user = User(email, name, password)
-                this@UserRepo.user = user
-                usersDbRef.child(email.substringBefore('@')).setValue(user)
-            } else {
-                throw Exception(context.getString(R.string.Acount_is_existed))
+            if (isCreated) {
+                throw Exception(context.getString(R.string.Account_is_existed))
             }
+
+            val authResult = fbAuthInstance.createUserWithEmailAndPassword(email, password).await()
+
+            if (authResult.user == null) {
+                fbAuthInstance.currentUser?.delete()
+                throw Exception(context.getString(R.string.Create_new_account_failed))
+            }
+
+            val user: User = User(email, name, password)
+            usersDbRef.child(email.substringBefore('@')).setValue(user).await()
 
             user
         }
@@ -117,104 +131,5 @@ class UserRepo(private val context: Context) {
         }
 
         return false
-    }
-
-    suspend fun addFavoriteWord(newWord: Word): Boolean {
-        return withContext(Dispatchers.IO) {
-            var isAdded: Boolean = false
-            val list: ArrayList<Word> = ArrayList()
-            val userEmail = this@UserRepo.user?.email
-
-            try {
-                userEmail?.let { email ->
-                    val userRef = usersDbRef.child(email.substringBefore('@'))
-                    val favWordsSnapshot: DataSnapshot? =
-                        userRef.child("favWords").get().await()
-
-                    favWordsSnapshot?.let { snapShots ->
-                        if (snapShots.exists()) {
-                            snapShots.children.forEach { snapShot ->
-                                val word = snapShot.getValue(Word::class.java)
-
-                                word?.let { list.add(it) }
-                            }
-                        }
-
-                        list.takeIf { !it.contains(newWord) }?.add(newWord)
-                    }
-
-                    Tasks.await(userRef.child("favWords").setValue(list))
-                    isAdded = true
-                }
-            } catch (e: Exception) {
-                throw Exception(context.getString(R.string.Added_favorite_word_failed))
-            }
-
-            isAdded
-        }
-    }
-
-    suspend fun removeFavoriteWord(newWord: Word): Boolean {
-        return withContext(Dispatchers.IO) {
-            var isRemoved: Boolean = false
-            val list: ArrayList<Word> = ArrayList()
-            val userEmail = this@UserRepo.user?.email
-
-            try {
-                userEmail?.let { email ->
-                    val userRef = usersDbRef.child(email.substringBefore('@'))
-                    val favWordsSnapshot: DataSnapshot? =
-                        userRef.child("favWords").get().await()
-
-                    favWordsSnapshot?.let { snapShots ->
-                        if (snapShots.exists()) {
-                            snapShots.children.forEach { snapShot ->
-                                val word = snapShot.getValue(Word::class.java)
-
-                                word?.let { list.add(it) }
-                            }
-                        }
-
-                        list.takeIf { !it.contains(newWord) }?.add(newWord)
-                    }
-
-                    Tasks.await(userRef.child("favWords").setValue(list))
-                    isRemoved = true
-                }
-            } catch (e: Exception) {
-                throw Exception(context.getString(R.string.Removed_favorite_word_failed))
-            }
-
-            isRemoved
-        }
-    }
-
-    suspend fun fetchFavoriteWords(): List<Word> {
-        return withContext(Dispatchers.IO){
-            val list: ArrayList<Word> = ArrayList()
-            val userEmail = this@UserRepo.user?.email
-
-            try {
-                userEmail?.let { email ->
-                    val userRef = usersDbRef.child(email.substringBefore('@'))
-                    val favWordsSnapshot: DataSnapshot? =
-                        userRef.child("favWords").get().await()
-
-                    favWordsSnapshot?.let { snapShots ->
-                        if (snapShots.exists()) {
-                            snapShots.children.forEach { snapShot ->
-                                val word = snapShot.getValue(Word::class.java)
-
-                                word?.let { list.add(it) }
-                            }
-                        }
-                    }
-                }
-            } catch (e: Exception) {
-                throw Exception(context.getString(R.string.Get_favorite_word_failed))
-            }
-
-            list
-        }
     }
 }

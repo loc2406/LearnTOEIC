@@ -10,6 +10,7 @@ import com.locnguyen.toeicexercises.sharedpreference.MySharedPreference
 
 class MainVM(val app: Application): AndroidViewModel(app) {
 
+    val isFetchedData: MutableLiveData<Boolean> by lazy {MutableLiveData(false)}
     val user: MutableLiveData<User> by lazy { MutableLiveData(MySharedPreference.getInstance(app).getUser())}
     val itemExamClicked: MutableLiveData<Exam> by lazy { MutableLiveData() }
     val itemTheoryClicked: MutableLiveData<String> by lazy {MutableLiveData()}

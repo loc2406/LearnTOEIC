@@ -126,11 +126,16 @@
     <string name="Confirm_password_not_correct">Xác nhận mật khẩu không đúng!</string>
     <string name="Account_is_existed">Tài khoản đã tồn tại!</string>
     <string name="Register_new_account_successful">Đăng kí tài khoản mới thành công!</string>
-    <string name="Acount_is_existed">Tài khoản đã tồn tại!</string>
     <string name="Login_successful">Đăng nhập thành công!</string>
     <string name="Ask_for_logout">Xác nhận đăng xuất?</string>
     <string name="Added_favorite_word_failed">Thêm từ vựng yêu thích thất bại!</string>
     <string name="Removed_favorite_word_failed">Xóa từ vựng yêu thích thất bại!</string>
     <string name="Removed_favorite_word_successful">Xóa từ vựng yêu thích thành công!</string>
     <string name="Get_favorite_word_failed">Lấy danh sách từ vựng yêu thích thất bại!</string>
+    <string name="Load_data_failed">Dữ liệu bị lỗi! Vui lòng khởi động lại ứng dụng!</string>
+    <string name="Login_firebase_failed">Đăng nhập vào Firebase thất bại!</string>
+    <string name="Create_new_account_failed">Tạo tài khoản mới thất bại!</string>
+    <string name="Unexpected_error_occurred">Có lỗi không mong muốn xảy ra!</string>
+    <string name="Word_already_exists">Từ vựng đã tồn tại!</string>
+    <string name="Word_not_exists">Từ vựng đã tồn tại!</string>
 </resources>

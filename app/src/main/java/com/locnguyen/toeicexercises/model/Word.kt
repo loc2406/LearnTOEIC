@@ -7,19 +7,20 @@ import com.google.gson.JsonSyntaxException
 import com.google.gson.reflect.TypeToken
 
 data class Word(
-    var id: Int? = null,
-    var title: String? = null,
-    var shortMean: String? = null,
-    var listMeans: List<WordKindMean>? = null,
-    var level: Int? = null,
-    var pronounce: String? = null): Parcelable {
+    var id: Int = -1,
+    var title: String = "",
+    var shortMean: String = "",
+    var listMeans: List<WordKindMean> = emptyList(),
+    var level: Int = 1,
+    var pronounce: String = ""): Parcelable {
+
     constructor(parcel: Parcel) : this(
-        parcel.readValue(Int::class.java.classLoader) as? Int,
-        parcel.readString(),
-        parcel.readString(),
-        parcel.createTypedArrayList(WordKindMean),
-        parcel.readValue(Int::class.java.classLoader) as? Int,
-        parcel.readString()
+        parcel.readInt(),
+        parcel.readString().toString(),
+        parcel.readString().toString(),
+        parcel.createTypedArrayList(WordKindMean)!!,
+        parcel.readInt(),
+        parcel.readString().toString()
     ) {
     }
 
@@ -48,12 +49,12 @@ data class Word(
 }
 
 data class WordKindMean(
-    var kind: String? = null,
-    var means: List<WordMean>? = null
+    var kind: String = "",
+    var means: List<WordMean> = emptyList()
 ): Parcelable{
     constructor(parcel: Parcel) : this(
-        parcel.readString(),
-        parcel.createTypedArrayList(WordMean)
+        parcel.readString().toString(),
+        parcel.createTypedArrayList(WordMean)!!
     )
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
@@ -74,12 +75,12 @@ data class WordKindMean(
             return arrayOfNulls(size)
         }
 
-        fun covertFromJsonStringToList(jsonString: String): List<WordKindMean>? {
+        fun covertFromJsonStringToList(jsonString: String): List<WordKindMean> {
             val convertType = object:TypeToken<List<WordKindMean>>(){}.type
-            val value: List<WordKindMean>? = try{
+            val value: List<WordKindMean> = try{
                 Gson().fromJson(jsonString, convertType)
             }catch (e: JsonSyntaxException){
-                null
+                emptyList()
             }
 
             return value
@@ -88,17 +89,17 @@ data class WordKindMean(
 }
 
 data class WordMean(
-    var mean: String? = null,
-    var examples: List<Int>? = null
+    var mean: String = "",
+    var examples: List<Int> = emptyList()
 ): Parcelable {
     constructor(parcel: Parcel) : this(
-        parcel.readString(),
+        parcel.readString().toString(),
         parcel.createIntArray()?.toList() ?: emptyList()
     )
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
         parcel.writeString(mean)
-        parcel.writeIntArray(examples?.toIntArray() ?: intArrayOf())
+        parcel.writeIntArray(examples.toIntArray())
     }
 
     override fun describeContents(): Int {

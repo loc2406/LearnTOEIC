@@ -1,24 +1,25 @@
 package com.locnguyen.toeicexercises.database
 
-import android.content.ContentValues
 import android.content.Context
 import android.database.Cursor
-import android.database.SQLException
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteException
 import android.database.sqlite.SQLiteOpenHelper
+import com.locnguyen.toeicexercises.MyApplication
 import com.locnguyen.toeicexercises.R
 import com.locnguyen.toeicexercises.model.Example
 import com.locnguyen.toeicexercises.model.Grammar
 import com.locnguyen.toeicexercises.model.GrammarSubContent
 import com.locnguyen.toeicexercises.model.Word
 import com.locnguyen.toeicexercises.model.WordKindMean
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
 import java.io.FileOutputStream
 import java.io.IOException
 import java.io.InputStream
 import java.io.OutputStream
 
-class TheoryDB(private val context: Context, version: Int = 1) :
+class TheoryDb(private val context: Context, version: Int = 1) :
     SQLiteOpenHelper(context, context.getString(R.string.db_name), null, version) {
 
     private var db: SQLiteDatabase? = null
@@ -63,7 +64,7 @@ class TheoryDB(private val context: Context, version: Int = 1) :
     }
 
     override fun onCreate(db: SQLiteDatabase?) {
-        db?.let{
+        db?.let {
             it.execSQL("CREATE TABLE IF NOT EXISTS words (id INTEGER PRIMARY KEY NOT NULL, word TEXT, short_mean TEXT, means TEXT, level INTEGER, pronounce TEXT)")
             it.execSQL("CREATE TABLE IF NOT EXISTS examples (id INTEGER PRIMARY KEY NOT NULL, e TEXT, m TEXT)")
             it.execSQL("CREATE TABLE IF NOT EXISTS grammars (id INTEGER PRIMARY KEY NOT NULL, level INTEGER, title TEXT, tag TEXT, contents TEXT)")
@@ -71,7 +72,7 @@ class TheoryDB(private val context: Context, version: Int = 1) :
     }
 
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
-        db?.let{
+        db?.let {
             it.execSQL("DROP TABLE IF EXISTS words")
             it.execSQL("DROP TABLE IF EXISTS examples")
             it.execSQL("DROP TABLE IF EXISTS grammars")
@@ -83,9 +84,9 @@ class TheoryDB(private val context: Context, version: Int = 1) :
         val dbFile = context.getDatabasePath(context.getString(R.string.db_name))
 
         return if (isExistedDatabase()) {
-            try{
+            try {
                 SQLiteDatabase.openDatabase(dbFile.absolutePath, null, SQLiteDatabase.OPEN_READONLY)
-            }catch(e: SQLiteException){
+            } catch (e: SQLiteException) {
                 null
             }
         } else {
@@ -93,90 +94,92 @@ class TheoryDB(private val context: Context, version: Int = 1) :
         }
     }
 
-    fun getListWord(level: Int? = null, limit: Int? = null): List<Word> {
-        val listWord: ArrayList<Word> = ArrayList()
+    suspend fun getListWord(level: Int? = null, limit: Int? = null): List<Word> {
+        return withContext(Dispatchers.IO) {
+            val listWord: ArrayList<Word> = ArrayList()
 
-        if (db == null) db = openDb()
+            if (db == null) db = openDb()
 
-        val cursor: Cursor? = when {
-            level == null && limit == null -> {
-                db?.rawQuery("Select * from words", null)
+            val cursor: Cursor? = when {
+                level == null && limit == null -> {
+                    db?.rawQuery("Select * from words", null)
+                }
+
+                level == null -> {
+                    db?.rawQuery("Select * from words where limit == $limit", null)
+                }
+
+                limit == null -> {
+                    db?.rawQuery("Select * from words where level == $level", null)
+                }
+
+                else -> {
+                    db?.rawQuery(
+                        "Select * from words where level == $level && limit == $limit",
+                        null
+                    )
+                }
             }
 
-            level == null -> {
-                db?.rawQuery("Select * from words where limit == $limit", null)
-            }
+            cursor?.let {
+                it.moveToFirst()
 
-            limit == null -> {
-                db?.rawQuery("Select * from words where level == $level", null)
-            }
+                while (!it.isAfterLast) {
+                    val idValue = it.getColumnIndex("id")
+                    val wordValue = it.getColumnIndex("word")
+                    val shortMeanValue = it.getColumnIndex("short_mean")
+                    val listMeansValue = it.getColumnIndex("means")
+                    val levelValue = it.getColumnIndex("level")
+                    val pronounceValue = it.getColumnIndex("pronounce")
 
-            else -> {
-                db?.rawQuery("Select * from words where level == $level && limit == $limit", null)
-            }
-        }
-
-        cursor?.let{
-            it.moveToFirst()
-
-            while (!it.isAfterLast) {
-                val idValue = it.getColumnIndex("id")
-                val wordValue = it.getColumnIndex("word")
-                val shortMeanValue = it.getColumnIndex("short_mean")
-                val listMeansValue = it.getColumnIndex("means")
-                val levelValue = it.getColumnIndex("level")
-                val pronounceValue = it.getColumnIndex("pronounce")
-
-                val wordObject = Word(
-                    if (idValue != -1) it.getInt(idValue) else null,
-                    if (wordValue != -1) it.getString(wordValue) else null,
-                    if (shortMeanValue != -1) it.getString(shortMeanValue) else null,
-                    if (listMeansValue != -1) WordKindMean.covertFromJsonStringToList(
-                        it.getString(
-                            listMeansValue
+                    if (idValue != -1 && wordValue != -1 && shortMeanValue != -1 && listMeansValue != -1 && levelValue != -1 && pronounceValue != -1) {
+                        val wordObject = Word(
+                            it.getInt(idValue),
+                            it.getString(wordValue),
+                            it.getString(shortMeanValue),
+                            WordKindMean.covertFromJsonStringToList(it.getString(listMeansValue)),
+                            it.getInt(levelValue),
+                            it.getString(pronounceValue),
                         )
-                    ) else null,
-                    if (levelValue != -1) it.getInt(levelValue) else null,
-                    if (pronounceValue != -1) it.getString(pronounceValue) else null,
-                )
-                listWord.add(wordObject)
-                it.moveToNext()
+                        listWord.add(wordObject)
+                    }
+                    it.moveToNext()
+                }
+                it.close()
             }
-            it.close()
+            listWord
         }
-
-        return listWord
     }
 
-    fun getListExamples(): List<Example> {
-        val listExample: ArrayList<Example> = ArrayList()
+    suspend fun getListExamples(): List<Example> {
+        return withContext(Dispatchers.IO) {
+            val listExample: ArrayList<Example> = ArrayList()
+            if (db == null) db = openDb()
 
-        if (db == null) db = openDb()
+            val cursor: Cursor? = db?.rawQuery("Select * from examples", null)
 
-        val cursor: Cursor? = db?.rawQuery("Select * from examples", null)
+            cursor?.let {
+                it.moveToFirst()
 
-        cursor?.let{
-            it.moveToFirst()
+                while (!it.isAfterLast) {
+                    val idValue = it.getColumnIndex("id")
+                    val engContentValue = it.getColumnIndex("e")
+                    val viContentValue = it.getColumnIndex("m")
 
-            while (!it.isAfterLast) {
-                val idValue = it.getColumnIndex("id")
-                val engContentValue = it.getColumnIndex("e")
-                val viContentValue = it.getColumnIndex("m")
-
-                if (idValue != -1){
-                    val exampleObject = Example(
-                        it.getInt(idValue),
-                        if (engContentValue != -1) it.getString(engContentValue) else null,
-                        if (viContentValue != -1) it.getString(viContentValue) else null
-                    )
-                    listExample.add(exampleObject)
+                    if (idValue != -1) {
+                        val exampleObject = Example(
+                            it.getInt(idValue),
+                            if (engContentValue != -1) it.getString(engContentValue) else null,
+                            if (viContentValue != -1) it.getString(viContentValue) else null
+                        )
+                        listExample.add(exampleObject)
+                    }
+                    it.moveToNext()
                 }
-                it.moveToNext()
+                it.close()
             }
-            it.close()
+            listExample
         }
-
-        return listExample
     }
 
     fun getListGrammars(): List<Grammar> {
@@ -186,7 +189,7 @@ class TheoryDB(private val context: Context, version: Int = 1) :
 
         val cursor: Cursor? = db?.rawQuery("Select * from grammars", null)
 
-        cursor?.let{
+        cursor?.let {
             it.moveToFirst()
 
             while (!it.isAfterLast) {
@@ -201,7 +204,8 @@ class TheoryDB(private val context: Context, version: Int = 1) :
                     it.getString(titleValue),
                     Grammar.covertFromJsonStringToList(it.getString(tagValue)) ?: emptyList(),
                     it.getInt(levelValue),
-                    GrammarSubContent.covertFromJsonStringToList(it.getString(contentsValue)) ?: emptyList()
+                    GrammarSubContent.covertFromJsonStringToList(it.getString(contentsValue))
+                        ?: emptyList()
                 )
 
                 grammars.add(grammarObject)

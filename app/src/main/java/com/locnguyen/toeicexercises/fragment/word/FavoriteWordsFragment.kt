@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.lifecycle.lifecycleScope
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.GridLayoutManager
@@ -22,6 +23,9 @@ import com.locnguyen.toeicexercises.utils.isHasNetWork
 import com.locnguyen.toeicexercises.utils.toastMessage
 import com.locnguyen.toeicexercises.viewmodel.MainVM
 import com.locnguyen.toeicexercises.viewmodel.WordVM
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class FavoriteWordsFragment : Fragment() {
     private lateinit var binding: FavoriteWordsFragmentBinding
@@ -45,11 +49,15 @@ class FavoriteWordsFragment : Fragment() {
 
         navController = Navigation.findNavController(view)
         wordNoteAdapter = WordNoteAdapter()
-        wordVM.fetchFavoriteWords()
+        loadFavoriteWords()
 
         initViews()
         initListeners()
         initObserves()
+    }
+
+    private fun loadFavoriteWords() {
+        wordVM.fetchFavoriteWords()
     }
 
     private fun initViews() {
@@ -89,13 +97,17 @@ class FavoriteWordsFragment : Fragment() {
     }
 
     private fun initObserves() {
+        wordVM.loadFavoriteWords.observe(viewLifecycleOwner){needLoad ->
+            needLoad.takeIf { it != null }?.let { wordVM.fetchFavoriteWords() }
+        }
+
         wordVM.favWords.observe(viewLifecycleOwner) { favoriteWords ->
             favoriteWords?.let {
                 if (it.isEmpty()) {
                     binding.dontHaveDataMessage.visibility = VISIBLE
                     binding.favoriteWords.visibility = INVISIBLE
                 } else {
-                    wordNoteAdapter.words = favoriteWords
+                    wordNoteAdapter.updateFavoriteList(it)
                 }
             }
         }

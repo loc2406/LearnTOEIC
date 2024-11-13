@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.GridLayoutManager
 import com.google.android.gms.ads.AdRequest
 import com.locnguyen.toeicexercises.Api
@@ -18,8 +19,10 @@ import com.locnguyen.toeicexercises.viewmodel.GrammarVM
 import com.locnguyen.toeicexercises.viewmodel.MainVM
 import com.locnguyen.toeicexercises.viewmodel.WordVM
 import kotlinx.coroutines.DelicateCoroutinesApi
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class PracticeFragment: Fragment() {
 
@@ -40,7 +43,6 @@ class PracticeFragment: Fragment() {
         return binding.root
     }
 
-    @OptIn(DelicateCoroutinesApi::class)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -67,6 +69,7 @@ class PracticeFragment: Fragment() {
     }
 
     private fun loadFavoriteWords(){
+        wordVM.fetchFavoriteWords()
         binding.wordQuantity.text = (wordVM.favWords.value?.size ?: 0).toString()
     }
 
@@ -96,7 +99,6 @@ class PracticeFragment: Fragment() {
     private fun initObserves(){
         wordVM.loadFavoriteWords.observe(viewLifecycleOwner){ needLoad ->
             needLoad.takeIf { it == true }?.let{
-                wordVM.fetchFavoriteWords()
                 loadFavoriteWords()
             }
         }

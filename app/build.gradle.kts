@@ -67,6 +67,7 @@ dependencies {
     implementation(libs.androidx.material3)
     implementation(libs.androidx.appcompat)
     implementation(libs.firebase.database)
+    implementation(libs.firebase.auth.ktx)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -131,8 +132,8 @@ dependencies {
     implementation(libs.kotlinx.coroutines.android)
 
     //lifecycle
-    implementation(libs.androidx.lifecycle.runtime.ktx.v286)
-    implementation(libs.androidx.lifecycle.viewmodel.ktx.v286)
+    implementation(libs.androidx.lifecycle.runtime.ktx)
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
 
     //các thư viện không được chuyển sang kiểu khai báo mới vì sẽ không nhận
     implementation("com.github.yarolegovich:DiscreteScrollView:1.5.1")

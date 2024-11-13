@@ -8,11 +8,11 @@ import com.google.gson.annotations.SerializedName
 import com.google.gson.reflect.TypeToken
 
 data class Grammar(
-    var id: Int,
-    var title: String,
-    var tags: List<String>,
-    var level: Int,
-    var contents: List<GrammarSubContent>
+    var id: Int = -1,
+    var title: String = "",
+    var tags: List<String> = emptyList(),
+    var level: Int = 1,
+    var contents: List<GrammarSubContent> = emptyList()
 ): Parcelable {
     constructor(parcel: Parcel) : this(
         parcel.readInt(),
@@ -58,9 +58,9 @@ data class Grammar(
 
 data class GrammarSubContent(
     @SerializedName("sub_title") // vì trong file db tên cột là sub_title
-    var subTitle: String,
+    var subTitle: String = "",
     @SerializedName("content")
-    var subContents: List<GrammarContent>
+    var subContents: List<GrammarContent> = emptyList()
 ): Parcelable {
     constructor(parcel: Parcel) : this(
         parcel.readString().toString(),
@@ -101,11 +101,11 @@ data class GrammarSubContent(
 
 data class GrammarContent(
     @SerializedName("c")
-    var content: String,
+    var content: String = "",
     @SerializedName("f")
-    var formulas: List<String>,
+    var formulas: List<String> = emptyList(),
     @SerializedName("e")
-    var examples: List<GrammarEx>
+    var examples: List<GrammarEx> = emptyList()
 ): Parcelable {
     constructor(parcel: Parcel) : this(
         parcel.readString().toString(),
@@ -137,7 +137,7 @@ data class GrammarContent(
 
 data class GrammarEx(
     @SerializedName("e")
-    var example: String
+    var example: String = ""
 ): Parcelable {
     constructor(parcel: Parcel) : this(parcel.readString().toString()) {
     }
