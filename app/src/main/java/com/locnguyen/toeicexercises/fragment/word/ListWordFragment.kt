@@ -49,20 +49,13 @@ class ListWordFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         navController = Navigation.findNavController(view)
-
-        loadFavoriteWords()
         wordAdapter = WordAdapter(wordVM.words.value!!)
-        wordVM.searchResult.value = wordVM.words.value
 
         initViews()
         initListeners()
         initObserves()
 
         if (loadingDialog.isShowing) loadingDialog.dismiss()
-    }
-
-    private fun loadFavoriteWords() {
-        wordVM.fetchFavoriteWords()
     }
 
     private fun initViews() {
@@ -92,9 +85,9 @@ class ListWordFragment : Fragment() {
                 newText?.let {
                     if (it.isBlank()) {
                         wordAdapter.stopSearchAction()
-                        wordVM.searchResult.value = wordVM.words.value
+                        wordVM.searchFilteredList.value = wordVM.words.value
                     } else {
-                        wordVM.handleSearchWord(it)
+                        wordVM.handleSearchChange(it)
                     }
                 }
                 return true
@@ -119,8 +112,20 @@ class ListWordFragment : Fragment() {
     }
 
     private fun initObserves() {
-        wordVM.searchResult.observe(viewLifecycleOwner) { result ->
-            result?.let { wordAdapter.setCurrentList(it) }
+        wordVM.level.observe(viewLifecycleOwner) { currentLevel ->
+            requireContext().toastMessage("Current level: $currentLevel")
+        }
+
+        wordVM.levelFilteredList.observe(viewLifecycleOwner) { list ->
+            list?.let {
+                wordAdapter.updateCurrentList(levelFilteredList = it)
+            }
+        }
+
+        wordVM.searchFilteredList.observe(viewLifecycleOwner) { list ->
+            list?.let {
+                wordAdapter.updateCurrentList(searchFilteredList = it)
+            }
         }
 
         wordVM.message.observe(viewLifecycleOwner) { message ->

@@ -15,6 +15,8 @@ class WordAdapter(
 ) : RecyclerView.Adapter<WordAdapter.WordVH>() {
 
     private var defaultList: List<Word> = words
+    private var currentLevelList: List<Word> = words
+    private var currentSearchList: List<Word> = words
 
     class WordVH(val binding: ItemWordBinding) : RecyclerView.ViewHolder(binding.root)
 
@@ -34,20 +36,39 @@ class WordAdapter(
         holder.binding.content.text = data.shortMean
 
         holder.binding.icPronounce.setOnClickListener {
-            data.title?.let { pronounceWord.invoke(it) }
+            data.title.let { pronounceWord.invoke(it) }
         }
         holder.binding.root.setOnClickListener {
             itemClicked.invoke(data)
         }
     }
 
-    fun setCurrentList(list: List<Word>) {
-        words = list
+    fun updateCurrentList(searchFilteredList: List<Word>? = null, levelFilteredList: List<Word>? = null) {
+        when {
+            searchFilteredList == null && levelFilteredList == null -> return
+            
+            searchFilteredList == null -> {
+                currentLevelList = levelFilteredList!!
+                words = currentLevelList.intersect(currentSearchList.toSet()).toList()
+            }
+            
+            levelFilteredList == null -> {
+                currentSearchList = searchFilteredList
+                words = currentSearchList.intersect(currentLevelList.toSet()).toList()
+            }
+            
+            else -> {
+                currentLevelList = levelFilteredList
+                currentSearchList = searchFilteredList
+                words = currentSearchList.intersect(currentLevelList.toSet()).toList()
+            }
+        }
         notifyDataSetChanged()
     }
 
     fun stopSearchAction() {
-        words = defaultList
+        currentSearchList = defaultList
+        words = currentSearchList.intersect(currentLevelList.toSet()).toList()
         notifyDataSetChanged()
     }
 }

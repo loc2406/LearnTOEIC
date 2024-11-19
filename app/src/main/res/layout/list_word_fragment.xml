@@ -66,6 +66,73 @@
             android:queryHint="@string/Find_word"
             android:searchIcon="@drawable/ic_search" />
 
+        <TextView
+            android:id="@+id/select_level_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Select_level_title"
+            android:textSize="@dimen/smaller_title"
+            android:textColor="@color/black"
+            android:fontFamily="@font/tinos_bold"
+            app:layout_constraintStart_toStartOf="@id/search_bar"
+            app:layout_constraintTop_toBottomOf="@id/search_bar"
+            android:layout_marginTop="20dp" />
+
+        <HorizontalScrollView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/select_level_title"
+            app:layout_constraintTop_toTopOf="@id/select_level_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/select_level_title"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="20dp"
+            android:scrollbars="none">
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/search_bar"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <RadioButton
+                    android:id="@+id/btn_level_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:onCheckedChanged="@{(view, isChecked) -> wordVM.handleLevelChange(view, isChecked)}"
+                    android:buttonTint="@color/secondPrimary"
+                    android:text="@string/level_1_description"/>
+
+                <RadioButton
+                    android:id="@+id/btn_level_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onCheckedChanged="@{(view, isChecked) -> wordVM.handleLevelChange(view, isChecked)}"
+                    android:buttonTint="@color/secondPrimary"
+                    android:text="@string/level_2_description"/>
+
+                <RadioButton
+                    android:id="@+id/btn_level_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onCheckedChanged="@{(view, isChecked) -> wordVM.handleLevelChange(view, isChecked)}"
+                    android:buttonTint="@color/secondPrimary"
+                    android:text="@string/level_3_description"/>
+
+                <RadioButton
+                    android:id="@+id/btn_level_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onCheckedChanged="@{(view, isChecked) -> wordVM.handleLevelChange(view, isChecked)}"
+                    android:buttonTint="@color/secondPrimary"
+                    android:text="@string/level_4_description"/>
+            </RadioGroup>
+
+        </HorizontalScrollView>
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/words"
             android:layout_width="0dp"
@@ -75,7 +142,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/search_bar" />
+            app:layout_constraintTop_toBottomOf="@id/select_level_title" />
 
         <TextView
             android:id="@+id/Dont_find_word_message"
@@ -87,7 +154,7 @@
             android:text="@string/Dont_find_word_message"
             android:textColor="@color/primary"
             android:textSize="@dimen/small_content"
-            android:visibility="@{wordVM.searchResult.empty ? View.VISIBLE : View.GONE}"
+            android:visibility="@{wordVM.searchFilteredList.empty ? View.VISIBLE : View.GONE}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@id/words" />
