@@ -20,7 +20,7 @@ import kotlinx.coroutines.withContext
 
 class LoginVM(val app: Application) : AndroidViewModel(app) {
 
-    private val userRepo: UserRepo by lazy { UserRepo(app) }
+    private val userRepo: UserRepo by lazy { UserRepo.getInstance() }
     val email: MutableLiveData<String> by lazy { MutableLiveData("") }
     val password: MutableLiveData<String> by lazy { MutableLiveData("") }
     val errMessage: MutableLiveData<String?> by lazy { MutableLiveData() }

@@ -13,7 +13,7 @@ import com.locnguyen.toeicexercises.repo.UserRepo
 import kotlinx.coroutines.launch
 
 class RegisterVM(val app: Application) : AndroidViewModel(app) {
-    private val userRepo: UserRepo by lazy { UserRepo(app) }
+    private val userRepo: UserRepo by lazy { UserRepo.getInstance() }
     val email: MutableLiveData<String> by lazy { MutableLiveData("") }
     val name: MutableLiveData<String> by lazy { MutableLiveData("") }
     val password: MutableLiveData<String> by lazy { MutableLiveData("") }

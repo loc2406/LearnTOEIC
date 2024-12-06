@@ -1,8 +1,13 @@
 package com.locnguyen.toeicexercises.repo
 
+import android.app.Dialog
 import android.content.Context
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.net.Uri
 import android.util.Log
+import android.view.Gravity
+import android.view.WindowManager
 import com.cloudinary.android.MediaManager
 import com.cloudinary.android.callback.ErrorInfo
 import com.cloudinary.android.callback.UploadCallback
@@ -15,20 +20,28 @@ import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 import com.locnguyen.toeicexercises.R
 import com.locnguyen.toeicexercises.model.User
-import com.locnguyen.toeicexercises.utils.CloudinaryManager
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.suspendCancellableCoroutine
 import kotlinx.coroutines.tasks.await
 import kotlinx.coroutines.withContext
-import java.io.File
 import kotlin.coroutines.resume
 import kotlin.coroutines.resumeWithException
 
-class UserRepo(private val context: Context) {
+class UserRepo{
+    companion object {
+        @Volatile
+        private var instance: UserRepo? = null
 
-    private val fbDbInstance: FirebaseDatabase by lazy { Firebase.database }
-    private val fbAuthInstance: FirebaseAuth by lazy { Firebase.auth }
-    private val usersDbRef: DatabaseReference by lazy { fbDbInstance.getReference("users") }
+        fun getInstance(): UserRepo {
+            return instance ?: synchronized(this) {
+                instance ?: UserRepo().also { instance = it }
+            }
+        }
+    }
+
+    private val db: FirebaseDatabase by lazy { Firebase.database }
+    private val auth: FirebaseAuth by lazy { Firebase.auth }
+    private val usersDbRef: DatabaseReference by lazy { db.getReference("users") }
 
     suspend fun login(
         email: String,
@@ -40,7 +53,7 @@ class UserRepo(private val context: Context) {
             val usersSnapshot: DataSnapshot? = try {
                 getAllUserInFb()
             } catch (e: Exception) {
-                throw Exception(context.getString(R.string.Something_went_wrong_please_try_again))
+                throw Exception("Có lỗi xảy ra! Vui lòng thử lại!")
             }
 
             usersSnapshot?.let {
@@ -59,20 +72,20 @@ class UserRepo(private val context: Context) {
                                     if (loginTask.user != null) {
                                         userFound = u
                                     } else {
-                                        throw Exception(context.getString(R.string.Login_firebase_failed))
+                                        throw Exception("Đăng nhập vào Firebase thất bại!")
                                     }
                                 } else {
-                                    throw Exception(context.getString(R.string.Wrong_password))
+                                    throw Exception("Sai mật khẩu!")
                                 }
                             }
                         }
                     }
 
                     if (!isEmailFound) {
-                        throw Exception(context.getString(R.string.Account_not_found))
+                        throw Exception("Không tìm thấy tài khoản!")
                     }
                 } else {
-                    throw Exception(context.getString(R.string.Account_not_found))
+                    throw Exception("Không tìm thấy tài khoản!")
                 }
             }
             userFound
@@ -90,14 +103,14 @@ class UserRepo(private val context: Context) {
             val isCreated = checkIfUserExist(email)
 
             if (isCreated) {
-                throw Exception(context.getString(R.string.Account_is_existed))
+                throw Exception("Tài khoản đã tồn tại!")
             }
 
-            val authResult = fbAuthInstance.createUserWithEmailAndPassword(email, password).await()
+            val authResult = auth.createUserWithEmailAndPassword(email, password).await()
 
             if (authResult.user == null) {
-                fbAuthInstance.currentUser?.delete()
-                throw Exception(context.getString(R.string.Create_new_account_failed))
+                auth.currentUser?.delete()
+                throw Exception("Tạo tài khoản mới thất bại!")
             }
 
             val user: User = User(email, name, password)
@@ -113,7 +126,7 @@ class UserRepo(private val context: Context) {
         val usersSnapshot: DataSnapshot? = try {
             getAllUserInFb()
         } catch (e: Exception) {
-            throw Exception(context.getString(R.string.Something_went_wrong_please_try_again))
+            throw Exception("Có lỗi xảy ra! Vui lòng thử lại!")
         }
 
         usersSnapshot?.let {
@@ -130,9 +143,21 @@ class UserRepo(private val context: Context) {
         return false
     }
 
+    suspend fun getUser(): User?{
+        return withContext(Dispatchers.IO){
+            val allUsers = getAllUserInFb()
+
+            allUsers?.let{
+                val userRef: String = auth.currentUser?.email?.substringBefore('@') ?: ""
+
+                it.child(userRef).getValue(User::class.java)
+            }
+        }
+    }
+
     suspend fun signOut() {
         withContext(Dispatchers.IO) {
-            fbAuthInstance.signOut()
+            auth.signOut()
         }
     }
 
@@ -155,7 +180,7 @@ class UserRepo(private val context: Context) {
                         Log.d("updateNewImg", "onSuccess")
                         val imageUrl = resultData?.get("secure_url")?.toString()
                         if (imageUrl != null) {
-                            fbAuthInstance.currentUser?.email?.let {
+                            auth.currentUser?.email?.let {
                                 usersDbRef.child(it.substringBefore('@')).child("avatar").setValue(imageUrl)
                             }
                             continuation.resume(imageUrl)

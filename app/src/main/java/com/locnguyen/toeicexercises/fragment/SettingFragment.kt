@@ -40,13 +40,17 @@ class SettingFragment: Fragment() {
         binding = SettingFragmentBinding.inflate(inflater, container, false)
         binding.settingVM = settingVM
         binding.lifecycleOwner = viewLifecycleOwner
+        initViews()
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         initObserves()
+    }
+
+    private fun initViews() {
+        settingVM.user.value?.avatar?.let { requireContext().loadImg(img = it, view = binding.img) }
     }
 
     private fun initObserves() {

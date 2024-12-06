@@ -45,8 +45,7 @@
                 android:layout_height="match_parent"
                 android:importantForAccessibility="no"
                 android:onClick="@{() -> settingVM.changeImgClicked()}"
-                android:scaleType="fitCenter"
-                android:src="@drawable/ic_user" />
+                android:scaleType="fitCenter" />
 
             <View
                 android:layout_width="match_parent"

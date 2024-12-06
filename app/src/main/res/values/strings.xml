@@ -115,16 +115,12 @@
     <string name="Password_can_not_empty">Mật khẩu không được trống!</string>
     <string name="Invalid_email">Email không hợp lệ!</string>
     <string name="Password_must_more_than_8_chars">Mật khẩu phải trên 8 kí tự!</string>
-    <string name="Wrong_password">Sai mật khẩu!</string>
-    <string name="Account_not_found">Không tìm thấy tài khoản!</string>
-    <string name="Something_went_wrong_please_try_again">Có lỗi xảy ra! Vui lòng thử lại!</string>
     <string name="Create_new_account">Tạo tài khoản mới</string>
     <string name="Email">Email</string>
     <string name="Confirm_password">Xác nhận mật khẩu</string>
     <string name="Username">Tên người dùng</string>
     <string name="Username_can_not_empty">Tên người dùng không được trống!</string>
     <string name="Confirm_password_not_correct">Xác nhận mật khẩu không đúng!</string>
-    <string name="Account_is_existed">Tài khoản đã tồn tại!</string>
     <string name="Register_new_account_successful">Đăng kí tài khoản mới thành công!</string>
     <string name="Login_successful">Đăng nhập thành công!</string>
     <string name="Ask_for_logout">Xác nhận đăng xuất?</string>
@@ -133,8 +129,6 @@
     <string name="Removed_favorite_word_successful">Xóa từ vựng yêu thích thành công!</string>
     <string name="Get_favorite_word_failed">Lấy danh sách từ vựng yêu thích thất bại!</string>
     <string name="Load_data_failed">Dữ liệu bị lỗi! Vui lòng khởi động lại ứng dụng!</string>
-    <string name="Login_firebase_failed">Đăng nhập vào Firebase thất bại!</string>
-    <string name="Create_new_account_failed">Tạo tài khoản mới thất bại!</string>
     <string name="Unexpected_error_occurred">Có lỗi không mong muốn xảy ra!</string>
     <string name="Word_already_exists">Từ vựng đã tồn tại!</string>
     <string name="Word_not_exists">Từ vựng đã tồn tại!</string>
@@ -148,4 +142,5 @@
     <string name="Normal_account">Tài khoản thường</string>
     <string name="Load_user_img_failed">Hiển thị ảnh người dùng thất bại!</string>
     <string name="Load_user_img_successful">Cập nhật ảnh người dùng thành công!</string>
+    <string name="Something_went_wrong_please_try_again">Có lỗi xảy ra! Vui lòng thử lại!</string>
 </resources>
