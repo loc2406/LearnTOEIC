@@ -12,7 +12,7 @@ import androidx.navigation.Navigation
 import com.locnguyen.toeicexercises.R
 import com.locnguyen.toeicexercises.databinding.ExamScoreFragmentBinding
 import com.locnguyen.toeicexercises.viewmodel.ExamVM
-import com.locnguyen.toeicexercises.viewmodel.MainVM
+import com.locnguyen.toeicexercises.viewmodel.main.MainVM
 
 class ExamScoreFragment : Fragment() {
     private lateinit var binding: ExamScoreFragmentBinding

@@ -137,4 +137,10 @@ dependencies {
 
     //các thư viện không được chuyển sang kiểu khai báo mới vì sẽ không nhận
     implementation("com.github.yarolegovich:DiscreteScrollView:1.5.1")
+        // get Image from gallery
+        implementation("io.github.ParkSangGwon:tedimagepicker:1.6.1")
+
+    // upload ảnh lên cloud qua API
+    implementation("com.cloudinary:cloudinary-android:3.0.2")
+    implementation("com.squareup.okhttp3:okhttp:4.9.1")
 }

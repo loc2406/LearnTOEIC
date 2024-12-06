@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
@@ -20,7 +21,7 @@ class LoginFragment : Fragment() {
     private lateinit var binding: LoginFragmentBinding
     private lateinit var navController: NavController
 
-    private val loginVM: LoginVM by activityViewModels<LoginVM>()
+    private val loginVM: LoginVM by viewModels<LoginVM>()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -63,7 +64,6 @@ class LoginFragment : Fragment() {
                 MySharedPreference.getInstance(requireActivity().application).setUser(it)
                 MySharedPreference.getInstance(requireActivity().application).setIsLoggedIn(true)
                 navController.navigate(R.id.action_loginFragment_to_mainFragment)
-                loginVM.clearAllLiveData()
             }
         }
     }

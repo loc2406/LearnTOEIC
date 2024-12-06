@@ -1,31 +1,28 @@
 package com.locnguyen.toeicexercises.repo
 
-import android.app.Application
 import android.content.Context
+import android.net.Uri
 import android.util.Log
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import com.google.android.gms.tasks.Tasks
+import com.cloudinary.android.MediaManager
+import com.cloudinary.android.callback.ErrorInfo
+import com.cloudinary.android.callback.UploadCallback
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.database.ValueEventListener
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 import com.locnguyen.toeicexercises.R
 import com.locnguyen.toeicexercises.model.User
-import com.locnguyen.toeicexercises.model.Word
-import com.locnguyen.toeicexercises.sharedpreference.MySharedPreference
-import com.locnguyen.toeicexercises.utils.toastMessage
-import kotlinx.coroutines.CoroutineScope
+import com.locnguyen.toeicexercises.utils.CloudinaryManager
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.async
-import kotlinx.coroutines.launch
+import kotlinx.coroutines.suspendCancellableCoroutine
 import kotlinx.coroutines.tasks.await
 import kotlinx.coroutines.withContext
+import java.io.File
+import kotlin.coroutines.resume
+import kotlin.coroutines.resumeWithException
 
 class UserRepo(private val context: Context) {
 
@@ -131,5 +128,59 @@ class UserRepo(private val context: Context) {
         }
 
         return false
+    }
+
+    suspend fun signOut() {
+        withContext(Dispatchers.IO) {
+            fbAuthInstance.signOut()
+        }
+    }
+
+    suspend fun updateNewImg(newImg: Uri): String = suspendCancellableCoroutine { continuation -> //chuyển callback thành coroutine
+        try {
+            MediaManager.get().upload(newImg)
+                .options(mapOf(
+                    Pair("public_id", "user_img")
+                ))
+                .callback(object : UploadCallback {
+                    override fun onStart(requestId: String?) {
+                        Log.d("updateNewImg", "onStart")
+                    }
+
+                    override fun onProgress(requestId: String?, bytes: Long, totalBytes: Long) {
+                        Log.d("updateNewImg", "onProgress: ${bytes * 100 / totalBytes}%")
+                    }
+
+                    override fun onSuccess(requestId: String?, resultData: MutableMap<Any?, Any?>?) {
+                        Log.d("updateNewImg", "onSuccess")
+                        val imageUrl = resultData?.get("secure_url")?.toString()
+                        if (imageUrl != null) {
+                            fbAuthInstance.currentUser?.email?.let {
+                                usersDbRef.child(it.substringBefore('@')).child("avatar").setValue(imageUrl)
+                            }
+                            continuation.resume(imageUrl)
+                        } else {
+                            continuation.resumeWithException(Exception("Upload failed: URL is null"))
+                        }
+                    }
+
+                    override fun onError(requestId: String?, error: ErrorInfo?) {
+                        Log.e("updateNewImg", "onError: ${error?.description}")
+                        continuation.resumeWithException(Exception(error?.description ?: "Upload failed"))
+                    }
+
+                    override fun onReschedule(requestId: String?, error: ErrorInfo?) {
+                        Log.d("updateNewImg", "onReschedule")
+                        continuation.resumeWithException(Exception("Upload rescheduled"))
+                    }
+                }).dispatch()
+
+            // Nếu cancel thì hủy upload
+//            continuation.invokeOnCancellation {
+//                // Có thể thêm logic hủy upload ở đây nếu cần
+//            }
+        } catch (e: Exception) {
+            continuation.resumeWithException(e)
+        }
     }
 }

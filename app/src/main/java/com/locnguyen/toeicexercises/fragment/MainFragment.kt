@@ -4,10 +4,10 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import androidx.lifecycle.ViewModelProvider
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.lifecycleScope
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import androidx.viewpager2.widget.ViewPager2
@@ -15,10 +15,13 @@ import com.locnguyen.toeicexercises.R
 import com.locnguyen.toeicexercises.adapter.BottomNavAdapter
 import com.locnguyen.toeicexercises.databinding.MainFragmentBinding
 import com.locnguyen.toeicexercises.sharedpreference.MySharedPreference
+import com.locnguyen.toeicexercises.utils.DialogHelper
 import com.locnguyen.toeicexercises.utils.toastMessage
 import com.locnguyen.toeicexercises.viewmodel.ExamVM
-import com.locnguyen.toeicexercises.viewmodel.MainVM
+import com.locnguyen.toeicexercises.viewmodel.main.MainVM
 import com.locnguyen.toeicexercises.viewmodel.WordVM
+import com.locnguyen.toeicexercises.viewmodel.main.setting.SettingVM
+import kotlinx.coroutines.launch
 
 class MainFragment : Fragment() {
 
@@ -26,7 +29,6 @@ class MainFragment : Fragment() {
     private lateinit var navController: NavController
     private lateinit var bottomNavAdapter: BottomNavAdapter
     private val mainVM: MainVM by activityViewModels<MainVM>()
-    private val wordVM: WordVM by activityViewModels<WordVM>()
     private val examVM: ExamVM by activityViewModels<ExamVM>()
 
     override fun onCreateView(
@@ -111,14 +113,27 @@ class MainFragment : Fragment() {
         }
 
         mainVM.logoutClicked.observe(viewLifecycleOwner){ isClicked ->
-            isClicked.takeIf { it == true }?.let { handleLogoutClicked() }
+            isClicked.getContentIfNotHandled()?.let {
+                handleLogoutClicked()
+            }
         }
     }
 
     private fun handleLogoutClicked() {
-        MySharedPreference(requireActivity().application).setIsLoggedIn(false)
-        MySharedPreference(requireActivity().application).setUser(null)
-        navController.navigate(R.id.action_mainFragment_to_loginFragment)
+        DialogHelper(requireContext()).getLogOutDialog {
+            lifecycleScope.launch {
+                try {
+                    mainVM.logOutFb()
+                    MySharedPreference.getInstance(requireActivity().application).apply {
+                        setIsLoggedIn(false)
+                        setUser(null)
+                    }
+                    navController.navigate(R.id.action_mainFragment_to_loginFragment)
+                } catch (e: Exception) {
+                    requireContext().toastMessage(R.string.Something_went_wrong_please_try_again)
+                }
+            }
+        }.show()
     }
 
     private fun handleItemTheoryClicked(name: String) {

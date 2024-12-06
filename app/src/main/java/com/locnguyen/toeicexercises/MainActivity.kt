@@ -2,7 +2,6 @@ package com.locnguyen.toeicexercises
 
 import android.os.Bundle
 import androidx.activity.OnBackPressedCallback
-import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.splashscreen.SplashScreen
@@ -12,10 +11,6 @@ import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import com.locnguyen.toeicexercises.databinding.MainActivityBinding
 import com.locnguyen.toeicexercises.utils.toastMessage
-import com.locnguyen.toeicexercises.viewmodel.GrammarVM
-import com.locnguyen.toeicexercises.viewmodel.MainVM
-import com.locnguyen.toeicexercises.viewmodel.WordVM
-import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {

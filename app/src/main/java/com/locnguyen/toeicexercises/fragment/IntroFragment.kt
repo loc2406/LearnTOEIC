@@ -4,13 +4,9 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ArrayAdapter
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
-import com.google.android.gms.ads.AdRequest
-import com.locnguyen.toeicexercises.viewmodel.MainVM
 import com.locnguyen.toeicexercises.R
 import com.locnguyen.toeicexercises.databinding.IntroFragmentBinding
 import com.locnguyen.toeicexercises.sharedpreference.MySharedPreference

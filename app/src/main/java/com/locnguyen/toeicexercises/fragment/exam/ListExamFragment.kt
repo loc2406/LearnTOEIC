@@ -10,12 +10,11 @@ import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.locnguyen.toeicexercises.R
 import com.locnguyen.toeicexercises.adapter.ExamAdapter
-import com.locnguyen.toeicexercises.databinding.ExamFragmentBinding
 import com.locnguyen.toeicexercises.databinding.ListExamFragmentBinding
 import com.locnguyen.toeicexercises.utils.DialogHelper
 import com.locnguyen.toeicexercises.utils.toastMessage
 import com.locnguyen.toeicexercises.viewmodel.ExamVM
-import com.locnguyen.toeicexercises.viewmodel.MainVM
+import com.locnguyen.toeicexercises.viewmodel.main.MainVM
 
 class ListExamFragment : Fragment() {
 

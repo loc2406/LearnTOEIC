@@ -11,19 +11,13 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
-import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.locnguyen.toeicexercises.R
 import com.locnguyen.toeicexercises.adapter.GrammarNoteAdapter
-import com.locnguyen.toeicexercises.adapter.WordNoteAdapter
 import com.locnguyen.toeicexercises.databinding.FavoriteGrammarsFragmentBinding
 import com.locnguyen.toeicexercises.model.Grammar
 import com.locnguyen.toeicexercises.sharedpreference.MySharedPreference
-import com.locnguyen.toeicexercises.utils.SpeakTextHelper
-import com.locnguyen.toeicexercises.utils.isHasNetWork
-import com.locnguyen.toeicexercises.utils.toastMessage
 import com.locnguyen.toeicexercises.viewmodel.GrammarVM
-import com.locnguyen.toeicexercises.viewmodel.MainVM
+import com.locnguyen.toeicexercises.viewmodel.main.MainVM
 
 class FavoriteGrammarsFragment: Fragment() {
     private lateinit var binding: FavoriteGrammarsFragmentBinding

@@ -84,12 +84,12 @@
     <string name="Removed_favorite_grammar">Đã xóa ngữ pháp yêu thích khỏi sổ tay!</string>
     <string name="Check_internet_connection">Vui lòng kiểm tra kết nối mạng và thử lại!</string>
     <string name="_3_months">3 tháng</string>
-    <string name="_200000_vnđ">200.000 vnđ</string>
-    <string name="_250000_vnđ">250.000 vnđ</string>
+    <string name="_80000_vnđ">80.000 vnđ</string>
+    <string name="_100000_vnđ">100.000 vnđ</string>
     <string name="_20_percentages">20%</string>
     <string name="_6_months">6 tháng</string>
-    <string name="_350000_vnđ">350.000 vnđ</string>
-    <string name="_500000_vnđ">500.000 vnđ</string>
+    <string name="_105000_vnđ">105.000 vnđ</string>
+    <string name="_150000_vnđ">150.000 vnđ</string>
     <string name="_30_percentages">30%</string>
     <string name="User_evaluate">Đánh giá từ người dùng</string>
     <string name="email_title">Email:</string>
@@ -142,5 +142,10 @@
     <string name="level_2_description">Thường gặp</string>
     <string name="level_3_description">Phổ biến</string>
     <string name="level_4_description">Nâng cao</string>
-    <string name="Select_level_title">Chọn trình độ:</string>
+    <string name="Filter_by">Lọc theo:</string>
+    <string name="Account_info">Thông tin tài khoản</string>
+    <string name="Premium_account">Tài khoản VIP</string>
+    <string name="Normal_account">Tài khoản thường</string>
+    <string name="Load_user_img_failed">Hiển thị ảnh người dùng thất bại!</string>
+    <string name="Load_user_img_successful">Cập nhật ảnh người dùng thành công!</string>
 </resources>

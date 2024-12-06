@@ -67,10 +67,10 @@
             android:searchIcon="@drawable/ic_search" />
 
         <TextView
-            android:id="@+id/select_level_title"
+            android:id="@+id/filter_by"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/Select_level_title"
+            android:text="@string/Filter_by"
             android:textSize="@dimen/smaller_title"
             android:textColor="@color/black"
             android:fontFamily="@font/tinos_bold"
@@ -81,10 +81,10 @@
         <HorizontalScrollView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            app:layout_constraintStart_toEndOf="@id/select_level_title"
-            app:layout_constraintTop_toTopOf="@id/select_level_title"
+            app:layout_constraintStart_toEndOf="@id/filter_by"
+            app:layout_constraintTop_toTopOf="@id/filter_by"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="@id/select_level_title"
+            app:layout_constraintBottom_toBottomOf="@id/filter_by"
             android:layout_marginStart="5dp"
             android:layout_marginEnd="20dp"
             android:scrollbars="none">
@@ -142,7 +142,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/select_level_title" />
+            app:layout_constraintTop_toBottomOf="@id/filter_by" />
 
         <TextView
             android:id="@+id/Dont_find_word_message"

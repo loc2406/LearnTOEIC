@@ -76,13 +76,4 @@ class LoginVM(val app: Application) : AndroidViewModel(app) {
             user.postValue(result)
         }
     }
-
-    fun clearAllLiveData(){
-        email.value = ""
-        password.value = ""
-        errMessage.value = null
-        isValidInfo.value = null
-        user.value = null
-        registerClicked.value = null
-    }
 }

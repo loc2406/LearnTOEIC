@@ -9,7 +9,6 @@ import android.view.ViewGroup
 import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import androidx.lifecycle.lifecycleScope
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.GridLayoutManager
@@ -17,15 +16,11 @@ import com.locnguyen.toeicexercises.R
 import com.locnguyen.toeicexercises.adapter.WordNoteAdapter
 import com.locnguyen.toeicexercises.databinding.FavoriteWordsFragmentBinding
 import com.locnguyen.toeicexercises.model.Word
-import com.locnguyen.toeicexercises.sharedpreference.MySharedPreference
 import com.locnguyen.toeicexercises.utils.SpeakTextHelper
 import com.locnguyen.toeicexercises.utils.isHasNetWork
 import com.locnguyen.toeicexercises.utils.toastMessage
-import com.locnguyen.toeicexercises.viewmodel.MainVM
+import com.locnguyen.toeicexercises.viewmodel.main.MainVM
 import com.locnguyen.toeicexercises.viewmodel.WordVM
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 
 class FavoriteWordsFragment : Fragment() {
     private lateinit var binding: FavoriteWordsFragmentBinding

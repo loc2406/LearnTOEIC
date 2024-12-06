@@ -18,7 +18,7 @@ import com.locnguyen.toeicexercises.model.Exam
 import com.locnguyen.toeicexercises.model.Question
 import com.locnguyen.toeicexercises.utils.DialogHelper
 import com.locnguyen.toeicexercises.viewmodel.ExamVM
-import com.locnguyen.toeicexercises.viewmodel.MainVM
+import com.locnguyen.toeicexercises.viewmodel.main.MainVM
 import java.util.Locale
 import kotlin.properties.Delegates
 

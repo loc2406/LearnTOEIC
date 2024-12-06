@@ -12,7 +12,6 @@ import androidx.fragment.app.activityViewModels
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.locnguyen.toeicexercises.R
 import com.locnguyen.toeicexercises.adapter.WordAdapter
 import com.locnguyen.toeicexercises.databinding.ListWordFragmentBinding
@@ -21,7 +20,7 @@ import com.locnguyen.toeicexercises.utils.DialogHelper
 import com.locnguyen.toeicexercises.utils.SpeakTextHelper
 import com.locnguyen.toeicexercises.utils.isHasNetWork
 import com.locnguyen.toeicexercises.utils.toastMessage
-import com.locnguyen.toeicexercises.viewmodel.MainVM
+import com.locnguyen.toeicexercises.viewmodel.main.MainVM
 import com.locnguyen.toeicexercises.viewmodel.WordVM
 
 class ListWordFragment : Fragment() {
@@ -112,10 +111,6 @@ class ListWordFragment : Fragment() {
     }
 
     private fun initObserves() {
-        wordVM.level.observe(viewLifecycleOwner) { currentLevel ->
-            requireContext().toastMessage("Current level: $currentLevel")
-        }
-
         wordVM.levelFilteredList.observe(viewLifecycleOwner) { list ->
             list?.let {
                 wordAdapter.updateCurrentList(levelFilteredList = it)

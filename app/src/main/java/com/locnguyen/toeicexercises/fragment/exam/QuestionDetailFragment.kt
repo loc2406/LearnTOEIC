@@ -126,9 +126,9 @@ class QuestionDetailFragment : Fragment(), Runnable {
         }
         else{
             requireContext().loadImg(
-                question.img,
-                binding.img,
-                object : RequestListener<Drawable> {
+                img = question.img,
+                view = binding.img,
+                listener = object : RequestListener<Drawable> {
                     override fun onLoadFailed(
                         e: GlideException?,
                         model: Any?,

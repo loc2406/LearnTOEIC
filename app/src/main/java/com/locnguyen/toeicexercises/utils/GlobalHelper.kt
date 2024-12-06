@@ -42,16 +42,18 @@ fun Context.isHasNetWork(): Boolean {
     }
 }
 
-fun Context.loadImg(img: String, view: ImageView, listener: RequestListener<Drawable>? = null) {
+fun Context.loadImg(img: String, view: ImageView, placeholderDrawable: Drawable? = null,listener: RequestListener<Drawable>? = null) {
     Glide.with(this)
         .load(img)
+        .placeholder(placeholderDrawable)
         .addListener(listener)
         .into(view)
 }
 
-fun Context.loadImg(img: Drawable, view: ImageView, listener: RequestListener<Drawable>? = null) {
+fun Context.loadImg(img: Drawable, view: ImageView, placeholderDrawable: Drawable? = null, listener: RequestListener<Drawable>? = null) {
     Glide.with(this)
         .load(img)
+        .placeholder(placeholderDrawable)
         .addListener(listener)
         .into(view)
 }

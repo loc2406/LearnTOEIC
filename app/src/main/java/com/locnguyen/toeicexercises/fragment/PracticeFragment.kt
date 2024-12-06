@@ -1,28 +1,20 @@
 package com.locnguyen.toeicexercises.fragment
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.GridLayoutManager
 import com.google.android.gms.ads.AdRequest
-import com.locnguyen.toeicexercises.Api
 import com.locnguyen.toeicexercises.adapter.ExerciseAdapter
 import com.locnguyen.toeicexercises.adapter.TheoryAdapter
 import com.locnguyen.toeicexercises.databinding.PracticeFragmentBinding
 import com.locnguyen.toeicexercises.utils.DialogHelper
 import com.locnguyen.toeicexercises.viewmodel.GrammarVM
-import com.locnguyen.toeicexercises.viewmodel.MainVM
+import com.locnguyen.toeicexercises.viewmodel.main.MainVM
 import com.locnguyen.toeicexercises.viewmodel.WordVM
-import kotlinx.coroutines.DelicateCoroutinesApi
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 
 class PracticeFragment: Fragment() {
 

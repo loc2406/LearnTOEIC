@@ -59,6 +59,7 @@ class RegisterFragment: Fragment(){
                 MySharedPreference.getInstance(requireActivity().application).setUser(it)
                 MySharedPreference.getInstance(requireActivity().application).setIsLoggedIn(true)
                 navController.navigate(R.id.action_registerFragment_to_mainFragment)
+                registerVM.clearAllLiveData()
             }
         }
     }
