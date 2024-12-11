@@ -114,7 +114,7 @@
     <string name="Email_can_not_empty">Email không được trống!</string>
     <string name="Password_can_not_empty">Mật khẩu không được trống!</string>
     <string name="Invalid_email">Email không hợp lệ!</string>
-    <string name="Password_must_more_than_8_chars">Mật khẩu phải trên 8 kí tự!</string>
+    <string name="Password_must_from_8_chars">Mật khẩu phải từ 8 kí tự trở lên!</string>
     <string name="Create_new_account">Tạo tài khoản mới</string>
     <string name="Email">Email</string>
     <string name="Confirm_password">Xác nhận mật khẩu</string>
@@ -143,4 +143,12 @@
     <string name="Load_user_img_failed">Hiển thị ảnh người dùng thất bại!</string>
     <string name="Load_user_img_successful">Cập nhật ảnh người dùng thành công!</string>
     <string name="Something_went_wrong_please_try_again">Có lỗi xảy ra! Vui lòng thử lại!</string>
+    <string name="Input_new_name">Nhập tên mới</string>
+    <string name="Input_new_email">Nhập email mới</string>
+    <string name="Input_new_password">Nhập mật khẩu mới</string>
+    <string name="Update">Cập nhật</string>
+    <string name="Update_user_info_successful">Cập nhật thông tin người dùng thành công!</string>
+    <string name="Update_user_info_failed">Cập nhật thông tin người dùng thất bại!</string>
+    <string name="Select_answer">Chọn đáp án</string>
+    <string name="Connect_sentence">Nối câu</string>
 </resources>

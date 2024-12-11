@@ -8,6 +8,8 @@ import android.net.Uri
 import android.util.Log
 import android.view.Gravity
 import android.view.WindowManager
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import com.cloudinary.android.MediaManager
 import com.cloudinary.android.callback.ErrorInfo
 import com.cloudinary.android.callback.UploadCallback
@@ -27,14 +29,23 @@ import kotlinx.coroutines.withContext
 import kotlin.coroutines.resume
 import kotlin.coroutines.resumeWithException
 
-class UserRepo{
+class UserRepo {
     companion object {
         @Volatile
         private var instance: UserRepo? = null
+        private var isInitialized = false
+
+        fun init() {
+            if (!isInitialized){
+                instance = UserRepo().also { instance = it }
+                isInitialized = true
+            }
+        }
 
         fun getInstance(): UserRepo {
             return instance ?: synchronized(this) {
-                instance ?: UserRepo().also { instance = it }
+                init()
+                instance!!
             }
         }
     }
@@ -42,6 +53,18 @@ class UserRepo{
     private val db: FirebaseDatabase by lazy { Firebase.database }
     private val auth: FirebaseAuth by lazy { Firebase.auth }
     private val usersDbRef: DatabaseReference by lazy { db.getReference("users") }
+    private val _user: MutableLiveData<User> = MutableLiveData()
+    val user: LiveData<User> = _user
+
+    suspend fun refreshUser() {
+        return withContext(Dispatchers.IO) {
+            try {
+                _user.postValue(getUserRef()?.get()?.await()?.getValue(User::class.java))
+            } catch (e: Exception) {
+                Log.d("REFRESH_USER", e.message.toString())
+            }
+        }
+    }
 
     suspend fun login(
         email: String,
@@ -51,7 +74,7 @@ class UserRepo{
             var userFound: User? = null
             var isEmailFound: Boolean = false
             val usersSnapshot: DataSnapshot? = try {
-                getAllUserInFb()
+                usersDbRef.get().await()
             } catch (e: Exception) {
                 throw Exception("Có lỗi xảy ra! Vui lòng thử lại!")
             }
@@ -92,7 +115,14 @@ class UserRepo{
         }
     }
 
-    private suspend fun getAllUserInFb(): DataSnapshot? = usersDbRef.get().await()
+    fun getUserRef(): DatabaseReference? {
+        val userRef: String? = auth.currentUser?.email?.substringBefore('@')
+        return if (userRef != null) {
+            usersDbRef.child(userRef)
+        } else {
+            null
+        }
+    }
 
     suspend fun createNewUser(
         email: String,
@@ -124,7 +154,7 @@ class UserRepo{
         email: String
     ): Boolean {
         val usersSnapshot: DataSnapshot? = try {
-            getAllUserInFb()
+            usersDbRef.get().await()
         } catch (e: Exception) {
             throw Exception("Có lỗi xảy ra! Vui lòng thử lại!")
         }
@@ -143,69 +173,89 @@ class UserRepo{
         return false
     }
 
-    suspend fun getUser(): User?{
-        return withContext(Dispatchers.IO){
-            val allUsers = getAllUserInFb()
-
-            allUsers?.let{
-                val userRef: String = auth.currentUser?.email?.substringBefore('@') ?: ""
-
-                it.child(userRef).getValue(User::class.java)
-            }
-        }
-    }
-
     suspend fun signOut() {
         withContext(Dispatchers.IO) {
             auth.signOut()
         }
     }
 
-    suspend fun updateNewImg(newImg: Uri): String = suspendCancellableCoroutine { continuation -> //chuyển callback thành coroutine
-        try {
-            MediaManager.get().upload(newImg)
-                .options(mapOf(
-                    Pair("public_id", "user_img")
-                ))
-                .callback(object : UploadCallback {
-                    override fun onStart(requestId: String?) {
-                        Log.d("updateNewImg", "onStart")
-                    }
-
-                    override fun onProgress(requestId: String?, bytes: Long, totalBytes: Long) {
-                        Log.d("updateNewImg", "onProgress: ${bytes * 100 / totalBytes}%")
-                    }
-
-                    override fun onSuccess(requestId: String?, resultData: MutableMap<Any?, Any?>?) {
-                        Log.d("updateNewImg", "onSuccess")
-                        val imageUrl = resultData?.get("secure_url")?.toString()
-                        if (imageUrl != null) {
-                            auth.currentUser?.email?.let {
-                                usersDbRef.child(it.substringBefore('@')).child("avatar").setValue(imageUrl)
-                            }
-                            continuation.resume(imageUrl)
-                        } else {
-                            continuation.resumeWithException(Exception("Upload failed: URL is null"))
+    suspend fun updateNewImg(newImg: Uri): String =
+        suspendCancellableCoroutine { continuation -> //chuyển callback thành coroutine
+            try {
+                MediaManager.get().upload(newImg)
+                    .options(
+                        mapOf(
+                            Pair("public_id", "user_img")
+                        )
+                    )
+                    .callback(object : UploadCallback {
+                        override fun onStart(requestId: String?) {
+                            Log.d("updateNewImg", "onStart")
                         }
-                    }
 
-                    override fun onError(requestId: String?, error: ErrorInfo?) {
-                        Log.e("updateNewImg", "onError: ${error?.description}")
-                        continuation.resumeWithException(Exception(error?.description ?: "Upload failed"))
-                    }
+                        override fun onProgress(requestId: String?, bytes: Long, totalBytes: Long) {
+                            Log.d("updateNewImg", "onProgress: ${bytes * 100 / totalBytes}%")
+                        }
 
-                    override fun onReschedule(requestId: String?, error: ErrorInfo?) {
-                        Log.d("updateNewImg", "onReschedule")
-                        continuation.resumeWithException(Exception("Upload rescheduled"))
-                    }
-                }).dispatch()
+                        override fun onSuccess(
+                            requestId: String?,
+                            resultData: MutableMap<Any?, Any?>?
+                        ) {
+                            Log.d("updateNewImg", "onSuccess")
+                            val imageUrl = resultData?.get("secure_url")?.toString()
+                            if (imageUrl != null) {
+                                getUserRef()?.child("avatar")?.setValue(imageUrl)
+                                continuation.resume(imageUrl)
+                            } else {
+                                continuation.resumeWithException(Exception("Upload failed: URL is null"))
+                            }
+                        }
 
-            // Nếu cancel thì hủy upload
+                        override fun onError(requestId: String?, error: ErrorInfo?) {
+                            Log.e("updateNewImg", "onError: ${error?.description}")
+                            continuation.resumeWithException(
+                                Exception(
+                                    error?.description ?: "Upload failed"
+                                )
+                            )
+                        }
+
+                        override fun onReschedule(requestId: String?, error: ErrorInfo?) {
+                            Log.d("updateNewImg", "onReschedule")
+                            continuation.resumeWithException(Exception("Upload rescheduled"))
+                        }
+                    }).dispatch()
+
+                // Nếu cancel thì hủy upload
 //            continuation.invokeOnCancellation {
 //                // Có thể thêm logic hủy upload ở đây nếu cần
 //            }
-        } catch (e: Exception) {
-            continuation.resumeWithException(e)
+            } catch (e: Exception) {
+                continuation.resumeWithException(e)
+            }
+        }
+
+    suspend fun isExistedEmail(email: String): Boolean{
+        return withContext(Dispatchers.IO){
+            try{
+                val signInMethods = auth.fetchSignInMethodsForEmail(email).await().signInMethods
+                signInMethods?.isNotEmpty() ?: false
+            }catch (e: Exception){
+                throw e
+            }
+        }
+    }
+
+    suspend fun updateInfo(newInfo: Map<String, String>) {
+        return withContext(Dispatchers.IO) {
+            try {
+                getUserRef()?.updateChildren(newInfo)?.await() ?: {
+                    throw Exception("Không tìm thấy user!")
+                }
+                refreshUser()
+            } catch (e: Exception) {
+                throw Exception("Cập nhật thông tin thất bại: ${e.message}")
+            }
         }
     }
 }

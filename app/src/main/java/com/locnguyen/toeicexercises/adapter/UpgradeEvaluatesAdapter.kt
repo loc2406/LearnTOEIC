@@ -34,7 +34,7 @@ class UpgradeEvaluatesAdapter(private val evaluates: List<Evaluate>) :
 
         holder.binding.apply {
             context.loadImg(
-                AppCompatResources.getDrawable(context, R.drawable.ic_user)!!,
+                AppCompatResources.getDrawable(context, R.drawable.img_user)!!,
                 img
             )
             name.text = data.name

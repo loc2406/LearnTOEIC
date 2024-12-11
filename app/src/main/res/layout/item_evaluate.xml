@@ -23,7 +23,7 @@
             android:layout_height="match_parent"
             android:importantForAccessibility="no"
             android:scaleType="centerInside"
-            tool:src="@drawable/ic_user" />
+            tool:src="@drawable/img_user" />
 
     </androidx.cardview.widget.CardView>
 

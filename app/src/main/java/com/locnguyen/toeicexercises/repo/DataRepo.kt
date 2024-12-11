@@ -1,6 +1,7 @@
 package com.locnguyen.toeicexercises.repo
 
 import android.content.Context
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseReference
@@ -16,9 +17,10 @@ import kotlinx.coroutines.withContext
 
 class DataRepo(private val context: Context) {
 
-    private val examsDbRef: DatabaseReference by lazy { fbDbInstance.getReference("exams") }
-    private val fbDbInstance: FirebaseDatabase by lazy { Firebase.database }
-    private val usersDbRef: DatabaseReference by lazy { fbDbInstance.getReference("users") }
+    private val db: FirebaseDatabase by lazy { Firebase.database }
+    private val auth: FirebaseAuth by lazy { Firebase.auth }
+    private val examsDbRef: DatabaseReference by lazy { db.getReference("exams") }
+    private val usersDbRef: DatabaseReference by lazy { db.getReference("users") }
 
     private suspend fun getAllExamsInFb(): DataSnapshot? = examsDbRef.get().await()
 
@@ -42,6 +44,15 @@ class DataRepo(private val context: Context) {
             }
 
             result
+        }
+    }
+
+    fun getUserRef(): DatabaseReference? {
+        val userRef: String? = auth.currentUser?.email?.substringBefore('@')
+        return if (userRef != null) {
+            usersDbRef.child(userRef)
+        } else {
+            null
         }
     }
 
@@ -92,12 +103,9 @@ class DataRepo(private val context: Context) {
     suspend fun fetchFavoriteWords(): List<Word> {
         return withContext(Dispatchers.IO) {
             val list: ArrayList<Word> = ArrayList()
-            val userEmail: String = Firebase.auth.currentUser?.email
-                ?: throw Exception(context.getString(R.string.Unexpected_error_occurred))
-            val userRef = usersDbRef.child(userEmail.substringBefore('@'))
 
             val favWordsSnapshot: DataSnapshot? =
-                userRef.child("favWords").get().await()
+                getUserRef()?.child("favWords")?.get()?.await()
 
             favWordsSnapshot?.let { snapShots ->
                 if (snapShots.exists()) {

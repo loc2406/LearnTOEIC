@@ -50,7 +50,7 @@ class LoginVM(val app: Application) : AndroidViewModel(app) {
             }
 
             password.value!!.length < 8 -> {
-                errMessage.value = app.getString(R.string.Password_must_more_than_8_chars)
+                errMessage.value = app.getString(R.string.Password_must_from_8_chars)
                 false
             }
 
