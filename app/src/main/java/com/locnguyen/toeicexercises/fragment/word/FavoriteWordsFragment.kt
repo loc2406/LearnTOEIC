@@ -16,6 +16,7 @@ import com.locnguyen.toeicexercises.R
 import com.locnguyen.toeicexercises.adapter.WordNoteAdapter
 import com.locnguyen.toeicexercises.databinding.FavoriteWordsFragmentBinding
 import com.locnguyen.toeicexercises.model.Word
+import com.locnguyen.toeicexercises.utils.Event
 import com.locnguyen.toeicexercises.utils.SpeakTextHelper
 import com.locnguyen.toeicexercises.utils.isHasNetWork
 import com.locnguyen.toeicexercises.utils.toastMessage
@@ -44,7 +45,6 @@ class FavoriteWordsFragment : Fragment() {
 
         navController = Navigation.findNavController(view)
         wordNoteAdapter = WordNoteAdapter()
-        loadFavoriteWords()
 
         initViews()
         initListeners()
@@ -76,24 +76,24 @@ class FavoriteWordsFragment : Fragment() {
             handlePressedBack()
         }
 
-        if (::wordNoteAdapter.isInitialized) {
-            wordNoteAdapter.pronounceClicked = { pronounce ->
-                if (requireContext().isHasNetWork()) {
-                    SpeakTextHelper(requireContext()).speakText(pronounce, "en")
-                } else {
-                    requireContext().toastMessage(R.string.Check_internet_connection)
-                }
+        wordNoteAdapter.pronounceClicked = { pronounce ->
+            if (requireContext().isHasNetWork()) {
+                SpeakTextHelper(requireContext()).speakText(pronounce, "en")
+            } else {
+                requireContext().toastMessage(R.string.Check_internet_connection)
             }
+        }
 
-            wordNoteAdapter.itemClicked = { word ->
-                handleItemWordClicked(word)
-            }
+        wordNoteAdapter.itemClicked = { word ->
+            handleItemWordClicked(word)
         }
     }
 
     private fun initObserves() {
-        wordVM.loadFavoriteWords.observe(viewLifecycleOwner){needLoad ->
-            needLoad.takeIf { it != null }?.let { wordVM.fetchFavoriteWords() }
+        wordVM.isNeedLoaded.observe(viewLifecycleOwner){ eventLoaded ->
+            eventLoaded?.getContentIfNotHandled().let{
+                loadFavoriteWords()
+            }
         }
 
         wordVM.favWords.observe(viewLifecycleOwner) { favoriteWords ->
@@ -111,7 +111,7 @@ class FavoriteWordsFragment : Fragment() {
     private fun handlePressedBack() {
         navController.popBackStack()
         mainVM.wordsNoteClicked.value = false
-        wordVM.loadFavoriteWords.value = true
+        wordVM.isNeedLoaded.value = Event(true)
     }
 
     private fun handleItemWordClicked(word: Word) {

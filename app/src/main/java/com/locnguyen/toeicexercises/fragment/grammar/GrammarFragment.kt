@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import androidx.core.content.res.ResourcesCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.fragment.app.viewModels
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import androidx.navigation.fragment.navArgs
@@ -50,13 +51,14 @@ class GrammarFragment: Fragment() {
 
         initViews()
         initListeners()
+        initObserves()
 
         if (loadingDialog.isShowing) loadingDialog.dismiss()
     }
 
     private fun initViews() {
         binding.title.text = grammar.title
-        grammarVM.getFavoriteGrammars().takeIf { it.contains(grammar) }?.let{
+        grammarVM.favGrammars.value!!.takeIf { it.contains(grammar) }?.let{
             isFavorite = true
             checkFavoriteGrammar()
         }
@@ -105,14 +107,20 @@ class GrammarFragment: Fragment() {
             isFavorite = !isFavorite
 
             if (isFavorite){
-                requireContext().toastMessage(R.string.Added_favorite_grammar)
                 grammarVM.addFavoriteGrammar(grammar)
                 checkFavoriteGrammar()
             }
             else{
-                requireContext().toastMessage(R.string.Removed_favorite_grammar)
                 grammarVM.removeFavoriteGrammar(grammar)
                 uncheckFavoriteGrammar()
+            }
+        }
+    }
+
+    private fun initObserves(){
+        grammarVM.message.observe(viewLifecycleOwner){ eventMessage ->
+            eventMessage?.getContentIfNotHandled()?.let{ message ->
+                requireContext().toastMessage(message)
             }
         }
     }

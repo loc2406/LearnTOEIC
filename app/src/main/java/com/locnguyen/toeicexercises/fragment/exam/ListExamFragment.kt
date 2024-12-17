@@ -54,7 +54,12 @@ class ListExamFragment : Fragment() {
 
     private fun initListeners() {
         examAdapter.itemClicked = { itemExam ->
-            mainVM.itemExamClicked.value = itemExam
+            if (itemExam.isUnlock){
+                mainVM.itemExamClicked.value = itemExam
+            }
+            else{
+                DialogHelper(requireContext()).getExamLockedDialog().show()
+            }
         }
     }
 

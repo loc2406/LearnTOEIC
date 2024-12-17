@@ -6,6 +6,7 @@ import com.google.android.gms.ads.MobileAds
 import com.google.firebase.FirebaseApp
 import com.google.firebase.ktx.Firebase
 import com.locnguyen.toeicexercises.database.TheoryDb
+import com.locnguyen.toeicexercises.repo.DataRepo
 import com.locnguyen.toeicexercises.repo.UserRepo
 import com.locnguyen.toeicexercises.utils.CloudinaryManager
 import kotlinx.coroutines.CoroutineScope
@@ -27,6 +28,7 @@ class MyApplication: Application() {
         FirebaseApp.initializeApp(this)
         db = TheoryDb(applicationContext)
         UserRepo.init()
+        DataRepo.init()
 
         GlobalScope.launch {
             UserRepo.getInstance().refreshUser()

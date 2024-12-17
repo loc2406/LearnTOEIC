@@ -1,5 +1,6 @@
 package com.locnguyen.toeicexercises.adapter
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.View.INVISIBLE
@@ -30,11 +31,11 @@ class ExamAdapter(var listExam: List<Exam> = emptyList(), var itemClicked: (Exam
 
         holder.binding.title.text = data.title
         holder.binding.content.text = context.getString(R.string.Exam_content_regex, data.time, 200)
-        if (data.isUnlock){
-            holder.binding.icLock.visibility = INVISIBLE
-        }
-        else{
-            holder.binding.icLock.visibility = VISIBLE
+
+        Log.d("EXAM", data.isUnlock.toString())
+
+        if (!data.isUnlock){
+            holder.binding.icLock.setImageResource(R.drawable.ic_lock)
         }
 
         holder.binding.root.setOnClickListener {

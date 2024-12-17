@@ -17,6 +17,7 @@ import com.locnguyen.toeicexercises.adapter.GrammarLessonAdapter
 import com.locnguyen.toeicexercises.databinding.ListGrammarFragmentBinding
 import com.locnguyen.toeicexercises.model.Grammar
 import com.locnguyen.toeicexercises.utils.DialogHelper
+import com.locnguyen.toeicexercises.utils.Event
 import com.locnguyen.toeicexercises.viewmodel.GrammarVM
 import com.locnguyen.toeicexercises.viewmodel.main.MainVM
 
@@ -100,7 +101,7 @@ class ListGrammarFragment: Fragment() {
     private fun handlePressedBack(){
         navController.popBackStack()
         mainVM.itemTheoryClicked.value = null
-        grammarVM.loadFavoriteGrammars.value = true
+        grammarVM.isNeedLoaded.value = Event(true)
     }
 
     private fun handleGrammarClicked(grammar: Grammar) {

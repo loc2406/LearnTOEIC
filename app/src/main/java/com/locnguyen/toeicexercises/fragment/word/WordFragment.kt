@@ -188,7 +188,6 @@ class WordFragment: Fragment() {
 
     private fun handlePressedCallback() {
         navController.popBackStack()
-        wordVM.loadFavoriteWords.value = true
     }
 
     private fun initObserves(){

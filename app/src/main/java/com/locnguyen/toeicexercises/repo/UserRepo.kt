@@ -143,7 +143,7 @@ class UserRepo {
                 throw Exception("Tạo tài khoản mới thất bại!")
             }
 
-            val user: User = User(email, name, password)
+            val user: User = User(email = email, name =  name, password = password)
             usersDbRef.child(email.substringBefore('@')).setValue(user).await()
 
             user
@@ -235,16 +235,16 @@ class UserRepo {
             }
         }
 
-    suspend fun isExistedEmail(email: String): Boolean{
-        return withContext(Dispatchers.IO){
-            try{
-                val signInMethods = auth.fetchSignInMethodsForEmail(email).await().signInMethods
-                signInMethods?.isNotEmpty() ?: false
-            }catch (e: Exception){
-                throw e
-            }
-        }
-    }
+//    suspend fun isExistedEmail(email: String): Boolean{
+//        return withContext(Dispatchers.IO){
+//            try{
+//                val signInMethods = auth.fetchSignInMethodsForEmail(email).await().signInMethods
+//                signInMethods?.isNotEmpty() ?: false
+//            }catch (e: Exception){
+//                throw e
+//            }
+//        }
+//    }
 
     suspend fun updateInfo(newInfo: Map<String, String>) {
         return withContext(Dispatchers.IO) {

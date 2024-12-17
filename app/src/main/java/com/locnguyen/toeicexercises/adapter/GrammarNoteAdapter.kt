@@ -8,7 +8,7 @@ import com.locnguyen.toeicexercises.databinding.ItemWordNoteBinding
 import com.locnguyen.toeicexercises.model.Grammar
 import com.locnguyen.toeicexercises.model.Word
 
-class GrammarNoteAdapter(private val grammars: List<Grammar>, var itemClicked: (Grammar) -> Unit = {}) :
+class GrammarNoteAdapter(private var grammars: List<Grammar> = emptyList(), var itemClicked: (Grammar) -> Unit = {}) :
     RecyclerView.Adapter<GrammarNoteAdapter.GrammarNoteVH>() {
     class GrammarNoteVH(val binding: ItemGrammarNoteBinding) : RecyclerView.ViewHolder(binding.root)
 
@@ -33,5 +33,10 @@ class GrammarNoteAdapter(private val grammars: List<Grammar>, var itemClicked: (
         holder.binding.root.setOnClickListener {
             itemClicked.invoke(data)
         }
+    }
+
+    fun updateFavoriteList(grammars: List<Grammar>){
+        this.grammars = grammars
+        notifyDataSetChanged()
     }
 }

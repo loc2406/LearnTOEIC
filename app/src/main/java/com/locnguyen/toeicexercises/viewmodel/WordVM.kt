@@ -10,13 +10,14 @@ import com.locnguyen.toeicexercises.R
 import com.locnguyen.toeicexercises.model.Example
 import com.locnguyen.toeicexercises.model.Word
 import com.locnguyen.toeicexercises.repo.DataRepo
+import com.locnguyen.toeicexercises.utils.Event
 import kotlinx.coroutines.launch
 
 class WordVM(private val app: Application) : AndroidViewModel(app) {
 
-    private val repo: DataRepo by lazy { DataRepo(app) }
+    private val repo: DataRepo by lazy { DataRepo.getInstance() }
 
-    val loadFavoriteWords: MutableLiveData<Boolean> by lazy { MutableLiveData(true) }
+    val isNeedLoaded: MutableLiveData<Event<Boolean>> by lazy { MutableLiveData(Event(true)) }
     val words: MutableLiveData<List<Word>> by lazy { MutableLiveData(DataManager.words.value) }
     val examples: MutableLiveData<List<Example>> by lazy { MutableLiveData(DataManager.examples.value) }
     val searchFilteredList: MutableLiveData<List<Word>> by lazy { MutableLiveData(words.value) }
@@ -73,7 +74,7 @@ class WordVM(private val app: Application) : AndroidViewModel(app) {
                 repo.addFavoriteWord(word)
                 message.value = app.getString(R.string.Added_favorite_word_successful)
             } catch (e: Exception) {
-                message.value = e.message
+                message.value = app.getString(R.string.Added_favorite_word_failed)
             }
         }
     }
@@ -82,9 +83,9 @@ class WordVM(private val app: Application) : AndroidViewModel(app) {
         viewModelScope.launch {
             try {
                 repo.removeFavoriteWord(word)
-                message.value = app.getString(R.string.Removed_favorite_word_successful)
+                message.value = app.getString(R.string.Remove_favorite_word_successful)
             } catch (e: Exception) {
-                message.value = e.message
+                message.value = app.getString(R.string.Remove_favorite_word_failed)
             }
         }
     }

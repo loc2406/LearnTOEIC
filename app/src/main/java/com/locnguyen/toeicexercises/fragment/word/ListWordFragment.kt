@@ -17,6 +17,7 @@ import com.locnguyen.toeicexercises.adapter.WordAdapter
 import com.locnguyen.toeicexercises.databinding.ListWordFragmentBinding
 import com.locnguyen.toeicexercises.model.Word
 import com.locnguyen.toeicexercises.utils.DialogHelper
+import com.locnguyen.toeicexercises.utils.Event
 import com.locnguyen.toeicexercises.utils.SpeakTextHelper
 import com.locnguyen.toeicexercises.utils.isHasNetWork
 import com.locnguyen.toeicexercises.utils.toastMessage
@@ -134,7 +135,7 @@ class ListWordFragment : Fragment() {
     private fun handlePressedBack() {
         navController.popBackStack()
         mainVM.itemTheoryClicked.value = null
-        wordVM.loadFavoriteWords.value = true
+        wordVM.isNeedLoaded.value = Event(true)
     }
 
     private fun handleItemWordClick(word: Word) {

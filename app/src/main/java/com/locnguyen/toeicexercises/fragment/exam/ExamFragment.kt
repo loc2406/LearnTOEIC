@@ -56,7 +56,7 @@ class ExamFragment: Fragment() {
         examVM = ViewModelProvider(requireActivity())[ExamVM::class.java]
         binding.examVM = examVM
 
-        exam = examVM.exam.value ?: Exam()
+        exam = examVM.exam.value!!
 
         examTimeLeft = (exam.time * 60 * 1000).toLong()
 

@@ -2,6 +2,7 @@ package com.locnguyen.toeicexercises.viewmodel
 
 import android.app.Application
 import android.content.Context
+import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
@@ -14,7 +15,7 @@ import com.locnguyen.toeicexercises.utils.toastMessage
 import kotlinx.coroutines.launch
 
 class ExamVM(val app: Application) : AndroidViewModel(app) {
-    val dataRepo: DataRepo by lazy { DataRepo(app) }
+    val dataRepo: DataRepo by lazy { DataRepo.getInstance() }
     val exams: MutableLiveData<List<Exam>> by lazy { MutableLiveData(emptyList()) }
     val exam: MutableLiveData<Exam?> by lazy { MutableLiveData() }
     val currentQuestion: MutableLiveData<Int> by lazy { MutableLiveData(0) }
@@ -27,7 +28,7 @@ class ExamVM(val app: Application) : AndroidViewModel(app) {
     fun getAllExamInFb() {
         viewModelScope.launch {
             val result: List<Exam>? = try{
-                dataRepo.allExams()
+                dataRepo.allExams(app)
             }catch (e: Exception){
                 null
             }

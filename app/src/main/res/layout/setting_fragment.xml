@@ -154,45 +154,6 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/evaluate_space"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/bg_white_rectangle_primary_stroke_10dp_corners"
-                android:padding="15dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/edit_info_space">
-
-                <ImageView
-                    android:id="@+id/ic_evaluate"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:contentDescription="@string/Evaluate_app"
-                    android:src="@drawable/ic_evaluate"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/evaluate_app"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:ellipsize="end"
-                    android:fontFamily="@font/tinos_bold"
-                    android:maxLines="1"
-                    android:text="@string/Evaluate_app"
-                    android:textColor="@color/black"
-                    android:textSize="@dimen/small_content"
-                    app:layout_constraintBottom_toBottomOf="@id/ic_evaluate"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/ic_evaluate"
-                    app:layout_constraintTop_toTopOf="@id/ic_evaluate" />
-
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/logout_space"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -202,7 +163,7 @@
                 android:padding="15dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/evaluate_space">
+                app:layout_constraintTop_toBottomOf="@id/edit_info_space">
 
                 <ImageView
                     android:id="@+id/ic_logout"

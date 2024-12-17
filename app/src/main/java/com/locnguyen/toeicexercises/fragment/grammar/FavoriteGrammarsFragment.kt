@@ -16,6 +16,7 @@ import com.locnguyen.toeicexercises.adapter.GrammarNoteAdapter
 import com.locnguyen.toeicexercises.databinding.FavoriteGrammarsFragmentBinding
 import com.locnguyen.toeicexercises.model.Grammar
 import com.locnguyen.toeicexercises.sharedpreference.MySharedPreference
+import com.locnguyen.toeicexercises.utils.Event
 import com.locnguyen.toeicexercises.viewmodel.GrammarVM
 import com.locnguyen.toeicexercises.viewmodel.main.MainVM
 
@@ -40,17 +41,15 @@ class FavoriteGrammarsFragment: Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         navController = Navigation.findNavController(view)
+        grammarNoteAdapter = GrammarNoteAdapter()
 
-        val favoriteGrammars = MySharedPreference.getInstance(requireActivity().application).getFavoriteGrammars(MySharedPreference.FAVORITE_GRAMMARS)
-        if (favoriteGrammars.isEmpty()){
-            binding.dontHaveDataMessage.visibility = VISIBLE
-            binding.favoriteGrammars.visibility = INVISIBLE
-        }else{
-            grammarNoteAdapter = GrammarNoteAdapter(favoriteGrammars.toList())
-            initViews()
-        }
-
+        initViews()
         initListeners()
+        initObserves()
+    }
+
+    private fun loadFavoriteWords() {
+        grammarVM.fetchFavoriteGrammars()
     }
 
     private fun initViews() {
@@ -72,9 +71,26 @@ class FavoriteGrammarsFragment: Fragment() {
             handlePressedBack()
         }
 
-        if(::grammarNoteAdapter.isInitialized){
-            grammarNoteAdapter.itemClicked = { grammar ->
-                handleItemGrammarClicked(grammar)
+        grammarNoteAdapter.itemClicked = { grammar ->
+            handleItemGrammarClicked(grammar)
+        }
+    }
+
+    private fun initObserves(){
+        grammarVM.isNeedLoaded.observe(viewLifecycleOwner){ eventLoaded ->
+            eventLoaded?.getContentIfNotHandled().let{
+                loadFavoriteWords()
+            }
+        }
+
+        grammarVM.favGrammars.observe(viewLifecycleOwner) { favoriteGrammars ->
+            favoriteGrammars?.let {
+                if (it.isEmpty()) {
+                    binding.dontHaveDataMessage.visibility = VISIBLE
+                    binding.favoriteGrammars.visibility = INVISIBLE
+                } else {
+                    grammarNoteAdapter.updateFavoriteList(it)
+                }
             }
         }
     }
@@ -82,7 +98,7 @@ class FavoriteGrammarsFragment: Fragment() {
     private fun handlePressedBack() {
         navController.popBackStack()
         mainVM.grammarsNoteClicked.value = false
-        grammarVM.loadFavoriteGrammars.value = true
+        grammarVM.isNeedLoaded.value = Event(true)
     }
 
     private fun handleItemGrammarClicked(grammar: Grammar){

@@ -80,7 +80,8 @@
     <string name="Intro_image">Ảnh bìa</string>
     <string name="Added_favorite_word_successful">Đã thêm từ vựng yêu thích vào sổ tay!</string>
     <string name="Removed_favorite_word">Đã xóa từ vựng yêu thích khỏi sổ tay!</string>
-    <string name="Added_favorite_grammar">Đã thêm ngữ pháp yêu thích vào sổ tay!</string>
+    <string name="Add_favorite_grammar_successful">Thêm ngữ pháp yêu thích vào sổ tay thành công!</string>
+    <string name="Add_favorite_grammar_failed">Thêm ngữ pháp yêu thích vào sổ tay thất bại!</string>
     <string name="Removed_favorite_grammar">Đã xóa ngữ pháp yêu thích khỏi sổ tay!</string>
     <string name="Check_internet_connection">Vui lòng kiểm tra kết nối mạng và thử lại!</string>
     <string name="_3_months">3 tháng</string>
@@ -125,8 +126,8 @@
     <string name="Login_successful">Đăng nhập thành công!</string>
     <string name="Ask_for_logout">Xác nhận đăng xuất?</string>
     <string name="Added_favorite_word_failed">Thêm từ vựng yêu thích thất bại!</string>
-    <string name="Removed_favorite_word_failed">Xóa từ vựng yêu thích thất bại!</string>
-    <string name="Removed_favorite_word_successful">Xóa từ vựng yêu thích thành công!</string>
+    <string name="Remove_favorite_word_failed">Xóa từ vựng yêu thích thất bại!</string>
+    <string name="Remove_favorite_word_successful">Xóa từ vựng yêu thích thành công!</string>
     <string name="Get_favorite_word_failed">Lấy danh sách từ vựng yêu thích thất bại!</string>
     <string name="Load_data_failed">Dữ liệu bị lỗi! Vui lòng khởi động lại ứng dụng!</string>
     <string name="Unexpected_error_occurred">Có lỗi không mong muốn xảy ra!</string>
@@ -151,4 +152,7 @@
     <string name="Update_user_info_failed">Cập nhật thông tin người dùng thất bại!</string>
     <string name="Select_answer">Chọn đáp án</string>
     <string name="Connect_sentence">Nối câu</string>
+    <string name="Get_favorite_grammar_failed">Lấy danh sách ngữ pháp yêu thích thất bại!</string>
+    <string name="Notify_locked_exam">Bài kiểm tra này đang bị khóa!</string>
+    <string name="Require_user_upgrade_account">Vui lòng nâng cấp tài khoản để mở khóa toàn bộ bài kiểm tra!</string>
 </resources>
