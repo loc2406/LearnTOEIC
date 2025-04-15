@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="editUserInfoVM"
+            type="com.locnguyen.toeicexercises.viewmodel.main.setting.EditUserInfoVM" />
+
+        <import type="android.view.View" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_primary_rectangle_no_stroke_20dp_botstart_botend_corners"
+            android:fontFamily="@font/tinos_bold"
+            android:gravity="center"
+            android:paddingVertical="15dp"
+            android:text="@string/Edit_info"
+            android:textColor="@color/white"
+            android:textSize="@dimen/medium_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/new_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_white_rectangle_primary_stroke_10dp_corners"
+            android:drawableStart="@drawable/ic_user"
+            android:drawablePadding="5dp"
+            android:fontFamily="@font/tinos_regular"
+            android:hint="@string/Input_new_name"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:padding="15dp"
+            android:text="@={editUserInfoVM.newName}"
+            android:textColor="@color/black"
+            android:textSize="@dimen/small_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title" />
+
+        <EditText
+            android:id="@+id/new_password"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_white_rectangle_primary_stroke_10dp_corners"
+            android:drawableStart="@drawable/ic_input_password"
+            android:drawablePadding="5dp"
+            android:fontFamily="@font/tinos_regular"
+            android:hint="@string/Input_new_password"
+            android:importantForAutofill="no"
+            android:inputType="textPassword"
+            android:padding="15dp"
+            android:text="@={editUserInfoVM.newPassword}"
+            android:textColor="@color/black"
+            android:textSize="@dimen/small_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/new_name" />
+
+        <TextView
+            android:id="@+id/error"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="20dp"
+            android:text="@{editUserInfoVM.error}"
+            android:textAlignment="center"
+            android:textColor="@color/red"
+            android:textSize="@dimen/small_content"
+            android:visibility="@{editUserInfoVM.error == null ? View.GONE : View.VISIBLE}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/new_password" />
+
+        <TextView
+            android:id="@+id/btn_back"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/bg_white_rectangle_primary_stroke_10dp_corners"
+            android:fontFamily="@font/tinos_bold"
+            android:importantForAutofill="no"
+            android:onClick="@{() -> editUserInfoVM.backClicked()}"
+            android:padding="15dp"
+            android:text="@string/Back"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/small_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btn_update"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/error"
+            app:layout_constraintVertical_bias="1" />
+
+        <TextView
+            android:id="@+id/btn_update"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/bg_primary_rectangle_no_stroke_10dp_corners"
+            android:fontFamily="@font/tinos_bold"
+            android:importantForAutofill="no"
+            android:onClick="@{() -> editUserInfoVM.updateClicked()}"
+            android:padding="15dp"
+            android:text="@string/Update"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/small_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btn_back"
+            app:layout_constraintTop_toBottomOf="@id/error"
+            app:layout_constraintVertical_bias="1" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
