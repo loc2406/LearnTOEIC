@@ -143,6 +143,7 @@
                     android:background="@drawable/bg_white_rectangle_primary_stroke_10dp_corners"
                     android:importantForAccessibility="no"
                     android:padding="10dp"
+                    android:onClick="@{() -> practiceVM.selectAnswerClicked()}"
                     android:scaleType="centerInside"
                     app:layout_constraintEnd_toStartOf="@id/ic_exercise_connect_sentence"
                     app:layout_constraintStart_toStartOf="parent"
@@ -172,13 +173,14 @@
                     android:importantForAccessibility="no"
                     android:padding="10dp"
                     android:scaleType="centerInside"
+                    android:onClick="@{() -> practiceVM.readParagraphClicked()}"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@id/ic_exercise_select_correct_answer"
                     app:layout_constraintTop_toBottomOf="@id/exercise_title"
-                    android:src="@drawable/ic_connect_sentence" />
+                    android:src="@drawable/ic_read_paragraph" />
 
                 <TextView
-                    android:id="@+id/exercise_connect_sentence_title"
+                    android:id="@+id/exercise_read_paragraph"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
@@ -189,7 +191,7 @@
                     app:layout_constraintEnd_toEndOf="@id/ic_exercise_connect_sentence"
                     app:layout_constraintStart_toStartOf="@id/ic_exercise_connect_sentence"
                     app:layout_constraintTop_toBottomOf="@id/ic_exercise_connect_sentence"
-                    android:text="@string/Connect_sentence" />
+                    android:text="@string/Read_paragraph" />
 
                 <TextView
                     android:id="@+id/note_title"

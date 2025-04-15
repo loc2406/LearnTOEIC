@@ -43,8 +43,10 @@ class QuestionDetailFragment : Fragment(), Runnable {
     private lateinit var binding: QuestionDetailFragmentBinding
     private lateinit var question: Question
     private lateinit var answerViews: List<TextView>
+    private lateinit var answerValueViews: List<TextView>
     private val examVM: ExamVM by activityViewModels<ExamVM>()
     private var isShowAnswer by Delegates.notNull<Boolean>()
+    private var type: String = ""
 
     private var questionPosition: Int = -1
     private var currentSecondsPlayed: Int = 0
@@ -87,6 +89,7 @@ class QuestionDetailFragment : Fragment(), Runnable {
         question = getQuestionFromArgument() ?: Question()
         questionPosition = arguments?.getInt("POSITION") ?: -1
         isShowAnswer = arguments?.getBoolean("IS_SHOW_ANSWER") ?: false
+        type = arguments?.getString("TYPE").toString()
 
         initViews()
         initListeners()
@@ -153,6 +156,236 @@ class QuestionDetailFragment : Fragment(), Runnable {
         }
 
         checkUserAnsweredBefore()
+        initAnswerDetail()
+    }
+
+    private fun initAnswerDetail() {
+        answerValueViews = listOf(
+            binding.firstAnswerValue,
+            binding.secondAnswerValue,
+            binding.thirdAnswerValue,
+            binding.fourthAnswerValue
+        )
+
+        initAnswerValueViews()
+        initAnswerValueContents()
+
+        binding.apply {
+            if (question.explain.isNotEmpty()){
+                explainContent.text = question.explain
+            }
+            else{
+                explainTitle.visibility = GONE
+                explainContent.visibility = GONE
+            }
+
+            if (question.key.isNotEmpty()){
+                keyContent.text = question.key
+            }
+            else{
+                keyTitle.visibility = GONE
+                keyContent.visibility = GONE
+            }
+        }
+
+        handleShowAnswer()
+    }
+
+    private fun initAnswerValueViews() {
+        if (isShowAnswer){
+            binding.firstAnswerValue.apply {
+                layoutParams = ConstraintLayout.LayoutParams(
+                    0,
+                    ConstraintLayout.LayoutParams.WRAP_CONTENT
+                ).apply {
+                    startToStart = ConstraintLayout.LayoutParams.PARENT_ID
+                    endToEnd = ConstraintLayout.LayoutParams.PARENT_ID
+                    bottomToTop = binding.explainTitle.id
+                    bottomMargin = 20.dpToPx(requireContext())
+                }
+
+                background = ContextCompat.getDrawable(requireContext(), R.drawable.bg_white_rectangle_primary_stroke_10dp_corners)
+                setPadding(10.dpToPx(requireContext()), 10.dpToPx(requireContext()), 10.dpToPx(requireContext()), 10.dpToPx(requireContext()))
+            }
+            binding.secondAnswerValue.apply {
+                layoutParams = ConstraintLayout.LayoutParams(
+                    0,
+                    ConstraintLayout.LayoutParams.WRAP_CONTENT
+                ).apply {
+                    topToBottom = binding.firstAnswer.id
+                    startToStart = ConstraintLayout.LayoutParams.PARENT_ID
+                    endToEnd = ConstraintLayout.LayoutParams.PARENT_ID
+                    bottomToTop = binding.explainTitle.id
+                    bottomMargin = 20.dpToPx(requireContext())
+                }
+
+                background = ContextCompat.getDrawable(requireContext(), R.drawable.bg_white_rectangle_primary_stroke_10dp_corners)
+                setPadding(10.dpToPx(requireContext()), 10.dpToPx(requireContext()), 10.dpToPx(requireContext()), 10.dpToPx(requireContext()))
+            }
+            binding.thirdAnswerValue.apply {
+                layoutParams = ConstraintLayout.LayoutParams(
+                    0,
+                    ConstraintLayout.LayoutParams.WRAP_CONTENT
+                ).apply {
+                    topToBottom = binding.secondAnswer.id
+                    startToStart = ConstraintLayout.LayoutParams.PARENT_ID
+                    endToEnd = ConstraintLayout.LayoutParams.PARENT_ID
+                    bottomToTop = binding.explainTitle.id
+                    bottomMargin = 20.dpToPx(requireContext())
+                }
+
+                background = ContextCompat.getDrawable(requireContext(), R.drawable.bg_white_rectangle_primary_stroke_10dp_corners)
+                setPadding(10.dpToPx(requireContext()), 10.dpToPx(requireContext()), 10.dpToPx(requireContext()), 10.dpToPx(requireContext()))
+            }
+            binding.fourthAnswerValue.apply {
+                layoutParams = ConstraintLayout.LayoutParams(
+                    0,
+                    ConstraintLayout.LayoutParams.WRAP_CONTENT
+                ).apply {
+                    topToBottom = binding.thirdAnswer.id
+                    startToStart = ConstraintLayout.LayoutParams.PARENT_ID
+                    endToEnd = ConstraintLayout.LayoutParams.PARENT_ID
+                    bottomToTop = binding.explainTitle.id
+                    bottomMargin = 20.dpToPx(requireContext())
+                }
+
+                background = ContextCompat.getDrawable(requireContext(), R.drawable.bg_white_rectangle_primary_stroke_10dp_corners)
+                setPadding(10.dpToPx(requireContext()), 10.dpToPx(requireContext()), 10.dpToPx(requireContext()), 10.dpToPx(requireContext()))
+            }
+        }
+        else{
+            binding.firstAnswerValue.apply {
+                layoutParams = ConstraintLayout.LayoutParams(
+                    30.dpToPx(requireContext()),
+                    30.dpToPx(requireContext())
+                ).apply {
+                    topToBottom = binding.showAnswerTitle.id
+                    startToStart = ConstraintLayout.LayoutParams.PARENT_ID
+                    endToEnd = ConstraintLayout.LayoutParams.PARENT_ID
+                    bottomToTop = binding.explainTitle.id
+                    bottomMargin = 20.dpToPx(requireContext())
+                }
+
+                background = ContextCompat.getDrawable(requireContext(), R.drawable.bg_circle_answer)
+                gravity = Gravity.CENTER
+            }
+            binding.secondAnswerValue.apply {
+                layoutParams = ConstraintLayout.LayoutParams(
+                    30.dpToPx(requireContext()),
+                    30.dpToPx(requireContext())
+                ).apply {
+                    topToBottom = binding.showAnswerTitle.id
+                    startToStart = ConstraintLayout.LayoutParams.PARENT_ID
+                    endToEnd = ConstraintLayout.LayoutParams.PARENT_ID
+                    bottomToTop = binding.explainTitle.id
+                    bottomMargin = 20.dpToPx(requireContext())
+                }
+
+                background = ContextCompat.getDrawable(requireContext(), R.drawable.bg_circle_answer)
+                gravity = Gravity.CENTER
+
+            }
+            binding.thirdAnswerValue.apply {
+                layoutParams = ConstraintLayout.LayoutParams(
+                    30.dpToPx(requireContext()),
+                    30.dpToPx(requireContext())
+                ).apply {
+                    topToBottom = binding.showAnswerTitle.id
+                    startToStart = ConstraintLayout.LayoutParams.PARENT_ID
+                    endToEnd = ConstraintLayout.LayoutParams.PARENT_ID
+                    bottomToTop = binding.explainTitle.id
+                    bottomMargin = 20.dpToPx(requireContext())
+                }
+
+                background = ContextCompat.getDrawable(requireContext(), R.drawable.bg_circle_answer)
+                gravity = Gravity.CENTER
+            }
+            binding.fourthAnswerValue.apply {
+                layoutParams = ConstraintLayout.LayoutParams(
+                    30.dpToPx(requireContext()),
+                    30.dpToPx(requireContext())
+                ).apply {
+                    topToBottom = binding.showAnswerTitle.id
+                    startToStart = ConstraintLayout.LayoutParams.PARENT_ID
+                    endToEnd = ConstraintLayout.LayoutParams.PARENT_ID
+                    bottomToTop = binding.explainTitle.id
+                    bottomMargin = 20.dpToPx(requireContext())
+                }
+
+                background = ContextCompat.getDrawable(requireContext(), R.drawable.bg_circle_answer)
+                gravity = Gravity.CENTER
+            }
+        }
+    }
+
+    private fun initAnswerValueContents() {
+        val answersChar = listOf("A", "B", "C", "D")
+
+        for (i in question.answers.indices) {
+            answerValueViews[i].apply {
+                text = if (isShowAnswer){
+                    requireContext().getString(
+                        R.string.Question_answer_with_content_regex,
+                        answersChar[i],
+                        question.answers[i]
+                    )
+                }else{
+                    requireContext().getString(
+                        R.string.Question_answer_no_content_regex,
+                        answersChar[i]
+                    )
+                }
+
+                visibility = VISIBLE
+            }
+        }
+
+        answerValueViews = answerValueViews.filter { view -> view.visibility == VISIBLE }
+    }
+
+    private fun handleShowAnswer() {
+        val trueAnswerPosition = question.answers.indexOf(question.trueAnswer)
+        setTrueAnswer(answerValueViews[trueAnswerPosition])
+        for ( index in answerValueViews.indices){
+            if (index != trueAnswerPosition){
+                answerValueViews[index].visibility = GONE
+            }
+        }
+    }
+
+//    private fun setFalseAnswer(view: TextView) {
+//        view.apply {
+//            setTextColor(WHITE)
+//            background = if (isShowAnswer) {
+//                AppCompatResources.getDrawable(
+//                    requireContext(),
+//                    R.drawable.bg_second_primary_rectangle_no_stroke_10dp_corners
+//                )
+//            } else {
+//                AppCompatResources.getDrawable(
+//                    requireContext(),
+//                    R.drawable.bg_circle_false_answer
+//                )
+//            }
+//        }
+//    }
+
+    private fun setTrueAnswer(view: TextView) {
+        view.apply {
+            setTextColor(WHITE)
+            background = if (isShowAnswer){
+                AppCompatResources.getDrawable(
+                    requireContext(),
+                    R.drawable.bg_primary_rectangle_no_stroke_10dp_corners
+                )
+            }
+            else{
+                AppCompatResources.getDrawable(
+                    requireContext(),
+                    R.drawable.bg_circle_true_answer
+                )
+            }
+        }
     }
 
     private fun initMedia() {
@@ -350,6 +583,24 @@ class QuestionDetailFragment : Fragment(), Runnable {
             mediaPlayer.setOnCompletionListener {
                 currentMediaState.value = MediaState.PLAYBACK_COMPLETED
             }
+        }
+
+        if (type == "EXERCISE"){
+            var isShowAnswer = false
+            binding.showAnswerTitle.visibility = VISIBLE
+            binding.showAnswerTitle.setOnClickListener {
+                isShowAnswer = !isShowAnswer
+                if (isShowAnswer){
+                    binding.showAnswerValue.visibility = VISIBLE
+                }
+                else{
+                    binding.showAnswerValue.visibility = GONE
+                }
+            }
+        }
+        else{
+            binding.showAnswerTitle.visibility = GONE
+            binding.showAnswerValue.visibility = GONE
         }
     }
 

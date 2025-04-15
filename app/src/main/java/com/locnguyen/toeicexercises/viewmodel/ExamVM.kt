@@ -8,6 +8,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.locnguyen.toeicexercises.R
 import com.locnguyen.toeicexercises.model.Exam
+import com.locnguyen.toeicexercises.model.ExamPart
 import com.locnguyen.toeicexercises.model.Question
 import com.locnguyen.toeicexercises.repo.DataRepo
 import com.locnguyen.toeicexercises.repo.UserRepo
@@ -231,7 +232,7 @@ class ExamVM(val app: Application) : AndroidViewModel(app) {
         return score
     }
 
-    fun getAllQuestionsFollowEachPart(context: Context): List<Pair<String, Question>> {
+    fun getQuestions(context: Context): List<Pair<String, Question>> {
         val allQuestions = ArrayList<Pair<String, Question>>()
 
         exam.value?.let {

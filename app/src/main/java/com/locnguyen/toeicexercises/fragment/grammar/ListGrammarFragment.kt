@@ -100,7 +100,6 @@ class ListGrammarFragment: Fragment() {
 
     private fun handlePressedBack(){
         navController.popBackStack()
-        mainVM.itemTheoryClicked.value = null
         grammarVM.isNeedLoaded.value = Event(true)
     }
 

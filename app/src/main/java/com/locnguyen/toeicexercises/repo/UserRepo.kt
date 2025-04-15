@@ -137,6 +137,7 @@ class UserRepo {
             }
 
             val authResult = auth.createUserWithEmailAndPassword(email, password).await()
+            auth.signInWithEmailAndPassword(email, password).await()
 
             if (authResult.user == null) {
                 auth.currentUser?.delete()
@@ -185,23 +186,20 @@ class UserRepo {
                 MediaManager.get().upload(newImg)
                     .options(
                         mapOf(
-                            Pair("public_id", "user_img")
+                            Pair("public_id", "${auth.currentUser?.email?.substringBefore('@')}")
                         )
                     )
                     .callback(object : UploadCallback {
                         override fun onStart(requestId: String?) {
-                            Log.d("updateNewImg", "onStart")
                         }
 
                         override fun onProgress(requestId: String?, bytes: Long, totalBytes: Long) {
-                            Log.d("updateNewImg", "onProgress: ${bytes * 100 / totalBytes}%")
                         }
 
                         override fun onSuccess(
                             requestId: String?,
                             resultData: MutableMap<Any?, Any?>?
                         ) {
-                            Log.d("updateNewImg", "onSuccess")
                             val imageUrl = resultData?.get("secure_url")?.toString()
                             if (imageUrl != null) {
                                 getUserRef()?.child("avatar")?.setValue(imageUrl)

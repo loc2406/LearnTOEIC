@@ -7,9 +7,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
+import androidx.navigation.fragment.navArgs
 import androidx.viewpager2.widget.ViewPager2
 import com.locnguyen.toeicexercises.R
 import com.locnguyen.toeicexercises.adapter.ExamQuestionsAdapter
@@ -26,8 +28,8 @@ class ExamFragment: Fragment() {
 
     private lateinit var binding: ExamFragmentBinding
     private lateinit var exam: Exam
-    private lateinit var mainVM: MainVM
-    private lateinit var examVM: ExamVM
+    private val mainVM: MainVM by activityViewModels<MainVM>()
+    private val examVM: ExamVM by activityViewModels<ExamVM>()
     private lateinit var navController: NavController
     private lateinit var examQuestionAdapter: ExamQuestionsAdapter
     private var examTimeLeft by Delegates.notNull<Long>()
@@ -45,6 +47,7 @@ class ExamFragment: Fragment() {
     ): View {
         binding = ExamFragmentBinding.inflate(inflater, container, false)
         binding.lifecycleOwner = viewLifecycleOwner
+        binding.examVM = examVM
         return binding.root
     }
 
@@ -52,18 +55,14 @@ class ExamFragment: Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         navController = Navigation.findNavController(view)
-        mainVM = ViewModelProvider(requireActivity())[MainVM::class.java]
-        examVM = ViewModelProvider(requireActivity())[ExamVM::class.java]
-        binding.examVM = examVM
-
         exam = examVM.exam.value!!
 
         examTimeLeft = (exam.time * 60 * 1000).toLong()
 
-        allQuestions = examVM.getAllQuestionsFollowEachPart(requireContext())
-        examVM.examQuestions = examVM.getAllQuestionsFollowEachPart(requireContext()) as ArrayList<Pair<String, Question>>
+        allQuestions = examVM.getQuestions(requireContext())
+        examVM.examQuestions = allQuestions as ArrayList<Pair<String, Question>>
 
-        examQuestionAdapter = ExamQuestionsAdapter(requireActivity(), allQuestions)
+        examQuestionAdapter = ExamQuestionsAdapter(requireActivity(), allQuestions, "EXAM")
 
         startCountDown()
 

@@ -134,7 +134,6 @@ class ListWordFragment : Fragment() {
 
     private fun handlePressedBack() {
         navController.popBackStack()
-        mainVM.itemTheoryClicked.value = null
         wordVM.isNeedLoaded.value = Event(true)
     }
 

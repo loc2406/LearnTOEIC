@@ -7,7 +7,7 @@ import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.locnguyen.toeicexercises.fragment.exam.QuestionDetailFragment
 import com.locnguyen.toeicexercises.model.Question
 
-class ExamQuestionsAdapter(private val fm: FragmentActivity, private var allQuestions: List<Pair<String, Question>>): FragmentStateAdapter(fm){
+class ExamQuestionsAdapter(private val fm: FragmentActivity, private var allQuestions: List<Pair<String, Question>>, private val type: String): FragmentStateAdapter(fm){
 
     override fun getItemCount(): Int {
         return allQuestions.size
@@ -22,6 +22,7 @@ class ExamQuestionsAdapter(private val fm: FragmentActivity, private var allQues
             }
 
             arguments = Bundle().apply {
+                putString("TYPE", type)
                 putParcelable("QUESTION", allQuestions[position].second)
                 putInt("POSITION", position)
                 putBoolean("IS_SHOW_ANSWER", isShowAnswer)

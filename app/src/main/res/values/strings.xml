@@ -151,7 +151,7 @@
     <string name="Update_user_info_successful">Cập nhật thông tin người dùng thành công!</string>
     <string name="Update_user_info_failed">Cập nhật thông tin người dùng thất bại!</string>
     <string name="Select_answer">Chọn đáp án</string>
-    <string name="Connect_sentence">Nối câu</string>
+    <string name="Read_paragraph">Đọc hiểu</string>
     <string name="Get_favorite_grammar_failed">Lấy danh sách ngữ pháp yêu thích thất bại!</string>
     <string name="Notify_locked_exam">Bài kiểm tra này đang bị khóa!</string>
     <string name="Require_user_upgrade_account">Vui lòng nâng cấp tài khoản để mở khóa toàn bộ bài kiểm tra!</string>
