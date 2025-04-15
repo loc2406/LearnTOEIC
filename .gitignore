@@ -1,0 +1,64 @@
+# 👉 Android & Kotlin build
+/build/
+/app/build/
+/**/build/
+
+# 👉 Gradle
+.gradle/
+/gradle/
+/**/*.gradle
+gradle-wrapper.jar
+gradle-wrapper.properties
+!gradle-wrapper.properties
+
+# 👉 Local configuration
+/local.properties
+/.idea/
+/.idea/
+/*.iml
+*.iws
+*.ipr
+
+# 👉 Kotlin specific
+*.class
+*.log
+*.jar
+*.war
+*.ear
+
+# 👉 OS/system files
+.DS_Store
+Thumbs.db
+
+# 👉 Others
+*.swp
+*.swo
+*.tmp
+*.bak
+*.orig
+
+# 👉 Crash/log/debug files
+*.log
+
+# 👉 Keystore or secrets
+*.jks
+*.keystore
+*.key
+*.pem
+*.crt
+.env
+
+# 👉 Ignore test outputs or generated files
+/test-output/
+/out/
+/captures/
+
+# 👉 Ignore IntelliJ/Android Studio auto-save
+.idea/modules.xml
+.idea/workspace.xml
+.idea/navEditor.xml
+.idea/libraries/
+
+# 👉 Ignore generated binding or cache
+.navigation.json
+.cxx/
